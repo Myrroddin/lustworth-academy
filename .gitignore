@@ -1,0 +1,68 @@
+# ---------------------------------------------------------------------------
+# Ren'Py compiled / generated files
+# ---------------------------------------------------------------------------
+
+# Compiled Python bytecode produced by Ren'Py
+*.rpyc
+*.rpymc
+
+# Compiled Ren'Py archives
+*.rpa
+
+# Ren'Py log files
+log.txt
+errors.txt
+traceback.txt
+
+# ---------------------------------------------------------------------------
+# Ren'Py runtime directories
+# ---------------------------------------------------------------------------
+
+# Save data and persistent state
+game/saves/
+game/cache/
+
+# Auto-generated Ren'Py directory
+renpy/
+
+# ---------------------------------------------------------------------------
+# Original game assets (not redistributed — must be sourced from the game)
+# ---------------------------------------------------------------------------
+# Uncomment and adjust the paths below to match your local game installation
+# if you ever accidentally stage original assets.
+#
+# game/audio/
+# game/images/
+# game/gui/
+# game/tl/
+
+# ---------------------------------------------------------------------------
+# OS / editor artifacts
+# ---------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# ---------------------------------------------------------------------------
+# Patch / diff working files
+# ---------------------------------------------------------------------------
+
+# Temporary patch staging area — keep actual .patch and .diff files tracked
+*.orig
+*.rej

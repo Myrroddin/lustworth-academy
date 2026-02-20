@@ -1,1 +1,43 @@
-# lustworth-academy
+# Lustworth Academy — Unofficial Patch
+
+An unofficial fan patch for the visual novel *Lustworth Academy*. This repository
+contains only the changes (patches, corrected scripts, and converted assets) made
+on top of the original game. It does **not** redistribute the original game or any
+of its copyrighted assets.
+
+## What this patch does
+
+- Converts audio files to the more efficient `.ogg` format
+- Converts image files to the more efficient `.webp` format
+- Corrects English spelling and grammar throughout the scripts
+- Includes miscellaneous code clean-up and optimisations
+
+## Legal notice
+
+*Lustworth Academy* is the intellectual property of its original developer(s).
+The original game ships several components (tooling, libraries, etc.) under the
+[MIT License](https://opensource.org/licenses/MIT); please refer to the game's
+own "About" screen and bundled licence files for the full details.
+
+The patch code and asset-conversion scripts contained in **this** repository are
+released under the MIT License (see [`LICENSE`](LICENSE)). They do not include
+any original game content; you must own a legitimate copy of *Lustworth Academy*
+to use this patch.
+
+## How to apply the patch
+
+1. Install *Lustworth Academy* from its official source.
+2. Clone or download this repository.
+3. Run the provided patch script (or apply the `.patch` / `.diff` files manually)
+   against your local game installation.
+
+## Contributing
+
+Pull requests that are limited to the scope described above (spelling/grammar
+fixes, asset conversion, code optimisations) are welcome. Please do **not**
+include any original game files in your contributions.
+
+## Acknowledgements
+
+All credit for the original game, story, artwork, and music belongs to the
+*Lustworth Academy* development team.
