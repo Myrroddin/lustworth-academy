@@ -31,6 +31,22 @@ to use this patch.
 3. Run the provided patch script (or apply the `.patch` / `.diff` files manually)
    against your local game installation.
 
+### Optional cleanup: remove obsolete `.mp3` files
+
+After applying the audio-conversion patch, you can safely remove `.mp3` files that
+have `.ogg` counterparts:
+
+```powershell
+# Dry-run (shows what would be removed)
+powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1 -WhatIf
+
+# Apply cleanup
+powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1
+```
+
+The script only removes `.mp3` files when a same-name `.ogg` file exists in the
+same directory.
+
 ## Contributing
 
 Pull requests that are limited to the scope described above (spelling/grammar
