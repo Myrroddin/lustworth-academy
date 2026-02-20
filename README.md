@@ -57,6 +57,30 @@ powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1
 The script only removes `.mp3` files when a same-name `.ogg` file exists in the
 same directory.
 
+### Generate current patch files
+
+This repo supports two local Git shortcuts for generating patch files:
+
+```bash
+# Full cumulative patch (first commit -> HEAD)
+git makepatch
+
+# Patch of your new work (origin/main -> HEAD)
+git makepatch-main
+```
+
+Output files:
+
+- `all-changes-current.patch` (full cumulative patch)
+- `all-changes-from-main.patch` (changes since `origin/main`)
+
+Recommended release flow:
+
+1. Run cleanup dry-run and apply cleanup if needed.
+2. Commit your latest changes.
+3. Run `git makepatch-main` for a developer-facing patch.
+4. Optionally run `git makepatch` to archive a full cumulative patch.
+
 ## Contributing
 
 Pull requests that are limited to the scope described above (spelling/grammar
