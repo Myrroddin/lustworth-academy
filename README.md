@@ -36,6 +36,16 @@ to use this patch.
 After applying the audio-conversion patch, you can safely remove `.mp3` files that
 have `.ogg` counterparts:
 
+```bash
+# Cross-platform (Windows/Linux/macOS) dry-run
+python ./tools/remove_obsolete_mp3.py --dry-run
+
+# Cross-platform apply cleanup
+python ./tools/remove_obsolete_mp3.py
+```
+
+On Windows, you can also use PowerShell:
+
 ```powershell
 # Dry-run (shows what would be removed)
 powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1 -WhatIf
