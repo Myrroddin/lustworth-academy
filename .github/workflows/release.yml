@@ -161,7 +161,8 @@ jobs:
 
 ${commits}
 EOF
-  - name: Create GitHub release
+
+      - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.vars.outputs.tag }}
