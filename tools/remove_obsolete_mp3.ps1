@@ -1,4 +1,3 @@
-[CmdletBinding(SupportsShouldProcess = $true)]
 #
 # remove_obsolete_mp3.ps1
 # -----------------------

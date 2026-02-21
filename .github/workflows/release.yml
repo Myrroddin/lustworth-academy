@@ -1,0 +1,63 @@
+name: Release Patch Artifacts
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Patch version (for example: 1.00)"
+        required: true
+        type: string
+      include_tools_patch:
+        description: "Also generate a game+tools patch"
+        required: true
+        default: true
+        type: boolean
+      prerelease:
+        description: "Mark this GitHub Release as a pre-release"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build patch artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          version="${{ inputs.version }}"
+          base_commit="$(git rev-list --max-parents=0 HEAD | tail -n 1)"
+          mkdir -p dist
+
+          # Developer-facing patch: game scripts/assets only.
+          # This intentionally excludes renpy/, lib/, README, LICENSE, and other non-game files.
+          game_patch="dist/lustworth-academy-v${version}-game.patch"
+          git diff --binary "$base_commit" -- game/ > "$game_patch"
+
+          if [[ "${{ inputs.include_tools_patch }}" == "true" ]]; then
+            # Optional patch including maintenance tooling in addition to game files.
+            tools_patch="dist/lustworth-academy-v${version}-game-tools.patch"
+            git diff --binary "$base_commit" -- game/ tools/ > "$tools_patch"
+          fi
+
+          sha256sum dist/* > dist/lustworth-academy-v${version}-SHA256SUMS.txt
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: Lustworth Academy Patch v${{ inputs.version }}
+          prerelease: ${{ inputs.prerelease }}
+          files: |
+            dist/*
