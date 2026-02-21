@@ -68,7 +68,6 @@ jobs:
           mkdir -p dist
 
           # Developer-facing patch: game scripts/assets only.
-          # This intentionally excludes renpy/, lib/, README, LICENSE, and other non-game files.
           game_patch="dist/lustworth-academy-v${version}-game.patch"
           git diff --binary "$base_commit" -- game/ > "$game_patch"
 
@@ -153,14 +152,16 @@ jobs:
             commits="* No user-facing changes."
           fi
 
+          mkdir -p dist
+
           cat > dist/CHANGELOG.md <<EOF
-# Lustworth Academy
+          # Lustworth Academy
 
-## [${tag}](https://github.com/${repo}/tree/${tag}) (${release_date})
-[Full Changelog](${compare_url}) [Previous Releases](https://github.com/${repo}/releases)
+          ## [${tag}](https://github.com/${repo}/tree/${tag}) (${release_date})
+          [Full Changelog](${compare_url}) [Previous Releases](https://github.com/${repo}/releases)
 
-${commits}
-EOF
+          ${commits}
+          EOF
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
