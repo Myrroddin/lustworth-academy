@@ -86,6 +86,33 @@ python ./tools/remove_replaced_non_webp.py --dry-run
 python ./tools/remove_replaced_non_webp.py
 ```
 
+### Additional maintainer helper scripts (optional)
+
+These scripts are for the game developer/maintainer. They are not required for
+normal patch application by testers.
+
+- `tools/update_known_image_refs_to_webp.py`
+   - Purpose: proactive migration.
+   - It updates script references from `.png`/`.jpg` to `.webp` when the `.webp`
+      file is known to exist.
+   - Use when you want to convert more legacy references safely.
+
+- `tools/fix_missing_legacy_refs_to_webp.py`
+   - Purpose: repair missing-file references.
+   - It only updates references that currently point to missing `.png`/`.jpg`
+      files, and only if a matching `.webp` file exists.
+   - Use after cleanup/moves when some old references break.
+
+Recommended order: run `update_known_image_refs_to_webp.py` first, then
+`fix_missing_legacy_refs_to_webp.py`.
+
+Run from repository root:
+
+```bash
+python ./tools/update_known_image_refs_to_webp.py
+python ./tools/fix_missing_legacy_refs_to_webp.py
+```
+
 ## Generate current patch file (maintainer workflow)
 
 Use the GitHub Actions workflow in `.github/workflows/release.yml` to generate
@@ -98,6 +125,16 @@ Default release artifact scope:
 Optional release artifact scope:
 
 - `game/` + `tools/` (for maintainers who also want helper scripts)
+
+Artifact meaning:
+
+- `lustworth-academy-v<version>-game.patch`
+   - Includes all tracked adds/edits/deletes under `game/`.
+   - This is the patch for game developer testing/integration.
+   - Default choice: use this patch unless helper scripts are also required.
+- `lustworth-academy-v<version>-game-tools.patch` (optional)
+   - Includes everything in the game patch, plus tracked changes under `tools/`.
+   - Use this only when helper scripts are also needed.
 
 These release patches intentionally exclude `renpy/`, `lib/`, `README.md`,
 `LICENSE`, and other non-patch files.
