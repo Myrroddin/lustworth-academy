@@ -24,6 +24,7 @@ game/cache/
 
 # Auto-generated Ren'Py directory
 renpy/
+lib/
 
 # ---------------------------------------------------------------------------
 # Original game assets (not redistributed — must be sourced from the game)
@@ -35,6 +36,10 @@ renpy/
 # game/images/
 # game/gui/
 # game/tl/
+game/fonts/
+game/script_version.txt
+game/tl/
+game/game/
 
 # ---------------------------------------------------------------------------
 # OS / editor artifacts
@@ -52,6 +57,9 @@ desktop.ini
 
 # Linux
 *~
+
+# Root-only launcher/runtime files from game install
+/LustworthAcademy*.*
 
 # Visual Studio Code
 .vscode/

@@ -80,11 +80,94 @@ jobs:
 
           sha256sum dist/* > dist/lustworth-academy-v${version}-SHA256SUMS.txt
 
+      - name: Generate release changelog
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          repo="${GITHUB_REPOSITORY}"
+          tag="${{ steps.vars.outputs.tag }}"
+          release_date="$(date -u +%Y-%m-%d)"
+
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            end_ref="${tag}"
+            previous_tag="$(git describe --tags --abbrev=0 "${tag}^" 2>/dev/null || true)"
+          else
+            end_ref="HEAD"
+            previous_tag="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          fi
+
+          if [[ -n "${previous_tag}" ]]; then
+            compare_url="https://github.com/${repo}/compare/${previous_tag}...${tag}"
+            range="${previous_tag}..${end_ref}"
+          else
+            first_commit="$(git rev-list --max-parents=0 "${end_ref}" | tail -n 1)"
+            compare_url="https://github.com/${repo}/compare/${first_commit}...${tag}"
+            range="${first_commit}..${end_ref}"
+          fi
+
+          commits=""
+          current_subject=""
+          current_body=()
+
+          flush_commit() {
+            if [[ -z "${current_subject}" ]]; then
+              return
+            fi
+
+            if printf '%s\n' "${current_subject}" | grep -Eiq '^(chore(\(.+\))?:|ci(\(.+\))?:|build(\(.+\))?:|bump (version|toc)\b|version bump\b|release v?[0-9])'; then
+              return
+            fi
+
+            commits+="* ${current_subject}"$'\n'
+
+            for body_line in "${current_body[@]}"; do
+              cleaned_line="$(printf '%s' "${body_line}" | sed -E 's/^[[:space:]]*[-*]?[[:space:]]*//; s/[[:space:]]+$//')"
+              if [[ -n "${cleaned_line}" ]]; then
+                commits+="    - ${cleaned_line}"$'\n'
+              fi
+            done
+          }
+
+          while IFS= read -r line; do
+            if [[ "${line}" == "__END_COMMIT__" ]]; then
+              flush_commit
+              current_subject=""
+              current_body=()
+              continue
+            fi
+
+            if [[ -z "${current_subject}" ]]; then
+              cleaned_subject="$(printf '%s' "${line}" | sed -E 's/^[[:space:]]*[-*]?[[:space:]]*//; s/[[:space:]]+$//')"
+              if [[ -n "${cleaned_subject}" ]]; then
+                current_subject="${cleaned_subject}"
+              fi
+            else
+              current_body+=("${line}")
+            fi
+          done < <(git log --no-merges --pretty='%s%n%b%n__END_COMMIT__' "${range}")
+
+          commits="${commits%$'\n'}"
+
+          if [[ -z "${commits}" ]]; then
+            commits="* No user-facing changes."
+          fi
+
+          cat > dist/CHANGELOG.md <<EOF
+# Lustworth Academy
+
+## [${tag}](https://github.com/${repo}/tree/${tag}) (${release_date})
+[Full Changelog](${compare_url}) [Previous Releases](https://github.com/${repo}/releases)
+
+${commits}
+EOF
+
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.vars.outputs.tag }}
           name: Lustworth Academy Patch v${{ steps.vars.outputs.version }}
           prerelease: ${{ steps.vars.outputs.prerelease }}
+          body_path: dist/CHANGELOG.md
           files: |
             dist/*

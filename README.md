@@ -35,9 +35,16 @@ to use this patch.
 ## How to apply the patch
 
 1. Install *Lustworth Academy* from its official source.
-2. Clone or download this repository.
-3. Run the provided patch script (or apply the `.patch` / `.diff` files manually)
-   against your local game installation.
+2. Open the latest GitHub Release for this repository and download
+   `lustworth-academy-v<version>-game.patch`.
+3. From the game installation root, apply the downloaded patch file:
+
+```bash
+git apply --binary /path/to/lustworth-academy-v<version>-game.patch
+```
+
+   (Optional) If you also need helper scripts, download and apply
+   `lustworth-academy-v<version>-game-tools.patch` instead.
 4. Remove obsolete `.mp3` files that were replaced by `.ogg` files.
 5. Remove obsolete non-webp image files that were replaced by `.webp` files.
 
