@@ -143,6 +143,15 @@ Artifact meaning:
    - Includes everything in the game patch, plus tracked changes under `tools/`.
    - Use this only when helper scripts are also needed.
 
+For game developer (release assets):
+
+1. Open the GitHub Release for the tagged version.
+2. Download `lustworth-academy-v<version>-game.patch` (default file).
+3. Apply the patch from the game install root so `game/...` paths map correctly.
+4. Launch and test the game.
+5. Use `lustworth-academy-v<version>-game-tools.patch` only if you also want
+   the helper scripts from `tools/`.
+
 These release patches intentionally exclude `renpy/`, `lib/`, `README.md`,
 `LICENSE`, and other non-patch files.
 
