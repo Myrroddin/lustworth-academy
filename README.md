@@ -57,6 +57,25 @@ powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1
 The script only removes `.mp3` files when a same-name `.ogg` file exists in the
 same directory.
 
+### Optional cleanup: remove replaced non-webp image files
+
+After converting images, you can remove non-webp files that have a same-name
+`.webp` in the same directory.
+
+This cleanup is conservative:
+
+- Only checks same-directory replacements (`name.png` -> `name.webp`)
+- Preserves common icon patterns (for launcher/build safety)
+- Skips uncertain cases automatically
+
+```bash
+# Dry-run
+python ./tools/remove_replaced_non_webp.py --dry-run
+
+# Apply cleanup
+python ./tools/remove_replaced_non_webp.py
+```
+
 ### Generate current patch files
 
 This repo supports two local Git shortcuts for generating patch files:

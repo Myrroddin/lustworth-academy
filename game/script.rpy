@@ -217,7 +217,7 @@ screen money_pickup:
         ypos 0.45
 
         # add Solid('#000b')
-        add Frame('gui/nvl.png', Borders(0, 0, 0, 0))
+        add Frame('gui/nvl.webp', Borders(0, 0, 0, 0))
 
         $ img = Transform('images/sprites/inventory/money01_sprite.webp', zoom=1.5)
         add img:
@@ -508,7 +508,7 @@ screen item_pickup(item):
         ypos 0.45
 
         # add Solid('#000b')
-        add Frame('gui/nvl.png', Borders(0, 0, 0, 0))
+        add Frame('gui/nvl.webp', Borders(0, 0, 0, 0))
 
         $ img = Transform(item.image, zoom=1.5)
         add img:

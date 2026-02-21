@@ -166,16 +166,16 @@ screen shooter(initial_enemies, kill_limit, timer_delay=1.0): # Define the main 
         imagebutton:
 #          align .5,.5
             align 0.48,0.48 # Centers the button on the screen.
-            idle "images/sprites/minigames/slingshot/start_button_idle.png"
+            idle "images/sprites/minigames/slingshot/start_button_idle.webp"
             # Specifies the image when the mouse hovers over it
-            hover "images/sprites/minigames/slingshot/start_button_hover.png"
+            hover "images/sprites/minigames/slingshot/start_button_hover.webp"
             action Function(g.start) # Calls the handler's start method to begin the game.
     elif g.stat == "playing": # Content displayed when the game state is "playing".
         timer timer_delay repeat True action Function(g.spawn)
         
         bar value g.kills range g.kill_limit:
-            left_bar "images/sprites/minigames/slingshot/panic_bar_full.png"
-            right_bar "images/sprites/minigames/slingshot/panic_bar_empty.png"
+            left_bar "images/sprites/minigames/slingshot/panic_bar_full.webp"
+            right_bar "images/sprites/minigames/slingshot/panic_bar_empty.webp"
             xpos 1500 ypos 78 xmaximum 390
             ymaximum 85
 
@@ -184,58 +184,58 @@ screen shooter(initial_enemies, kill_limit, timer_delay=1.0): # Define the main 
             align .0,1.0 spacing 10 offset 20,-20
             # The 'for' loop rebuilds the contents every time the screen updates
             for i in range(g.health):
-                add "images/sprites/minigames/slingshot/shooter_health.png" at zoom(2, True)
+                add "images/sprites/minigames/slingshot/shooter_health.webp" at zoom(2, True)
 
         # 💡 Bullet Indicator:
         if g.bullets > 0:
             hbox:
                 align 1.0,1.0 spacing 10 offset -20,-20
                 for i in range(g.bullets):
-                    add "images/sprites/minigames/slingshot/shooter_bullets.png" at zoom(2, True)
+                    add "images/sprites/minigames/slingshot/shooter_bullets.webp" at zoom(2, True)
 
         else:
             # Reload button appears when g.bullets is 0
             imagebutton:
                 align 1.0,1.0  offset -20,-20
-                idle "images/sprites/minigames/slingshot/reload_button_idle.png"
+                idle "images/sprites/minigames/slingshot/reload_button_idle.webp"
                 # Specifies the image when the mouse hovers over it
-                hover "images/sprites/minigames/slingshot/reload_button_hover.png"
+                hover "images/sprites/minigames/slingshot/reload_button_hover.webp"
                 action Function(g.reload)
         key "K_SPACE" action Function(g.reload) # Binds the Space key to the reload action.
     elif g.stat == "dead": # Content displayed when the game state is "dead".
         vbox:
             on "show" action Play(channel="sfx1", file="audio/sfx/fightlose.ogg")
             align 0, 0
-            add "images/sprites/minigames/slingshot/defeat_screen.png"
+            add "images/sprites/minigames/slingshot/defeat_screen.webp"
         
         hbox: # Horizontal box for the dead screen buttons.
             
             align .5,.5 spacing 10 # Centers the buttons.
             imagebutton:
                 # Specifies the image for the normal state
-                idle "images/sprites/minigames/slingshot/restart_button_idle.png"
+                idle "images/sprites/minigames/slingshot/restart_button_idle.webp"
                 # Specifies the image when the mouse hovers over it
-                hover "images/sprites/minigames/slingshot/restart_button_hover.png"
+                hover "images/sprites/minigames/slingshot/restart_button_hover.webp"
                 # Defines the action that occurs when the button is clicked
                 action Function(g.restart) # Calls the handler's restart method.
             imagebutton:
                 # Specifies the image for the normal state
-                idle "images/sprites/minigames/slingshot/skip_button_idle.png"
+                idle "images/sprites/minigames/slingshot/skip_button_idle.webp"
                 # Specifies the image when the mouse hovers over it
-                hover "images/sprites/minigames/slingshot/skip_button_hover.png"
+                hover "images/sprites/minigames/slingshot/skip_button_hover.webp"
                 # Defines the action that occurs when the button is clicked
                 action Return(g.kills) # Hides the screen and returns the player's kill count to the calling label.
     elif g.stat == "won":
         vbox:
             on "show" action Play(channel="sfx1", file="audio/sfx/fightvictory.ogg")
             align 0, 0.3
-            add "images/sprites/minigames/slingshot/victory_screen.png"
+            add "images/sprites/minigames/slingshot/victory_screen.webp"
             imagebutton:
                 align 0.5, 0.7
                 # Specifies the image for the normal state
-                idle "images/sprites/minigames/slingshot/continue_button_idle.png"
+                idle "images/sprites/minigames/slingshot/continue_button_idle.webp"
                 # Specifies the image when the mouse hovers over it
-                hover "images/sprites/minigames/slingshot/continue_button_hover.png"
+                hover "images/sprites/minigames/slingshot/continue_button_hover.webp"
                 # Defines the action that occurs when the button is clicked
                 action Return(g.kills)
     

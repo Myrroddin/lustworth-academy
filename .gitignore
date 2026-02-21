@@ -66,3 +66,15 @@ desktop.ini
 # Temporary patch staging area — keep actual .patch and .diff files tracked
 *.orig
 *.rej
+
+# ---------------------------------------------------------------------------
+# Python tooling artifacts
+# ---------------------------------------------------------------------------
+
+# Python bytecode/cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary local review artifacts
+root_webp_review_report.txt
