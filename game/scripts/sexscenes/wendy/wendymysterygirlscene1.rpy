@@ -4,9 +4,9 @@ label wendy_mysterygirlnight1_scene:
     "{i}In the middle of the night, a figure hiding under a red cape slipped quietly into [player_name]'s room.{/i}"
     play sound "audio/sfx/dooropen01.ogg"
     show jimmyroomwendypeek02 with dissolve
-    "{i}Her objective? Look for someone that didn't sleep in that room anymore.{/i}"
+    "{i}Her objective? Look for someone who didn't sleep in that room anymore.{/i}"
     "{i}The last owner of this room had left the town without notice the day before.{/i}"
-    "{i}Luckily for [player_name], she didn't realize there was actually a stranger in that bed.{/i}"
+    "{i}Luckily for [player_name], she didn't realize there was actually a stranger in the bed.{/i}"
     scene bedroomwall01 with fade
     show wendy cape hidden with dissolve
     play sound "audio/sfx/hey05.ogg"
@@ -118,11 +118,11 @@ label .finish:
     play sound "audio/sfx/doorclose01.ogg"
     scene misterygirlshadow with vpunch
     play music "audio/music/suspensetheme01.ogg"
-    "{i}However, [player_name] quickly realized that there was a figure in the window.{/i}"
+    "{i}However, [player_name] quickly realized there was a figure in the window.{/i}"
     "{i}Someone was watching.{/i}"
     Jimmy "Hey! Who's there!?"
     scene misterygirlshadow02 with dissolve
-    "{i}The figure slowly disappeared in the blackness of the night.{/i}"
+    "{i}The figure slowly disappeared into the blackness of the night.{/i}"
     Jimmy "What the fuck is wrong with this place?"
     if wendygallery == True:
         call screen wendygallery

@@ -118,6 +118,13 @@ python ./tools/fix_missing_legacy_refs_to_webp.py
 Use the GitHub Actions workflow in `.github/workflows/release.yml` to generate
 release patch artifacts.
 
+You can trigger releases in two ways:
+
+- Manual: run **Release Patch Artifacts** from GitHub Actions.
+- Automatic: push a tag like `v1.00`.
+
+For automatic tag releases, the tools patch is enabled by default.
+
 Default release artifact scope:
 
 - `game/` only (developer-facing apply patch)
