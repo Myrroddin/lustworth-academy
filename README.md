@@ -1,6 +1,6 @@
 # Lustworth Academy — Unofficial Patch
 
-Patch version: **1.00**
+Patch version: **v1.01**
 
 An unofficial fan patch for the visual novel *Lustworth Academy*. This repository
 contains only the changes (patches, corrected scripts, and converted assets) made
@@ -128,7 +128,7 @@ release patch artifacts.
 You can trigger releases in two ways:
 
 - Manual: run **Release Patch Artifacts** from GitHub Actions.
-- Automatic: push a tag like `v1.00`.
+   - Automatic: push a tag like `v1.01`.
 
 For automatic tag releases, the tools patch is enabled by default.
 
@@ -166,7 +166,7 @@ Recommended release flow:
 
 1. Run cleanup dry-run and apply cleanup if needed.
 2. Commit your latest changes.
-3. Run the **Release Patch Artifacts** workflow with your version (for example `1.00`).
+3. Run the **Release Patch Artifacts** workflow with your version (for example `1.01`).
 4. Share the generated release assets from GitHub Releases.
 
 ## Contributing

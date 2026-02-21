@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Patch version (for example: 1.00)"
+        description: "Patch version (for example: 1.01)"
         required: true
         type: string
       include_tools_patch:
