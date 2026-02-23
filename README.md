@@ -13,6 +13,11 @@ This patch is intended for *Lustworth Academy* v0.5.4b Extended Edition.
 Do not apply it to earlier or later editions.
 If you do, you may need to fix bugs manually.
 
+
+## Why WebP and OGG formats?
+
+For details on why Lustworth Academy uses WebP for images and OGG for audio (instead of ASIF or MP3), see the [format rationale](format_rationale.md).
+
 ## What this patch does
 
 - Converts audio files to the more efficient `.ogg` format
