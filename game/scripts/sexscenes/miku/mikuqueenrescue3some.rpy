@@ -27,7 +27,7 @@ label miku_queenrescue3some_scene:
     play sound "audio/sfx/ah1.ogg"
     scene eunicemikufuckinganim with vpunch
     play sound "audio/sfx/threesome01.ogg"
-    "{i}As Jimmy began to thrust into Miku, the queen hesitantly sat on his face.{/i}"
+    "{i}As [player_name] began to thrust into Miku, the queen hesitantly sat on his face.{/i}"
     "{i}Miku's body started shaking with pleasure as [player_name]'s cock pounded into her.{/i}"
     Miku "Oh, my lord... you're so big inside me."
     Miku "Fuck me harder! I need your cock!"
