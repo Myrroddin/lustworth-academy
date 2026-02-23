@@ -153,7 +153,7 @@ define config.save_directory = "LustworthAcademyBeta-v2"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.webp"
 
 
 ## Build configuration #########################################################
@@ -194,8 +194,7 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    # build.classify('game/**.webp', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.

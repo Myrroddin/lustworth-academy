@@ -18,7 +18,7 @@ init python:
     class Match3Icon:
         def __init__(self, color):
             self.color = color
-            self.image = Image(match3.imageDir + 'icons/match3_{}_icon.png'.format(self.color))
+            self.image = Image(match3.imageDir + 'icons/match3_{}_icon.webp'.format(self.color))
 
             self.pos = Vector(0, 0)
             self.inMatch = False
@@ -32,7 +32,7 @@ init python:
         def __init__(self, color):
             self.color = color
             self.value = 0.0
-            self.image = Image(match3.imageDir + 'bars/match3_{}_bar.png'.format(self.color))
+            self.image = Image(match3.imageDir + 'bars/match3_{}_bar.webp'.format(self.color))
 
     class Match3Game(renpy.Displayable):
         def __init__(self, recipe, **kwargs):
