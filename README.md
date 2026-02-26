@@ -1,6 +1,6 @@
 # Lustworth Academy — Unofficial Patch
 
-Patch version: **v1.01**
+Patch version: **v1.02**
 
 An unofficial fan patch for the visual novel *Lustworth Academy*. This repository
 contains only the changes (patches, corrected scripts, and converted assets) made
