@@ -25,6 +25,47 @@ init 1 python:
     }
 
 #LABELS
+
+label edna_drunk_intervention:
+    Edna "Pssssst... Hey, kid."
+    Jimmy "Uh?"
+    show edna cook neutral with dissolve
+    Edna "I'm having a good time, but look at her..."
+    show audrey halloween drunk with dissolve
+    Edna "She's barely keeping herself up."
+    Edna "That redhead bitch shouldn't see her like this."
+    Edna "Do me a favor and take her out of here..."
+    Edna "I will distract the bitch so you can slip out."
+    Edna "The janitor's out for the weekend, maybe you can hide her in his place."
+    Edna "She just needs some rest..."
+    Jimmy "Wow, Edna. I didn't know you had a heart..."
+    Edna "Ahhh, what can I say, kid... Now go, before I regret it."
+    Jimmy "Alright..."
+    jump audreyhalloweendrunk
+
+label edna_party_outro:
+    Audrey "Mine is Edna!"
+    play sound "audio/sfx/ednalaugh.ogg"
+    Edna "Ha, ha, ha, ha! Yeah, and we are drinking my gift already!"
+    Edna "Tell you what, kid! I know that redhead bitch will be giving her gift to one of those pricks outside."
+    play sound "audio/sfx/ednalaugh.ogg"
+    Edna "And by the way, I'm glad they are all outside, because the real party is in here, ha, ha, ha, ha!"
+    play sound "audio/sfx/ednaahgorgeous.ogg"
+    Edna "Ahhh, this bottle is gorgeous!"
+    hide edna with dissolve
+    hide audrey with dissolve
+    play sound "audio/sfx/signature01.ogg"
+    return
+
+label jones_toord_ghost_shutdown:
+    play sound "audio/sfx/femaleclearthroat.ogg"
+    Jones "Mr. Toord! You cannot give away who's your secret ghost!"
+    Toord "Ah, who cares... This is stupid."
+    Jimmy "Alright, thanks."
+    $ showscene('cafeteriahalloween')
+    play sound "audio/sfx/signature01.ogg"
+    return
+
 label cafeteriahalloween:
     $ checkcurfew()
     jump cafeteriahalloween_loop
@@ -116,12 +157,7 @@ label jonesandtoorddialog:
         $ gotoscene('cafeteriahalloween')
     elif secretghostclue == 1:
         Toord "Mine is a substitute, so it's lazy like you, slacker!"
-        play sound "audio/sfx/femaleclearthroat.ogg"
-        Jones "Mr. Toord! You cannot give away who's your secret ghost!"
-        Toord "Ah, who cares... This is stupid."
-        Jimmy "Alright, thanks."
-        $ showscene('cafeteriahalloween')
-        play sound "audio/sfx/signature01.ogg"
+        call jones_toord_ghost_shutdown
         show dawsonsecretghost03 with dissolve
         Jimmy "Okay, I got the second clue."
         play sound "audio/sfx/signature02.ogg"
@@ -132,12 +168,7 @@ label jonesandtoorddialog:
     elif secretghostclue == 2:
         Toord "Mine is a woman, so it might have the same taste for dressing like you, slacker!"
         Toord "Oh, and I heard old Camembert also got a woman, it's the only way he can get some! Ha, ha, ha, ha!"
-        play sound "audio/sfx/femaleclearthroat.ogg"
-        Jones "Mr. Toord! You cannot give away who's your secret ghost!"
-        Toord "Ah, who cares... This is stupid."
-        Jimmy "Alright, thanks."
-        $ showscene('cafeteriahalloween')
-        play sound "audio/sfx/signature01.ogg"
+        call jones_toord_ghost_shutdown
         show dawsonsecretghost05 with dissolve
         Jimmy "If Toord and Camembert secret ghost's are women, only Miss Punny and Miss Jones are remaining."
         Jimmy "So, the secret ghost must be a man."
@@ -168,15 +199,7 @@ label ednaandaudreydialog:
     Edna "Ahhh, I'm drunk but not stupid!"
     $ ednaandaudreyclue = True
     if secretghostclue == 0:
-        Audrey "Mine is Edna!"
-        play sound "audio/sfx/ednalaugh.ogg"
-        Edna "Ha, ha, ha, ha! Yeah, and we are drinking my gift already!"
-        Edna "But, I'm not telling you mine, kid!"
-        play sound "audio/sfx/ednaahgorgeous.ogg"
-        Edna "Ahhh, this bottle is gorgeous!"
-        hide edna with dissolve
-        hide audrey with dissolve
-        play sound "audio/sfx/signature01.ogg"
+        call edna_party_outro
         show dawsonsecretghost01 with dissolve
         Jimmy "Okay, I got the first clue."
         play sound "audio/sfx/signature02.ogg"
@@ -185,33 +208,9 @@ label ednaandaudreydialog:
         Jimmy "Edna it's Audrey's secret ghost."
         $ secretghostclue += 1
         hide dawsonsecretghost02 with dissolve
-        Edna "Pssssst... Hey, kid."
-        Jimmy "Uh?"
-        show edna cook neutral with dissolve
-        Edna "I'm having a good time, but look at her..."
-        show audrey halloween drunk with dissolve
-        Edna "She's barely keeping herself up."
-        Edna "That redhead bitch shouldn't see her like this."
-        Edna "Do me a favor and take her out of here..."
-        Edna "I will distract the bitch so you can slip out."
-        Edna "The janitor's out for the weekend, maybe you can hide her in his place."
-        Edna "She just needs some rest..."
-        Jimmy "Wow, Edna. I didn't know you had a heart..."
-        Edna "Ahhh, what can I say, kid... Now go, before I regret it."
-        Jimmy "Alright..."
-        jump audreyhalloweendrunk
+        call edna_drunk_intervention
     elif secretghostclue == 1:
-        Audrey "Mine is Edna!"
-        play sound "audio/sfx/ednalaugh.ogg"
-        Edna "Ha, ha, ha, ha! Yeah, and we are drinking my gift already!"
-        Edna "Tell you what, kid! I know that redhead bitch will be giving her gift to one of those pricks outside."
-        play sound "audio/sfx/ednalaugh.ogg"
-        Edna "And by the way, I'm glad they are all outside, because the real party is in here, ha, ha, ha, ha!"
-        play sound "audio/sfx/ednaahgorgeous.ogg"
-        Edna "Ahhh, this bottle is gorgeous!"
-        hide edna with dissolve
-        hide audrey with dissolve
-        play sound "audio/sfx/signature01.ogg"
+        call edna_party_outro
         show dawsonsecretghost03 with dissolve
         Jimmy "Okay, I got the second clue."
         play sound "audio/sfx/signature02.ogg"
@@ -221,33 +220,9 @@ label ednaandaudreydialog:
         Jimmy "So, Audrey is out."
         $ secretghostclue += 1
         hide dawsonsecretghost04 with dissolve
-        Edna "Pssssst... Hey, kid."
-        Jimmy "Uh?"
-        show edna cook neutral with dissolve
-        Edna "I'm having a good time, but look at her..."
-        show audrey halloween drunk with dissolve
-        Edna "She's barely keeping herself up."
-        Edna "That redhead bitch shouldn't see her like this."
-        Edna "Do me a favor and take her out of here..."
-        Edna "I will distract the bitch so you can slip out."
-        Edna "The janitor's out for the weekend, maybe you can hide her in his place."
-        Edna "She just needs some rest..."
-        Jimmy "Wow, Edna. I didn't know you had a heart..."
-        Edna "Ahhh, what can I say, kid... Now go, before I regret it."
-        Jimmy "Alright..."
-        jump audreyhalloweendrunk
+        call edna_drunk_intervention
     elif secretghostclue == 2:
-        Audrey "Mine is Edna!"
-        play sound "audio/sfx/ednalaugh.ogg"
-        Edna "Ha, ha, ha, ha! Yeah, and we are drinking my gift already!"
-        Edna "Tell you what, kid! I know that redhead bitch will be giving her gift to one of the men outside."
-        play sound "audio/sfx/ednalaugh.ogg"
-        Edna "And by the way, I'm glad they are all outside, because the real party is in here, ha, ha, ha, ha!"
-        play sound "audio/sfx/ednaahgorgeous.ogg"
-        Edna "Ahhh, this bottle is gorgeous!"
-        hide edna with dissolve
-        hide audrey with dissolve
-        play sound "audio/sfx/signature01.ogg"
+        call edna_party_outro
         show dawsonsecretghost05 with dissolve
         Jimmy "Okay, I got the third clue."
         play sound "audio/sfx/signature02.ogg"
@@ -258,21 +233,7 @@ label ednaandaudreydialog:
         Jimmy "Alright, need one more clue to figure out between this two."
         Jimmy "Maybe Miss Dawson herself can give me a clue..."
         hide dawsonsecretghost06 with dissolve
-        Edna "Pssssst... Hey, kid."
-        Jimmy "Uh?"
-        show edna cook neutral with dissolve
-        Edna "I'm having a good time, but look at her..."
-        show audrey halloween drunk with dissolve
-        Edna "She's barely keeping herself up."
-        Edna "That redhead bitch shouldn't see her like this."
-        Edna "Do me a favor and take her out of here..."
-        Edna "I will distract the bitch so you can slip out."
-        Edna "The janitor's out for the weekend, maybe you can hide her in his place."
-        Edna "She just needs some rest..."
-        Jimmy "Wow, Edna. I didn't know you had a heart..."
-        Edna "Ahhh, what can I say, kid... Now go, before I regret it."
-        Jimmy "Alright..."
-        jump audreyhalloweendrunk
+        call edna_drunk_intervention
 
 label camemberthalloweendialog:
     hide screen freeroamhud
