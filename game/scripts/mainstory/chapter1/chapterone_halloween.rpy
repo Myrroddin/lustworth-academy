@@ -1,12 +1,12 @@
 label halloween_harrisonhousearrival:
     play music MUSIC_HALLOWEEN_THEME
     scene harrisonhouseentrancehalloween with fade
-    "{i}It's Halloween night and the full moon illuminates the sky, casting an eerie glow on the landscape.{/i}"
-    "{i}Pete, Gary and [player_name], dressed in their particular costumes, are making their way towards the Harrison mansion, where a Halloween party is in full swing.{/i}"
-    "{i}As they approach, [player_name] can hear the faint laughter of girls in the distance and wonders who will be there.{/i}"
-    "{i}The three friends have an ulterior motive for coming to the party - to pull off the ultimate Halloween prank. Their target? Derby, the leader of the preps."
-    "{i}Their goal? To steal the Derby's laptop and pull pranks around the mansion to make the preps look like fools. It's going to be a night that they'll never forget.{/i}"
-    "{i}Have fun, have sex, and be scary!{/i}"
+    __("{i}It's Halloween night and the full moon illuminates the sky, casting an eerie glow on the landscape.{/i}")
+    __("{i}Pete, Gary and [player_name], dressed in their particular costumes, are making their way towards the Harrison mansion, where a Halloween party is in full swing.{/i}")
+    __("{i}As they approach, [player_name] can hear the faint laughter of girls in the distance and wonders who will be there.{/i}")
+    __("{i}The three friends have an ulterior motive for coming to the party - to pull off the ultimate Halloween prank. Their target? Derby, the leader of the preps.")
+    __("{i}Their goal? To steal the Derby's laptop and pull pranks around the mansion to make the preps look like fools. It's going to be a night that they'll never forget.{/i}")
+    __("{i}Have fun, have sex, and be scary!{/i}")
     show pete bunny neutral with dissolve
     Pete "Alright, [player_name]. We need to do this like ninjas."
     Pete "First, the preps love drinking cocktails with not that much alcohol." 
@@ -39,7 +39,7 @@ label halloween_harrisonhousearrival:
 
 label halloween_intermission:
     scene laterthatday with fade
-    "{i}Some time later...{/i}"
+    __("{i}Some time later...{/i}")
     scene harrisonhouseentrancenight with fade
     show pete bunny neutral with dissolve
     play sound "audio/sfx/heypete01.ogg"
@@ -148,22 +148,22 @@ label halloween_violethalloweenincident:
     Derby "You disgusting peasant, get away from my princess!"
     play sound "audio/sfx/scream01.ogg"
     scene darkderbybedroom with fade
-    "{i}[player_name] had two options, taking his clothes and run, or taking Derby's laptop and run.{/i}"
-    "{i}As he tried to do both, he realized he was cornered inside the bedroom with the door being held by Derby Harrison.{/i}"
+    __("{i}[player_name] had two options, taking his clothes and run, or taking Derby's laptop and run.{/i}")
+    __("{i}As he tried to do both, he realized he was cornered inside the bedroom with the door being held by Derby Harrison.{/i}")
     Jimmy "Think fast, [player_name], think fast!"
     play sound "audio/sfx/big_punch.ogg"
     scene halloweeneventending01 with vpunch
-    "{i}In a matter of seconds, [player_name] took Derby's laptop running towards the closest window.{/i}"
+    __("{i}In a matter of seconds, [player_name] took Derby's laptop running towards the closest window.{/i}")
     play sound "audio/sfx/run01.ogg"
-    "{i}He looked down from the small balcony outside and saw a group of bushes next to the pool.{/i}"
-    "{i}There was only one way to get out of there.{/i}"
+    __("{i}He looked down from the small balcony outside and saw a group of bushes next to the pool.{/i}")
+    __("{i}There was only one way to get out of there.{/i}")
     play sound "audio/sfx/big_punch.ogg"
     scene halloweeneventending02 with vpunch
-    "{i}After throwing the laptop into the bushes, he ran towards the ledge of the balcony and jumped into the pool.{/i}"
+    __("{i}After throwing the laptop into the bushes, he ran towards the ledge of the balcony and jumped into the pool.{/i}")
     play sound "audio/sfx/crowdshock01.ogg"
-    "{i}Being naked in front of the crowd that was about to come out of the building, he got out as fast as he could, fetched the laptop and ran away.{/i}"
+    __("{i}Being naked in front of the crowd that was about to come out of the building, he got out as fast as he could, fetched the laptop and ran away.{/i}")
     scene halloweeneventending03 with vpunch
-    "{i}That was definitely a night he will always remember.{/i}"
+    __("{i}That was definitely a night he will always remember.{/i}")
     stop music
     call nextday from _call_nextday_7
     call nextday from _call_nextday_8
@@ -216,10 +216,10 @@ label halloween_fionasex:
     Fiona "Come on, let's get out of here!"
     play music "audio/music/80music.ogg"
     scene fionawaldodancing with vpunch
-    "{i}Finally free from the shackles of underpaid labor, Fiona took [player_name]'s hand and led him to the dancing floor.{/i}"
+    __("{i}Finally free from the shackles of underpaid labor, Fiona took [player_name]'s hand and led him to the dancing floor.{/i}")
     Fiona "God! You don't know how much I wanted to dance with you!"
-    "{i}They both got closer and closer as the music took over their bodies.{/i}"
-    "{i}Their skin rubbed together, as the heat of the moment increased, igniting their passion.{/i}"
+    __("{i}They both got closer and closer as the music took over their bodies.{/i}")
+    __("{i}Their skin rubbed together, as the heat of the moment increased, igniting their passion.{/i}")
     Fiona "Let's go to a private place..."
     Jimmy "Of course..."
     scene fewmomentslater with fade
@@ -234,8 +234,8 @@ label halloween_fionasex:
     Fiona "So, before all hell breaks loose, I want to have as much fun as I can tonight with you."
     Jimmy "Anything special in mind?"
     hide fiona with dissolve
-    "{i}Fiona hopped on the nearest bed and started taking off her shorts.{/i}"
-    "{i}Watching her undress, an aroused [player_name] quickly followed suit and stripped off his clothes.{/i}"
+    __("{i}Fiona hopped on the nearest bed and started taking off her shorts.{/i}")
+    __("{i}Watching her undress, an aroused [player_name] quickly followed suit and stripped off his clothes.{/i}")
     call fiona_halloweensex_scene from _call_fiona_halloweensex_scene
     stop music
     stop sound
@@ -313,7 +313,7 @@ label halloween_beatrixgrinding:
     Jimmy "Beatrix? How's the night going?"
     play sound "audio/sfx/mh1.ogg"
     Beatrix "I'm jussst feeleeng a litt bit funny."
-    "Oh, oh, she's really drunk now."
+    __("Oh, oh, she's really drunk now.")
     Beatrix "You know, I kind og hate you. I mean, I dln't jnow why but you lookm like an asssshole and..."
     Beatrix "I loke you and don't know why. It must be some meethod of reeverrse psychology."
     Beatrix "I can't stip thinling about howw I danssed on yur lap..."
@@ -334,7 +334,7 @@ label halloween_beatrixgrinding:
     Beatrix "Umm, a bit salty and... gross."
     Beatrix "Well, you serrved me well, [player_name]. I shoulld rest now."
     Beatrix "See ya!"
-    "{i}She pushed [player_name] outside the office and closed the door.{/i}"
+    __("{i}She pushed [player_name] outside the office and closed the door.{/i}")
     $ quests.beatrixHalloweenGrinding = COMPLETE
     if quests.beatrixHomework == LOCKED:
         $ quests.beatrixHomework = ACTIVE
@@ -397,16 +397,16 @@ label halloween_christyandmandypoolintro:
 
 label halloween_voltiumfound:
     hide screen freeroamhud
-    "Seems to be unlocked, let's take a look."
+    __("Seems to be unlocked, let's take a look.")
     scene harrisonhousebedroom01 with fade
-    "Maybe I can find that Voltium somewhere in here."
+    __("Maybe I can find that Voltium somewhere in here.")
     scene twentyminuteslater onlayer cutscene with dissolve
     pause 1.2
     scene onlayer cutscene
     with dissolve
     call item_pickup(ItemVoltium) from _call_item_pickup_18
-    "So this is Voltium, huh?"
-    "We'll see if it lives up to Christy's hype."
+    __("So this is Voltium, huh?")
+    __("We'll see if it lives up to Christy's hype.")
     $ quests.christyMandyVoltium = SATISFIED
     $ gotoscene('harrisonhousefloor2', transition=fade)
 
@@ -436,7 +436,7 @@ label halloween_christyandmandypoolsex:
     hide christy
     hide mandy
     with dissolve
-    "{i}Not much time passed after taking the pills before one of the girls started taking her clothes off.{/i}"
+    __("{i}Not much time passed after taking the pills before one of the girls started taking her clothes off.{/i}")
     call christy_halloweenpoolsex_scene from _call_christy_halloweenpoolsex_scene
     Christy "What do you think?"
     Christy "Did we put on a good show?"
@@ -918,9 +918,9 @@ label halloween_cassidyjacuzzi:
     Cassidy "Just play."
     Jimmy "Alright..."
     menu:
-        "What's the lie?"
+        __("What's the lie?")
 
-        "I've never had sex in my life.":
+        __("I've never had sex in my life."):
             Jimmy "I don't believe you're a virgin."
             Jimmy "You must be a nymphomaniac."
             play sound "audio/sfx/wrongfx.ogg"
@@ -933,11 +933,11 @@ label halloween_cassidyjacuzzi:
             Jimmy "She must already know how every dick in town feels inside her."
             Cassidy soberb "HAHAHAHAHA! You're so mean."
             Cassidy "But, you lost..."
-        "I make webcam porn for money.":
+        __("I make webcam porn for money."):
             Jimmy "Webcam? Bullshit."
             play sound "audio/sfx/correctfx.ogg"
             Cassidy "Ding, ding. We have a winner!"
-        "I want to see your dick.":
+        __("I want to see your dick."):
             Jimmy "You don't want to see my dick, do you?"
             Cassidy "..."
             play sound "audio/sfx/wrongfx.ogg"
@@ -970,9 +970,9 @@ label halloween_cassidyjacuzzi:
     $ quests.christyPlan = ACTIVE
     $ Cassidy.relPoints += 1
     if quests.halloweenGraffitiMessage == ACTIVE:
-        "{i}After having fun in the jacuzzi, [player_name]'s head was clearer than ever.{/i}"
-        "{i}He realized the jacuzzi had to be one of the preps' favorite places to hang out.{/i}"
-        "{i}So, it was the perfect place to leave a message.{/i}"
+        __("After having fun in the jacuzzi, [player_name]'s head was clearer than ever.")
+        __("He realized the jacuzzi had to be one of the preps' favorite places to hang out.")
+        __("So, it was the perfect place to leave a message.")
         play sound "audio/sfx/guitarriff01.ogg"
         scene prepprankgraffiti with fade
         $ quests.halloweenGraffitiMessage = COMPLETE
@@ -1029,9 +1029,9 @@ label halloween_tatianajacuzzi:
     $ Tatiana.relPoints += 1
     if quests.halloweenGraffitiMessage == ACTIVE:
         scene harrisonhousejacuzzi with fade
-        "{i}After having fun in the jacuzzi, [player_name]'s head was clearer than ever.{/i}"
-        "{i}He realized the jacuzzi had to be one of the preps' favorite places to hang out.{/i}"
-        "{i}So, it was the perfect place to leave a message.{/i}"
+        __("After having fun in the jacuzzi, [player_name]'s head was clearer than ever.")
+        __("He realized the jacuzzi had to be one of the preps' favorite places to hang out.")
+        __("So, it was the perfect place to leave a message.")
         scene prepprankgraffiti with fade
         $ quests.halloweenGraffitiMessage = COMPLETE
         Jimmy "Perfect."
@@ -1064,7 +1064,7 @@ label halloween_rubycostumecontest:
     Ruby "But... I think you're interesting enough to earn my time."
     Jimmy "I feel honored, your highness."
     Ruby "Awww, you're so cute."
-    "I guess she doesn't understand the concept of sarcasm."
+    __("I guess she doesn't understand the concept of sarcasm.")
     Ruby "It's a change of pace not talking to one of Derby's friends."
     Ruby "Sometimes they get on my nerves."
     Ruby "Did you heard about the costume contest?"
@@ -1087,7 +1087,7 @@ label halloween_rubyjacuzzi:
     Ruby "I guess you're used to common showers and stuff like that, right?"
     Jimmy "Well, I sometimes have to take a bath under the rain, you know, 'cause it's free."
     Ruby "Oh, that's so sad..."
-    "Did she seriously just believe that?"
+    __("Did she seriously just believe that?")
     Ruby "Well, in a jacuzzi the water is warm and really enticing."
     Jimmy "Alright, so, do we take our clothes off? Or..."
     Ruby "Yes, of course, we can go in in our underwear."
@@ -1095,9 +1095,9 @@ label halloween_rubyjacuzzi:
     $ Ruby.relPoints += 1
     if quests.halloweenGraffitiMessage == ACTIVE:
         scene harrisonhousejacuzzi with fade
-        "{i}After having fun in the jacuzzi, [player_name]'s head was clearer than ever.{/i}"
-        "{i}He realized the jacuzzi had to be one of the preps' favorite places to hang out.{/i}"
-        "{i}So, it was the perfect place to leave a message.{/i}"
+        __("After having fun in the jacuzzi, [player_name]'s head was clearer than ever.")
+        __("He realized the jacuzzi had to be one of the preps' favorite places to hang out.")
+        __("So, it was the perfect place to leave a message.")
         scene prepprankgraffiti with fade
         $ quests.halloweenGraffitiMessage = COMPLETE
         Jimmy "Perfect."

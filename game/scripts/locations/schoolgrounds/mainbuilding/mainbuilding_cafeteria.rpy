@@ -47,8 +47,8 @@ label mainbuildingcafeteria_eunice:
     hide eunicedialog01
     if EuniceDaylimit == True:
         show eunice uniform neutral with dissolve
-        Jimmy "*She look busy today.*"
-        Jimmy "*Let's talk another time.*"
+        Jimmy "*She looks busy today.*"
+        Jimmy "*I'll talk another time.*"
         jump mainbuildingcafeteria_loop
     jump eunicedialogue
 
@@ -56,7 +56,7 @@ label mainbuildingcafeteria_kitchen:
     if quests.missdawsonAssistant == ACTIVE:
         if quests.missdawsonAssistantEdna == LOCKED:
             jump ednathecookintro
-    "That's the kitchen, it's smells awful in there."
+    __("That's the kitchen, it smells awful in there.")
     jump mainbuildingcafeteria_loop
 
 label ednathecookintro:

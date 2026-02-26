@@ -3,7 +3,7 @@ label queenletticiarescueintro:
     play music "audio/music/investigationfunny.ogg"
     scene auditoriumhallfallevening with fade
     show miku servant sad with moveinright
-    "{i}When entering the Auditorium, [player_name] saw Miku in a corner wearing an old dress and doing exaggerated gestures to herself."
+    __("{i}When entering the Auditorium, [player_name] saw Miku in a corner wearing an old dress and doing exaggerated gestures by herself.{/i}")
     play sound "audio/sfx/frustratedhum.ogg"
     Miku "Oh, woe is me! The Queen languishes! Her royal spirit, once a lion's roar, now but a gentle sigh!"
     Jimmy "..."
@@ -34,11 +34,11 @@ label queenletticiarescueintro:
     Miku "At once! Come with me, I know a secret way into the dungeon."
     play sound "audio/sfx/run01.ogg"
     scene auditoriumbackstage01 with fade
-    "{i}Miku pushes aside a heavy velvet curtain, revealing the familiar backstage area. In the dim, dusty light, it looks less like a workshop and more like a grim, forgotten catacomb.{/i}"
+    __("{i}Miku pushes aside a heavy velvet curtain, revealing the familiar backstage area. In the dim, dusty light, it looks less like a workshop and more like a grim, forgotten catacomb.{/i}")
     Miku "{i}*whispering* Tread carefully, good Guard. The usurper's spies are everywhere.{/i}"
     play sound "audio/sfx/hmm02.ogg"
     Miku "The Queen is being held in the deepest cell... Umm, 'Prop Storage Closet B'."
-    "{i}She leads you to a dark corner, partially blocked by a large, painted flat of a spooky-looking tree. From behind it, you hear a faint, sorrowful sigh.{/i}"
+    __("{i}She leads you to a dark corner, partially blocked by a large, painted flat of a spooky-looking tree. From behind it, you hear a faint, sorrowful sigh.{/i}")
     scene queenletticiaprisoner with fade
     play music "audio/music/classicmusic01.ogg"
     Eunice "Is that you, Matilda? Have you come to watch the last flicker of my royal light extinguish?"
@@ -58,7 +58,7 @@ label queenletticiarescueintro:
     Miku "Yes! At last! Your strength will be renewed, my Queen!"
     play sound "audio/sfx/stopmusiceffect.ogg"
     stop music
-    "{i}Miku's anxiously pulls out the glass of milk, but immediately drops it and it turns into a white pool of broken glass on the ground.{/i}"
+    __("{i}Miku's anxiously pulls out the glass of milk, but immediately drops it and it turns into a white pool of broken glass on the ground.{/i}")
     play sound "audio/sfx/glassbrake.ogg"
     scene queenletticiaprisonermilk with vpunch
     Miku "No! Catastrophe! The chalice!"

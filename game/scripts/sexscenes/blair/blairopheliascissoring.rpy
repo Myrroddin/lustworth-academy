@@ -1,8 +1,8 @@
 label blair_opheliascissoring_scene:
     play music MUSIC_SEXY_THEME
     scene blairlesbianrubanim01 with dissolve
-    "WHOA WHAT THE FUCK?!"
-    "Is that Blair?"
+    __("WHOA WHAT THE FUCK?!")
+    __("Is that Blair?")
     $ renpy.pause()
     if blairgallery == True:
         call screen blairgallery

@@ -5,7 +5,7 @@ label misspunnyprivatelesson01:
     Jimmy "I'm gonna pay for a private lesson, Miss."
     play sound "audio/sfx/hmm03.ogg"
     Punny "Oh! That's such good news!"
-    Punny "Muchas gracias, Mr. [player_surname]."
+    Punny "Muchas gracias, Sr. [player_surname]."
     $ Jimmy.money -= 100
     Punny desk arm "I have something special for our first lesson."
     Punny "Meet me by the plaza with the golden statue in a couple of hours and we'll start, ¿esta bien?"
@@ -16,7 +16,7 @@ label misspunnyprivatelesson01:
     $ showscene('schoolgroundspeacockplaza', transition=fade)
     show misspunny teacher neutral with dissolve
     play sound "audio/sfx/hey04.ogg"
-    Punny "Mr. [player_surname]! Everything is ready now."
+    Punny "Sr. [player_surname]! Everything is ready now."
     Punny "Do you like hiking?"
     Jimmy "Well, I don't mind taking a walk from time to time."
     play sound "audio/sfx/giggle01.ogg"
@@ -30,9 +30,9 @@ label misspunnyprivatelesson01:
     scene twentyminuteslater with fade
     $ renpy.pause()
     $ showscene('observatoryhillexterior', transition=fade)
-    "{i}After walking for a while longer than he expected, [player_name] and Miss Punny arrived to the area near the observatory.{/i}"
-    "{i}The sun was shining, and the breeze was gentle.{/i}"
-    "{i}A picnic blanket was spread out with various foods: fruits, bread, and juice.{/i}"
+    __("{i}After walking for a while longer than he expected, [player_name] and Miss Punny arrived to the area near the observatory.{/i}")
+    __("{i}The sun was shining, and the breeze was gentle.{/i}")
+    __("{i}A picnic blanket was spread out with various foods: fruits, bread, and juice.{/i}")
     scene misspunnypicnic01 with fade
     play sound "audio/sfx/girlsigh01.ogg"
     play music MUSIC_MISSPUNNY_THEME
@@ -61,7 +61,7 @@ label misspunnyprivatelesson01:
     Punny "Eso es queso. Queso amarillo."
     Jimmy "Queso amareello, right... I’m getting the hang of this."
     scene misspunnypicnic04 with fade
-    "{i}The lesson continues and the conversation flows naturally, as well as the food towards the digestive system.{/i}"
+    __("{i}The lesson continues and the conversation flows naturally, as well as the food towards the digestive system.{/i}")
     Jimmy "So, Miss, how did you become so good at Spanish?"
     play sound "audio/sfx/femaleclearthroat.ogg"
     Punny "Well, you know, growing up in a Spanish-speaking household helps a lot."
@@ -79,15 +79,15 @@ label misspunnyprivatelesson01:
     play sound "audio/sfx/undress01.ogg"
     scene misspunnypicnic05 with fade
     play music MUSIC_TENDER01_THEME
-    "{i}For a while, they shared a moment of silence, enjoying the view and the company.{/i}"
-    "{i}[player_name] looks at Miss Punny, noticing how the soft sunlight makes her skin glow, realizing how beautiful she was...{/i}"
+    __("{i}For a while, they shared a moment of silence, enjoying the view and the company.{/i}")
+    __("{i}[player_name] looks at Miss Punny, noticing how the soft sunlight makes her skin glow, realizing how beautiful she was...{/i}")
     scene misspunnypicnic06 with fade
-    "{i}And how sexy she was too. That one is called 'banana', by the way.{/i}"
+    __("{i}And how sexy she was too. That one is called 'banana', by the way.{/i}")
     play sound "audio/sfx/undress01.ogg"
     scene misspunnypicnic07 with fade
     Jimmy "Thank you, Miss."
     Jimmy "I really appreciate the effort. It's not just the lesson, but spending time with you."
-    Punny "I've enjoyed it too, Mr. [player_surname]."
+    Punny "I've enjoyed it too, Sr. [player_surname]."
     Jimmy "Please, you can call me [player_name], Miss."
     play sound "audio/sfx/hum01.ogg"
     Punny "I shouldn't because I'm your teacher but, alright [player_name]. It's nice to get to know you better outside of the classroom."
@@ -100,8 +100,8 @@ label misspunnyprivatelesson01:
     Punny "My husband? Oh..."
     play sound "audio/sfx/girlsigh01.ogg"
     Punny "..."
-    "{i}Her expression suddenly changed as [player_name] started questioning if he said something wrong.{/i}"
-    "{i}A long silence made things even more uncomfortable.{/i}"
+    __("{i}Her expression suddenly changed as [player_name] started questioning if he said something wrong.{/i}")
+    __("{i}A long silence made things even more uncomfortable.{/i}")
     Punny "Oh, el tiempo vuela! I think it's time to get back."
     call nexttime from _call_nexttime_39
     $ showscene('observatoryhillexterior', transition=fade)
@@ -125,9 +125,9 @@ label misspunnydancinglesson:
     hide screen freeroamhud with None
     $ showscene('mainbuildingauditorium', transition=fade)
     play music "audio/music/salsatheme01.ogg"
-    "{i}The auditorium was empty as a soft, golden light cast a warm glow over the scenario.{/i}"
-    "{i}Music with a rythmic melody and tropical sounds played softly in the background.{/i}"
-    "{i}Miss Punny stood in the middle of the floor, dressed with clothes that make her attributes stand out.{/i}"
+    __("{i}The auditorium was empty as a soft, golden light cast a warm glow over the scenario.{/i}")
+    __("{i}Music with a rythmic melody and tropical sounds played softly in the background.{/i}")
+    __("{i}Miss Punny stood in the middle of the floor, dressed with clothes that make her attributes stand out.{/i}")
     scene misspunnydancinglesson01 with fade
     play sound "audio/sfx/gasp01.ogg"
     Punny "[player_name]! What are you doing here?"
@@ -142,33 +142,33 @@ label misspunnydancinglesson:
     Punny "Just follow my lead. First, let's start with the basic steps."
     scene misspunnydancinglesson02 with fade
     play music "audio/music/salsatheme02.ogg"
-    "{i}With fluid and graceful movements, Miss Punny starts moving her feet right and left.{/i}"
-    "{i}[player_name] watches intently, trying to mimic her steps.{/i}"
+    __("{i}With fluid and graceful movements, Miss Punny starts moving her feet right and left.{/i}")
+    __("{i}[player_name] watches intently, trying to mimic her steps.{/i}")
     Punny "You're doing great! Just remember to keep your hips loose and follow the rhythm."
     scene misspunnydancinglesson03 with fade
     play sound "audio/sfx/crowdshock01.ogg"
-    "{i}[player_name] fumbles a bit, trying to keep up with Miss Punny's instructions, as she moves closer to him.{/i}"
-    "{i}He steps on her foot accidentally and quickly apologizes.{/i}"
+    __("{i}[player_name] fumbles a bit, trying to keep up with Miss Punny's instructions, as she moves closer to him.{/i}")
+    __("{i}He steps on her foot accidentally and quickly apologizes.{/i}")
     Jimmy "Sorry! I told you, I'm not much of a dancer."
     Punny "You're doing fine! Just relax and enjoy the moment."
     play sound "audio/sfx/alright06.ogg"
-    "{i}Gradually [player_name] started to become more comfortable with the steps.{/i}"
-    "{i}She took his hand, guiding him through the more complicated movements as there was a growing connection between them.{/i}"
-    "{i}There was something about the music and the dance that made them feel closer and closer. Passion brewed inside them.{/i}"
+    __("{i}Gradually [player_name] started to become more comfortable with the steps.{/i}")
+    __("{i}She took his hand, guiding him through the more complicated movements as there was a growing connection between them.{/i}")
+    __("{i}There was something about the music and the dance that made them feel closer and closer. Passion brewed inside them.{/i}")
     play sound "audio/sfx/big_punch.ogg"
     scene misspunnydancinglesson04 with fade
     Jimmy "I think I'm getting the hang of it!!"
     play sound "audio/sfx/wow01.ogg"
     Punny "Wow, maybe not that much flair! But I love the enthusiasm."
-    "{i}Suddenly, their eyes lock. There's a palpable chemistry between them, and for a brief moment, it felt almost romantic.{/i}"
+    __("{i}Suddenly, their eyes lock. There's a palpable chemistry between them, and for a brief moment, it felt almost romantic.{/i}")
     play sound "audio/sfx/stopmusiceffect.ogg"
     stop music
-    "{i}But then, [player_name] tripped over his own feet, his hands pulling Miss Punny to the ground with him.{/i}"
+    __("{i}But then, [player_name] tripped over his own feet, his hands pulling Miss Punny to the ground with him.{/i}")
     play sound "audio/sfx/big_punch_trimmed.ogg"
     scene misspunnydancinglesson05 with vpunch
     play sound "audio/sfx/sexyintro.ogg"
-    "{i}They both looked at each other for a while in silence. Neither of them moved, not even an inch.{/i}"
-    "{i}He could feel her breathing on his skin and the heat emanating from their sweaty bodies.{/i}"
+    __("{i}They both looked at each other for a while in silence. Neither of them moved, not even an inch.{/i}")
+    __("{i}He could feel her breathing on his skin and the heat emanating from their sweaty bodies.{/i}")
     play sound "audio/sfx/hmm01.ogg"
     Punny "..."
     Jimmy "..."
@@ -220,7 +220,7 @@ label misspunnyprivatelesson02:
         call nexttime from _call_nexttime_45
     elif calendar.when[2] == EVENING:
         call nexttime from _call_nexttime_46
-    "{i}They spent the rest of the day practicing what [player_name] learned in the last lesson, and getting the basics of anatomy in Spanish.{/i}"
+    __("{i}They spent the rest of the day practicing what [player_name] learned in the last lesson, and getting the basics of anatomy in Spanish.{/i}")
     play sound "audio/sfx/laugh01.ogg"
     Punny "HA, HA, HA! It's not cerveza! It's CABEZA! HA HA HA!" with vpunch
     play music MUSIC_FUNNY_MOMENT
@@ -231,30 +231,30 @@ label misspunnyprivatelesson02:
     scene misspunnyanatomy01 with fade
     Punny "Let's start with the head..."
     menu:
-        "Pierna":
+        __("Pierna"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "La pierna?"
             Punny "Oh, no... It's Cabeza."
-        "Cabeza":
+        __("Cabeza"):
             play sound "audio/sfx/correctfx.ogg"
             Jimmy "La cerve... La cabeza!"
             Punny "Good job!"
-        "Mano":
+        __("Mano"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "La mano?"
             Punny "Oh, no... It's Cabeza."
     scene misspunnyanatomy02 with fade
     Punny "What about these..."
     menu:
-        "Pierna":
+        __("Pierna"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "La pierna?"
             Punny "Oh, no... It's los ojos."
-        "Cuello":
+        __("Cuello"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "El cuello?"
             Punny "Oh, no... It's los ojos."
-        "Los ojos":
+        __("Los ojos"):
             play sound "audio/sfx/correctfx.ogg"
             Jimmy "Los ojos."
             Punny "Good job!"
@@ -264,40 +264,40 @@ label misspunnyprivatelesson02:
     scene misspunnyanatomy03 with fade
     Punny "And these..."
     menu:
-        "Piernas":
+        __("Piernas"):
             play sound "audio/sfx/correctfx.ogg"
             Jimmy "Las piernas?"
             Punny "Good job!"
-        "Los brazos":
+        __("Los brazos"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "Los brazos?"
             Punny "Oh, no... It's las piernas."
-        "Corazón":
+        __("Corazón"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "El corazón?"
             Punny "Oh, no... It's las piernas."
     scene misspunnyanatomy04 with fade
     Punny "Next, we have..."
     menu:
-        "Pecho":
+        __("Pecho"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "El pecho?"
             Punny "Oh, no... It's los pies."
-        "Pies":
+        __("Pies"):
             play sound "audio/sfx/correctfx.ogg"
             Jimmy "Los pies!"
             Punny "Good job!"
             Jimmy "Muy bonitos too."
             play sound "audio/sfx/giggle02.ogg"
             Punny "Ha, ha, ha, stop it..."
-        "Dedos":
+        __("Dedos"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "Los dedos?"
             Punny "Oh, no... It's los pies."
     scene misspunnyanatomy05 with fade
     Punny "And lastly..."
     menu:
-        "Tetas":
+        __("Tetas"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "Las tetas?"
             play sound "audio/sfx/laugh03.ogg"
@@ -305,11 +305,11 @@ label misspunnyprivatelesson02:
             Punny "Oh, my god! [player_name]! No!"
             Punny "It's el corazón!"
             Jimmy "Oh, I'm sorry, Lucía."
-        "Corazón":
+        __("Corazón"):
             play sound "audio/sfx/correctfx.ogg"
             Jimmy "El corazón!"
             Punny "Good job!"
-        "Nalgas":
+        __("Nalgas"):
             play sound "audio/sfx/wrongfx.ogg"
             Jimmy "Las nalgas?"
             play sound "audio/sfx/laugh01.ogg"
@@ -392,13 +392,13 @@ label punnyromanticdinner:
     play music MUSIC_TENDER01_THEME
     scene punnyhouselivingroomnight with fade
     play sound "audio/sfx/highheels.ogg"
-    "{i}The aroma of freshly cooked paella filled the cozy, dimly lit dining room.{/i}"
-    "{i}[player_name] could hear the faint notes of a soft melody playing in the background.{/i}"
+    __("{i}The aroma of freshly cooked paella filled the cozy, dimly lit dining room.{/i}")
+    __("{i}[player_name] could hear the faint notes of a soft melody playing in the background.{/i}")
     show misspunny gala talk with dissolve
     play sound "audio/sfx/doorclose01.ogg"
-    "{i}Lucía, draped in a stunning red dress that accentuated her graceful figure, moved with elegant ease as she already had the table ready for two.{/i}"
-    "{i}As she heard the door knocking sound, a smile played on her lips, a blend of anticipation and nervous excitement.{/i}"
-    "{i}She opened the door to find [player_name] standing there, and her eyes lit up.{/i}"
+    __("{i}Lucía, draped in a stunning red dress that accentuated her graceful figure, moved with elegant ease as she already had the table ready for two.{/i}")
+    __("{i}As she heard the door knocking sound, a smile played on her lips, a blend of anticipation and nervous excitement.{/i}")
+    __("{i}She opened the door to find [player_name] standing there, and her eyes lit up.{/i}")
     play sound "audio/sfx/gasp02.ogg"
     Punny suggestive "[player_name]! Estás aquí!"
     Jimmy "You look breathtaking, Lucía."
@@ -416,12 +416,12 @@ label punnyromanticdinner:
     Punny "Well, let's stop talking and let's get to the important stuff."
     Jimmy "Yes, ma'am!"
     scene punnyromanticdinner01 with fade
-    "{i}They settled at the table, and the little amount of conversation that wasn't interrumpted by chewing, flowed effortlesly.{/i}"
+    __("{i}They settled at the table, and the little amount of conversation that wasn't interrumpted by chewing, flowed effortlesly.{/i}")
     play sound "audio/sfx/giggle02.ogg"
-    "{i}There was an undoubtable growing connection between them, nurtured through those private lessons that ended up with a such a climatic scene.{/i}"
+    __("{i}There was an undoubtable growing connection between them, nurtured through those private lessons that ended up with a such a climatic scene.{/i}")
     play sound "audio/sfx/teapour.ogg"
-    "{i}As they sipped on a rich red wine, Lucía felt a sense of joy she hadn't experienced in a long time, since her husband dissapeared.{/i}"
-    "{i}Yet, there was doubt clouding her mind, a feeling of sadness that refused to be silenced.{/i}"
+    __("{i}As they sipped on a rich red wine, Lucía felt a sense of joy she hadn't experienced in a long time, since her husband dissapeared.{/i}")
+    __("{i}Yet, there was doubt clouding her mind, a feeling of sadness that refused to be silenced.{/i}")
     scene punnyhouselivingroomnight with fade
     show misspunny gala talk with dissolve
     Punny "[player_name], I've been meaning to tell you something."
@@ -446,8 +446,8 @@ label punnyromanticdinner:
     Jimmy "That's all that matters."
     play sound "audio/sfx/girlsigh01.ogg"
     Punny "Thank you, [player_name]. For everything."
-    "{i}They finished the bottle of wine, their conversation meandering through memories and shared dreams.{/i}"
-    "{i}As the night grew darker, Lucía felt a desire she could no longer ignore.{/i}"
+    __("{i}They finished the bottle of wine, their conversation meandering through memories and shared dreams.{/i}")
+    __("{i}As the night grew darker, Lucía felt a desire she could no longer ignore.{/i}")
     Punny "Would you like to come to my bedroom?"
     Jimmy "I'd love to."
     Jimmy "But, I need to go to the bathroom, first."
@@ -511,8 +511,8 @@ label punnyhusbandarrival:
     play sound "audio/sfx/gasp01.ogg"
     Punny "..."
     play sound "audio/sfx/doorclose01.ogg"
-    "{i}After hearing that voice, Lucía froze and couldn't move for a moment.{/i}"
-    "{i}A man wearing a military uniform was standing near the door of the classroom.{/i}"
-    "{i}[player_name] already figured out who he was...{/i}"
+    __("{i}After hearing that voice, Lucía froze and couldn't move for a moment.{/i}")
+    __("{i}A man wearing a military uniform was standing near the door of the classroom.{/i}")
+    __("{i}[player_name] already figured out who he was...{/i}")
     $ quests.punnyDatingTeacher = COMPLETE
     $ gotoscene('mainbuildingrighthallway')

@@ -285,7 +285,7 @@ label camemberthalloweendialog:
     Camembert "So, what brings you here?"
     Camembert "Are you trying to saciate your knowledge about the precise mathematic explanation of the universe existance?"
     Jimmy "Well, sir..."
-    "{i}'This guy is insufferable, thought [player_surname]'{/i}"
+    __("{i}'This guy is insufferable, thought [player_name].{/i}")
     Jimmy "I'm not that smart, but I'm actually trying to solve a riddle of my own."
     Camembert "Ah, interesting. Tell me more."
     Jimmy "You know about the secret ghost, right?"
@@ -327,7 +327,7 @@ label camemberthalloweendialog:
         Jimmy "Maybe she's Mr. Toord's secret ghost?"
         play sound "audio/sfx/signature02.ogg"
         show dawsonsecretghost04 with dissolve
-        Jimmy "If that's the case, it's obvious she is not Miss Dawson secret ghost."
+        Jimmy "If that's the case, it's obvious she is not Miss Dawson's secret ghost."
         $ secretghostclue += 1
         $ gotoscene('cafeteriahalloween')
     elif secretghostclue == 2:
@@ -375,7 +375,7 @@ label misspunnyhalloweendialog:
     Punny "Oh, ha, ha, of course, dear. It's 'importa'. What do you need?"
     Jimmy "Do you know the fantasma secriito tradition?"
     Punny "Fantasma secreto? Si, por supuesto. I got my gift right here."
-    "{i}Goddamn she is hot! I would love to have some private classes with her.{/i}"
+    __("Goddamn she is hot! I would love to have some private classes with her.")
     Jimmy "Could you give me a clue of who is your fantasmo secreto?"
     Punny "Ha, ha, ha, I love your effort, my dear."
     Punny "But, lo siento. I can't tell you who is it. It's part of the tradition."
@@ -430,13 +430,13 @@ label missdawsonhalloweendialog:
     Jimmy "Oh, not at all, sir!"
     Jimmy "I just heard about it and someone told me it was one of the teachers!"
     Jimmy "I... I thought, well... you know..."
-    Camembert "Because is Black it must be me, right?"
+    Camembert "Because is 'Black' it must be me, right?"
     Camembert "Ha, ha, ha, ha, ha! You should have seen your face, boy."
     Camembert "First, I gotta tell you that there is no way in hell I would have such a stupid pet name."
     Camembert "Second, there is someone stupid enough for that."
     Camembert "It's a wrestling name, so..."
     Jimmy "Mr Toord?"
-    Camembert "Indeed, he wore that name during his highschool days. He has been a racist asshole all his life."
+    Camembert "Indeed, he wore that name during his high school days. He has been a racist asshole all his life."
     Jimmy "Wow, thank you for the information, sir!"
     Jimmy "I'm sorry if I offended you."
     Camembert "Offend me? Ha, ha, ha, you have to do more than that, young man."
@@ -546,12 +546,12 @@ label missdawsonhalloweendialog:
     Dawson "I'll contact you one day, I promise."
     play sound "audio/sfx/highheels.ogg"
     hide missdawson with dissolve
-    "{i}Right before leaving, [player_name] noticed there was something shiny in the floor.{/i}"
+    __("Right before leaving, [player_name] noticed there was something shiny in the floor.")
     Jimmy "There is something in the floor."
-    "{i}Yes, I just said that.{/i}"
+    __("Yes, I just said that.")
     call item_pickup(ItemHeadmasterKey) from _call_item_pickup_3
     Jimmy "Oh, it's a key..."
-    Jimmy "Might this be the key to the headmaster's office?"
+    Jimmy "Might this be the key to the Headmaster's office?"
     if quests.fionaDadTrouble == ACTIVE and quest.fionaheadmastertalk == True:
         Jimmy "Fiona will be happy."
         $ quests.fionaDadTrouble = SATISFIED

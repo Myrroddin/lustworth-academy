@@ -24,7 +24,7 @@ label mikudialogue:
 
 label .dialogmenu:
     menu:
-        "Ask for the Art Book" if quests.artclassBook == ACTIVE:
+        __("Ask for the Art Book") if quests.artclassBook == ACTIVE:
             Jimmy "Hey, I'm looking for a book for the art teacher."
             Jimmy "She told me to ask for it here in the library."
             Miku "Oh, yes! Miss Bakshi always sends someone to fetch a book before her class. It's like a ritual of hers."
@@ -35,22 +35,22 @@ label .dialogmenu:
             Jimmy "Oh... Okay, thank you."
             Miku "No problem, see you in class!"
             $ quests.artclassBook = SATISFIED
-        "Ask about the Art project" if quests.artProject == ACTIVE:
+        __("Ask about the Art project") if quests.artProject == ACTIVE:
             Jimmy "Hey, Miku. Can you remind me what are we going to do with the Art project?"
             Miku "Sure. We agreed to meet at your house to take some photos."
             Miku happy "I have the perfect suit for our historical character, and you told me there is room in your backyard for what we need."
             Jimmy "Yes, of course. Thank you, see you on the weekend!"
             Miku "Looking forward to it!"
-        "Talk about her 'Art Shirt'" if quests.artProject == COMPLETE:
+        __("Talk about her 'Art Shirt'") if quests.artProject == COMPLETE:
             $ mikutitshakenet = True
             Jimmy "Hey, Miku. I was thinking about that shirt you wear in art class."
             Miku "Yes?"
             Jimmy "Have you found a replacement?"
             Miku "Oh, I was thinking about something I found that might work."
-            Miku "Let me put show you!"
+            Miku "Let me put it on and show you!"
             play sound "audio/sfx/undress01.ogg"
             call miku_titshake_scene from _call_miku_titshake_scene
-        "Surprise Miku with new camera" if quests.mikuPhotoShoot == SATISFIED:
+        __("Surprise Miku with new camera") if quests.mikuPhotoShoot == SATISFIED:
             Jimmy "Miku! I got something for you."
             $ Jimmy.inventory.remove(ItemPolaroidCamera)
             Miku blushed "Is that..."
@@ -63,7 +63,7 @@ label .dialogmenu:
             Miku "Nonsense! You are so good to me. Meet me in the archive after class, please. You will like it."
             Jimmy "Alright, I'll see you tomorrow, then."
             $ quests.mikuPhotoShoot = COMPLETE
-        "Nevermind":
+        __("Nevermind"):
             pass
     $ gotoscene('schoollibraryshelves')
 
@@ -83,7 +83,7 @@ label mikuhalloweendialogue:
     Jimmy "Eh, it's alright."
     Miku "It's really nice to see you."
     menu:
-        "How's the party going?":
+        __("How's the party going?"):
             Miku "Kind of boring, to be honest."
             Miku "My mom got me the invitation, and I thought I had the perfect costume..."
             Miku "But, this place is as frivolous as it gets."
@@ -160,6 +160,6 @@ label mikuhalloweendialogue:
                 Miku "I think I know a private place. There are a lot of rooms in this house."
                 jump mikuhalloweensex
 
-        "Nevermind":
+        __("Nevermind"):
             pass
     $ gotoscene('harrisonhousefloor2')

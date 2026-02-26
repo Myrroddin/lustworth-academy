@@ -49,7 +49,7 @@ label schoollibrarymainhall_exit:
 
 label schoollibrarymainhall_toarchive:
     if quests.fionaHideAndSeek == ACTIVE:
-        "The door is closed."
+        __("The door is closed.")
         jump schoollibrarymainhall_loop
     $ gotoscene('schoollibraryarchives')
 
@@ -60,12 +60,12 @@ label schoollibrarymainhall_nerdhq:
         else:
             $ gotoscene('schoollibrarynerdcliquehq')
     elif quests.fionaHideAndSeek == ACTIVE:
-        "The door is closed."
+        __("The door is closed.")
         jump schoollibrarymainhall_loop
     elif prologue.complete:
         $ gotoscene('schoollibrarynerdcliquehq')
     else:
-        "There is a closed door at the end of the passage."
+        __("There is a closed door at the end of the passage.")
         jump schoollibrarymainhall_loop
 
 label schoollibrarymainhall_shelves:
@@ -77,7 +77,7 @@ label schoollibrarymainhall_reception:
     if prologue.complete:
         jump clarissadialogue
     else:
-        "There is no one in the reception."
+        __("There is no one at the reception.")
         jump schoollibrarymainhall_loop
 
 
@@ -86,7 +86,7 @@ label schoollibrarymainhall_clarissa:
     if prologue.complete:
         jump clarissadialogue
     else:
-        "There is no one in the reception."
+        __("There is no one at the reception.")
         jump schoollibrarymainhall_loop
 
 label schoollibrarymainhallcheckderek:

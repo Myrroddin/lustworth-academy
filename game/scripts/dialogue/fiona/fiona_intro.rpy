@@ -1,16 +1,16 @@
 label cliffcheckfionaintro:
     hide screen freeroamhud with None
-    "The cliff's wall is high from this side."
-    "There is a way through the rocks that leads to the other side, let's see..."
+    __("The cliff's wall is high from this side.")
+    __("There is a way through the rocks that leads to the other side, let's see...")
     $ showscene('seasidecliff', transition=fade)
-    "Bingo! I can use these stairs to climb from this side."
-    "There is a lower opening I can use to get up there."
-    "But, the stairs are broken."
+    __("Bingo! I can use these stairs to climb from this side.")
+    __("There is a lower opening I can use to get up there.")
+    __("But, the stairs are broken.")
     $ prologue.checkthecliff = True
     Fiona "Need a hand?"
     scene fionabeachintro with fade
     play music MUSIC_FIONAS_THEME
-    "Goddamn..."
+    __("Goddamn...")
     Fiona "Wanna climb up there?"
     Fiona "I don't think you should try that."
     Fiona "Those stairs must be rotten and if you reach the top somehow, you'll be entering the mayor's backyard."
@@ -26,14 +26,14 @@ label cliffcheckfionaintro:
     Fiona "My name is Fiona, by the way."
     Jimmy "[player_name], nice to meet you."
     Fiona "Take care! I hope we see each other another time."
-    "I would love that, for sure."
+    __("I would love that, for sure.")
     call nexttime from _call_nexttime_13
     $ showscene('seasidecliff', transition=fade)
     play music MUSIC_HEISTPLAN_THEME
     show wendyplan04 with dissolve
-    "Alright, I found a way to reach the mansion."
+    __("Alright, I found a way to reach the mansion.")
     show wendyplan05 with dissolve
-    "But, I need to find something to fix the stairs, maybe a rope."
-    "I'll take look around the house, maybe there is something I can use."
+    __("But, I need to find something to fix the stairs, maybe a rope.")
+    __("I'll take look around the house, maybe there is something I can use.")
     stop music
     $ gotoscene('seasideareamap')

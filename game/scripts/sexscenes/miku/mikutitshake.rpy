@@ -6,14 +6,14 @@ label miku_titshake_scene:
         jump miku_titshakenet_scene
     play music MUSIC_SEXY_THEME
     scene mikutitshakestatic with fade
-    "{i}Suddenly, Miku started to shake her body in excitement.{/i}"
-    "{i}That shirt barely left any room for imagination.{/i}"
+    __("{i}Suddenly, Miku started to shake her body in excitement.{/i}")
+    __("{i}That shirt barely left any room for imagination.{/i}")
     scene mikutitshakeanimation with dissolve
-    "{i}Just by fixing his eyes on her boobs, he could imagine those breasts dancing in the air naked.{/i}"
-    "{i}Suddenly, Miku started to shake her body in excitement.{/i}"
-    "{i}No words were necessary for the moment.{/i}"
-    "{i}[player_name] was hynotized with the movement of her boobs, just bouncing in the air like two soft ballons dancing for him.{/i}"
-    "{i}Something twitched between his legs, and at that moment, he knew he wanted to see those tits naked.{/i}"
+    __("{i}Just by fixing his eyes on her boobs, he could imagine those breasts dancing in the air naked.{/i}")
+    __("{i}Suddenly, Miku started to shake her body in excitement.{/i}")
+    __("{i}No words were necessary for the moment.{/i}")
+    __("{i}[player_name] was hynotized with the movement of her boobs, just bouncing in the air like two soft ballons dancing for him.{/i}")
+    __("{i}Something twitched between his legs, and at that moment, he knew he wanted to see those tits naked.{/i}")
     stop music
     $ mikutitshake01 = True
     if mikugallery == True:
@@ -23,11 +23,11 @@ label miku_titshake_scene:
 label miku_titshakenet_scene:
     play music MUSIC_SEXY_THEME
     scene mikutitshakenetanimation with fade
-    "{i}As Miku started shaking her tits in excitement,{/i}"
-    "{i}[player_name] couldn't help but think about her inclination to wear clothes that usually a stripper would.{/i}"
-    "{i}It seemed strange that she didn't mind to be that exposed.{/i}"
-    "{i}Was it natural for her to do that?{/i}"
-    "{i}What would her parents say if they saw her like this?{/i}"
+    __("{i}As Miku started shaking her tits in excitement,{/i}")
+    __("{i}[player_name] couldn't help but think about her inclination to wear clothes that usually a stripper would.{/i}")
+    __("{i}It seemed strange that she didn't mind to be that exposed.{/i}")
+    __("{i}Was it natural for her to do that?{/i}")
+    __("{i}What would her parents say if they saw her like this?{/i}")
     Miku "What do you think about it?"
     Jimmy "I totally love it."
     Miku "Ha, ha, thanks. I'm not sure yet about it. But, I'll keep trying new stuff until I'm sure."

@@ -15,7 +15,7 @@ screen planner_girls:
 screen planner_girls_select:
     $ girls = get_girls()
 
-    text "The Girls":
+    text __("The Girls"):
         style 'planner_header'
         underline True
         xcenter planner_left_center
@@ -105,13 +105,13 @@ screen planner_profile(char):
     
     use expression ('planner_' + char.key + '_profile')
 
-    text "Current Objective":
+    text __("Current Objective"):
         style 'planner_text_bold'
         xcenter planner_left_center
         ypos 0.25
 
     if calendar.when[0] == PROLOGUE:
-        $ objective = "{i}Complete the prologue to unlock quest hints{/i}"
+        $ objective = ("{i}" + __("Complete the prologue to unlock quest hints") + "{/i}")
     else:
         $ objective = getSideObjective(char.key)
         if objective is not None:
@@ -119,9 +119,9 @@ screen planner_profile(char):
             $ planner.viewedObjectives.add(char.key + '_' + objective[0])
             $ objective = objective[1]
         elif calendar.event is not None:
-            $ objective = "{i}No more event content{/i}"
+            $ objective = "{i}" + __("No more event content") + "{/i}"
         else:
-            $ objective = "{i}More content coming soon{/i}"
+            $ objective = "{i}" + __("More content coming soon") + "{/i}"
     
     text objective:
         style 'planner_text'
@@ -130,13 +130,13 @@ screen planner_profile(char):
         xmaximum gui.planner_objective_width
         text_align 0.5
     
-    text "Relationship Status":
+    text __("Relationship Status"):
         style 'planner_text_bold'
         xcenter planner_left_center
         ypos 0.39
     
     # TODO: dynamic relationship status titles
-    # text "Acquaintances":
+    # text __("Acquaintances"):
     #     style 'planner_text'
     #     xcenter planner_left_center
     #     ypos 0.48
@@ -149,7 +149,7 @@ screen planner_profile(char):
     add Solid('#ff0000', xsize=w, ysize=gui.planner_relationship_bar_height):
         pos relBarPos
     
-    text "About":
+    text __("About"):
         style 'planner_text_bold'
         xcenter planner_left_center
         ypos gui.planner_profile_about_label_ypos

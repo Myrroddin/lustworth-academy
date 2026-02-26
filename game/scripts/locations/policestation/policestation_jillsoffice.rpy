@@ -30,17 +30,17 @@ label policestationjillsoffice_loop:
     jump policestationjillsoffice_loop
 
 label policestationjillsoffice_board:
-    "There are pictures and clues of a case she must be working on."
-    "She's investigating a company called \"Zombrella.\""
-    "It says they're developing some kind of super virus..."
-    "Weird stuff."
+    __("There are pictures and clues of a case she must be working on.")
+    __("She's investigating a company called \"Zombrella.\"")
+    __("It says they're developing some kind of super virus...")
+    __("Weird stuff.")
     jump policestationjillsoffice_loop
 
 label policestationjillsoffice_certificate:
-    "\"This is a certificate in recognition of the hard work of Officer Jillian Valentino.\""
-    "\"You make our town better.\""
-    "\"Signed: Mayor Jack Donaguy.\""
-    "Ha... This guy."
+    __("\"This is a certificate in recognition of the hard work of Officer Jillian Valentino.\"")
+    __("\"You make our town better.\"")
+    __("\"Signed: Mayor Jack Donaguy.\"")
+    __("Ha... This guy.")
     jump policestationjillsoffice_loop
 
 label policestationjillsoffice_hobobag:
@@ -50,32 +50,32 @@ label policestationjillsoffice_hobobag:
 
 label policestationjillsoffice_jill:
     if not policestationjillsoffice.jillChecked:
-        "Man, she is really hot."
-        "Just look at those huge tits."
-        "She's in a deep sleep... Maybe I can give them a little feel."
+        __("Man, she is really hot.")
+        __("Just look at those huge tits.")
+        __("She's in a deep sleep... Maybe I can give them a little feel.")
         menu:
-            "Touch":
+            __("Touch"):
                 hide screen freeroamhud
                 play music MUSIC_SEXY_THEME
                 scene jilltitgropeanim01 with dissolve
-                "Wow, they feel even better than I expected."
-                "This is so fucking wrong."
+                __("Wow, they feel even better than I expected.")
+                __("This is so fucking wrong.")
                 $ renpy.pause()
-                "Alright, that's enough."
+                __("Alright, that's enough.")
                 stop music
                 $ sexscenes.jillGrope = True
-            "Don't touch":
-                "On second thought, I shouldn't take advantage of her like this."
-                "Let's just grab the bag and get out."
+            __("Don't touch"):
+                __("On second thought, I shouldn't take advantage of her like this.")
+                __("Let's just grab the bag and get out.")
                 $ Jimmy.stats['intelligence'] += 1
                 $ policestationjillsoffice.jillChecked
     else:
-        "I should leave her alone now."
+        __("I should leave her alone now.")
     jump policestationjillsoffice_loop
 
 label policestationjillsoffice_door:
     if quests.grantHoboBag != SATISFIED:
-        "I can't leave without Grant's bag."
+        __("I can't leave without Grant's bag.")
     else:
         $ gotoscene('policestationfloor2')
     jump policestationjillsoffice_loop

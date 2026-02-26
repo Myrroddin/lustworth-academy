@@ -119,46 +119,46 @@ label start:
     pause 2.0
     call namesigning from _call_namesigning
     menu:
-        "Play new content v0.5.4":
+        __("Play new content v0.5.4"):
             call housematesnaming from _call_housematesnaming
             call newcontentvariablecheck from _call_newcontentvariablecheck
             $ Jimmy.outfit = JIMMY_UNIFORM
             $ calendar.when = (CHAPTER_3, MONDAY, MORNING)
             $ newcontentskipactive = True
             $ showscene('boysdormhallway', transition=fade)
-            Jimmy "So, what am I doing here?"
-            Jimmy "Right, I gotta go talk to Pete at the TV room."
+            Jimmy __("So, what am I doing here?")
+            Jimmy __("Right, I gotta go talk to Pete at the TV room.")
             $ gotoscene('boysdormhallway')
-        "Continue New Game":
+        __("Continue New Game"):
             jump prologue_intro
 
 label namesigning:
     stop music
     scene namesigning01 with fade
-    "{i}What's your name, new guy?{/i}"
-    $ player_name = renpy.input("First name (default: Jimmy)")
+    __("{i}What's your name, new guy?{/i}")
+    $ player_name = renpy.input(__("First name (default: Jimmy)"))
     $ player_name = player_name.strip()
     if player_name == '':
         $ player_name = "Jimmy"
     play sound "audio/sfx/signature01.ogg"
     scene namesigning02 with dissolve
-    $ player_surname = renpy.input("Last name (default: Napkins)")
+    $ player_surname = renpy.input(__("Last name (default: Napkins)"))
     $ player_surname = player_surname.strip()
     if player_surname == '':
         $ player_surname = "Napkins"
     play sound "audio/sfx/signature02.ogg"
     scene namesigning03 with dissolve
-    "{i}Welcome to Trustworth, [player_name] [player_surname].{/i}"
+    __("{i}Welcome to Trustworth, [player_name] [player_surname].{/i}")
     return
 
 label housematesnaming:
     play music "audio/music/happyrock01.ogg"
     scene jimmytownhouseday with fade
-    "{i}Before we get started, I need to introduce you to a few characters.{i}"
+    __("{i}Before we get started, I need to introduce you to a few characters.{i}")
     # Kassandra
     show kassandra neutral with dissolve
-    "{i}This is Kassandra. You live with her on the weekends.{/i}"
-    $ landlady_name = renpy.input("Kassandra is your... (default: landlady)")
+    __("{i}This is Kassandra. You live with her on the weekends.{/i}")
+    $ landlady_name = renpy.input(__("Kassandra is your... (default: landlady)"))
     $ landlady_name = landlady_name.strip()
     if landlady_name == "":
         $ landlady_name = "landlady"
@@ -168,12 +168,12 @@ label housematesnaming:
     show blair roommate intro
     show alice roommate intro
     with dissolve
-    "{i}These are Kassandra's daughters, Cassidy, Blair, and Alice.{/i}"
-    $ roommate_female = renpy.input("Cassidy/Blair/Alice is your... (default: roommate)")
+    __("{i}These are Kassandra's daughters, Cassidy, Blair, and Alice.{/i}")
+    $ roommate_female = renpy.input(__("Cassidy/Blair/Alice is your... (default: roommate)"))
     $ roommate_female = roommate_female.strip()
     if roommate_female == "":
         $ roommate_female = "roommate"
-    $ roommate_male = renpy.input("And you are their... (default: roommate)")
+    $ roommate_male = renpy.input(__("And you are their... (default: roommate)"))
     $ roommate_male = roommate_male.strip()
     if roommate_male == "":
         $ roommate_male = "roommate"
@@ -181,7 +181,7 @@ label housematesnaming:
     hide blair
     hide alice
     with dissolve
-    "{i}Alright, thanks. Now, on with the show!{/i}"
+    __("{i}Alright, thanks. Now, on with the show!{/i}")
     return
 
 label halloweencostumeselection:
@@ -189,7 +189,7 @@ label halloweencostumeselection:
     $ fionasKioskItems += [ItemShaggyCostume, ItemPirateCostume, ItemHeroCostume]
     show screen freeroamhud(showTray=False)
     call fionaskiosk_showscene from _call_fionaskiosk_showscene
-    "What costume do you want to wear to the party?"
+    __("What costume do you want to wear to the party?")
     call screen fionaskiosk(halloweenSkip=True)
     $ item = _return
     call fionaskiosk_onclick(item) from _call_fionaskiosk_onclick
@@ -225,7 +225,7 @@ screen money_pickup:
             yanchor 0.5
             ypos 0.37
 
-        $ msg = "You got money!"
+        $ msg = __("You got money!")
         text msg:
             style 'item_pickup_text'
             yoffset -40
@@ -271,15 +271,15 @@ label nap(until):
 label nap_menu:
     $ scene = scenemanager.scene
     menu:
-        "How long should I rest?"
+        __("How long should I rest?")
 
-        "Afternoon" if time < AFTERNOON:
+        __("Afternoon") if time < AFTERNOON:
             call nap(AFTERNOON) from _call_nap
-        "Evening" if time < EVENING:
+        __("Evening") if time < EVENING:
             call nap(EVENING) from _call_nap_1
-        "Night" if time < NIGHT:
+        __("Night") if time < NIGHT:
             call nap(NIGHT) from _call_nap_2
-        "Nevermind":
+        __("Nevermind"):
             jump expression (scene + '_bed')
     $ gotoscene(scene, transition=fade)
 
@@ -288,7 +288,7 @@ label sleep(comment=None):
         $ miku.nextdayflag01 = True
     call chardaylimitreset from _call_chardaylimitreset
     hide screen freeroamhud
-    $ renpy.say(None, comment if comment is not None else "Time to hit the sack.")
+    $ renpy.say(None, comment if comment is not None else __("Time to hit the sack."))
     stop music
     scene nightsky with fade
     pause 0.8
@@ -516,7 +516,7 @@ screen item_pickup(item):
             yanchor 0.5
             ypos 0.37
 
-        $ msg = "You got\n{}!".format(item.name)
+        $ msg = __("You got\n{}!").format(item.name)
         text msg:
             style 'item_pickup_text'
             yoffset -40
@@ -540,7 +540,7 @@ init python:
             else:
                 renpy.pause(0.4)
                 renpy.show_screen('freeroamhud', interactable=False)
-                renpy.say(None, "It's getting late. I should head back to my dorm if I don't want detention.")
+                renpy.say(None, __("It's getting late. I should head back to my dorm if I don't want detention."))
                 gotoscene('boysdormjimmysroom', transition=fade)
 
     def showscene(scene_name, transition=None, playMusic=True):

@@ -8,9 +8,9 @@ label algiedialogue:
     if Jimmy.hasItem(ItemCrownofGods):
         if quests.beatrixGetlaid == COMPLETE:
             menu:
-                "Replay RPG Campaign v0.5.4":
+                __("Replay RPG Campaign v0.5.4"):
                     jump rpgcampaignact1
-                "Nevermind":
+                __("Nevermind"):
                     $ gotoscene('schoollibrarynerdcliquehq')
         if quests.beatrixGetlaid == SATISFIED:
             jump rpgcampaignact1
@@ -131,13 +131,13 @@ label algiescrollfound:
     Derek "The next time we meet, new guy, will be the last time you'll get in my way."
     play sound "audio/sfx/run01.ogg"
     hide derek with vpunch
-    "{i}Scrambling to his feet, Derek shot one last glare before tucking his tail between his legs and running to the door.{/i}"
+    __("{i}Scrambling to his feet, Derek shot one last glare before tucking his tail between his legs and running to the door.{/i}")
     Melvin "Unbelievable! I've never seen a man capable of transmiting such a powerful intimidation."
     Melvin laugh "You didn't even had to touch him, ho, ho, ho! Oh my lord!"
     Jimmy "Well, I have some story with that guy."
     Jimmy "You alright?"
     Melvin jovial "My deepest gratitude, Sir. Your intervention has been timely and... efficient."
-    "{i}Melvin showed [player_name] a roll of aged-looking paper, tied with a pristine red ribbon."
+    __("{i}Melvin showed [player_name] a roll of aged-looking paper, tied with a pristine red ribbon.{/i}")
     Melvin "Here, The Scroll of the Elders."
     call item_pickup(ItemAlgieScroll) from _call_item_pickup_40
     Jimmy "Thank you, I'll get it back to the library."

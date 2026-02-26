@@ -3,7 +3,7 @@ label fiona_nightdate_scene:
     scene fionatitjobanimslow
     play sound "audio/sfx/mh1.ogg"
     Jimmy "Mmm, your those tits feel amazing around my dick, babe."
-    "{i}Hearing that, Fiona redoubled her efforts to make [player_name] feel even better.{/i}"
+    __("{i}Hearing that, Fiona redoubled her efforts to make [player_name] feel even better.{/i}")
     Fiona "Oh, yes. I can feel it getting harder."
     Jimmy "Keep at it, and it will be hard as a rock."
     Fiona "Ufff, yes, that's exactly what I want."
@@ -14,65 +14,65 @@ label fiona_nightdate_scene:
 label fionatitjobslow:
     play sound "audio/sfx/handjob01.ogg"
     menu:
-        "Faster":
+        __("Faster"):
             scene fionatitjobanimfast
             $ renpy.pause()
             jump fionatitjobfast
-        "Move on":
+        __("Move on"):
             jump fionamissionarysex
 
 label fionatitjobfast:
     menu:
-        "Slow":
+        __("Slow"):
             scene fionatitjobanimslow
             $ renpy.pause()
             jump fionatitjobslow
-        "Move on":
+        __("Move on"):
             jump fionamissionarysex
 
 label fionamissionarysex:
     play sound "audio/sfx/ah1.ogg"
-    "{i}When she released him, [player_name] got up and helped Fiona take her swinsuit off.{/i}"
-    "{i}Her panties were a little tight because of the wetness between her legs.{/i}"
-    "{i}Fiona couldn't stop watching [player_name]'s cock with awe, is was as hard as she wanted it to be.{/i}"
+    __("{i}When she released him, [player_name] got up and helped Fiona take her swinsuit off.{/i}")
+    __("{i}Her panties were a little tight because of the wetness between her legs.{/i}")
+    __("{i}Fiona couldn't stop watching [player_name]'s cock with awe, is was as hard as she wanted it to be.{/i}")
     scene fionamissionarysideanim with fade
     play sound "audio/sfx/cowgirl01.ogg"
-    "{i}With her eyes fixated on the manhood in front of her, she laid down in the sand and opened her legs for him.{/i}"
+    __("{i}With her eyes fixated on the manhood in front of her, she laid down in the sand and opened her legs for him.{/i}")
     Fiona "AH! FUCK!"
     Fiona "It's so hard!"
-    "{i}The tip of his cock made his way inside, pushing aside the lips and going in smoothly.{/i}"
-    "{i}The juiced dripping from her pussy made it all easier.{/i}"
+    __("{i}The tip of his cock made his way inside, pushing aside the lips and going in smoothly.{/i}")
+    __("{i}The juiced dripping from her pussy made it all easier.{/i}")
     Fiona "Oh my god! I can feel it in my belly!"
     Fiona "Yes, baby! It feels so goood!"
 
 label fionamissionary01:
     menu:
-        "Change angle":
+        __("Change angle"):
             scene fionamissionaryfrontanim with vpunch
             play sound "audio/sfx/cowgirl01.ogg"
             Fiona "Yes, [player_name]! Fuck me hard, please!"
-            "{i}[player_name] started pushing and pulling in a perfect rythm.{/i}"
-            "{i}He could feel Fiona's legs twitching every time he pushed his dick deep inside.{/i}"
+            __("{i}[player_name] started pushing and pulling in a perfect rythm.{/i}")
+            __("{i}He could feel Fiona's legs twitching every time he pushed his dick deep inside.{/i}")
             jump fionamissionary02
-        "Cum":
+        __("Cum"):
             jump fionamissionarycum
 
 label fionamissionary02:
     menu:
-        "Change angle":
+        __("Change angle"):
             scene fionamissionarysideanim with vpunch
             play sound "audio/sfx/cowgirl02.ogg"
             Fiona "AHHH! FUCK ME, FUCK ME, FUCK MEEEE!"
-            "{i}Her moans drowned his thoughts along with the movement of her boobs shaking with every thrust.{/i}"
+            __("{i}Her moans drowned his thoughts along with the movement of her boobs shaking with every thrust.{/i}")
             jump fionamissionary01
-        "Cum":
+        __("Cum"):
             jump fionamissionarycum
     
     
 label fionamissionarycum:
     scene fionamissionary01cum with vpunch
     play sound "audio/sfx/cowgirlcum.ogg"
-    "{i}Finally, she came putting her knuckles inside her mouth to silence the scream.{/i}"
+    __("{i}Finally, she came putting her knuckles inside her mouth to silence the scream.{/i}")
     Fiona "Oh, [player_name]. That felt so good!"
     Jimmy "Your pussy is so warm, babe."
     play sound "audio/sfx/cumshotone.ogg"

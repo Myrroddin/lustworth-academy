@@ -83,14 +83,14 @@ label mainbuildingentrance_exit:
     $ gotoscene('schoolgroundssouthplaza')
 
 label mainbuildingentrance_headmastersdoor:
-    "\"Office hours: Tuesday and Thursday evenings.\""
+    __("Office hours: Tuesday and Thursday evenings.")
     jump mainbuildingentrance_loop
 
 label mainbuildingentrance_conciergeroom:
     if quests.missdawsonAssistant == ACTIVE:
         if quests.missdawsonAssistantMarlon == LOCKED:
             jump marlontheconciergeintro
-    "The concierge room. It's locked."
+    __("The concierge room. It's locked.")
     jump mainbuildingentrance_loop
 
 label mainbuildingentrance_camembertcaught:
@@ -107,13 +107,13 @@ label mainbuildingentrance_camembertcaught:
 label marlontheconciergeintro:
     hide screen freeroamhud
     Jimmy "This is the concierge room. Let's see..."
-    "{i}*Knock* *Knock*.{/i}"
+    __("*Knock* *Knock*.")
     Marlon "Come in!"
     play sound "audio/sfx/dooropen01.ogg"
     scene conciergestorageroom with fade
     show marlonconciergeintro with dissolve
     play music MUSIC_MARLONS_THEME
-    "{i}When [player_name] entered the room, he saw an old man sitting in a chair while petting a golden cat.{/i}"
+    __("When [player_name] entered the room, he saw an old man sitting in a chair while petting a golden cat.")
     Jimmy "Good day, sir."
     Jimmy "Miss Dawson asked me to deliver this memo to you."
     if quests.missdawsonAssistantEdna == COMPLETE:
@@ -132,6 +132,6 @@ label marlontheconciergeintro:
     Marlon "Thank you, lad. My name is Marlon, by the way."
     Jimmy "[player_name], sir. It's a pleasure."
     Marlon "The pleasure is mine, lad."
-    "{i}'I like this guy', thought [player_name].{/i}"
+    __("'I like this guy', thought [player_name].")
     $ quests.missdawsonAssistantMarlon = COMPLETE
     $ gotoscene('mainbuildingentrance')

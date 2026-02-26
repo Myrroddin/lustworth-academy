@@ -39,7 +39,7 @@ label cassidynightdate01:
     Jimmy "What do you mean?"
     Cassidy "I want you to be my first."
     Jimmy "I want you to take my virginity."
-    "{i}[player_name] looked at Cassidy, unsure of what to say.{/i}"
+    __("{i}[player_name] looked at Cassidy, unsure of what to say.{/i}")
     Jimmy "I...I don't know, Cassidy."
     call cassidy_cassidycowgirl_scene from _call_cassidy_cassidycowgirl_scene
     scene cassidybedroomnight with fade
@@ -74,8 +74,8 @@ label cassidy_cassidycowgirl_scene:
     Cassidy "Don't worry, everything will be our secret."
     play sound "audio/sfx/mh1.ogg"
     scene cassidycowgirlintro with fade
-    "{i}Once [player_name] got his clothes off, she got on top of him on the bed.{/i}"
-    "{i}She guided his cock inside her pussy, moaning as it struggled to enter such a tight space.{/i}"
+    __("{i}Once [player_name] got his clothes off, she got on top of him on the bed.{/i}")
+    __("{i}She guided his cock inside her pussy, moaning as it struggled to enter such a tight space.{/i}")
     play sound "audio/sfx/ah3.ogg"
     Cassidy "Oh my god, [roommate_male]. It feels so warm and hard..."
     Cassidy "I'm scared that is going to tear me apart."
@@ -92,9 +92,9 @@ label .slow:
     Cassidy "My [roommate_male]'s cock inside me feels so good."
     Cassidy "I've been wanting to do this since I met you."
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
-        "Cum":
+        ("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Cassidy "Fuck, fuck fuuuuuck!"
             Cassidy "I'm gonna cum! I'm gonna cum!"
@@ -114,9 +114,9 @@ label .fast:
     Cassidy "I didn't think I could take it so hard and so fast inside me."
     Cassidy "My pussy is so tight, but it's loving every inch of your cock."
     menu:
-        "Slow":
+        __("Slow"):
             jump .slow
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Cassidy "Fuck, fuck fuuuuuck!"
             Cassidy "I'm gonna cum! I'm gonna cum!"

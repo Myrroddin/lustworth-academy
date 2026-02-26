@@ -24,19 +24,19 @@ label halloweenreunionstart:
     Dawson "Saturday evening! I'll be waiting for you!"
     Jimmy "Alright, Miss."
     $ quests.missdawsonHalloweenStaff = ACTIVE
-    "Do you want to skip time to the reunion?"
+    __("Do you want to skip time to the reunion?")
     menu:
-        "Yes":
+        __("Yes"):
             jump halloweenstaffreunionintro
-        "Yes, of course":
+        __("Yes, of course"):
             jump halloweenstaffreunionintro
-        "By all means":
+        __("By all means"):
             jump halloweenstaffreunionintro
             
 
 label halloweenstaffreunionintro:
     scene nightsky with fade
-    "Sometime later..."
+    __("Sometime later...")
     $ calendar.when = (1, 6, EVENING)
     play music MUSIC_SNEAK_THEME
     scene secretaryoffice01 with fade
@@ -80,7 +80,7 @@ label halloweenstaffreunionintro:
     Dawson halloween happy "Miss Punny! I'm so glad you came, my dear!"
     hide missdawson with vpunch
     play sound "audio/sfx/highheels.ogg"
-    "Miss Dawson looks very nervous. I should help her in any way I can. Hopefully, there will a good reward for this."
+    __("Miss Dawson looks very nervous. I should help her in any way I can. Hopefully, there will a good reward for this.")
     scene schoolkitchendayfall with fade
     Jimmy "Well, it still smells like crap in here..."
     play music MUSIC_EDNA_THEME

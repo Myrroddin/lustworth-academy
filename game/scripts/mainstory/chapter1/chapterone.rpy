@@ -12,8 +12,8 @@ label chapterone_garycliquesintro:
     play music MUSIC_UPBEAT
     $ Jimmy.outfit = JIMMY_UNIFORM
     show jimmy smug with dissolve
-    "{i}[player_name] arrived at school looking forward to what the week held in store.{/i}"
-    "{i}His smile quickly disappeared, however, when he saw Gary Smith, that creepy guy with the scar on his face, approaching him.{/i}"
+    __("{i}[player_name] arrived at school looking forward to what the week held in store.{/i}")
+    __("{i}His smile quickly disappeared, however, when he saw Gary Smith, that creepy guy with the scar on his face, approaching him.{/i}")
     show jimmy neutral with dissolve
     play music MUSIC_GARYS_THEME
     show gary uniform neutral with dissolve
@@ -27,9 +27,9 @@ label chapterone_garycliquesintro:
     Gary "Great, come with me to the cafeteria. I'll show you what you need to know."
     hide gary with dissolve
     hide jimmy with dissolve
-    "{i}[player_name] followed Gary, not because he trusted him, but because he was curious to hear what this \"survival advice\" was.{/i}"
+    __("{i}[player_name] followed Gary, not because he trusted him, but because he was curious to hear what this \"survival advice\" was.{/i}")
     $ showscene('mainbuildingcafeteria', transition=fade)
-    "{i}The cafeteria was full before classes started, and Gary began his speech.{/i}"
+    __("{i}The cafeteria was full before classes started, and Gary began his speech.{/i}")
     show jimmy neutral
     show gary uniform neutral
     with dissolve
@@ -65,7 +65,7 @@ label chapterone_garycliquesintro:
     Gary "Remember what I told you and you might just survive here."
     hide gary with dissolve
     pause 0.5
-    "...Creep."
+    __("{i}...Creep.{/i}")
     hide jimmy with dissolve
     $ showscene('mainbuildingentrance', transition=fade)
     play music MUSIC_UPBEAT
@@ -160,9 +160,9 @@ label chapterone_girlsdormsneak:
     $ renpy.pause()
     scene girldormattic with fade
     play music MUSIC_SNEAK_THEME
-    "Alright, I'm inside."
-    "It smells weird in here."
-    "The bedrooms must be down a floor."
+    __("Alright, I'm inside.")
+    __("It smells weird in here.")
+    __("The bedrooms must be down a floor.")
     scene girlsdormhallwayfirstfloor01 with fade
     Jimmy "Umm, fancy place..."
     Jimmy "Alright, I have to look for Mandy's room."
@@ -185,20 +185,20 @@ label chapterone_girlsdormsneak:
     Jimmy "You're the best. I owe you one."
     Blair "Yes, you do."
     hide blair with dissolve
-    "Alright, let's see."
+    __("Alright, let's see.")
     scene girlsdormhallwaysecondfloor01 with fade
-    "Wow, lots of doors."
-    "Thanks, Blair. I would be lost without you."
-    "Last door to the right."
+    __("Wow, lots of doors.")
+    __("Thanks, Blair. I would be lost without you.")
+    __("Last door to the right.")
     scene mandyroompreview with dissolve
-    "Holy fuck. She really likes pink."
-    "Alright, let's look the for the diary."
-    "{i}After searching the shelf, [player_name] found a diary with Beatrix's name on it.{/i}"
-    "This has to be it."
+    __("Holy fuck. She really likes pink.")
+    __("Alright, let's look the for the diary.")
+    __("{i}After searching the shelf, [player_name] found a diary with Beatrix's name on it.{/i}")
+    __("This has to be it.")
     call item_pickup(ItemBeatrixDiary) from _call_item_pickup_14
-    "{i}[player_name] couldn't resist the urge to take a look inside the diary.{/i}"
-    "{i}Beatrix lied to him about it being just math notes.{/i}"
-    "{i}He realized that after reading something about a furry friend named Trevor.{/i}"
+    __("{i}[player_name] couldn't resist the urge to take a look inside the diary.{/i}")
+    __("{i}Beatrix lied to him about it being just math notes.{/i}")
+    __("{i}He realized that after reading something about a furry friend named Trevor.{/i}")
     Beatrix "{i}Last night I got too excited with Trevor.{/i}"
     Beatrix "{i}We were talking about his life on Galavan-6, how his civilization was so advanced that they could have sexual intercourse using telephatic abilities.{/i}"
     Beatrix "{i}It was so enlightening, I couldn't hold myself to show him how primitive humans do that...{/i}"
@@ -210,21 +210,21 @@ label chapterone_girlsdormsneak:
     hide beatrixdiaryfound with dissolve
     $ Christy.met = False
     Christy "You need to get that thing out, now!" with vpunch
-    "Oh, shit. Someone's coming!"
+    __("Oh, shit. Someone's coming!")
     Christy "Wait!"
     $ Cassidy.met = False
     Cassidy "It hurts too much, Christy! Leave me alone!"
-    "{i}The sound of a door from another room indicated to [player_name] that this was his chance to escape.{/i}"
+    __("{i}The sound of a door from another room indicated to [player_name] that this was his chance to escape.{/i}")
     scene girlsdormhallwaysecondfloor01 with fade
-    "{i}Making as little noise as possible, he made his way back to the stairs.{/i}"
+    __("{i}Making as little noise as possible, he made his way back to the stairs.{/i}")
     scene girlsdormhallwayfirstfloor01 with dissolve
     Dawson "I don't have time for your whinning, girls."
     Dawson "There is nothing in the attic."
     Jimmy "Fuck, she's coming from upstairs..."
-    "{i}Making a run for the main entrance was too risky for him, so he looked for a place to hide.{/i}"
+    __("{i}Making a run for the main entrance was too risky for him, so he looked for a place to hide.{/i}")
     $ Cassidy.met = True
     call christy_dildofight_scene from _call_christy_dildofight_scene
-    "{i}Still confused, [player_name] made his way out of the bathroom and up to the attic.{/i}"
+    __("{i}Still confused, [player_name] made his way out of the bathroom and up to the attic.{/i}")
     $ quests.beatrixDiary = SATISFIED
     scene fewmomentslater with fade
     play sound "audio/sfx/fewmomentslater.ogg"

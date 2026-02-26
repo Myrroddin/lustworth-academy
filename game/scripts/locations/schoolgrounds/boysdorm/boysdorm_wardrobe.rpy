@@ -1,3 +1,28 @@
+label dormwardrobe_costume(costume, narration, oldOutfit=None):
+    $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))
+    if oldOutfit is None:
+        $ oldOutfit = JIMMY_UNIFORM
+    $ Jimmy.outfit = costume
+    show jimmy smug with dissolve
+    __(narration)
+    if glob.halloweenEventComplete:
+        menu:
+            __("Replay the Halloween event?")
+            __("Yes"):
+                jump skip_to_halloween
+            __("No"):
+                $ Jimmy.outfit = oldOutfit
+                jump boysdormjimmysroom_closet
+    elif not halloween:
+        __("But I should wait until the night of the Halloween party to change into my costume.")
+        menu:
+            __("Skip ahead to Friday night?")
+            __("Yes"):
+                jump skip_to_halloween
+            __("No"):
+                $ Jimmy.outfit = oldOutfit
+                jump boysdormjimmysroom_closet
+
 #SCREENS
 init 1 python:
     scene_defs['dormwardrobe'] = {
@@ -30,7 +55,7 @@ label dormwardrobe_loop:
 label dormwardrobe_yellowjacket:
     $ Jimmy.outfit = JIMMY_DEFAULT
     show jimmy smug with dissolve
-    "I like this jacket, makes me look buff."
+    __("I like this jacket, makes me look buff.")
     $ gotoscene('boysdormjimmysroom', transition=fade)
 
 label dormwardrobe_uniform01:
@@ -43,85 +68,19 @@ label dormwardrobe_uniform01:
         $ jimmynewuniform = True
     $ Jimmy.outfit = JIMMY_UNIFORM
     show jimmy smug with dissolve
-    "Alright, it fits pretty well."
+    __("Alright, it fits pretty well.")
     $ gotoscene('boysdormjimmysroom', transition=fade)
 
 label dormwardrobe_shaggycostume:
-    $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))
-    $ Jimmy.outfit = JIMMY_SHAGGY
-    show jimmy smug with dissolve
-    "Looks good..."
-    if glob.halloweenEventComplete:
-        menu:
-            "{i}Replay the Halloween event?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = JIMMY_UNIFORM
-                jump boysdormjimmysroom_closet
-    elif not halloween:
-        "I should wait until the night of Halloween to change into my costume."
-        menu:
-            "{i}Skip ahead to Friday night?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = JIMMY_UNIFORM
-                jump boysdormjimmysroom_closet
+    call dormwardrobe_costume(JIMMY_SHAGGY, "Looks good...")
 
 label dormwardrobe_piratecostume:
-    $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))
     $ oldOutfit = Jimmy.outfit
-    $ Jimmy.outfit = JIMMY_PIRATE
-    show jimmy smug with dissolve
-    "Looks good."
-    if glob.halloweenEventComplete:
-        menu:
-            "{i}Replay the Halloween event?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = oldOutfit
-                jump boysdormjimmysroom_closet
-    elif not halloween:
-        "But I should wait until the night of the Halloween party to change into my costume."
-        menu:
-            "{i}Skip ahead to Friday night?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = oldOutfit
-                jump boysdormjimmysroom_closet
+    call dormwardrobe_costume(JIMMY_PIRATE, "Looks good.", oldOutfit)
 
 label dormwardrobe_homelandercostume:
-    $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))
     $ oldOutfit = Jimmy.outfit
-    $ Jimmy.outfit = JIMMY_HOMELANDER
-    show jimmy smug with dissolve
-    "Looks good."
-    if glob.halloweenEventComplete:
-        menu:
-            "{i}Replay the Halloween event?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = oldOutfit
-                jump boysdormjimmysroom_closet
-    elif not halloween:
-        "But I should wait until the night of the Halloween party to change into my costume."
-        menu:
-            "{i}Skip ahead to Friday night?{/i}"
-
-            "Yes":
-                jump skip_to_halloween
-            "No":
-                $ Jimmy.outfit = oldOutfit
-                jump boysdormjimmysroom_closet
+    call dormwardrobe_costume(JIMMY_HOMELANDER, "Looks good.", oldOutfit)
 
 label skip_to_halloween:
     $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))

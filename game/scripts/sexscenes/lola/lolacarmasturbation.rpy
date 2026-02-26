@@ -3,10 +3,10 @@ label lola_carmasturbation_scene:
     scene lolamasturbationcar01 with fade
     play sound "audio/sfx/mh1.ogg"
     Lola "Ohhh, muscle cars turn me on so bad!"
-    "What the fuck?!"
-    "Shit, the girls at this school are nuts!"
+    __("What the fuck?!")
+    __("Shit, the girls at this school are nuts!")
     Lola "Fuck, I'm so wet..."
-    "{i}[player_name] watched the girl masturbating inside the car.{/i}"
+    __("{i}[player_name] watched the girl masturbating inside the car.{/i}")
     scene lolamastanim01 with dissolve
     play sound "audio/sfx/ah1.ogg"
     Lola "Oh, fuck! FUCK! YES!"
@@ -17,8 +17,8 @@ label lola_carmasturbation_scene:
     $ renpy.pause()
     scene lolamasturbationcarcum with vpunch
     play sound "audio/sfx/ah2.ogg"
-    "{i}[player_name] thought he was just the man who could give her what she desired.{/i}"
-    "{i}Suddenly, he heard a voice coming from the back...{/i}"
+    __("{i}[player_name] thought he was just the man who could give her what she desired.{/i}")
+    __("{i}Suddenly, he heard a voice coming from the back...{/i}")
     stop music
     play sound SOUND_RECORD_SCRATCH
     scene blairintropose with vpunch

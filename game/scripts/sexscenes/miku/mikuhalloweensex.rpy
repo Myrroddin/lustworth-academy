@@ -7,14 +7,14 @@ label miku_halloweensex_scene:
     Miku "Come here, I want to suck that dick once again..."
     scene mikuwizard69 with vpunch
     play sound "audio/sfx/bj1.ogg"
-    "{i}For a while, the two love birds slurped the hell out of each other, while maintaining such an odd position.{/i}"
-    "{i}He used his tongue to caress her clit up and down, as she released drowned moans of pleasure.{/i}"
-    "{i}[player_name] could hear her slurping on his cock, making him harder and harder.{/i}"
-    "{i}As the heat of the moment rose up, and idea struck him like she was stroking his dick inside her mouth.{/i}"
+    __("{i}For a while, the two love birds slurped the hell out of each other, while maintaining such an odd position.{/i}")
+    __("{i}He used his tongue to caress her clit up and down, as she released drowned moans of pleasure.{/i}")
+    __("{i}[player_name] could hear her slurping on his cock, making him harder and harder.{/i}")
+    __("{i}As the heat of the moment rose up, and idea struck him like she was stroking his dick inside her mouth.{/i}")
     Jimmy "Alright, now let's put this wet pussy on my dick..."
     Miku "Mhhm?"
-    "{i}[player_name] grabbed her body side up and stood next to the bed, carrying her in his arms.{/i}"
-    "{i}Then, he made sure to put the tip of his cock right between her pussy lips getting ready to ram her down.{/i}"
+    __("{i}[player_name] grabbed her body side up and stood next to the bed, carrying her in his arms.{/i}")
+    __("{i}Then, he made sure to put the tip of his cock right between her pussy lips getting ready to ram her down.{/i}")
     play sound "audio/sfx/standfuckmoans.ogg"
     scene mikuwizardstandfuckanim with vpunch
     Miku "YES! [player_name]! Fuck me, , please!"
@@ -36,9 +36,9 @@ label miku_halloweensex_scene:
     play sound "audio/sfx/orgasm1.ogg"
     scene mikuwizardcum with vpunch
     Miku "AAAAAGHHH! FUCK! ahhhh... ahhhh..."
-    "{i}As [player_name]'s cum was released, she trembled so hard in his arms that he barely could let her fall on the bed.{/i}"
-    "{i}Miku layed there with her pussy spewing cum all over her legs.{/i}"
-    "{i}She could barely let out timid moans while her legs where still trembling.{/i}"
+    __("{i}As [player_name]'s cum was released, she trembled so hard in his arms that he barely could let her fall on the bed.{/i}")
+    __("{i}Miku layed there with her pussy spewing cum all over her legs.{/i}")
+    __("{i}She could barely let out timid moans while her legs where still trembling.{/i}")
     play sound "audio/sfx/cumshotone.ogg"
     Miku "My god, that was incredible, [player_name]..."
     Miku "I think I not gonna be able to move for a while..."

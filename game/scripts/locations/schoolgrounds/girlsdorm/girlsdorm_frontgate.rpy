@@ -36,9 +36,9 @@ label girlsdormfrontgate:
     if quests.fionaHideAndSeek == ACTIVE:
         call girlsdormfrontgatecheckderek from _call_girlsdormfrontgatecheckderek
     elif calendar.when[0] == PROLOGUE and not girlsdormfrontgate.gateClosedComment:
-        "The gate to the girl's dorm is closed."
-        "I guess they don't like unwanted visitors."
-        "There's also some kind of kiosk, but no one is around."
+        __("The gate to the girl's dorm is closed.")
+        __("I guess they don't like unwanted visitors.")
+        __("There's also some kind of kiosk, but no one is around.")
         $ girlsdormfrontgate.gateClosedComment = True
     elif quests.fionaConfrontDerek == LOCKED:
         if quests.fionaPadlock == COMPLETE:
@@ -54,12 +54,12 @@ label girlsdormfrontgate_loop:
     jump girlsdormfrontgate_loop
 
 label girlsdormfrontgate_gate:
-    "The gate's closed."
+    __("The gate's closed.")
     jump girlsdormfrontgate_loop
 
 label girlsdormfrontgate_kiosk:
     if calendar.when[0] == PROLOGUE:
-        "There's no one at the kiosk."
+        __("There's no one at the kiosk.")
     elif quests.fionaHideAndSeek == ACTIVE:
         Jimmy "*Better stay away from Fiona while I deal with this idiot.*"
     elif not quests.fionaConfrontDerek == COMPLETE:
@@ -67,7 +67,7 @@ label girlsdormfrontgate_kiosk:
             if FionaDaylimit == False:
                 jump fionaconfrontderekquest
     elif quests.fionaPadlock == LOCKED:
-        "I should introduce myself to the girl running the stand first."
+        __("I should introduce myself to the girl running the stand first.")
     else:
         jump fionaskiosk
     jump girlsdormfrontgate_loop
@@ -81,10 +81,7 @@ label girlsdormfrontgate_fiona:
 ### Various Labels ####
 
 label girlsdormfrontgatecheckderek:
-    if FionaWineFound == False:
-        Derek "Very cold"
-        return     
-    elif FionaDonutFound == False:
+    if FionaWineFound == False or FionaDonutFound == False:
         Derek "Very cold"
         return
     else:

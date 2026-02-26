@@ -44,7 +44,7 @@ label schoolgroundssouthplaza_mainbuilding:
         Derek "Look somewhere else..."
         jump schoolgroundssouthplaza_loop
     elif mainbuildingentrance.camembertCaught and Jimmy.outfit != JIMMY_UNIFORM:
-        "I can't go in there without my uniform, not unless I want detention."
+        __("I can't go in there without my uniform, not unless I want detention.")
         jump schoolgroundssouthplaza_loop
     $ gotoscene('mainbuildingentrance')
 

@@ -68,14 +68,14 @@ label mikuartprojectsceneintro:
     Jimmy "Alright."
     hide miku with dissolve
     play sound "audio/sfx/undress01.ogg"
-    "{i}At this point, I think you already know what is going to happen next.{/i}"
-    "{i}For [player_name], having a girl undressing in his room was a chance that could not go to waste.{/i}"
-    "{i}So, naturally, he peeked just a bit.{/i}"
+    __("{i}At this point, I think you already know what is going to happen next.{/i}")
+    __("{i}For [player_name], having a girl undressing in his room was a chance that could not go to waste.{/i}")
+    __("{i}So, naturally, he peeked just a bit.{/i}")
     play sound "audio/sfx/undress01.ogg"
     scene mikuundresspeek with fade
-    "{i}Goddamn! Thought [player_name].{/i}" 
-    "{i}In order to get some of that at the end of the day, he needed to play his cards right.{/i}"
-    "{i}So, he patiently waited for her to be ready.{/i}"
+    __("{i}Goddamn! Thought [player_name].{/i}") 
+    __("{i}In order to get some of that at the end of the day, he needed to play his cards right.{/i}")
+    __("{i}So, he patiently waited for her to be ready.{/i}")
     play sound "audio/sfx/undress01.ogg"
     $ showscene('townhousejimmysroom', transition=fade)
     stop music
@@ -103,24 +103,24 @@ label mikuartprojectsceneintro:
     Jimmy "YEAH! I CAN HEAR THE NATIVE MUSIC AGAIN!"
     Miku "WHAT MUSIC? HA, HA, HA, HA, YOU'RE SO FUNNY!"
     scene mikunativephotoafter with fade
-    "{i}A long time ago, when the land was still mostly untouched by mankind, like an very very ugly woman.{/i}"
-    "{i}There was a native girl named Moaning Eagle.{/i}"
-    "{i}She loved to climb on big hard poles, also known as trees.{/i}"
-    "{i}Maybe that's why she was called Eagle, but not everyone liked her ability to climb huge stiff logs.{/i}"
-    "{i}Some of the other natives thought that she would climb just to peek on everyone's business.{/i}"
+    __("{i}A long time ago, when the land was still mostly untouched by mankind, like an very very ugly woman.{/i}")
+    __("{i}There was a native girl named Moaning Eagle.{/i}")
+    __("{i}She loved to climb on big hard poles, also known as trees.{/i}")
+    __("{i}Maybe that's why she was called Eagle, but not everyone liked her ability to climb huge stiff logs.{/i}")
+    __("{i}Some of the other natives thought that she would climb just to peek on everyone's business.{/i}")
     scene mikunativephotopeaches with fade
-    "{i}First thing in the morning, Moaning Eagle contributed to the wellness of her people by collecting fruit, and by sexually arousing men of the tribe, and some women too.{/i}"
-    "{i}Some people questioned her about it.{/i}"
-    "{i}They said that she only liked to collect fruits that looked like huge and soft balls.{/i}"
-    "{i}However, she never took those words personally. She never stopped being herself.{/i}"
+    __("{i}First thing in the morning, Moaning Eagle contributed to the wellness of her people by collecting fruit, and by sexually arousing men of the tribe, and some women too.{/i}")
+    __("{i}Some people questioned her about it.{/i}")
+    __("{i}They said that she only liked to collect fruits that looked like huge and soft balls.{/i}")
+    __("{i}However, she never took those words personally. She never stopped being herself.{/i}")
     scene mikunativephotofinal with fade
-    "{i}In the end, her skill to climb long and thick staffs, called trees of course... Saved the village from predators more than once.{/i}"
-    "{i}She warned the people by watching over the distance, spotting any danger which could approach their territory.{/i}"
-    "{i}And sometimes, those big balls she collected were used as projectiles to scare predators away.{/i}"
-    "{i}We could say that she was the first CCTV security system in history, but maybe that's an exaggeration.{/i}"
-    "{i}Her life went on as she got pregnant twenty-six times, not knowing who the father of each child was, but she sure loved them unconditionally.{/i}"
-    "{i}That's the story of Moaning Eagle. A heroic ancester and a powerful woman.{/i}"
-    "{i}To this day, it is yet to be determined the origin of 'Moaning' in her name, Moaning Eagle, but I'll leave you that to think about.{/i}"
+    __("{i}In the end, her skill to climb long and thick staffs, called trees of course... Saved the village from predators more than once.{/i}")
+    __("{i}She warned the people by watching over the distance, spotting any danger which could approach their territory.{/i}")
+    __("{i}And sometimes, those big balls she collected were used as projectiles to scare predators away.{/i}")
+    __("{i}We could say that she was the first CCTV security system in history, but maybe that's an exaggeration.{/i}")
+    __("{i}Her life went on as she got pregnant twenty-six times, not knowing who the father of each child was, but she sure loved them unconditionally.{/i}")
+    __("{i}That's the story of Moaning Eagle. A heroic ancester and a powerful woman.{/i}")
+    __("{i}To this day, it is yet to be determined the origin of 'Moaning' in her name, Moaning Eagle, but I'll leave you that to think about.{/i}")
     $ showscene('townhousebackyard', transition=fade)
     stop music
     call nexttime from _call_nexttime_18
@@ -177,18 +177,18 @@ label mikuartprojectsceneintro:
     play music MUSIC_IZUMI_THEME
     play sound "audio/sfx/sexyintro.ogg"
     scene izumiintro with fade
-    "Heads turned in unison towards the sound of a roaring engine, a blood-red Mustang rolling down the avenue." 
-    "In front of it, sat a woman whose presence was as commanding as the machine she controlled." 
-    "Her hair was a cascade of dark waves, tamed by a baseball hat perched atop her head."
-    "Nothing could consealed the intensity that emanated from her gaze."
-    "The combination that was both intimidating and undeniably alluring to [player_name]."
-    "The setting sun cast a silhouette that merged with the Mustang and her figure, an embodiment of both beauty and power."
-    "[player_name] would never forget that image."
+    __("Heads turned in unison towards the sound of a roaring engine, a blood-red Mustang rolling down the avenue.") 
+    __("In front of it, sat a woman whose presence was as commanding as the machine she controlled.") 
+    __("Her hair was a cascade of dark waves, tamed by a baseball hat perched atop her head.")
+    __("Nothing could consealed the intensity that emanated from her gaze.")
+    __("The combination that was both intimidating and undeniably alluring to [player_name].")
+    __("The setting sun cast a silhouette that merged with the Mustang and her figure, an embodiment of both beauty and power.")
+    __("[player_name] would never forget that image.")
     Izumi "Get in the car, Miku."
     Miku "Yes, mom."
     Miku "Bye, [player_name]!"
-    "He could only watch in silence as the woman stepped in the car and left without saying a word."
-    "However, she didn't stop looking at [player_name] for more than two seconds until they left, with a gaze both inviting and hair-raising."
+    __("He could only watch in silence as the woman stepped in the car and left without saying a word.")
+    __("However, she didn't stop looking at [player_name] for more than two seconds until they left, with a gaze both inviting and hair-raising.")
     call nexttime from _call_nexttime_49
     $ showscene('townhousejimmysroom', transition=fade)
     Jimmy "That was... intense."

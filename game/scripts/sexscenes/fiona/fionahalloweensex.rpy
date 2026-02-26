@@ -20,9 +20,9 @@ label .slow:
     Fiona "I want this pussy to have your full cock inside."
     Fiona "So, I'm just gonna... SIT ON IT!"
     menu:
-        "Harder":
+        __("Harder"):
             jump .fast
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Jimmy "I'm gonna cum!"
             Fiona "Me too! CUM INSIDE ME!"
@@ -47,9 +47,9 @@ label .fast:
     Jimmy "Oh, yes, baby. Ride me!"
     Fiona "YES YES YES!"
     menu:
-        "Slow down":
+        __("Slow down"):
             jump .slow
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Jimmy "I'm gonna cum!"
             Fiona "Me too! CUM INSIDE ME!"

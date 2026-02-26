@@ -23,7 +23,7 @@ label artbookquest:
         Jimmy "Sure, Miss."
         Aurora "Go do de library and ask for a book for de art class deacher. They vill know what yur dalkin about."
         Jimmy "Uh, okay, I'll get it."
-        "Umm, that's a very particular accent..."
+        __("Umm, that's a very particular accent...")
         $ quests.artclassBook = ACTIVE
         $ gotoscene('mainbuildingrighthallway', transition=fade)
     elif quests.artclassBook == SATISFIED:

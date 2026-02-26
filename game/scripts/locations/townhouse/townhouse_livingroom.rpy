@@ -52,21 +52,21 @@ label townhouselivingroom_stairs:
 
 label townhouselivingroom_basementdoor:
     if not townhouselivingroom.basementDoorChecked:
-        "This door is locked."
-        "I think it leads to the basement."
+        __("This door is locked.")
+        __("I think it leads to the basement.")
         $ townhouselivingroom.basementDoorChecked = True
     else:
-        "Locked."
+        __("Locked.")
     jump townhouselivingroom_loop
 
 label townhouselivingroom_boxes:
     if quests.blairUSB == ACTIVE:
         jump prologue_blairusbcollision
     elif quests.blairUSB == SATISFIED:
-        "I already got the USB drive."
-        "I should go to my room and finish setting up my PC."
+        __("I already got the USB drive.")
+        __("I should go to my room and finish setting up my PC.")
     else:
-        "The boxes are empty."
+        __("The boxes are empty.")
     jump townhouselivingroom_loop
 
 label townhouselivingroom_todiningroom:
@@ -81,17 +81,15 @@ label townhouselivingroom_kassandra:
     hide kassandrapajama01
     show kassandra pajamas with dissolve
     if quests.blairUSB == COMPLETE:
+        Kassandra "Hey, honey."
         if alice_breakfastwarning == True:
-            Kassandra "Hey, honey."
             Kassandra "We were waiting for you."
             jump prologue_awkwardbreakfast
         else:
-            Kassandra "Hey, honey."
             Kassandra "Can you go tell Alice that breakfast is ready, please?"
             $ breakfast_ready = True
             jump townhouselivingroom_loop
     else:
-        Kassandra "Hey, honey."
         Kassandra "Have you talked to your [roommate_female]s yet?"
         Kassandra "If you see them, please tell them that breakfast is ready."
         $ breakfast_ready = True
@@ -101,5 +99,5 @@ label townhouselivingroom_housefront:
     if prologue.awkwardBreakfast == True:
         $ gotoscene('townhousefront')
     else:
-        "I have things to do before going out."
+        __("I have things to do before going out.")
         jump townhouselivingroom_loop

@@ -14,9 +14,9 @@ label missdawson_fucking_scene:
     Dawson "This is the man I deserve. A man that can actually fuck me hard like this."
     Dawson "FUCK, [player_name]!! Please, fuck me harder!"
     menu:
-        "Harder":
+        __("Harder"):
             jump .fast
-        "Cum":
+        __("Cum"):
             jump .cum
 
 label .slow:
@@ -27,9 +27,9 @@ label .slow:
     Dawson "This is the man I deserve. A man that can actually fuck me hard like this."
     Dawson "FUCK, [player_name]!! Please, fuck me harder!"
     menu:
-        "Harder":
+        __("Harder"):
             jump .fast
-        "Cum":
+        __("Cum"):
             jump .cum
 
 label .fast:
@@ -42,9 +42,9 @@ label .fast:
     Dawson "You have been such a nice boy!"
     Dawson "Fuck, I'm almost cumming!!"
     menu:
-        "Slow":
+        __("Slow"):
             jump .slow
-        "Cum":
+        __("Cum"):
             jump .cum
 
 

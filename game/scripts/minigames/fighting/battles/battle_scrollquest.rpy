@@ -31,9 +31,9 @@ label start_battlederekfinal:
     call battlederekfinal(mcfighter02, derekbrute) from _call_battlederekfinal
     if _return == False:
         menu:
-            "Try again?":
+            __("Try again?"):
                 jump start_battlederekfinal
-            "Skip":
+            __("Skip"):
                 jump derekdefeatedrpgending
     if _return == True:
         jump derekdefeatedrpgending
@@ -111,7 +111,7 @@ label battlederekfinal(p_fighter, e_fighter):
         jump .loop
 
     label .playerattack:
-        "[player_name] attacks Derek 'The Piece of Shit'!"
+        __("{} attacks Derek 'The Piece of Shit'!".format(player_name))
         hide mcfighter02_idle_anim
         if enemy_defending:
             hide derekbrute_idle_anim
@@ -121,7 +121,7 @@ label battlederekfinal(p_fighter, e_fighter):
             hide derekbrute_idle_anim
             show derekbrute_defend_anim at Transform(pos=(0, 550)) with vpunch
             play sound "audio/sfx/metalclang.ogg"
-            "Derek 'The Piece of Shit' is defending!"
+            __("Derek 'The Piece of Shit' is defending!")
             $ e_fighter.endurance_current -= ((p_fighter.guts * 2) + 30 - (e_fighter.wits * 2)) / 2
             $ p_fighter.special_current += 1
             $ e_fighter.special_current += 3
@@ -134,7 +134,7 @@ label battlederekfinal(p_fighter, e_fighter):
             pause 0.1
             hide derekbrute_idle_anim
             show derekbrute_hurt_anim at Transform(pos=(0, 600)) with vpunch
-            "Derek 'The Piece of Shit' is not defending!"
+            __("Derek 'The Piece of Shit' is not defending!")
             $ e_fighter.endurance_current -= (p_fighter.guts * 2) + 30
             $ p_fighter.special_current += 1
             $ e_fighter.special_current += 1
@@ -151,7 +151,7 @@ label battlederekfinal(p_fighter, e_fighter):
         hide mcfighter02_idle_anim
         play sound "audio/sfx/metalclang.ogg"
         show mcfighter02_defend_anim at Transform(pos=(0, 615)) with vpunch
-        "[player_name] is defending!"
+        __("{} is defending!".format(player_name))
         $ player_defending = True
         $ player_battleturn = False
         $ enemy_battleturn = True
@@ -167,7 +167,7 @@ label battlederekfinal(p_fighter, e_fighter):
                 pause 0.5
                 play sound "audio/sfx/metalclang.ogg"
                 show derekbrute_defend_anim at Transform(pos=(0, 550)) with vpunch
-                "Derek 'The Piece of Shit' is defending!"
+                __("Derek 'The Piece of Shit' is defending!")
                 $ e_fighter.endurance_current -= ((p_fighter.guts * 2) + 50 - (e_fighter.wits * 2)) / 2
                 $ e_fighter.special_current += 1
                 $ p_fighter.special_current -= 4
@@ -181,7 +181,7 @@ label battlederekfinal(p_fighter, e_fighter):
                 pause 0.5
                 hide derekbrute_idle_anim
                 show derekbrute_hurt_anim at Transform(pos=(0, 600)) with vpunch
-                "Derek 'The Piece of Shit' is not defending!"
+                __("Derek 'The Piece of Shit' is not defending!")
                 $ e_fighter.endurance_current -= (p_fighter.guts * 2) + 50 - (e_fighter.wits * 2)
                 $ e_fighter.special_current += 1
                 $ p_fighter.special_current -= 4
@@ -189,7 +189,7 @@ label battlederekfinal(p_fighter, e_fighter):
                 show derekbrute_idle_anim at Transform(pos=(1150, 600))
                 $ renpy.pause()
         else:
-            "You don't have enough 'violence desire' to make this move."
+            __("You don't have enough 'violence desire' to make this move.")
             jump .loop # Go back to the main loop to re-select an action
         
         hide mcfighter02_bullcharge_anim
@@ -199,7 +199,7 @@ label battlederekfinal(p_fighter, e_fighter):
         jump .loop
 
     label .enemyattack:
-        "Derek 'The Piece of Shit' attacks [player_name]!"
+        __("Derek 'The Piece of Shit' attacks {}!".format(player_name))
         if player_defending:
             hide derekbrute_idle_anim
             play sound "audio/sfx/rockthrow.ogg"
@@ -207,7 +207,7 @@ label battlederekfinal(p_fighter, e_fighter):
             pause 0.5
             play sound "audio/sfx/metalclang.ogg"
             show mcfighter02_defend_anim at Transform(pos=(0, 615)) with vpunch
-            "[player_name] is defending!"
+            __("{} is defending!".format(player_name))
             $ p_fighter.endurance_current -= ((e_fighter.guts * 2) + 10 - (p_fighter.wits * 2)) / 2
             $ e_fighter.special_current += 1
             $ p_fighter.special_current += 3
@@ -221,7 +221,7 @@ label battlederekfinal(p_fighter, e_fighter):
             pause 0.5
             hide mcfighter02_idle_anim
             show mcfighter02_hurt_anim at Transform(pos=(0, 625)) with vpunch
-            "[player_name] is not defending!"
+            __("{} is not defending!".format(player_name))
             $ p_fighter.endurance_current -= (e_fighter.guts * 2) + 10 - (p_fighter.wits * 2)
             $ e_fighter.special_current += 1
             $ p_fighter.special_current += 1
@@ -239,7 +239,7 @@ label battlederekfinal(p_fighter, e_fighter):
         hide derekbrute_idle_anim
         play sound "audio/sfx/metalclang.ogg"
         show derekbrute_defend_anim at Transform(pos=(0, 550)) with vpunch
-        "Derek 'The Piece of Shit' is defending!"
+        __("Derek 'The Piece of Shit' is defending!")
         $ enemy_defending = True
         $ enemy_battleturn = False
         $ player_battleturn = True
@@ -254,7 +254,7 @@ label battlederekfinal(p_fighter, e_fighter):
             pause 0.5
             play sound "audio/sfx/metalclang.ogg"
             show mcfighter02_defend_anim at Transform(pos=(0, 615)) with vpunch
-            "[player_name] is defending!"
+            __("{} is defending!".format(player_name))
             $ p_fighter.special_current += 1
             $ e_fighter.special_current -= 6
             $ player_stunned = True
@@ -268,7 +268,7 @@ label battlederekfinal(p_fighter, e_fighter):
             pause 0.5
             hide mcfighter02_idle_anim
             show mcfighter02_hurt_anim at Transform(pos=(0, 625)) with vpunch
-            "[player_name] is not defending!"
+            __("{} is not defending!".format(player_name))
             $ p_fighter.endurance_current -= 10
             $ p_fighter.special_current += 1
             $ e_fighter.special_current -= 6

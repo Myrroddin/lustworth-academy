@@ -19,7 +19,7 @@ label chapterone_fionaintro:
     hide screen freeroamhud with None
     play music MUSIC_FIONAS_THEME
     show fionaintropeek with dissolve
-    "Wow, look at those legs."
+    __("Wow, look at those legs.")
     pause 0.8
     $ time = TIME_STRINGS[calendar.when[2] - 1]
     Jimmy "Hey, do you work here?"

@@ -10,8 +10,8 @@ label eunicetheater_practiceintro:
     hide screen freeroamhud with None
     stop music
     scene artclassroomfallday with fade
-    "{i}The art classroom was quiet, smelling faintly of turpentine and clay.{/i}"
-    "{i}In the center of the room, Eunice stood talking in a strange manner towards the sunlight leaking through the windows.{/i}"
+    __("{i}The art classroom was quiet, smelling faintly of turpentine and clay.{/i}")
+    __("{i}In the center of the room, Eunice stood talking in a strange manner towards the sunlight leaking through the windows.{/i}")
     play music "audio/music/classicmusic01.ogg"
     show eunice uniform acting with dissolve
     Eunice "How dare you! You bring this... this peasant's trifle before me and call it tribute? Your insolence is a stain upon this court!"
@@ -35,7 +35,7 @@ label eunicetheater_practiceintro:
     Eunice "The Captain is reporting to the Queen about a baker who used cow milk instead of almond milk."
     Eunice acting "Okay, I'm ready. Get into character!"
     play music "audio/music/classicmusic01.ogg"
-    "{i}Eunice takes a deep breath, her entire demeanor shifting into one of regal fury. It might be a good idea to remember her lines...{/i}"
+    __("{i}Eunice takes a deep breath, her entire demeanor shifting into one of regal fury. It might be a good idea to remember her lines...{/i}")
     play sound "audio/sfx/clearthroat01.ogg"
     Jimmy "Your Majesty, the baker has been apprehended. He claims it was a... a simple mistake."
     play sound "audio/sfx/hum01.ogg"
@@ -69,14 +69,14 @@ label eunicetheater_bookfetch:
         hide screen freeroamhud with None
         stop music
         play sound "audio/sfx/doorknock01.ogg"
-        "{i}The door to the Art classroom was locked, but [player_name] could hear the voice of Eunice laughing and talking to another girl.{/i}"
-        "{i}What's going on? Thought [player_name], before knocking on the door.{/i}"
+        __("{i}The door to the Art classroom was locked, but [player_name] could hear the voice of Eunice laughing and talking to another girl.{/i}")
+        __("{i}What's going on? Thought [player_name], before knocking on the door.{/i}")
         play sound "audio/sfx/gasp01.ogg"
         Eunice "Coming!"
-        Eunice "{i}*whispers* He's here. *whispers*{/i}"
+        Eunice "*whispers* He's here. *whispers*"
         play sound "audio/sfx/giggle01.ogg"
-        Unk "{i}*whispers* He, he, he. *whispers*{/i}"
-        "{i}[player_name] heard the steps getting closer to the door, but the when it opened he couldn't hide the shock on his face.{/i}"
+        Unk "*whispers* He, he, he. *whispers*"
+        __("{i}[player_name] heard the steps getting closer to the door, but the when it opened he couldn't hide the shock on his face.{/i}")
         play sound "audio/sfx/dooropen01.ogg"
         scene eunicedoorkeep01 with vpunch
         play sound "audio/sfx/sexyintro.ogg"
@@ -149,7 +149,7 @@ label eunicetheater_bookfetch:
             play sound "audio/sfx/girlsigh01.ogg"
             Eunice "This is not the one I need."
             Eunice "It's the 'The Compassionate Palate: A Vegan's Guide to Friendly Cuisine.'"
-            Jimmy "Shit, I'm sorry. I sounded similar."
+            Jimmy "Shit, I'm sorry. It sounded similar."
             Jimmy "I'll get you the right one."
             Miku "Hurry up! We're waiting for you!"
             play sound "audio/sfx/doorclose01.ogg"
@@ -160,7 +160,7 @@ label eunicetheater_bookfetch:
             play sound "audio/sfx/girlsigh01.ogg"
             Eunice "This is not the one I need."
             Eunice "It's the 'The Compassionate Palate: A Vegan's Guide to Friendly Cuisine.'"
-            Jimmy "Shit, I'm sorry. I sounded similar."
+            Jimmy "Shit, I'm sorry. It sounded similar."
             Jimmy "I'll get you the right one."
             Miku "Hurry up! We're waiting for you!"
             play sound "audio/sfx/doorclose01.ogg"
@@ -171,7 +171,7 @@ label eunicetheater_bookfetch:
             play sound "audio/sfx/girlsigh01.ogg"
             Eunice "This is not the one I need, even though I think I want to read it now."
             Eunice "I need the 'The Compassionate Palate: A Vegan's Guide to Friendly Cuisine.'"
-            Jimmy "Shit, I'm sorry. I sounded similar."
+            Jimmy "Shit, I'm sorry. It sounded similar."
             Jimmy "I'll get you the right one."
             Miku "Hurry up! We're waiting for you!"
             play sound "audio/sfx/doorclose01.ogg"
@@ -190,7 +190,7 @@ label eunicemikuartworkintro:
     play music MUSIC_MIKUS_THEME
     play sound "audio/sfx/hey02.ogg"
     Miku "Hey, [player_name]."
-    Jimmy "Sup, Miks."
+    Jimmy "Sup, Miku."
     Miku "You got here just in time."
     Miku "What do you think about our suits?"
     Jimmy "Very revealing..."
@@ -200,7 +200,7 @@ label eunicemikuartworkintro:
     Miku "And I'm also trying to make Eunice feel less ashamed of her body."
     Eunice "..."
     Miku "Here, take a picture with the camera you gave me!"
-    "{i}As [player_name] took the camera, he couldn't help but stare at their bodies through the lens.{/i}"
+    __("{i}As [player_name] took the camera, he couldn't help but stare at their bodies through the lens.{/i}")
     Jimmy "Have you thought about something more artistic?"
     play sound "audio/sfx/hmm03.ogg"
     Miku "What do you have in mind?"
@@ -211,7 +211,7 @@ label eunicemikuartworkintro:
     Jimmy "Well, I try."
     Miku "So, what should we do?"
     Jimmy "Stand right there, so I can get both of your figures in one painting."
-    "{i}The girls nodded in agreement and took up their positions.{/i}"
+    __("{i}The girls nodded in agreement and took up their positions.{/i}")
     play sound "audio/sfx/giggle01.ogg"
     Eunice "This is so cool." 
     Eunice "I've never been painted before."
@@ -234,8 +234,8 @@ label eunicepaintingsuccess:
     Miku "[player_name], could you turn your head for a bit?"
     Jimmy "Sure..."
     play sound "audio/sfx/whisperfemale.ogg"
-    "{i}As [player_name] turned his head, he started hearing both girls whispering to each other.{/i}"
-    "{i}He heard giggles while they seemed to be doing something he couldn't see.{/i}"
+    __("{i}As [player_name] turned his head, he started hearing both girls whispering to each other.{/i}")
+    __("{i}He heard giggles while they seemed to be doing something he couldn't see.{/i}")
     Eunice "[player_name], you can turn back now."
     play sound "audio/sfx/sexyintro.ogg"
     scene eunicemikuartworkreward with fade
@@ -258,7 +258,6 @@ label eunicepaintingsuccess:
     Jimmy "See you later, then."
     $ MikuDaylimit = True
     $ gotoscene('mainbuildingrighthallway', transition=fade)
-
 
 label eunicepaintingfail:
     stop music

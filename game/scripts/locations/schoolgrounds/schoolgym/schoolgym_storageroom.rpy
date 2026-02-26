@@ -39,7 +39,7 @@ label schoolgymstorageroom_poster:
     else:
         hide screen freeroamhud
         show girlshowerhole with dissolve
-        "No one's there."
+        __("No one's there.")
         hide girlshowerhole with dissolve
     jump schoolgymstorageroom_loop
 

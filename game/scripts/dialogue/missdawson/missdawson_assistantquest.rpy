@@ -47,7 +47,7 @@ label missdawsonassistantquest:
         show jimmy neutral
         with dissolve
         Dawson "Hello, Mr. [player_surname]."
-        "I don't require your services today."
+        __("I don't require your services today.")
     $ gotoscene('mainbuildingsecretarysoffice')
 
 label .intro:
@@ -139,7 +139,7 @@ label .titshow:
     play sound "audio/sfx/womansobbing01.ogg"
     Dawson "..."
     Jimmy "..."
-    "{i}'Oh, shit. This got serious', thought [player_name] as he saw the woman sobbing in front of him.{/i}"
+    __("{i}'Oh, shit. This got serious', thought [player_name] as he saw the woman sobbing in front of him.{/i}")
     Dawson "Sometimes it's so hard to... to do this job..."
     Dawson "And he... he left me alone with all the responsability this time..."
     Dawson "It's not fair..."
@@ -151,10 +151,10 @@ label .titshow:
     play sound "audio/sfx/doorclose02.ogg"
     scene dawsontitshowintro with fade
     Dawson "Can I ask you a question?"
-    "{i}The headmaster's assistant sat on the desk in a very suggestive pose.{/i}"
-    "{i}She looked at [player_name] with tears drying on her beautiful face.{/i}"
+    __("{i}The headmaster's assistant sat on the desk in a very suggestive pose.{/i}")
+    __("{i}She looked at [player_name] with tears drying on her beautiful face.{/i}")
     Dawson "Would you marry a woman like me?"
-    "{i}'Wow, that's scalated quickly', thought [player_name].{/i}"
+    __("{i}'Wow, that's scalated quickly', thought [player_name].{/i}")
     Jimmy "Uhmmm... I think I would, yes."
     play sound "audio/sfx/femaleclearthroat.ogg"
     Dawson "Really? I mean, it's just that sometimes I feel that I'm not enough."
@@ -182,8 +182,8 @@ label .titshow:
     call nexttime from _call_nexttime_20
     $ showscene('mainbuildingentrance', transition=fade)
     show jimmy smug with dissolve
-    "Damn, that was hot!"
-    "I hope I get to see more of those \"juicy\" tits in the future..."
+    __("Damn, that was hot!")
+    __("I hope I get to see more of those \"juicy\" tits in the future...")
     $ quests.missdawsonTitShow = COMPLETE
     $ gotoscene('mainbuildingentrance')
 

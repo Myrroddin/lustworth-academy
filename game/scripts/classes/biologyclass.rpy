@@ -27,14 +27,14 @@ label biology_lesson1intro:
     DrLed "Welcome, welcome, students."
     DrLed "As you can see, I've been busy preparing the lesson."
     DrLed "And to answer what I'm sure many of you are wondering - this is {i}not{/i} human blood."
-    "Da fuq?"
+    __("Da fuq?")
     DrLed "Today, we are going to start with the basics."
     DrLed "By the time you finish my class - {i}if{/i} you finish my class..."
     DrLed "You'll be able to perform surgery, even if you don't have a license."
     DrLed "Don't worry, I don't have one either."
     DrLed "That's just how medicine works."
     DrLed "Anyone can be a doctor if they want it enough."
-    "This guy's a psycho."
+    __("This guy's a psycho.")
     DrLed "Well, let's begin with the first lesson."
     return
 

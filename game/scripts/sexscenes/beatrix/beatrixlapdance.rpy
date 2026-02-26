@@ -4,7 +4,7 @@ label beatrix_lapdance_scene:
     Beatrix "Please, don't move, okay?"
     Jimmy "..."
     Beatrix "This is so weird."
-    "At least she has a nice ass under that skirt"
+    __("At least she has a nice ass under that skirt")
     Beatrix "Alright, that's enough, right?"
     Beatrix "Your penis had some contact with my butt, so..."
     pause 1.0

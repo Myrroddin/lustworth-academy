@@ -47,7 +47,7 @@ label start_battletutorial:
     scene battletutorialbganim with fade
     show mcfighter01_idle_anim at Transform(pos=(450, 550)) with dissolve 
     show thadsquire_idle_anim  at Transform(pos=(1150, 550)) with dissolve
-    "A nervous-looking kid in steps up."
+    __("A nervous-looking kid in steps up.")
     Toord "Alright, Thad, today you're going to be someone else's punching bag, as usual."
     Toord "Here's the deal, new kid."  
     Toord "Use your imagination to see how much damage you can take until you pass out."
@@ -169,7 +169,7 @@ label battletutorial(p_fighter, e_fighter):
         jump .loop
 
     label .playerattack:
-        "[player_name] attacks Thad 'The Squire'!"
+        __("{} attacks Thad 'The Squire'!".format(player_name))
         hide mcfighter01_idle_anim
         if enemy_defending:
             hide thadsquire_idle_anim
@@ -179,7 +179,7 @@ label battletutorial(p_fighter, e_fighter):
             hide thadsquire_idle_anim
             show thadsquire_defend_anim at Transform(pos=(0, 550)) with vpunch
             play sound "audio/sfx/metalclang.ogg"
-            "Thad 'The Squire' is defending!"
+            __("Thad 'The Squire' is defending!")
             $ e_fighter.endurance_current -= ((p_fighter.guts * 2) + 30 - (e_fighter.wits * 2)) / 2
             $ p_fighter.special_current += 1
             $ e_fighter.special_current += 3
@@ -192,7 +192,7 @@ label battletutorial(p_fighter, e_fighter):
             pause 0.1
             hide thadsquire_idle_anim
             show thadsquire_hurt_anim at Transform(pos=(0, 550)) with vpunch
-            "Thad 'The Squire' is not defending!"
+            __("Thad 'The Squire' is not defending!")
             $ e_fighter.endurance_current -= (p_fighter.guts * 2) + 30
             $ p_fighter.special_current += 1
             $ e_fighter.special_current += 1
@@ -209,7 +209,7 @@ label battletutorial(p_fighter, e_fighter):
         hide mcfighter01_idle_anim
         play sound "audio/sfx/metalclang.ogg"
         show mcfighter01_defend_anim at Transform(pos=(0, 550)) with vpunch
-        "[player_name] is defending!"
+        __("{} is defending!".format(player_name))
         $ player_defending = True
         $ player_battleturn = False
         $ enemy_battleturn = True
@@ -225,7 +225,7 @@ label battletutorial(p_fighter, e_fighter):
                 pause 0.5
                 play sound "audio/sfx/metalclang.ogg"
                 show thadsquire_defend_anim at Transform(pos=(0, 550)) with vpunch
-                "Thad 'The Squire' is defending!"
+                __("Thad 'The Squire' is defending!")
                 $ e_fighter.endurance_current -= ((p_fighter.guts * 2) + 50 - (e_fighter.wits * 2)) / 2
                 $ e_fighter.special_current += 1
                 $ p_fighter.special_current -= 4
@@ -239,7 +239,7 @@ label battletutorial(p_fighter, e_fighter):
                 pause 0.5
                 hide thadsquire_idle_anim
                 show thadsquire_hurt_anim at Transform(pos=(0, 550)) with vpunch
-                "Thad 'The Squire' is not defending!"
+                __("Thad 'The Squire' is not defending!")
                 $ e_fighter.endurance_current -= (p_fighter.guts * 2) + 50 - (e_fighter.wits * 2)
                 $ e_fighter.special_current += 1
                 $ p_fighter.special_current -= 4
@@ -247,7 +247,7 @@ label battletutorial(p_fighter, e_fighter):
                 show thadsquire_idle_anim at Transform(pos=(1150, 550))
                 $ renpy.pause()
         else:
-            "You don't have enough 'violence desire' to make this move."
+            __("You don't have enough 'violence desire' to make this move.")
             jump .loop # Go back to the main loop to re-select an action
         
         hide mcfighter01_bullcharge_anim
@@ -257,7 +257,7 @@ label battletutorial(p_fighter, e_fighter):
         jump .loop
 
     label .enemyattack:
-        "Thad 'The Squire' attacks [player_name]!"
+        __("Thad 'The Squire' attacks {}!".format(player_name))
         if player_defending:
             hide thadsquire_idle_anim
             play sound "audio/sfx/swordslash01.ogg"
@@ -265,7 +265,7 @@ label battletutorial(p_fighter, e_fighter):
             pause 0.5
             play sound "audio/sfx/metalclang.ogg"
             show mcfighter01_defend_anim at Transform(pos=(0, 550)) with vpunch
-            "[player_name] is defending!"
+            __("{} is defending!".format(player_name))
             $ p_fighter.endurance_current -= ((e_fighter.guts * 2) + 10 - (p_fighter.wits * 2)) / 2
             $ e_fighter.special_current += 1
             $ p_fighter.special_current += 3
@@ -279,7 +279,7 @@ label battletutorial(p_fighter, e_fighter):
             pause 0.5
             hide mcfighter01_idle_anim
             show mcfighter01_hurt_anim at Transform(pos=(0, 550)) with vpunch
-            "[player_name] is not defending!"
+            __("{} is not defending!".format(player_name))
             $ p_fighter.endurance_current -= (e_fighter.guts * 2) + 10 - (p_fighter.wits * 2)
             $ e_fighter.special_current += 1
             $ p_fighter.special_current += 1
@@ -297,7 +297,7 @@ label battletutorial(p_fighter, e_fighter):
         hide thadsquire_idle_anim
         play sound "audio/sfx/metalclang.ogg"
         show thadsquire_defend_anim at Transform(pos=(0, 550)) with vpunch
-        "Thad 'The Squire' is defending!"
+        __("Thad 'The Squire' is defending!")
         $ enemy_defending = True
         $ enemy_battleturn = False
         $ player_battleturn = True
@@ -312,7 +312,7 @@ label battletutorial(p_fighter, e_fighter):
             pause 0.5
             play sound "audio/sfx/metalclang.ogg"
             show mcfighter01_defend_anim at Transform(pos=(0, 550)) with vpunch
-            "[player_name] is defending!"
+            __("{} is defending!".format(player_name))
             $ p_fighter.endurance_current -= ((e_fighter.wits * 2) - (p_fighter.wits * 2)) / 2
             $ p_fighter.special_current += 1
             $ e_fighter.special_current -= 6
@@ -327,7 +327,7 @@ label battletutorial(p_fighter, e_fighter):
             pause 0.5
             hide mcfighter01_idle_anim
             show mcfighter01_hurt_anim at Transform(pos=(0, 550)) with vpunch
-            "[player_name] is not defending!"
+            __("{} is not defending!".format(player_name))
             $ p_fighter.endurance_current -= (e_fighter.wits * 2) - (p_fighter.wits * 2)
             $ p_fighter.special_current += 1
             $ e_fighter.special_current -= 6

@@ -31,11 +31,11 @@ label policestationcellswest_loop:
     jump policestationcellswest_loop
 
 label policestationcellswest_door:
-    "Locked tight."
+    __("Locked tight.")
     jump policestationcellswest_loop
 
 label policestationcellswest_keypad:
-    "I don't know the code."
+    __("I don't know the code.")
     jump policestationcellswest_loop
 
 label policestationcellswest_grant:
@@ -47,13 +47,13 @@ label policestationcellswest_grant:
     jump policestationcellswest_loop
 
 label policestationcellswest_profilegrant:
-    "\"Grant, last name unknown. Convicted for fraud, robbing people with a banana, and public disorder.\""
-    "\"He claims to be innocent of all charges because he has blue eyes.\""
+    __("\"Grant, last name unknown. Convicted for fraud, robbing people with a banana, and public disorder.\"")
+    __("\"He claims to be innocent of all charges because he has blue eyes.\"")
     Grant "What can I say, my eyes are beautiful!"
     Jimmy "Umm, I have a profile of my own."
-    "\"[player_surname], [player_name]. Reported many times for causing public disorder in his home town of San Pestillo.\""
-    "\"Student at Trustworth Academy. Possible candidate for the new reformation program.\""
-    "Reformation program? I don't like the sound of that."
+    __("\"[player_surname], [player_name]. Reported many times for causing public disorder in his home town of San Pestillo.\"")
+    __("\"Student at Trustworth Academy. Possible candidate for the new reformation program.\"")
+    __("Reformation program? I don't like the sound of that.")
     jump policestationcellswest_loop
 
 label policestationcellswest_armscabinet:

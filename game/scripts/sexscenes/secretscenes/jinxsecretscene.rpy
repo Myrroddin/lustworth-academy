@@ -7,12 +7,12 @@ label jinxsecretscene_menu:
     scene jinxbackground with fade
     Jinx "Hey, handsome, wanna have some fun?"
     menu:
-        "Missionary":
+        __("Missionary"):
             Jinx "Let's fuck on the table!"
             scene jinxmissionaryanim01 with fade
             $ renpy.pause()
             jump jinxsecretscene_menu
-        "Leave":
+        __("Leave"):
             return
 
 image jinxmissionaryanim01:

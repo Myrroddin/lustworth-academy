@@ -34,15 +34,15 @@ label prologue_day3morning:
     jump prologue_dakotaranchintro
 
 label prologue_blairusbcollision:
-    "The USB stick must be in one of these boxes."
+    __("The USB stick must be in one of these boxes.")
     call item_pickup(ItemBlairUsb) from _call_item_pickup_20
-    "Now I can finish setting up my PC."
+    __("Now I can finish setting up my PC.")
     hide screen freeroamhud
     stop music
     play sound SOUND_RECORD_SCRATCH
     show blair house neutral with vpunch
-    "{i}As Blair was coming down the stairs, you bumped into her.{/i}"
-    "{i}Your USB stick fell to the floor, along with hers.{/i}"
+    __("As Blair was coming down the stairs, you bumped into her.")
+    __("Your USB stick fell to the floor, along with hers.")
     play music MUSIC_FUNNY_MOMENT
     show jimmy talk with dissolve
     Jimmy "Oh, crap. Sorry, I didn't see you coming."
@@ -63,9 +63,9 @@ label prologue_blairusbcollision:
     hide usbstickdilemma with dissolve
     hide blair with vpunch
     show jimmy neutral with dissolve
-    "{i}Blair took the USB stick on the right and ran back to her room.{/i}"
-    "Wow, she was in a hurry."
-    "Alright, let's get back to my room."
+    __("Blair took the USB stick on the right and ran back to her room.")
+    __("Wow, she was in a hurry.")
+    __("Alright, let's get back to my room.")
     $ quests.blairUSB = SATISFIED
     $ gotoscene('townhouselivingroom')
 
@@ -73,18 +73,18 @@ label prologue_blairlesbianvideo:
     stop music
     hide screen freeroamhud
     scene pcscreenblairusbdesktop with dissolve
-    "Hey, I forgot I still had this wallpaper."
-    "I took that picture with Amanda across the lake in San Pestillo, my home town."
-    "Those were good times."
-    "I wonder how Amanda is doing. She was my first girlfriend back in 7th grade."
-    "A lot of things have happened since then."
-    "Anyways, let's see if this USB still works."
+    __("Hey, I forgot I still had this wallpaper.")
+    __("I took that picture with Amanda across the lake in San Pestillo, my home town.")
+    __("Those were good times.")
+    __("I wonder how Amanda is doing. She was my first girlfriend back in 7th grade.")
+    __("A lot of things have happened since then.")
+    __("Anyways, let's see if this USB still works.")
     scene pcscreenblairusbwindow
-    "What the? This isn't mine."
-    "What is this folder?"
+    __("What the? This isn't mine.")
+    __("What is this folder?")
     scene pcscreenblairusbwindow02
-    "\"Ophelia.mp4\""
-    "Let's take a look."
+    __("\"Ophelia.mp4\"")
+    __("Let's take a look.")
     call blair_opheliascissoring_scene from _call_blair_opheliascissoring_scene
     Cassidy "[player_name]! Hey, I need a favor."
     Cassidy "Oh, you dirty boy. You're already watching porn?"
@@ -98,13 +98,13 @@ label prologue_blairlesbianvideo:
     Jimmy "Shut up, Cassidy! Everyone's going to hear you!"
     show blair left house neutral hairup with vpunch
     Blair "[player_name]! I think we switched our USB sticks!"
-    "{i}As Blair entered the room, sweating and nervous, she looked at Cassidy, then at [player_name], then finally at the screen.{/i}"
-    "{i}When she saw the video playing, her whole body froze.{/i}"
+    __("As Blair entered the room, sweating and nervous, she looked at Cassidy, then at [player_name], then finally at the screen.")
+    __("When she saw the video playing, her whole body froze.")
     Blair blushed "Fuck, no..."
     Cassidy neutral "Wow... Just, wow..."
     Cassidy "That explains why I've never seen you with a guy before!"
     Blair "Shut up, Cassidy."
-    "{i}[player_name] quickly stopped the video and pulled the USB out of his computer.{/i}"
+    __(" [player_name] quickly stopped the video and pulled the USB out of his computer.")
     Jimmy "Sorry, Blair. I thought it was a virus or something."
     Jimmy "Here's your stick."
     Blair "[player_name], I..."
@@ -116,7 +116,7 @@ label prologue_blairlesbianvideo:
     Blair "[player_name], I'm sure you'll keep this a secret, right?"
     Jimmy "What? I didn't see anything."
     Blair "You're cool, [player_name]. Thanks."
-    "{i}An uncomfortable silence filled the room as Cassidy and Blair shot daggers at each other.{/i}"
+    __("An uncomfortable silence filled the room as Cassidy and Blair shot daggers at each other.")
     if breakfast_ready == True:
         Jimmy "Oh, by the way. Breakfast is ready."
     $ quests.blairUSB = COMPLETE
@@ -126,10 +126,10 @@ label prologue_blairlesbianvideo:
 label prologue_awkwardbreakfast:
     play music MUSIC_FUNNY_MOMENT
     scene breakfasttime01 with fade
-    "{i}The first day in his new house, [player_name] realized how good his [landlady_name]'s food was.{/i}"
-    "{i}Everything on the table looked, smelled, and tasted delicious.{/i}"
+    __("The first day in his new house, [player_name] realized how good his [landlady_name]'s food was.")
+    __("Everything on the table looked, smelled, and tasted delicious.")
     scene awkwardbreakfast02 with dissolve
-    "{i}However, Cassidy and Blair were really quiet.{/i}"
+    __("However, Cassidy and Blair were really quiet.")
     Kassandra "Girls, you're all so quiet today..."
     scene awkwardbreakfast01 with dissolve
     Alice "The food is really good, Mom."
@@ -140,14 +140,14 @@ label prologue_awkwardbreakfast:
     Cassidy "Wow, talk about kissing ass."
     Kassandra "What did you say, Cass?"
     Cassidy "Nothing, Mom."
-    "{i}The tension between Blair, Cassidy, and [player_name] was growing as time passed.{/i}"
-    "{i}[player_name] tried to finish his food as fast as he could.{/i}"
+    __("The tension between Blair, Cassidy, and [player_name] was growing as time passed.")
+    __("[player_name] tried to finish his food as fast as he could.")
     scene breakfasttime01 with fade
     Jimmy "That was nice, Kassandra, thank you."
     Kassandra "Anytime, darling."
     Kassandra "You should get some rest."
     scene jimmyhousediningroom with fade
-    "{i}As he got up from the table, the girls left the room in a rush.{/i}"
+    __("As he got up from the table, the girls left the room in a rush.")
     Kassandra "Wait a minute, [player_name]."
     play music MUSIC_KASSANDRAS_THEME
     show jimmy neutral with dissolve
@@ -169,7 +169,7 @@ label prologue_awkwardbreakfast:
     Developer "{i}Don't worry, getting money won't be a grindy headache in this game.{/i}"
     Developer "{i}Of course, like in real life, some things are more expensive than others.{/i}"
     Developer "{i}And some girls are more expensive than others too. Watch out for gold diggers ;){/i}"
-    "Alright, now I have time to go to the beach and check on the mansion."
+    __("Alright, now I have time to go to the beach and check on the mansion.")
     call nexttime from _call_nexttime_32
     $ gotoscene('townhouselivingroom')
 
@@ -229,7 +229,7 @@ label prologue_antonellabasement:
     Antonella "And, please... no peeking ;)"
     #"I don't know about you, but that sounds like she's begging for me to peek on her."
     menu:
-        "Peek":
+        __("Peek"):
             call antonella_titshow_scene from _call_antonella_titshow_scene
             scene townhousebasement01 with dissolve
             hide antonella with dissolve
@@ -241,14 +241,14 @@ label prologue_antonellabasement:
             Antonella "You can go back, now."
             Antonella "I'm going to wait for my shirt to wash."
             $ Antonella.relPoints += 1
-        "Don't peek":
+        __("Don't peek"):
             Jimmy "No problem. Let me know when you're finished."
             Antonella "Mmm, my boobs are all wet with wine..."
-            "I'm a gentlemen, I won't turn around."
+            __("I'm a gentlemen, I won't turn around.")
             Antonella "Kassandra's clothes are so... small."
-            "I respect women and I'm not a toxic masculine man."
+            __("I respect women and I'm not a toxic masculine man.")
             Antonella "They barely fit on me."
-            "I don't want to see her boobs. That would be rude."
+            __("I don't want to see her boobs. That would be rude.")
             Antonella "Ah, come on, [player_name]."
             show antonella change with dissolve
             Antonella "I thought you were more daring."

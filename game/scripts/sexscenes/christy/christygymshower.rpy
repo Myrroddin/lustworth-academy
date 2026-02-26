@@ -1,8 +1,8 @@
 label christy_gymshower_scene:
     show christyshower01anim with fade
     play music "audio/music/showersexytheme.ogg"
-    "Damn..."
-    "What a hot piece of ass."
+    __("Damn...")
+    __("What a hot piece of ass.")
     Jimmy "Do you know who she is?"
     Pete "Oh, yeah. That's Christy. She's a real beauty."
     $ Christy.met = True

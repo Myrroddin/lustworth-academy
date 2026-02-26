@@ -11,11 +11,11 @@ label cassidy_titsout_scene:
 
 label titsoutloop:
     menu:
-        "Again!":
+        __("Again!"):
             scene cassidytitsoutanimation with dissolve
             $ renpy.pause()
             jump titsoutloop
-        "Move on":
+        __("Move on"):
             Cassidy "Do you think I'm attractive?"
             Cassidy "Do you think I'm more attractive than Christy?"
             Jimmy "Umm, I'm not sure where you're going with this."

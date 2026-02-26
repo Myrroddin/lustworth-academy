@@ -13,11 +13,11 @@ label ivanasecretscene_menu:
         $ entry = False
     menu:
         Ivana "I'm all yours baby..."
-        "Deep Throat":
+        __("Deep Throat"):
             jump ivanasecretscene_deepthroat
-        "Doggystyle":
+        __("Doggy style"):
             jump ivanasecretscene_doggystyle
-        "Leave":
+        __("Leave"):
             Jimmy "I'll come back again later."
             Ivana "I'll be waiting, darling."
             return
@@ -27,7 +27,7 @@ label ivanasecretscene_deepthroat:
     Ivana "Oh, yes. Put it inside my mouth."
     Ivana "I'm gonna suck it so hard."
     menu:
-        "Faster":
+        __("Faster"):
             jump ivanasecretscene_deepthroat_fast
 
 label ivanasecretscene_deepthroat_slow:
@@ -37,9 +37,9 @@ label ivanasecretscene_deepthroat_slow:
     Ivana "Ohgg my gsdhod!"
     Ivana "*Gasp* Fuck my mouth, [player_name]! Nnggguckkk"
     menu:
-        "Faster":
+        __("Faster"):
             jump ivanasecretscene_deepthroat_fast
-        "Cum":
+        __("Cum"):
             jump ivanasecretscene_deepthroat_cum
 
 label ivanasecretscene_deepthroat_fast:
@@ -49,9 +49,9 @@ label ivanasecretscene_deepthroat_fast:
     Ivana "I caghgn't breathgghghe!"
     Ivana "*Gasp* Fuck my mouth, [player_name]! Nnggguckkk"
     menu:
-        "Slower":
+        __("Slower"):
             jump ivanasecretscene_deepthroat_slow
-        "Cum":
+        __("Cum"):
             jump ivanasecretscene_deepthroat_cum
 
 label ivanasecretscene_deepthroat_cum:
@@ -67,16 +67,16 @@ label ivanasecretscene_doggystyle:
     Ivana "Yes! Fuck me from behind!."
     Ivana "It's been a long time since I had a good cock pounding my pussy."
     menu:
-        "Faster":
+        __("Faster"):
             jump ivanasecretscene_doggystyle_fast
 
 label ivanasecretscene_doggystyle_slow:
     scene ivanadoggystyleanimslow
     Ivana "YES! YES! Fuck me harder!"
     menu:
-        "Faster":
+        __("Faster"):
             jump ivanasecretscene_doggystyle_fast
-        "Cum":
+        __("Cum"):
             jump ivanasecretscene_doggystyle_cum
 
 label ivanasecretscene_doggystyle_fast:
@@ -85,9 +85,9 @@ label ivanasecretscene_doggystyle_fast:
     Ivana "I can feel you going in and out so fast!"
     Ivana "You're pounding my butt so hard!"
     menu:
-        "Slower":
+        __("Slower"):
             jump ivanasecretscene_doggystyle_slow
-        "Cum":
+        __("Cum"):
             jump ivanasecretscene_doggystyle_cum
 
 label ivanasecretscene_doggystyle_cum:

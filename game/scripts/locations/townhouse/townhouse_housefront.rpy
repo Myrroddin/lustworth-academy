@@ -25,7 +25,7 @@ label townhousefront:
         else:
             Jimmy "Miku should be here in the afternoon."
     elif quests.punnyPrivateLessons == ACTIVE and moneyhelp01 == False:
-        "There is something in the floor..."
+        __("There is something on the floor...")
         call item_pickup(ItemMoneyFound01) from _call_item_pickup_30
         $ Jimmy.money += 100
         $ moneyhelp01 = True

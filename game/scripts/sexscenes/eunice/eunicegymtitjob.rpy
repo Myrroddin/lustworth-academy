@@ -1,9 +1,9 @@
 label eunice_gymtitjob_scene:
     play music MUSIC_SEXY_THEME
     scene eunicetitjobintro with fade
-    "{i}She struggled to take her clothes because of the size of her curves.{/i}"
-    "{i}But, slowly and avoiding [player_name]'s gaze, she got completely naked in front of him.{/i}"
-    "{i}Then, still not looking at [player_name] in the eyes, she got close and asked him to take his pants off with signs.{/i}"
+    __("She struggled to take her clothes because of the size of her curves.")
+    __("{i}But, slowly and avoiding [player_name]'s gaze, she got completely naked in front of him.{/i}")
+    __("{i}Then, still not looking at [player_name] in the eyes, she got close and asked him to take his pants off with signs.{/i}")
     scene eunicetitjobanim with dissolve
     play sound "audio/sfx/mh1.ogg"
     Eunice "Uhh..."

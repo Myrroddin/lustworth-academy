@@ -1,6 +1,6 @@
 label jill_officemasturbation_scene:
     scene jillmasturbationspritedoor with fade
-    "[player_name] slowly opened the door."
+    __("[player_name] slowly opened the door.")
     play music "audio/music/sexytheme02.ogg"
     scene jillmasturbationanim01 with dissolve
     Jill "Uff, yes..."
@@ -14,7 +14,7 @@ label jill_officemasturbation_scene:
     $ renpy.pause()
     Jill "I'm cumming, I'm cumming!! OHHH!"
     scene jillmasturbationcum with vpunch
-    "{i}Her body shook with pleasure until she passed out.{/i}"
+    __("{i}Her body shook with pleasure until she passed out.{/i}")
     if jilliangallery == True:
         call screen jilliangallery
     return

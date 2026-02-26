@@ -4,8 +4,8 @@ label euniceboobytrap:
     hide screen freeroamhud
     $ showscene('schoolgymstorageroom', transition=fade)
     play sound "audio/sfx/doorclose01.ogg"
-    "{i}[player_name] entered the storage room expecting to meet Eunice as she requested.{/i}"
-    "{i}However, there was someone else in there...{/i}"
+    __("{i}[player_name] entered the storage room expecting to meet Eunice as she requested.{/i}")
+    __("{i}However, there was someone else in there...{/i}")
     Jimmy "Miku?"
     show miku uniform sit with dissolve
     play sound "audio/sfx/hey01.ogg"
@@ -66,7 +66,7 @@ label euniceboobytrap:
     play sound "audio/sfx/hum01.ogg"
     Eunice seductive "So... Um... Can you sit over there on that mat?"
     Jimmy "Sure."
-    "{i}[player_name] did what she requested. With a timid look in her eyes, Eunice started taking her clothes off...{/i}"
+    __("{i}[player_name] did what she requested. With a timid look in her eyes, Eunice started taking her clothes off...{/i}")
     call eunice_gymtitjob_scene from _call_eunice_gymtitjob_scene_1
     $ quests.euniceBoobytrap = COMPLETE
     $ Eunice.relPoints += 1

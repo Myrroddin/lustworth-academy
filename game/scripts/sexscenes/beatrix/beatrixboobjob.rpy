@@ -24,25 +24,25 @@ label beatrix_beatrixboobjob_scene:
     Beatrix "You are lucky I need more of you cum, to run some tests."
     scene beatrixboobjobintro with fade
     play sound "audio/sfx/undress01.ogg"
-    "{i}Beatrix got down the table and started undressing her chest.{/i}"
-    "[player_name]'s manhood was already hard for the occasion and Beatrix seemed impressed with it."
+    __("{i}Beatrix got down the table and started undressing her chest.{/i}")
+    __("[player_name]'s manhood was already hard for the occasion and Beatrix seemed impressed with it.")
     play sound "audio/sfx/mh1.ogg"
     Beatrix "Are these things supposed to be this big?"
     Jimmy "Oh, yeah."
     Beatrix "Good thing, my boobs have a good size."
     play sound "audio/sfx/handjob01.ogg"
     scene beatrixboobjobanim with fade
-    "[player_name] could feel her warm skin around his cock as she started to work it up and down like a natural."
-    "He could feel her boobs bouncing on his hip as she clenched his cock more and more each time."
+    __("[player_name] could feel her warm skin around his cock as she started to work it up and down like a natural.")
+    __("He could feel her boobs bouncing on his hip as she clenched his cock more and more each time.")
     Jimmy "Oh, fuck. I never thought you would be so good at this!"
     play sound "audio/sfx/ah1.ogg"
     Beatrix "I've seen stuff on the internet."
-    "{i}The sensation of her tits being fucked by his cock was unlike anything she had ever experienced before.{/i}"
-    "{i}He grabbed the edge of the desk, feeling that he was getting closer and closer to the climax.{/i}"
+    __("{i}The sensation of her tits being fucked by his cock was unlike anything she had ever experienced before.{/i}")
+    __("{i}He grabbed the edge of the desk, feeling that he was getting closer and closer to the climax.{/i}")
     Jimmy "Oh fuck, here it comes!"
     scene beatrixboobjobcum with vpunch
     play sound "audio/sfx/cumshotone.ogg"
-    "{i}He grunted as he felt his cum shoot in all directions.{/i}"
+    __("{i}He grunted as he felt his cum shoot in all directions.{/i}")
     Jimmy "Holy shit, that felt so good."
     Jimmy "I love those tits."
     play sound "audio/sfx/giggle01.ogg"

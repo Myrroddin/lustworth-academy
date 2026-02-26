@@ -2,10 +2,10 @@ label eunice_fuckvision_scene:
     play music MUSIC_SEXY_THEME
     scene eunicefuckvisionanim with fade
     play sound "audio/sfx/cowgirl01.ogg"
-    "{i}Suddenly, his mind is transported to a different place.{/i}"
-    "{i}He feels pleasure as he sees himself having sex with a woman.{/i}"
-    "{i}The woman was big sized. Her whole body shaked wildly with every thrust of his cock.{/i}"
-    "{i}After a couple of seconds of pulling and retreating, he realizes who the woman was...{/i}"
+    __("{i}Suddenly, his mind is transported to a different place.{/i}")
+    __("{i}He feels pleasure as he sees himself having sex with a woman.{/i}")
+    __("{i}The woman was big sized. Her whole body shaked wildly with every thrust of his cock.{/i}")
+    __("{i}After a couple of seconds of pulling and retreating, he realizes who the woman was...{/i}")
     Eunice "My god! [player_name]! This is the best feeling I've ever had in my life!"
     Eunice "I thought eating a triple smash burger was my happy place, but..."
     Eunice "This is so much better!"
@@ -22,7 +22,7 @@ label eunice_fuckvision_scene:
     Eunice "Get that cum real deep inside!"
     Jimmy "Wait, no. I don't wanna..."
     Eunice "DOOOO IT!" with vpunch
-    "{i}[player_name] couldn't resist the heat of the moment.{/i}"
+    __("{i}[player_name] couldn't resist the heat of the moment.{/i}")
     scene eunicefuckvisioncum with vpunch
     play sound "audio/sfx/cumshotone.ogg"
     Eunice "OH MY GOD!"

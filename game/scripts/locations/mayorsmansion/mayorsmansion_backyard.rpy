@@ -42,143 +42,143 @@ label mayorsmansionbackyard_loop:
 label mayorsmansionbackyard_kitchen:
     if dogsleeping == False:
         if mayorsmansionbackyard.dogComment == True:
-            "I can see someone in there, but the dog won't let me get close."
+            __("I can see someone in there, but the dog won't let me get close.")
         else:
-            "It's a bit dark. I think someone is in there, let's take a look."
-            "{i}As [player_name] got closer to the mansion, he felt something bumping against his leg.{/i}"
+            __("It's a bit dark. I think someone is in there, let's take a look.")
+            __("As [player_name] got closer to the mansion, he felt something bumping against his leg.")
             show rocky happy with vpunch
             play music MUSIC_ROCKY_THEME
-            "{i}The dog which seemed to be sleeping, was looking at him and smelling his clothes.{/i}"
-            "{i}After a couple of seconds, he stood in front of [player_name] and tilted his head.{/i}"
+            __("The dog which seemed to be sleeping, was looking at him and smelling his clothes.")
+            __("After a couple of seconds, he stood in front of [player_name] and tilted his head.")
             Jimmy "Hey, pal..."
             Jimmy "Ummm... You're a good, dog, right?"
             Jimmy "Please, don't bark."
             Jimmy "I'm a friend."
-            "{i}[player_name] tried to get closer, but the dog showed his teeth and growled.{/i}"
-            "{i}[player_name] stepped back and the dog started licking his nose and savoring his mouth.{/i}"
+            __("I tried to get closer, but the dog showed his teeth and growled.")
+            __("I stepped back and the dog started licking his nose and savoring his mouth.")
             Jimmy "Are you hungry, pal?"
-            "{i}The dog blinked and licked his nose, again.{/i}"
+            __("The dog blinked and licked his nose, again.")
             Jimmy "Alright, pal. I'll see what I can do."
-            "Fuck, where the hell am I gonna get food for the dog?"
-            "{i}When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.{/i}"
+            __("Fuck, where the hell am I gonna get food for the dog?")
+            __("When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.")
             $ mayorsmansionbackyard.dogComment = True
     elif not mayorsmansionbackyard.wendysLightOn:
         jump prologue_wendykitchen
     else:
-        "Nothing to see here."
+        __("Nothing to see here.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_wendyroom:
     if dogsleeping == False:
         if mayorsmansionbackyard.dogComment == True:
-            "I think I can climb my way up there."
+            __("I think I can climb my way up there.")
         else:
-            "Let's take a look."
-            "{i}As [player_name] got closer to the mansion, he felt something bumping against his leg.{/i}"
+            __("Let's take a look.")
+            __("As [player_name] got closer to the mansion, he felt something bumping against his leg.")
             show rocky happy with vpunch
             play music MUSIC_ROCKY_THEME
-            "{i}The dog that seemed to be sleeping, was looking at him and smelling his clothes.{/i}"
-            "{i}After a couple of seconds, he stood in front of [player_name] and tilted his head.{/i}"
+            __("The dog that seemed to be sleeping, was looking at him and smelling his clothes.")
+            __("After a couple of seconds, he stood in front of [player_name] and tilted his head.")
             Jimmy "Hey, pal..."
             Jimmy "Ummm... you're a good, dog, right?"
             Jimmy "Please, don't bark."
             Jimmy "I'm a friend."
-            "{i}[player_name] tried to get closer, but the dog showed his teeth and growled.{/i}"
-            "{i}[player_name] stepped back and the dog started licking his nose and savoring his mouth.{/i}"
+            __("I tried to get closer, but the dog showed his teeth and growled.")
+            __("I stepped back and the dog started licking his nose and savoring his mouth.")
             Jimmy "Are you hungry, pal?"
-            "{i}The dog blinked and licked his nose, again.{/i}"
+            __("The dog blinked and licked his nose, again.")
             Jimmy "Alright, pal. I'll see what I can do."
-            "Fuck, where the hell am I gonna get food for the dog?"
-            "{i}When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.{/i}"
+            __("Fuck, where the hell am I gonna get food for the dog?")
+            __("When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.")
             $ mayorsmansionbackyard.dogComment = True
     elif not mayorsmansionbackyard.wendysLightOn:
-        "I think I can climb my way up there."
-        "I need to find out if Wendy's room is on the first or second floor, before trying."
+        __("I think I can climb my way up there.")
+        __("I need to find out if Wendy's room is on the first or second floor, before trying.")
     else:
         "Okay, I'm gonna do it."
         jump prologue_wendyinfiltration
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_pool:
-    "Nice pool."
-    "This place could be great for wild party."
+    __("Nice pool.")
+    __("This place could be great for wild party.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_dog:
     if dogsleeping == True:
         show rocky sleep aftereat with dissolve
-        "He's snoring, I love this dog."
+        __("He's snoring, I love this dog.")
     elif dogfoodfound == True:
         play music MUSIC_ROCKY_THEME
         show rocky happy with vpunch
         Jimmy "Alright pal, here's your food."
         $ dogsleeping = True
-        "{i}The dog jumped on the food spreading it everywhere.{/i}"
+        __("The dog jumped on the food spreading it everywhere.")
         hide rocky happy with dissolve
         show rocky sleep aftereat with dissolve
-        "{i}With his stomach full, he stumbled a couple of steps away from the bag and went to sleep.{/i}"
+        __("With his stomach full, he stumbled a couple of steps away from the bag and went to sleep.")
     else:
         if mayorsmansionbackyard.dogComment == True:
-            "If I find some food, maybe he won't bother me anymore."
+            __("If I find some food, maybe he won't bother me anymore.")
         else:
-            "I should be careful not to wake him up."
+            __("I should be careful not to wake him up.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_shed:
     if dogfoodfound == False:
         if mayorsmansionbackyard.dogComment == True:
-            "Maybe I can find something useful in there."
+            __("Maybe I can find something useful in there.")
             show dogfooditem with dissolve
             Jimmy "Jackpot!"
             $ dogfoodfound = True
     else:
-        "Nothing to see there."
+        __("Nothing to see there.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_backdoor:
     if dogsleeping == False:
         if mayorsmansionbackyard.dogComment == True:
             if not mayorsmansionbackyard.backDoorComment:
-                "Maybe I can get in through that door."
+                __("Maybe I can get in through that door.")
             else:
-                "The back door is locked."
+                __("The back door is locked.")
                 $ mayorsmansionbackyard.backDoorComment = True
         else:
-            "Let's take a look."
-            "{i}As [player_name] got closer to the mansion, he felt something bumping against his leg.{/i}"
+            __("Let's take a look.")
+            __("As [player_name] got closer to the mansion, he felt something bumping against his leg.")
             show rocky happy with vpunch
             play music MUSIC_ROCKY_THEME
-            "{i}The dog that seemed to be sleeping, was looking at him and smelling his clothes.{/i}"
-            "{i}After a couple of seconds, he stood in front of [player_name] and tilted his head.{/i}"
+            __("The dog that seemed to be sleeping, was looking at him and smelling his clothes.")
+            __("After a couple of seconds, he stood in front of [player_name] and tilted his head.")
             Jimmy "Hey, pal..."
             Jimmy "Ummm... you're a good, dog, right?"
             Jimmy "Please, don't bark."
             Jimmy "I'm a friend."
-            "{i}[player_name] tried to get closer, but the dog showed his teeth and growled.{/i}"
-            "{i}[player_name] stepped back and the dog started licking his nose and savoring his mouth.{/i}"
+            __(" [player_name] tried to get closer, but the dog showed his teeth and growled.")
+            __(" [player_name] stepped back and the dog started licking his nose and savoring his mouth.")
             Jimmy "Are you hungry, pal?"
-            "{i}The dog blinked and licked his nose, again.{/i}"
+            __("The dog blinked and licked his nose, again.")
             Jimmy "Alright, pal. I'll see what I can do."
-            "Fuck, where the hell am I gonna get food for the dog?"
-            "{i}When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.{/i}"
+            __("Fuck, where the hell am I gonna get food for the dog?")
+            __("When [player_name] went back to the pool, the dog did the same thing, laying down on the same spot.")
             $ mayorsmansionbackyard.dogComment = True
     elif not mayorsmansionbackyard.backDoorComment:
-        "The back door is locked."
+        __("The back door is locked.")
         $ mayorsmansionbackyard.backDoorComment = True
     else:
-        "It's locked."
-    "I'll have to find another way."
+        __("It's locked.")
+        __("I'll have to find another way.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_towerwindow1:
-    "I think I see some kind of library, but it's really dark."
+    __("I think I see some kind of library, but it's really dark.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_towerwindow2:
-    "It's too dark to see inside."
+    __("It's too dark to see inside.")
     jump mayorsmansionbackyard_loop
 
 label mayorsmansionbackyard_wendyswindow:
-    "That's Wendy's room."
-    "Okay, I'm gonna do it."
+    __("That's Wendy's room.")
+    __("Okay, I'm gonna do it.")
     jump prologue_wendyinfiltration

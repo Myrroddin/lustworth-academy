@@ -6,10 +6,10 @@ label prologue_start:
     scene academygatefallevening with fade
     play music MUSIC_MAIN_THEME
     show jimmy neutral with dissolve
-    "Well, I'm finally here."
-    "I guess this shithole is gonna be my home now."
-    "Just gotta get through one more year, [player_name]. Just one."
-    "Then you're free from all this stupid crap."
+    __("Well, I'm finally here.")
+    __("I guess this shithole is gonna be my home now.")
+    __("Just gotta get through one more year, [player_name]. Just one.")
+    __("Then you're free from all this stupid crap.")
     Dawson "You must be the [player_surname] boy."
     play music MUSIC_DAWSONS_THEME
     show missdawson neutral with dissolve
@@ -19,7 +19,7 @@ label prologue_start:
     Dawson "I'm sure you're very excited to be here."
     Dawson blush "Very excited, indeed..."
     show jimmy smug with dissolve
-    "Is she looking at my crotch?"
+    __("Is she looking at my crotch?")
     Dawson talk arm "{i}Ahem.{/i} I have a man to make happy."
     Dawson "The Headmaster is expecting you in his study."
     Dawson "Don't keep Dr. Stapleneck waiting."
@@ -66,14 +66,14 @@ label prologue_stapleneckintro:
     Dawson "No more than you deserve, Headmaster."
     play music MUSIC_SEXY_THEME
     scene missdawsonbodypeek01 onlayer cutscene with dissolve
-    "Wow..."
+    __("Wow...")
     play sound "audio/sfx/teapour.ogg"
-    "This woman is really hot."
-    "I bet she's been \"reformed\" by this Stapleneck guy a few times."
+    __("This woman is really hot.")
+    __("I bet she's been \"reformed\" by this Stapleneck guy a few times.")
     scene missdawsonbodypeek02 onlayer cutscene with dissolve
-    "Damn, what I wouldn't give to clap those cheeks."
+    __("Damn, what I wouldn't give to clap those cheeks.")
     Stapleneck "Miss Dawson, please tell Miss Trudeau to come here."
-    "I bet Miss Trudeau is even hotter!"
+    __("I bet Miss Trudeau is even hotter!")
     show missdawson amazed
     show stapleneck neutral
     hide missdawsonbodypeek02 onlayer cutscene with fade
@@ -90,7 +90,7 @@ label prologue_stapleneckintro:
     show beatrix uniform smile with dissolve
     Beatrix talk "Headmaster! I'm here."
     Stapleneck "Very well, Miss Trudeau."
-    "{i}That's{/i} Miss Trudeau?"
+    __("That's Miss Trudeau?")
     Stapleneck "[player_name], this is Beatrix. She is a student here as well."
     $ Beatrix.met = True
     Stapleneck "She will show you to your room."
@@ -126,40 +126,40 @@ label prologue_boysdormintro:
     hide beatrix with dissolve
     stop music
     show jimmy neutral with dissolve
-    "Jesus... People here are even crazier than I expected."
-    "Well, here I am."
-    "Let's see how bad this school turns out to be."
-    "That old creep thinks he can tame me, but I only give people what they already have coming to them."
-    "Anyway, I'm exhausted from the trip."
-    "I should go to sleep, but I need to find my room first."
+    __("Jesus... People here are even crazier than I expected.")
+    __("Well, here I am.")
+    __("Let's see how bad this school turns out to be.")
+    __("That old creep thinks he can tame me, but I only give people what they already have coming to them.")
+    __("Anyway, I'm exhausted from the trip.")
+    __("I should go to sleep, but I need to find my room first.")
     $ prologue.finishIntro = True
     $ gotoscene('boysdormhallway')
 
 label prologue_jimmysroomintro:
     hide screen freeroamhud
     $ showscene('boysdormjimmysroom', transition=fade)
-    "Seems nice enough. Lots of space to store stuff."
-    "First thing I'm gonna need is a punching bag."
-    "I have a feeling I'm gonna have to punch a lot of people around here."
+    __("Seems nice enough. Lots of space to store stuff.")
+    __("First thing I'm gonna need is a punching bag.")
+    __("I have a feeling I'm gonna have to punch a lot of people around here.")
     $ prologue.findJimmysRoom = True
     $ gotoscene('boysdormjimmysroom')
 
 label prologue_mysterygirlnight1:
     scene jimmyroomshut with fade
-    "At least the bed looks cozy."
-    "I'm gonna sleep like a log."
+    __("At least the bed looks cozy.")
+    __("I'm gonna sleep like a log.")
     hide screen freeroamhud
     stop music
     scene black with fade
     pause 1.0
     call wendy_mysterygirlnight1_scene from _call_wendy_mysterygirlnight1_scene
     scene nightsky with fade
-    "{i}It was uncertain if the girl left because she discovered his true identity..."
-    "{i}or because someone else was watching through the window.{/i}"
-    "{i}Still, she left a very good impression on [player_name], and now he wanted to know who she was.{/i}"
-    "{i}But, right there in the middle of the night, there is not much you can do besides sleeping..."
-    "{i}And that encounter made [player_name] even sleepier, as he fell back into a heavy slumber...{/i}"
-    "{i}...now with a smile on his face.{/i}"
+    __("It was uncertain if the girl left because she discovered his true identity...")
+    __("or because someone else was watching through the window.{/i}")
+    __("Still, she left a very good impression on [player_name], and now he wanted to know who she was.{/i}")
+    __("{i}But, right there in the middle of the night, there is not much you can do besides sleeping...")
+    __("{i}And that encounter made [player_name] even sleepier, as he fell back into a heavy slumber...{/i}")
+    __("{i}...now with a smile on his face.{/i}")
     stop music
     call nextday from _call_nextday_10
     jump prologue_day1morning
@@ -167,12 +167,12 @@ label prologue_mysterygirlnight1:
 label prologue_day1morning:
     $ showscene('boysdormjimmysroom', transition=fade)
     show jimmy smug with dissolve
-    "Damn, my first night here has been absolutely unforgettable."
-    "It was too dark though. It's a shame I couldn't see her face."
-    "By the things she said, I think she mistook me for someone else..."
-    "The guy that stayed here before me, I guess."
+    __("Damn, my first night here has been absolutely unforgettable.")
+    __("It was too dark though. It's a shame I couldn't see her face.")
+    __("By the things she said, I think she mistook me for someone else...")
+    __("The guy that stayed here before me, I guess.")
     hide jimmy smug with dissolve
-    "Maybe I can find some clue that will lead me to her."
+    __("Maybe I can find some clue that will lead me to her.")
     show pete uniform salute with dissolve
     play sound "audio/sfx/heypete01.ogg"
     Pete "Hey, how's it going? You must be the new kid."
@@ -192,8 +192,8 @@ label prologue_day1morning:
     Pete "Oh, and make sure to wear your uniform!"
     hide pete with dissolve
     show jimmy neutral with dissolve
-    "Well, at least somebody is nice here."
-    "I guess I should get changed and head to class. My uniform should be in the closet."
+    __("Well, at least somebody is nice here.")
+    __("I guess I should get changed and head to class. My uniform should be in the closet.")
     hide jimmy with dissolve
     $ glob.plannerUnlocked = True
     $ prologue.firstNight = True
@@ -201,11 +201,11 @@ label prologue_day1morning:
 
 label prologue_spanishclassintro:
     play music MUSIC_CLASSROOMAMBIENCEDAY_THEME
-    "Looks like the teacher is not here yet."
-    "I think I'll take a seat in the back. I don't wanna get too much attention."
+    __("Looks like the teacher is not here yet.")
+    __("I think I'll take a seat in the back. I don't wanna get too much attention.")
     scene spanishclassback with fade
     show jimmy smug with dissolve
-    "Alright... This seems like a good spot."
+    __("Alright... This seems like a good spot.")
     show pete uniform salute with dissolve
     play sound "audio/sfx/heypete01.ogg"
     Pete "Oh, hey, [player_name]."
@@ -225,9 +225,9 @@ label prologue_spanishclassintro:
     Pete "That's Mandy. She's your typical, self-absorbed cheerleader. She's dating the captain of the football team, naturally."
     $ Mandy.met = True
     Jimmy "She doesn't seem to care that the whole world can see her panties sitting like that."
-    "{i}[player_name] noticed that her panties were pink, just like the girl that went into his room last night.{/i}"
-    "{i}Of course, he knew there was a pretty big number of girls that liked to use pink stuff, even if feminists didn't agree.{/i}"
-    "{i}So, he just thought about how much he would love to see what was under that particular piece of pink panties.{/i}"
+    __("{i}[player_name] noticed that her panties were pink, just like the girl that went into his room last night.{/i}")
+    __("{i}Of course, he knew there was a pretty big number of girls that liked to use pink stuff, even if feminists didn't agree.{/i}")
+    __("{i}So, he just thought about how much he would love to see what was under that particular piece of pink panties.{/i}")
     pause 0.8
     Jimmy "Interesting..."
     Jimmy "And what about her, the one with the dark hair?"
@@ -236,7 +236,7 @@ label prologue_spanishclassintro:
     Pete "Oh, that's Violet. She's one of the preppies."
     Pete "Her father is a real estate mogul. He owns like half of the houses in Peacock Valley."
     $ Violet.met = True
-    "She seems like a bit of a brat, but with an ass like that, I don't think I mind."
+    __("She seems like a bit of a brat, but with an ass like that, I don't think I mind.")
     pause 0.6
     scene spanishclassback with fade
     show jimmy smug with dissolve
@@ -255,13 +255,13 @@ label prologue_spanishclassintro:
     scene spanishclassmandy with fade
     show alice desk with dissolve
     Pete "I think she's been looking since you got here."
-    "{i}[player_name] had a feeling that he knew that girl from somewhere. She had a very familiar look.{/i}"
+    __("{i}[player_name] had a feeling that he knew that girl from somewhere. She had a very familiar look.{/i}")
     Punny "¡Hola, clase!"
     stop music fadeout 0.5
     scene spanishclasspunny with fade
     show misspunny desk with dissolve
     play music MUSIC_MISSPUNNY_THEME volume 0.3
-    "{i}\"Holy shit\" thought [player_name], realizing how hot the teacher was.{/i}"
+    __("\"Holy shit\" thought [player_name], realizing how hot the teacher was.")
     Punny "How are you doing, guys?"
     Violet "¡Muy bien, profesora!"
     Punny "Oh, Violet!"
@@ -269,9 +269,9 @@ label prologue_spanishclassintro:
     Punny "Okay, guys!"
     Punny "I've been told we have a new student in class."
     stop sound fadeout 0.5
-    "Oh no..."
-    Punny "Mr. [player_name]... [player_surname]."
-    Punny "Mr. [player_surname]? Can you come up here?"
+    __("Oh no...")
+    Punny "Sr. [player_name]... [player_surname]."
+    Punny "Sr. [player_surname]? Can you come up here?"
     show jimmy neutral with dissolve
     Punny "Un gusto en conocerte, [player_name]. ¡Eres muy guapo!"
     Jimmy suspicious "Yeah..."
@@ -377,11 +377,11 @@ label prologue_cassidyintro:
     $ showscene('schoolgym', transition=fade)
     show screen freeroamhud(False)
     stop music
-    "Well, that was an interesting class."
-    "I never thought beating up nerds would be a sanctioned school activity. Not that I'm complaining."
+    __("Well, that was an interesting class.")
+    __("I never thought beating up nerds would be a sanctioned school activity. Not that I'm complaining.")
     play sound "audio/sfx/ah1.ogg" volume 0.3
-    "...That's strange, I think I hear noises coming from the boys' locker room."
-    "I thought everyone left already."
+    __("...That's strange, I think I hear noises coming from the boys' locker room.")
+    __("I thought everyone left already.")
     stop music
     hide screen freeroamhud with None
     $ showscene('schoolgymboyslockers', transition=fade, playMusic=False)
@@ -392,9 +392,9 @@ label prologue_cassidyintro:
     $ showscene('schoolgymboyslockers', transition=dissolve)
     stop music
     play sound SOUND_RECORD_SCRATCH
-    "{i}As I turned to leave, I heard her moan again.{/i}"
+    __("As I turned to leave, I heard her moan again.")
     play sound "audio/sfx/gasp02.ogg"
-    "{i}This time though, it wasn't out of pleasure.{/i}"
+    __("This time though, it wasn't out of pleasure.")
     play music MUSIC_FUNNY_MOMENT
     show cassidy caught with vpunch
     Cassidy "AHH!"
@@ -415,9 +415,9 @@ label prologue_cassidyintro:
     hide cassidy with vpunch
     stop music
     show jimmy neutral with dissolve
-    "She just ran off."
-    "Wow, that girl is crazy."
-    "I feel like I've seen her before somewhere..."
+    __("She just ran off.")
+    __("Wow, that girl is crazy.")
+    __("I feel like I've seen her before somewhere...")
     call nexttime from _call_nexttime_31
     jump prologue_day1night
 
@@ -458,28 +458,28 @@ label prologue_mysterygirlnight2:
     stop music
     scene misterygirlshadow with vpunch
     play music "audio/music/suspensetheme01.ogg"
-    "{i}Once more, [player_name] realized that there was figure in the window.{/i}"
-    "{i}Someone was watching.{/i}"
+    __("Once more, [player_name] realized that there was figure in the window.")
+    __("Someone was watching.")
     Jimmy "Hey! Who's there!?"
     Jimmy "Stay right there!"
     scene misterygirlshadow02 with dissolve
-    "{i}The figure once more dissapeared in the blackness of the night.{/i}"
+    __("The figure once more dissapeared in the blackness of the night.")
     Jimmy "What the fuck?"
     scene nightsky with fade
-    "{i}He took a long breath one more time before falling sleep.{/i}"
-    "{i}Not before he cleaned himself, of course. He's a very hygienic guy.{/i}"
+    __("He took a long breath one more time before falling sleep.")
+    __("Not before he cleaned himself, of course. He's a very hygienic guy.")
     scene laterthatday with fade
     $ renpy.pause()
     show laterthatdaysomewhere with dissolve
     $ renpy.pause()
     scene lighthouseobservatorynight01 with fade
     play music "audio/music/mysterytheme.ogg"
-    "{i}Peacock town seemed like a quiet and idillic place at night.{/i}"
-    "{i}A place where the sky merged with the sea in the distance...{/i}"
+    __("Peacock town seemed like a quiet and idillic place at night.")
+    __("A place where the sky merged with the sea in the distance...")
     show oldsage neutral shadow with dissolve
-    "{i}However, there were secrets lurking in the shadows, mysterious figures with unknown intentions.{/i}"
-    "{i}And while the stars painted the dreams in which [player_name] was profoundly immersed...{/i}"
-    "{i}He didn't even know he was part of a greater plan.{/i}"
+    __("However, there were secrets lurking in the shadows, mysterious figures with unknown intentions.")
+    __("And while the stars painted the dreams in which [player_name] was profoundly immersed...")
+    __("He didn't even know he was part of a greater plan.")
     show pascal neutral light with dissolve
     Pascal "Goodnight, sir."
     Sage "Goodnight, my good friend."

@@ -106,18 +106,18 @@ label jimmyspc_discord:
     jump jimmyspc_loop
 
 label jimmyspc_word:
-    "\"Michaelsoft Word\""
-    "Part of the Michaelsoft Binbows suite."
+    __("\"Michaelsoft Word\"")
+    __("Part of the Michaelsoft Binbows suite.")
     jump jimmyspc_loop
 
 label jimmyspc_excel:
-    "\"Michaelsoft Excel\""
-    "Part of the Michaelsoft Binbows suite."
+    __("\"Michaelsoft Excel\"")
+    __("Part of the Michaelsoft Binbows suite.")
     jump jimmyspc_loop
 
 label jimmyspc_powerpoint:
-    "\"Michaelsoft PowerPoint\""
-    "Part of the Michaelsoft Binbows suite."
+    __("\"Michaelsoft PowerPoint\"")
+    __("Part of the Michaelsoft Binbows suite.")
     jump jimmyspc_loop
 
 label jimmyspc_wallpapers:

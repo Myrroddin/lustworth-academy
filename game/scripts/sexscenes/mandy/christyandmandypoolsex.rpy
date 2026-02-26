@@ -5,12 +5,12 @@ label mandy_halloweenpoolsex_scene:
     Christy "Fuck, I'm sweating already!"
     Christy "This thing is so good!"
     Christy "Come on, Mandy! What are you waiting for?"
-    "{i}Hesitating, Mandy took her skirt off and started to untie her bikini while looking at [player_name], kind of ashamed.{/i}"
-    "{i}But, she didn't stop.{/i}"
+    __("{i}Hesitating, Mandy took her skirt off and started to untie her bikini while looking at [player_name], kind of ashamed.{/i}")
+    __("{i}But, she didn't stop.{/i}")
     scene christymandypool02 with fade
     Mandy "You better not say a word about this to my boyfriend, Christy."
     Christy "That half-brain quarterback? He wouldn't understand a word."
-    "{i}Mandy looked at [player_name], waiting for a reply.{/i}"
+    __("{i}Mandy looked at [player_name], waiting for a reply.{/i}")
     Jimmy "I was never here."
     Mandy "Alright..."
     scene christymandypool03 with fade
@@ -18,8 +18,8 @@ label mandy_halloweenpoolsex_scene:
     Christy "I bet you're enjoying the view, [player_name]."
     Jimmy "..."
     Christy "Good boy. Don't worry, Mandy, he won't say a thing."
-    "{i}It was the truth. [player_name] felt so aroused by looking a two of the hottest girls in school naked for him.{/i}"
-    "{i}But he was a man of his word. However, being in the pool wasn't exactly a hidden spot, so he was afraid of being seen already.{/i}"
+    __("{i}It was the truth. [player_name] felt so aroused by looking a two of the hottest girls in school naked for him.{/i}")
+    __("{i}But he was a man of his word. However, being in the pool wasn't exactly a hidden spot, so he was afraid of being seen already.{/i}")
     scene christymandypool04 with fade
     Christy "Mandy, you truly have the nicest ass I've ever seen."
     Mandy "You have said that like a thousand times."

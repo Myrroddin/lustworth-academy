@@ -10,7 +10,7 @@ label .satisfied:
     hide beatrix neutral
     show beatrixherpes02
     Beatrix "What is that?"
-    Jimmy unamused arm "It's a cream that helps with herpes."
+    Jimmy unamused arm "It's cream that helps with herpes."
     hide beatrixherpes02
     show beatrixherpes03 with vpunch
     Beatrix "I told you that IS NOT HERPES!"

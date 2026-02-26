@@ -1,12 +1,12 @@
 label wendygoodbyescene:
     hide screen freeroamhud with None
     scene wendyatwindow with fade
-    "Wendy carefully climbed through the window while the moon shone over her beautiful skin."
+    __("Wendy carefully climbed through the window while the moon shone over her beautiful skin.")
     Wendy "Hey..."
     Jimmy "Wendy? You shouldn't be here."
     Wendy "I know, I know, but I need to talk to you."
     Wendy "Are you going to let me in?"
-    "[player_name] nodded, a small smile playing on his lips as he reached out to take her hand and help her down from the window."
+    __("[player_name] nodded, a small smile playing on his lips as he reached out to take her hand and help her down from the window.")
     scene jimmybedroomfallmidnight with fade
     show wendy goodbye with dissolve
     Wendy "I'm leaving Peacock Valley."
@@ -31,13 +31,13 @@ label wendygoodbyescene:
     Wendy "It was so special. I loved what we did in my bed that night."
     Wendy "I just... I want to make love with you before I go."
     call wendy_analandcreampie_scene from _call_wendy_analandcreampie_scene
-    "{i}The choice you're about to make, will determine the future of Wendy's storyline.{/i}"
+    ("{i}The choice you're about to make, will determine the future of Wendy's storyline.{/i}")
     menu:
-        "Wendy gets pregnant":
-            "{i}The choice has been made.{/i}"
+        __("Wendy gets pregnant"):
             $ pregnancy.Wendy = True
-        "Wendy does not get pregnant":
-            "{i}The choice has been made.{/i}"
+        __("Wendy does not get pregnant"):
+            $ pregnancy.Wendy = False
+    __("{i}The choice has been made.{/i}")
     scene jimmybedroomfallmidnight with fade
     show wendy goodbye with dissolve
     Wendy "I'll try to help you even if I'm far away."
@@ -50,7 +50,7 @@ label wendygoodbyescene:
     Jimmy "But take care of yourself first."
     Wendy "I will miss you."
     Jimmy "I will miss you too, princess, that's for sure."
-    "[player_name] smiled, then leaned in and kissed her gently before saying goodbye."
+    __("[player_name] smiled, then leaned in and kissed her gently before saying goodbye.")
     $ quests.goodbyeWendy = COMPLETE
     call sleep from _call_sleep_11
     $ gotoscene('boysdormjimmysroom')
@@ -58,7 +58,7 @@ label wendygoodbyescene:
 label wendy_analandcreampie_scene:
     Wendy "I wanna feel something I haven't felt before."
     scene wendyanalcreampie01 with fade
-    "She immediately took her clothes off and lay down on the bed, showing her nice round ass."
+    __("She immediately took her clothes off and lay down on the bed, showing her nice round ass.")
     Wendy "Have you ever done anal?"
     Wendy "I'm not sure if your dick will fit in my little hole, but just thinking about it is making me so wet."
     Wendy "I want you to fuck me in the ass, [player_name]."

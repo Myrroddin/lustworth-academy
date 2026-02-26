@@ -41,9 +41,9 @@ label schoollibraryplaza_library:
 label schoollibraryplaza_bed:
     $ time = calendar.when[2]
     menu:
-        "Rest for a while" if time < NIGHT:
+        __("Rest for a while") if time < NIGHT:
             jump nap_menu
-        "Nevermind":
+        __("Nevermind"):
             jump schoollibraryplaza_loop
     $ gotoscene('schoollibraryplaza', transition=fade)
 

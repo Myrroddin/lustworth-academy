@@ -1,13 +1,13 @@
 label wendy_mysterygirlnight2_scene:
     play music MUSIC_SEXY_THEME volume 0.2
     scene jimmyroomwendypeek with fade
-    "{i}That night, [player_name] received another visit from the mysterious horny girl.{/i}"
+    __("{i}That night, [player_name] received another visit from the mysterious horny girl.{/i}")
     play sound "audio/sfx/doorknock01.ogg"
-    "{i}This time, however, she knocked at the door.{/i}"
+    __("{i}This time, however, she knocked at the door.{/i}")
     Jimmy "Come in!"
     show jimmyroomwendypeek02 with dissolve
     play sound "audio/sfx/dooropen01.ogg"
-    "{i}It seemed like she wanted to have a serious talk.{/i}"
+    __("{i}It seemed like she wanted to have a serious talk.{/i}")
     scene bedroomwall01 with fade
     show wendy cape hidden with dissolve
     play sound "audio/sfx/hey05.ogg"
@@ -36,9 +36,9 @@ label wendy_mysterygirlnight2_scene:
     Wendy "I just really liked your cock. That's it."
     Jimmy "Now we are being honest."
     Jimmy "Well, I'm naked, you're naked. There is only one way out of this."
-    "{i}She didn't hesitate anymore and took a couple of steps closer to him.{/i}"
-    "{i}[player_name] sat down and showed his meat tower pointing at her.{/i}"
-    "{i}She just fell for it, again.{/i}"
+    __("{i}She didn't hesitate anymore and took a couple of steps closer to him.{/i}")
+    __("{i}[player_name] sat down and showed his meat tower pointing at her.{/i}")
+    __("{i}She just fell for it, again.{/i}")
     scene mysteryhandjobintro with fade
     play sound "audio/sfx/giggle01.ogg"
     Wendy "Here it is."
@@ -59,16 +59,16 @@ label wendy_mysterygirlnight2_scene:
     scene mysteryrubnightanim1 with fade
     Wendy "Mmm... It barely fits between my lips."
     Wendy "His sausage is too big for my little bun!"
-    "{i}[player_name] was trying his best to make out the girl's face in the dark.{/i}"
-    "{i}The main thing he could identify, however, was her short orange hair.{/i}"
+    __("{i}[player_name] was trying his best to make out the girl's face in the dark.{/i}")
+    __("{i}The main thing he could identify, however, was her short orange hair.{/i}")
     $ renpy.pause()
     Wendy "Fuck, yes! Oh, it feels so good against my clit."
     Wendy "Let me try another position."
     play sound "audio/sfx/ah2.ogg"
     scene mysteryrubnightanim2 with fade
     Wendy "Oh fuck, yes! Mmmm..."
-    "{i}[player_name] was enjoying every single movement of her incredible hips.{/i}"
-    "\"She must be a cheerleader\" {i}he thought...{/i}"
+    __("{i}[player_name] was enjoying every single movement of her incredible hips.{/i}")
+    __("\"She must be a cheerleader\" {i}he thought...{/i}")
     jump wendy_mysterygirlnight2_grind
 
 label wendy_mysterygirlnight2_grind:
@@ -77,7 +77,7 @@ label .slow:
     play sound "audio/sfx/ah1.ogg"
     $ renpy.pause()
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
 
 label .fast:
@@ -85,9 +85,9 @@ label .fast:
     play sound "audio/sfx/ah2.ogg"
     $ renpy.pause()
     menu:
-        "Slower":
+        __("Slower"):
             jump .slow
-        "Finish":
+        __("Finish"):
             jump .finish
 
 label .finish:
@@ -112,7 +112,7 @@ label .slow:
     Wendy "Let me ride it, let me ride it!"
     $ renpy.pause()
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
 
 label .fast:
@@ -124,9 +124,9 @@ label .fast:
     Wendy "Oh, fuck. Not inside, pull it out!"
     $ renpy.pause()
     menu:
-        "Slower":
+        __("Slower"):
             jump .slow
-        "Finish":
+        __("Finish"):
             jump .finish
 
 label .finish:
@@ -134,7 +134,7 @@ label .finish:
     scene mysteryrubnightcumanim
     play sound "audio/sfx/cowgirlcum.ogg"
     Wendy "AAAHHH FUUUUUCK!"
-    "{i}Having reached her climax, the girl remained quiet for a minute.{/i}"
+    __("{i}Having reached her climax, the girl remained quiet for a minute.{/i}")
     play sound "audio/sfx/gasp01.ogg"
     stop music
     Wendy "Oh my god... What did I do?"
@@ -145,8 +145,8 @@ label .finish:
     Wendy "I trust you will keep your word! Bye!"
     show wendy cape escape with vpunch
     play sound "audio/sfx/run01.ogg"
-    "{i}She quickly ran for the door, again.{/i}"
-    "{i}[player_name] noticed her legs were trembling on the way out.{/i}"
+    __("{i}She quickly ran for the door, again.{/i}")
+    __("{i}[player_name] noticed her legs were trembling on the way out.{/i}")
     play sound "audio/sfx/doorclose01.ogg"
     if wendygallery == True:
         call screen wendygallery

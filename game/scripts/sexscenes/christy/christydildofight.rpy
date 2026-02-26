@@ -9,7 +9,7 @@ label christy_dildofight_scene:
     Christy "You need to get that thing out, now!"
     play sound "audio/sfx/run01.ogg"
     scene cassandchrisplug01 with vpunch
-    "{i}Suddenly, two girls stormed in without even noticing [player_name]'s presence.{/i}"
+    __("{i}Suddenly, two girls stormed in without even noticing [player_name]'s presence.{/i}")
     Christy "It's okay, you passed the test... But, you have to give me my plug back."
     Cassidy "Christy, it hurts a lot when I put it in my ass..."
     $ Christy.met = True
@@ -43,14 +43,14 @@ label christy_dildofight_scene:
     Christy "Get out of my sight. I'll see you next week for your final test."
     play sound "audio/sfx/run01.ogg"
     scene girlsdormbathroom with fade
-    "{i}As Cassidy left the room with her legs trembling. The other girl stayed in silence.{/i}"
-    "{i}This is the redhead I saw in the gym's bathroom, thought [player_name].{/i}"
-    "{i}Damn, she's so hot, but Cassidy seems to be having trouble with her.{/i}"
-    "{i}I don't like how she's being treated...{/i}"
+    __("{i}As Cassidy left the room with her legs trembling. The other girl stayed in silence.{/i}")
+    __("{i}This is the redhead I saw in the gym's bathroom, thought [player_name].{/i}")
+    __("{i}Damn, she's so hot, but Cassidy seems to be having trouble with her.{/i}")
+    __("{i}I don't like how she's being treated...{/i}")
     show christy naked buttplug with dissolve
     play sound "audio/sfx/sexyintro.ogg"
     Christy "So, are you going to come out or not?"
-    "{i}Is she talking to me?{/i}"
+    __("{i}Is she talking to me?{/i}")
     Christy "Come on, pervert! I don't have all day."
     Christy "Show yourself."
     show jimmy neutral with dissolve

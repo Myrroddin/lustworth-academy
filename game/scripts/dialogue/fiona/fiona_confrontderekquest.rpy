@@ -92,8 +92,8 @@ label chapterone_derekhideandseekintro:
     Jimmy "Where is her stuff?"
     Derek confront "I'll be going with you, just walk along and I will be telling you how cold or hot you're from the spot."
     Derek "Two objects, two places. Come on, let's take a walk together, like pals!"
-    "Trying so hard to keep his hands from punching Derek's face, [player_name] decided to play along."
-    "{i}I'll play along until I find the stolen things, [player_name] thought.{/i}"
+    __("Trying so hard to keep his hands from punching Derek's face, [player_name] decided to play along.")
+    __("{i}I'll play along until I find the stolen things, [player_name] thought.{/i}")
     $ quests.fionaConfrontDerek = SATISFIED
     $ quests.fionaHideAndSeek = ACTIVE
     $ gotoscene('boysdormbackalley', transition=fade)
@@ -153,11 +153,11 @@ label chapterone_fionaderekconfrontation:
     Fiona "Yes, you can keep that, just get your hands off me!" with vpunch
     Jimmy "Alright, you heard the lady."
     Derek "Okay, let's do this slowly..."
-    "Still doubtful, Derek started to release his grip on Fiona's neck while pointing the piss gun at her."
+    __("Still doubtful, Derek started to release his grip on Fiona's neck while pointing the piss gun at her.")
     play music "audio/music/crazymoment01.ogg"
     show derekfionahostagedonut with vpunch
     play sound "audio/sfx/slap.ogg"
-    "Suddenly, a flying donut appeared out of nowhere..."
+    __("Suddenly, a flying donut appeared out of nowhere...")
     Derek "What the..."
     play sound "audio/sfx/big_punch.ogg"
     scene fionaderekballkick with vpunch

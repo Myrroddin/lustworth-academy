@@ -1,23 +1,23 @@
 label wendy_mysterygirlnight1_scene:
     play music MUSIC_SEXY_THEME volume 0.2
     scene jimmyroomwendypeek with fade
-    "{i}In the middle of the night, a figure hiding under a red cape slipped quietly into [player_name]'s room.{/i}"
+    __("{i}In the middle of the night, a figure hiding under a red cape slipped quietly into [player_name]'s room.{/i}")
     play sound "audio/sfx/dooropen01.ogg"
     show jimmyroomwendypeek02 with dissolve
-    "{i}Her objective? Look for someone who didn't sleep in that room anymore.{/i}"
-    "{i}The last owner of this room had left the town without notice the day before.{/i}"
-    "{i}Luckily for [player_name], she didn't realize there was actually a stranger in the bed.{/i}"
+    __("{i}Her objective? Look for someone who didn't sleep in that room anymore.{/i}")
+    __("{i}The last owner of this room had left the town without notice the day before.{/i}")
+    __("{i}Luckily for [player_name], she didn't realize there was actually a stranger in the bed.{/i}")
     scene bedroomwall01 with fade
     show wendy cape hidden with dissolve
     play sound "audio/sfx/hey05.ogg"
     Wendy "T, are you awake?"
-    "{i}\"Is she naked?\", thought [player_name]. \"Who's T?\".{/i}"
-    "{i}He was curious about what she could possibly want by sneaking into his room in the middle of the night.{/i}"
+    __("{i}\"Is she naked?\", thought [player_name]. \"Who's T?\".{/i}")
+    __("{i}He was curious about what she could possibly want by sneaking into his room in the middle of the night.{/i}")
     Wendy "I'm sorry for what I said, okay?"
     Wendy "I didn't really mean it."
     Wendy "It's getting harder to sneak into the boys' dorm. My Dad is starting to suspect something is wrong."
-    "{i}[player_name] knew that answering would give away his real identity and scare off the lady.{/i}"
-    "{i}At that moment, he wondered how far he could go on with it.{/i}"
+    __("{i}[player_name] knew that answering would give away his real identity and scare off the lady.{/i}")
+    __("{i}At that moment, he wondered how far he could go on with it.{/i}")
     Wendy "Okay, I'm not gonna push you to talk to me."
     Wendy "But, at least..."
     Jimmy "..."
@@ -44,7 +44,7 @@ label .slow:
     scene mysterygirlhandjobslow
     $ renpy.pause()
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
 
 label .fast:
@@ -52,9 +52,9 @@ label .fast:
     scene mysterygirlhandjobfast
     $ renpy.pause()
     menu:
-        "Slower":
+        __("Slower"):
             jump .slow
-        "Finish":
+        __("Finish"):
             jump .finish
 
 label .finish:
@@ -68,7 +68,7 @@ label .finish:
     play sound "audio/sfx/bj1.ogg"
     Wendy "Here I come."
     Wendy "I hope I don't gag with this thing."
-    "{i}'Oh, I hope you do', thought [player_name] while feeling her warm tongue wrapping around his manhood.{/i}"
+    __("{i}'Oh, I hope you do', thought [player_name] while feeling her warm tongue wrapping around his manhood.{/i}")
     jump wendy_mysterygirlnight1_blowjob
 
 ## Fuck
@@ -78,7 +78,7 @@ label wendy_mysterygirlnight1_blowjob:
         scene mysteryblowjobslow
         $ renpy.pause()
         menu:
-            "Faster":
+            __("Faster"):
                 jump .fast
 
     label .fast:
@@ -86,9 +86,9 @@ label wendy_mysterygirlnight1_blowjob:
         scene mysteryblowjobfast
         $ renpy.pause()
         menu:
-            "Slower":
+            __("Slower"):
                 jump .slow
-            "Finish":
+            __("Finish"):
                 jump .finish
 
 label .finish:
@@ -101,10 +101,10 @@ label .finish:
     scene mysteryblowjobend with vpunch
     play sound "audio/sfx/ah2.ogg"
     Wendy "Fuck! I thought I wasn't going to make it."
-    "{i}Not being able to contain the excitement, [player_name] let out a moan.{/i}"
+    __("{i}Not being able to contain the excitement, [player_name] let out a moan.{/i}")
     show mysteryblowjobend02 with dissolve
-    "{i}A small beam of light snuck through the door illuminating part of [player_name]'s face."
-    "{i}[player_name] tried to hide under the sheets, but it was too late.{/i}"
+    __("{i}A small beam of light snuck through the door illuminating part of [player_name]'s face.{/i}")
+    __("{i}[player_name] tried to hide under the sheets, but it was too late.{/i}")
     scene bedroomwall01 with fade
     stop music
     show wendy cape hidden cum with vpunch
@@ -113,16 +113,16 @@ label .finish:
     Wendy "What..."
     show wendy cape escape with vpunch
     play sound "audio/sfx/run01.ogg"
-    "{i}The mysterious girl ran for the door.{/i}"
-    "{i}She managed to make it out before [player_name] could see more under the cape.{/i}"
+    __("{i}The mysterious girl ran for the door.{/i}")
+    __("{i}She managed to make it out before [player_name] could see more under the cape.{/i}")
     play sound "audio/sfx/doorclose01.ogg"
     scene misterygirlshadow with vpunch
     play music "audio/music/suspensetheme01.ogg"
-    "{i}However, [player_name] quickly realized there was a figure in the window.{/i}"
-    "{i}Someone was watching.{/i}"
+    __("{i}However, [player_name] quickly realized there was a figure in the window.{/i}")
+    __("{i}Someone was watching.{/i}")
     Jimmy "Hey! Who's there!?"
     scene misterygirlshadow02 with dissolve
-    "{i}The figure slowly disappeared into the blackness of the night.{/i}"
+    __("{i}The figure slowly disappeared into the blackness of the night.{/i}")
     Jimmy "What the fuck is wrong with this place?"
     if wendygallery == True:
         call screen wendygallery

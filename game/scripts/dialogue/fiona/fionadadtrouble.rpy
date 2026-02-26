@@ -7,13 +7,13 @@ label fionadadtroublequest:
         if calendar.when[2] in [EVENING]:
             jump .sexscene
         else:
-            "I should wait until the evening to hide in the kiosk."
+            __("I should wait until the evening to hide in the kiosk.")
             $ gotoscene('girlsdormfrontgate')
     elif quests.fionaDadTrouble == ACTIVE:
         if quest.fionaheadmastertalk == False:
             jump .active
         else:
-            "I need to get the headmaster office key, maybe the secretary can help me with that."
+            __("I need to get the headmaster office key, maybe the secretary can help me with that.")
             $ gotoscene('girlsdormfrontgate')
 
 label .active:
@@ -61,7 +61,7 @@ label .active:
     Fiona "Fine, but, we'll go... ON OUR OWN."
     Dawson "As you wish, I have other things to do."
     play sound "audio/sfx/highheels.ogg"
-    "{i}Fiona grabbed [player_name]'s hand and they both made their way to the headmaster's office.{/i}"
+    __("{i}Fiona grabbed [player_name]'s hand and they both made their way to the headmaster's office.{/i}")
     $ showscene('mainbuildingsecretarysoffice', transition=fade)
     play music MUSIC_HEADMASTERS_THEME
     show fiona clerk mad with dissolve
@@ -85,7 +85,7 @@ label .active:
     play sound "audio/sfx/clearthroat01.ogg"
     Stapleneck talk "Ah! Yes, you're here now."
     Stapleneck "Take a seat."
-    "{i}The headmaster sat down in his chair with his face reddening with anger.{/i}"
+    __("{i}The headmaster sat down in his chair with his face reddening with anger.{/i}")
     scene stapleneckdiscussion with fade
     Stapleneck "I wanted to talk to you about recent activities. I've heard some reports that you were involved in some inappropriate behavior during Halloween festivities."
     Stapleneck "Do you have something to say about that?"
@@ -93,7 +93,7 @@ label .active:
     Stapleneck "Were you involved in the incident with the flag?"
     Jimmy "..."
     Stapleneck "What about the graffiti drawn next to the Jacuzzi..."
-    "{i}[player_name] already knew that the headmaster wasn't going to believe anything he said.{/i}"
+    __("{i}[player_name] already knew that the headmaster wasn't going to believe anything he said.{/i}")
     play sound "audio/sfx/clearthroat01.ogg"
     Stapleneck "I must remind you that you are a representative, whether you want it or not, of this school."
     Stapleneck "Your behavior reflects on the reputation of this academy, and I expect you to act accordingly."
@@ -214,7 +214,7 @@ label .sexscene:
     play sound "audio/sfx/gasp02.ogg"
     Fiona "I'm so excited!"
     scene mainplazafallnight with fade
-    "{i}Fiona and [player_name] crept down the schoolgrounds, the light from the full moon spilling through the trees' branches.{/i}"
+    __("{i}Fiona and [player_name] crept down the schoolgrounds, the light from the full moon spilling through the trees' branches.{/i}")
     Jimmy "Wow, the school looks very different at night."
     play sound "audio/sfx/hmm02.ogg"
     Fiona "Personally, I love it."
@@ -236,23 +236,23 @@ label .sexscene:
     Marlon "I pray to the heavens that you're right..."
     Marlon "Anyways, do you want some tea? I got some at the cafeteria."
     Pascal "Sure, lead the way."
-    "{i}For a moment, [player_name] saw the face of the old man with the coat and thought he knew him from somewhere.{/i}"
+    __("{i}For a moment, [player_name] saw the face of the old man with the coat and thought he knew him from somewhere.{/i}")
     Jimmy "{i}*whispers*{/i} Shit, I think he saw me..."
-    "{i}Indeed, it looked like the man in the coat crossed his eyes with [player_name].{/i}"
-    "{i}However, the old man didn't say anything and followed the concierge to the cafeteria.{/i}"
-    "{i}Was he blind?, thought [player_name]. Lucky for them, the way was cleared now.{/i}"
+    __("{i}Indeed, it looked like the man in the coat crossed his eyes with [player_name].{/i}")
+    __("{i}However, the old man didn't say anything and followed the concierge to the cafeteria.{/i}")
+    __("{i}Was he blind?, thought [player_name]. Lucky for them, the way was cleared now.{/i}")
     scene secretaryoffice01night with fade
     play music "audio/music/sneaking01.ogg"
     play sound "audio/sfx/dooropen01.ogg"
-    "{i}They went upstairs, crossing the assistant's office and stopped in front of the headmaster's.{/i}"
+    __("{i}They went upstairs, crossing the assistant's office and stopped in front of the headmaster's.{/i}")
     Fiona "This is it."
-    "{i}[player_name] got the key out and opened it.{/i}"
+    __("{i}[player_name] got the key out and opened it.{/i}")
     scene headmasterstudyfallnight with fade
     play music "audio/music/sneaking01.ogg"
     play sound "audio/sfx/doorclose02.ogg"
-    "{i}Fiona stepped inside her father's office, her eyes wide with excitement.{/i}"
+    __("{i}Fiona stepped inside her father's office, her eyes wide with excitement.{/i}")
     Fiona "We did it!"
-    "{i}She went directly for the desk, and after checking all the drawers, she finally found her permit.{/i}"
+    __("{i}She went directly for the desk, and after checking all the drawers, she finally found her permit.{/i}")
     show fiona clerk happy with dissolve
     Jimmy "Alright, you got it. Let's get out of here."
     play sound "audio/sfx/girlsigh01.ogg"
@@ -288,25 +288,25 @@ label .sexscene:
     Fiona "Oh, [player_name]. I love you so much."
     Fiona "You got in my life, right when I needed you."
     menu:
-        "I love you too":
+        __("I love you too"):
             play sound "audio/sfx/clearthroat01.ogg"
             Jimmy "I love you too, Fiona."
             $ fionaLoveYou = True
-            "{i}[player_name] knew that a girl with daddy issues was an easy one to get, but he actually felt bad for her.{/i}"
-            "{i}Having developed actual feelings for her, he felt the need to help her for real as someone he deeply cared about.{/i}"
-        "I know":
+            __("{i}[player_name] knew that a girl with daddy issues was an easy one to get, but he actually felt bad for her.{/i}")
+            __("{i}Having developed actual feelings for her, he felt the need to help her for real as someone he deeply cared about.{/i}")
+        __("I know"):
             play sound "audio/sfx/clearthroat01.ogg"
             Jimmy "I know, babe."
             Jimmy "You can count on me."
-            "{i}[player_name] knew that a girl with daddy issues was an easy one to get, but he actually felt bad for her.{/i}"
-            "{i}He didn't know exactly where this was going to lead, but he was having a lot of fun with it.{/i}"
+            __("{i}[player_name] knew that a girl with daddy issues was an easy one to get, but he actually felt bad for her.{/i}")
+            __("{i}He didn't know exactly where this was going to lead, but he was having a lot of fun with it.{/i}")
     play sound "audio/sfx/hum01.ogg"
     call sleep from _call_sleep_2
     scene revengeheadmasterarrival with fade
     play music MUSIC_FUNNY_MOMENT
     play sound "audio/sfx/clearthroat01.ogg"
-    "{i}The next morning, the headmaster came into his office like every morning for work.{/i}"
-    "{i}However, this time it smelled a bit odd. Did the concierge not clean his office last night?, he thought.{/i}"
+    __("{i}The next morning, the headmaster came into his office like every morning for work.{/i}")
+    __("{i}However, this time it smelled a bit odd. Did the concierge not clean his office last night?, he thought.{/i}")
     Stapleneck "Miss Dawson, there is a weird smell in the air."
     play sound "audio/sfx/femaleclearthroat.ogg"
     Dawson "Oh, headmaster. I will call Mr. Marlon at once!"

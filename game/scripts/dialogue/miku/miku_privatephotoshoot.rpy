@@ -1,10 +1,10 @@
 label mikuprivatephotoshootscene:
     $ showscene('schoollibraryarchives', transition=fade)
     hide screen freeroamhud
-    "{i}As [player_name] entered the archives section of the library, he was taken by the smell of leather and old parchment.{/i}"
-    "{i}What mysteries were hiding among these timeworn tomes?{/i}"
-    "{i}Perhaps a treasure map, or a magic spell, or a secret plot from the Russians to take over the world using monsters from a dark dimension, or...{/i}"
-    "{i}[player_name] didn't have much time to dwell on those thoughts, however, before Miku showed up.{/i}"
+    __("{i}As [player_name] entered the archives section of the library, he was taken by the smell of leather and old parchment.{/i}")
+    __("{i}What mysteries were hiding among these timeworn tomes?{/i}")
+    __("{i}Perhaps a treasure map, or a magic spell, or a secret plot from the Russians to take over the world using monsters from a dark dimension, or...{/i}")
+    __("{i}[player_name] didn't have much time to dwell on those thoughts, however, before Miku showed up.{/i}")
     play music MUSIC_MIKUS_THEME
     show miku bunny seductive with dissolve
     Miku "..."
@@ -30,7 +30,7 @@ label mikuprivatephotoshootscene:
     Jimmy "Alright, babe. I got some good photos here. Wanna try a different pose?"
     Miku "Okay."
     scene mikubunnypose02 onlayer cutscene with dissolve
-    "Holy shit. That suit is barely covering her parts."
+    __("Holy shit. That suit is barely covering her parts.")
     Miku "It's getting hot in here, huh?"
     Jimmy "Oh, yeah. Very hot."
     Miku "I'm starting to sweat, haha."
@@ -40,16 +40,16 @@ label mikuprivatephotoshootscene:
     Jimmy "Good to know."
     Miku "Here, let me show you a very hard pose."
     scene mikubunnypose03 onlayer cutscene with dissolve
-    "Oh shit, her pussy just popped out of the suit."
-    "Is she really sweating or is she wet?"
-    "Fuck, that's so hot. I'm getting an erection."
+    __("Oh shit, her pussy just popped out of the suit.")
+    __("Is she really sweating or is she wet?")
+    __("Fuck, that's so hot. I'm getting an erection.")
     Miku "[player_name], are you okay?"
     Jimmy "Umm, yeah. I just... That looks like a painful pose."
     Miku "Well, it's actually really..."
     Miku "Um, [player_name], there's a big bulge in your pants."
     Jimmy "Oh, uh, yeah..."
     Miku "Oh my god, is that...?"
-    "{i}Miku stood up and put on her glasses.{/i}"
+    __("{i}Miku stood up and put on her glasses.{/i}")
     scene onlayer cutscene
     with fade
     Miku "[player_name], you're aroused..."

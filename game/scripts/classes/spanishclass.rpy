@@ -45,13 +45,15 @@ label spanish_lesson1outro:
     Punny standbook "¡Oh por Dios, [player_name]!"
     Punny "That was a great result."
     Punny polaroid "I knew you were as smart as you are guapo."
-    "{i}Looks like something fell from the teacher's desk.{/i}"
+    __("{i}Looks like something fell from the teacher's desk.{/i}")
     play sound SOUND_SEXY_INTRO
     show misspunnyunlockable01 with dissolve
-    "{i}That was great, [player_name]!{/i}"
-    "{i}You've unlocked an exclusive piece of art and added 1 point to your charisma stat. The benefits of being bilingual!{/i}"
-    "{i}You also added 1 point to your relationship with Miss Punny.{i}"
-    "{i}If you keep succeeding at her class, you'll be able to advance her story (and maybe even have a shot at that ass).{/i}"
+    __("{i}That was great, [player_name]!{/i}")
+    __("{i}You've unlocked an exclusive piece of art and added 1 point to your charisma stat. The benefits of being bilingual!{/i}")
+    $ jimmy.stats['charisma'] += 1
+    __("{i}You also added 1 point to your relationship with Miss Punny.{i}")
+    $ Punny.relPoints += 1    
+    __("{i}If you keep succeeding at her class, you'll be able to advance her story (and maybe even have a shot at that ass).{/i}")
     hide misspunnyunlockable01 with dissolve
     play sound SOUND_SCHOOL_BELL
     Punny arm "Okay class, you are dismissed!"
@@ -73,7 +75,7 @@ label spanish_lesson2intro:
     Punny jumping "¡SALTAR!" with vpunch
     Punny lean "Oh, I almost fell on top of you, Señor [player_surname]!"
     play sound "audio/sfx/giggle01.ogg"
-    Jimmy "{i}*You can fall on top of me whenever you want, Miss...*{i}"
+    Jimmy "*You can fall on top of me whenever you want, Miss...*"
     play sound "audio/sfx/scream01.ogg"
     Punny surprised "¡GRITAR!"
     Punny talk "Is another example of a verb in Spanish."

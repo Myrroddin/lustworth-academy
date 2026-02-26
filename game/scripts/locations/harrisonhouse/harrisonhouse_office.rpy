@@ -30,14 +30,14 @@ label harrisonhouseoffice_exit:
 label harrisonhouseoffice_applecider1:
 label harrisonhouseoffice_applecider2:
     if quests.beatrixAppleCider == ACTIVE:
-        "What is this?"
-        "Seems like apple juice to me."
+        __("What is this?")
+        __("Seems like apple juice to me.")
         call item_pickup(ItemAppleCider) from _call_item_pickup_11
         $ quests.beatrixAppleCider = SATISFIED
     elif quests.beatrixAppleCider == SATISFIED:
-        "I already got some apple juice. I should give it to Beatrix."
+        __("I already got some apple juice. I should give it to Beatrix.")
     elif quests.beatrixAppleCider == COMPLETE:
         jump halloween_beatrixgrinding
     else:
-        "Looks like some sort of apple juice."
+        __("Looks like some sort of apple juice.")
     jump harrisonhouseoffice_loop

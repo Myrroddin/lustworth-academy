@@ -66,7 +66,7 @@ label math_lesson1outro:
     play sound "audio/sfx/mad02.ogg"
     hide beatrix with vpunch
     show jimmy neutral with dissolve
-    "What's her problem?"
+    __("What's her problem?")
     hide jimmy with dissolve
     return
 

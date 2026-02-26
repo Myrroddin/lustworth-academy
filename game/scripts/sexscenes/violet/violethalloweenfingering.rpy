@@ -9,7 +9,7 @@ label violet_halloweenfingering_scene:
     play sound "audio/sfx/giggle01.ogg"
     Violet "I wanted you to see if we could maybe touch each other..."
     Violet "Derby, can you touch my vagina?"
-    "*Oh, fuck. How do I get out of this?*"
+    __("*Oh, fuck. How do I get out of this?*")
     Violet "Derby, don't you want me anymore?"
     Violet "I'm getting wet down there, please. Give me your hand."
     scene violetfingeringanim with dissolve
@@ -19,7 +19,7 @@ label violet_halloweenfingering_scene:
     play sound "audio/sfx/handjob01.ogg"
     Violet "Uff, you like it, don't you? I can tell."
     Violet "I know you like me playing like this with your butt, but today you gotta please your princess."
-    "*Da fuq?*"
+    __("*Da fuq?*")
     scene violetfingeringanimfast with vpunch
     Violet "Oh, yes! Fuck, that feels so good."
     Violet "Derby, your fingers reach further inside me than your penis."
@@ -36,14 +36,14 @@ label violet_halloweenfingering_scene:
     Violet "Do it, now! Your princess demands it!"
     scene violetcaught06 with fade
     play sound "audio/sfx/undress01.ogg"
-    "{i}Being so horny. [player_name] thought, \"fuck it!\" and pulled out his cock forgetting about his mission.{/i}"
+    __("{i}Being so horny. [player_name] thought, \"fuck it!\" and pulled out his cock forgetting about his mission.{/i}")
     Violet "Wow! Derby? Did you inyect botox in your penis?"
     play sound "audio/sfx/big_punch.ogg"
     Violet "I don't remember it being so big... "
     scene violetcaught07 with vpunch
     play sound "audio/sfx/stopmusiceffect.ogg"
     play music "audio/music/crazymoment01.ogg"
-    "{i}Indeed. The real Derby opened the door as Violet was admiring [player_name]'s manhood with her mouth wide open.{/i}"
+    __("{i}Indeed. The real Derby opened the door as Violet was admiring [player_name]'s manhood with her mouth wide open.{/i}")
     Derby "Violet?"
     Derby "WHAT THE FUCK IS THIS?!"
     $ derbylaptopfound = True

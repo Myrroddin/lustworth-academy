@@ -11,11 +11,11 @@ label clairesecretscene_menu:
         Claire "You don't know how messy it gets being around zombies."
         $ entry = False
     menu:
-        "Sidefuck":
+        __("Side fuck"):
             jump clairesecretscene_sidefuck
-        "Anal on bike":
+        __("Anal on bike"):
             jump clairesecretscene_anal
-        "Leave":
+        __("Leave"):
             return
 
 label clairesecretscene_sidefuck:

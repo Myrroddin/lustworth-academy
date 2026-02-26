@@ -42,8 +42,8 @@ label infirmarynurseintro:
     Jimmy "Is there someone in here?"
     play sound "audio/sfx/surprisedhum.ogg"
     Vanessa "Just a moment!"
-    "{i}The voice came from behind a door at the back of the infirmary.{/i}"
-    "{i}Suddenly, a woman dressed in a specially tight suit came out of the room.{/i}"
+    __("The voice came from behind a door at the back of the infirmary.")
+    __("Suddenly, a woman dressed in an especially tight suit came out of the room.")
     play music "audio/music/funrocktheme01.ogg"
     show vanessa nurse coffee with dissolve
     play sound "audio/sfx/hey04.ogg"
@@ -72,7 +72,7 @@ label infirmarynurseintro:
     play sound "audio/sfx/femaleclearthroat.ogg"
     Vanessa "BEATRIX! That's right! That's right. Beatrix has a perioral dermatitis."
     Vanessa "I wonder why she hasn't come to me for a check."
-    Jimmy "Well, she's a bit estressed out right now with some homework."
+    Jimmy "Well, she's a bit stressed out right now with some homework."
     Vanessa "Of course, I understand. Well, now that her friend came to me, you can take this cream to her and be her hero."
     call item_pickup(ItemDermatitisCream) from _call_item_pickup_41
     Vanessa backpose "How about that? Isn't that romantic?"
@@ -82,7 +82,7 @@ label infirmarynurseintro:
     play sound "audio/sfx/alright03.ogg"
     Vanessa "Alright, thank you coming! See you later!"
     hide vanessa with vpunch
-    "{i}As quickly as she came out, she got back inside the room at the back.{/i}"
+    __("As quickly as she came out, she got back inside the room at the back.")
     Jimmy "Wow, that caffeine it's doing its work."
     Jimmy "Well, let's see if this cream helps Beatrix."
     $ quests.beatrixHerpes = SATISFIED

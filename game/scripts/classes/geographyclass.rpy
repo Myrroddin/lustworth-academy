@@ -28,9 +28,9 @@ label geography_failoutro:
 
 ## Lesson 1
 label geography_lesson1intro:
-    "{i}[player_name] knew he was in the right classroom as soon as he entered.{/i}"
-    "{i}The room was filled with flags and maps and different clocks in different times from different countries.{/i}"
-    "{i}[player_name] made his way to the back of the room.{/i}"
+    __("{i}[player_name] knew he was in the right classroom as soon as he entered.{/i}")
+    __("{i}The room was filled with flags and maps and different clocks in different times from different countries.{/i}")
+    __("{i}[player_name] made his way to the back of the room.{/i}")
     show missjones sit with dissolve
     Jones "My little darlings, we are finally together again!"
     Jones "I'm so happy to have you here with me once more."
@@ -39,7 +39,7 @@ label geography_lesson1intro:
     $ Jones.met = True
     Jones "My great-grandfather was a famous explorer, and I inherited his passion for adventure!"
     Jones "My goal is to transfer that excitement to you, my little pumpkins."
-    "Well isn't she a cheery one."
+    __("Well isn't she a cheery one.")
     Jones "Today, we are going to start light, and we are going to identify the continents of our world, okay?"
     Jones "I know you're excited to discover the world with me!"
     Jones "Let's begin."
@@ -51,8 +51,8 @@ label geography_lesson1outro:
     Jones "Oh, yes! Yes! YES! That's correct!"
     Jones "Wow, Mr. [player_surname], it's seems that you're a total adventurer."
     show geographyreward01 with dissolve
-    "{i}Nice one!{/i}"
-    "{i}Keep it up and you might have a different kind of adventure with her...{/i}"
+    __("{i}Nice one!{/i}")
+    __("{i}Keep it up and you might have a different kind of adventure with her...{/i}")
     hide geographyreward01 with dissolve
     play sound SOUND_SCHOOL_BELL
     Jones "'Til next time, class!"

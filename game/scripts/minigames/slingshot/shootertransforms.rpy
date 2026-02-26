@@ -1,4 +1,4 @@
-﻿# transform alpha(a):
+# transform alpha(a):
 transform alpha(a): # Defines a transform named 'alpha' that takes an argument 'a' (alpha value, 0.0 to 1.0).
     alpha a # Sets the displayable's opacity.
 transform rotate(r): # Defines a transform named 'rotate' that takes an argument 'r' (angle in degrees).

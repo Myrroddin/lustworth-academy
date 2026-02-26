@@ -2,16 +2,16 @@ label miku_photoshootblowjob_scene:
     play music MUSIC_SEXY_THEME
     scene mikublowjob01 with fade
     play sound "audio/sfx/mh1.ogg"
-    "{i}Miku began slowly rubbing her cheek against [player_name]'s cock.{/i}"
+    __("{i}Miku began slowly rubbing her cheek against [player_name]'s cock.{/i}")
     Miku "It feels so warm and... Hard."
     Jimmy "You make it hard, babe."
     Miku "Ummm... I've always wanted to taste a penis."
     Miku "My Mom says it's a little salty."
     Jimmy "Your Mom is really open with you, huh?"
-    "{i}Suddenly, [player_name] felt Miku's hands pulling his boxers down, exposing his erection.{/i}"
+    __("{i}Suddenly, [player_name] felt Miku's hands pulling his boxers down, exposing his erection.{/i}")
     play sound "audio/sfx/ah3.ogg"
     scene mikublowjob02 with dissolve
-    "{i}Without flinching, she took her glasses off and started slowly licking his shaft.{/i}"
+    __("{i}Without flinching, she took her glasses off and started slowly licking his shaft.{/i}")
     Miku "Mmmm, it's a little salty, but I like it."
     Miku "I don't know if this long cock will fit inside my mouth."
     Jimmy "There's only one way to find out."
@@ -24,7 +24,7 @@ label miku_photoshootblowjob_scene:
     Miku "Dikke diss?"
     Jimmy "Yeah, just like that."
     Jimmy "Do you think you can go all the way down?"
-    "{i}Miku looked up at [player_name] and nodded in approval.{/i}"
+    __("{i}Miku looked up at [player_name] and nodded in approval.{/i}")
     play sound "audio/sfx/dp1.ogg"
     scene mikublowjobanimationfast with vpunch
     Jimmy "FUCK!"

@@ -68,7 +68,7 @@ label schoolgroundsparkinglot_tosouthplaza:
 label schoolgroundsparkinglot_eunice:
     if EuniceDaylimit == True:
         show eunice uniform neutral with dissolve
-        Jimmy "*She look busy.*"
+        Jimmy "*She looks busy.*"
         Jimmy "*I already talked to her today.*"
         Jimmy "*I'll see her tomorrow.*"
         jump schoolgroundsparkinglot_loop
@@ -79,10 +79,7 @@ label schoolgroundsparkinglot_togymplaza2:
     $ gotoscene('schoolgroundspeacockplaza')
 
 label schoolgroundsparkinglotcheckderek:
-    if FionaWineFound == False:
-        Derek "Ice ice, baby..."
-        return     
-    elif FionaDonutFound == False:
+    if FionaWineFound == False or FionaDonutFound == False:
         Derek "Ice ice, baby..."
         return
     else:

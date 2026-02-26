@@ -22,12 +22,12 @@ label chemistry_minigame:
     if lesson > 1:
         return True
     menu:
-        "Play minigame":
+        __("Play minigame"):
             show chemclasswarning with dissolve
             $ renpy.pause()
             hide chemclasswarning with dissolve
             $ _return = True
-        "Skip":
+        __("Skip"):
             $ _return = True
     return _return
 
@@ -36,7 +36,7 @@ label chemistry_failintro:
     return
 
 label chemistry_failoutro:
-    'You lost...'
+    __("You lost...")
     return
 
 ## Lesson 1
@@ -68,7 +68,7 @@ label chemistry_lesson1outro:
     return
 
 label chemistry_lesson2intro:
-    "This content is not available yet."
+    __("This content is not available yet.")
     return
 
 label chemistry_lesson2outro:

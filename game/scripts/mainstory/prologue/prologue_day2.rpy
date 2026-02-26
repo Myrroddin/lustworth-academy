@@ -6,7 +6,7 @@ label prologue_day2morning:
     Pete "Hey! Good morning, [player_name]."
     Jimmy "Pete! Just the man I needed to see."
     Pete "Uhh, [player_name]... There's someone that wants to meet you."
-    "{i}[player_name] could instantly tell that Pete was afraid of the person who came through the door.{/i}"
+    __("{i}[player_name] could instantly tell that Pete was afraid of the person who came through the door.{/i}")
     hide jimmy with dissolve
     play music MUSIC_GARYS_THEME
     show gary uniform cocky left with dissolve
@@ -38,15 +38,15 @@ label prologue_day2morning:
     Pete "Bye, [player_name]."
     stop music
     hide pete with dissolve
-    "Jesus, what an asshole."
-    "I gotta be careful around that guy."
+    __("Jesus, what an asshole.")
+    __("I gotta be careful around that guy.")
     $ prologue.secondNight = True
     $ gotoscene('boysdormjimmysroom')
 
 label prologue_mathclassintro:
     play sound "audio/sfx/doorclose01.ogg"
-    "Man, these desks are really cramped, I can hardly get my legs under."
-    "Oh god, here comes brace face."
+    __("Man, these desks are really cramped, I can hardly get my legs under.")
+    __("Oh god, here comes brace face.")
     play music "audio/music/beatrixtheme.ogg" volume 0.5
     show beatrix uniform mad with vpunch
     play sound "audio/sfx/mad01.ogg"
@@ -58,7 +58,7 @@ label prologue_mathclassintro:
     Camembert "Get to your seats, everyone!"
     play sound "audio/sfx/hey02.ogg"
     Beatrix smile "Oh, hi Mr. Camembert, you look wonderful today!"
-    "Talk about boot licking..."
+    __("Talk about boot licking...")
     Beatrix mad "This isn't over, dork."
     play sound "audio/sfx/mad02.ogg"
     hide beatrix with vpunch
@@ -78,9 +78,9 @@ label prologue_mathclassintro:
 
 label prologue_shopclassintro:
     show screen freeroamhud(False)
-    "Looks like I got to class a bit early."
-    "Wow, look at that beauty. I would love to have a car like that."
-    "I can hear a sound coming from inside the car..."
+    __("Looks like I got to class a bit early.")
+    __("Wow, look at that beauty. I would love to have a car like that.")
+    __("I can hear a sound coming from inside the car...")
     hide screen freeroamhud
     call lola_carmasturbation_scene from _call_lola_carmasturbation_scene
     $ showscene('schoolgarage', transition=fade, playMusic=False)
@@ -173,8 +173,8 @@ label prologue_aftershop:
     show audrey neutral with dissolve
     Audrey "There's the bell. You guys can go now! Neil should be back next week."
     hide audrey with dissolve
-    "The mayor? Interesting..."
-    "Let's see who runs this town."
+    __("The mayor? Interesting...")
+    __("Let's see who runs this town.")
     jump prologue_mayorassembly
 
 label prologue_mayorassembly:
@@ -183,7 +183,7 @@ label prologue_mayorassembly:
     hide screen freeroamhud
     scene auditoriumhallfallevening with fade
     show jimmy neutral with dissolve
-    "This place is huge..."
+    __("This place is huge...")
     show pete uniform neutral with dissolve
     play sound "audio/sfx/heypete01.ogg"
     Pete "Hey, [player_name]!"
@@ -213,11 +213,11 @@ label prologue_mayorspeech:
     scene mayorspeech02 with fade
     # TODO: add a unique theme for the mayor
     play music MUSIC_MAYORSLOW_THEME
-    "{i}An imposing man walked up to the podium with an expression of absolute seriousness.{/i}"
-    "{i}Everyone in the room went silent, waiting for him to start his speech.{/i}"
-    "{i}Instead, he just stood there, looking at every single person in the crowd with an intimidating stare.{/i}"
-    "{i}When he reached [player_name], he paused.{/i}"
-    "{i}[player_name] didn't flinch for a moment.{/i}"
+    __("An imposing man walked up to the podium with an expression of absolute seriousness.")
+    __("Everyone in the room went silent, waiting for him to start his speech.")
+    __("Instead, he just stood there, looking at every single person in the crowd with an intimidating stare.")
+    __("When he reached [player_name], he paused.")
+    __(" [player_name] didn't flinch for a moment.")
     Donaguy "Ladies and gentlemen, esteemed faculty, and students."
     Donaguy "Let me put this hat down before I start..."
     scene mayorspeech03 with fade
@@ -231,7 +231,7 @@ label prologue_mayorspeech:
     Donaguy "And yet, our journey is far from over. We stand on the cusp of a new dawn, the next phase of our school's illustrious program."
     Donaguy "What awaits is the culmination of our efforts, which will soon be unveiled."
     Donaguy "A hard step forward that will ensure our legacy for generations to come."
-    "{i}Murmurs of expectation and uncertainty filled the room.{/i}"
+    __("Murmurs of expectation and uncertainty filled the room.")
     Jimmy "This guy is intense."
     Pete "Oh, yeah. Donaguy is famous for making radical changes."
     Pete "The thing is this town was so fucked up that his programs have actually worked."
@@ -249,8 +249,8 @@ label prologue_mayorspeech:
     scene mayorspeech01 with dissolve
     stop music
     play music "audio/music/funrocktheme01.ogg"
-    "Wait a minute..."
-    "She's..."
+    __("Wait a minute...")
+    __("She's...")
     show wendyrecuerdo01 with dissolve
     Wendy "{i}Oh, God!{/i}"
     Wendy "{i}I have to resist the urge of putting it inside my pussy.{/i}"
@@ -258,10 +258,10 @@ label prologue_mayorspeech:
     show wendyrecuerdo02 with dissolve
     Wendy "{i}You can do it! You can do it!{/i}"
     hide wendyrecuerdo02 with dissolve
-    "It's her..."
-    "She's the one!"
-    "{i}When the applause and cheers ended, everyone started to slowly leave the auditorium.{/i}"
-    "{i}The mayor went to talk to the Headmaster while his daughter went backstage.{/i}"
+    __("It's her...")
+    __("She's the one!")
+    __("When the applause and cheers ended, everyone started to slowly leave the auditorium.")
+    __("The mayor went to talk to the Headmaster while his daughter went backstage.")
     scene auditoriumhallfallevening with fade
     show jimmy neutral
     show pete uniform neutral
@@ -279,9 +279,9 @@ label prologue_mayorspeech:
 
 label prologue_wendybackstage:
     scene auditoriumbackstage01 with fade
-    "{i}Being careful not to be seen by the monitors, [player_name] snuck backstage looking for Wendy.{/i}"
+    __("Being careful not to be seen by the monitors, [player_name] snuck backstage looking for Wendy.")
     show wendy doubt with dissolve
-    "{i}He finally saw her behind some curtains. Being up close, he saw her green eyes and the orange hair, she was the one for sure.{/i}"
+    __("He finally saw her behind some curtains. Being up close, he saw her green eyes and the orange hair, she was the one for sure.")
     Wendy "I don't know why he always does that."
     Wendy "Every time he makes a speech, he calls me and puts me in front of everyone like a trophy. I hate that."
     show jimmy talk with dissolve
@@ -292,7 +292,7 @@ label prologue_wendybackstage:
     Jimmy "I mean, I enjoyed our time together, but I don't think your dad would be pleased to know about your nightly excursions."
     Jimmy "You know, you could invite me to your house to have a proper dinner or something."
     Jimmy "Or should I speak with a high wizard for an audience with your grace..."
-    "{i}Wendy's face blushed for a moment, and her voice started to tremble.{/i}"
+    __("Wendy's face blushed for a moment, and her voice started to tremble.")
     Wendy blush "I... I don't know who you are, or what you're talking about."
     Jimmy "So you don't remember slipping inside my room the last couple of nights?"
     Jimmy "Look, I know it was you. I remember your voice, your eyes and your hair, and you even left your panties in my room."
@@ -317,7 +317,7 @@ label prologue_wendybackstage:
     Stapleneck "What is the meaning of this?"
     Stapleneck "Miss Donaguy, is this boy bothering you?"
     Wendy "Headmaster... I think..."
-    "{i}Wendy looked at [player_name] in the eyes and raised an eyebrow. [player_name] felt that this time he was in real trouble.{/i}"
+    __("Wendy looked at [player_name] in the eyes and raised an eyebrow. [player_name] felt that this time he was in real trouble.")
     Wendy talk "No, no problem, Headmaster."
     Wendy "He was just introducing himself because he's new in town."
     Stapleneck neutral "Alright..."
@@ -328,38 +328,38 @@ label prologue_wendybackstage:
     Wendy "Wendy... Wendy Donaguy."
     $ Wendy.met = True
     hide wendy with dissolve
-    "{i}A mischevious smile showed on Wendy's face as she went out.{/i}"
+    __("A mischevious smile showed on Wendy's face as she went out.")
     Stapleneck arm "I don't know what you're planning, boy."
     Stapleneck "But you should be careful who you approach."
     stop music
     $ showscene('mainbuildingentrance', transition=fade)
     show screen freeroamhud(False)
-    "She didn't give me away... That's a message."
-    "She's into the game."
-    "I don't know how, but I'm gonna get into her room this weekend."
-    "Speaking of the weekend, Kassandra should be coming to pick me up any minute."
-    "I should get changed and meet her in front of the school."
+    __("She didn't give me away... That's a message.")
+    __("She's into the game.")
+    __("I don't know how, but I'm gonna get into her room this weekend.")
+    __("Speaking of the weekend, Kassandra should be coming to pick me up any minute.")
+    __("I should get changed and meet her in front of the school.")
     $ prologue.mayorsSpeech = True
     $ gotoscene('mainbuildingentrance')
 
 label prologue_kassandraintro:
     show screen freeroamhud(False)
-    "Alright, I'm ready to go."
+    __("Alright, I'm ready to go.")
     hide screen freeroamhud
     stop music
     scene academygatefallevening with fade
-    "I haven't seen Kassandra since I was four years old. I don't even remember her face."
-    "She and my dad have a weird relationship."
-    "They still get along, but just enough to keep each other informed about their lives."
-    "I think she has three daughters, but I don't know them at all."
-    "My dad told me they were students here at Trustworth, which means I may have even met them without knowing."
+    __("I haven't seen Kassandra since I was four years old. I don't even remember her face.")
+    __("She and my dad have a weird relationship.")
+    __("They still get along, but just enough to keep each other informed about their lives.")
+    __("I think she has three daughters, but I don't know them at all.")
+    __("My dad told me they were students here at Trustworth, which means I may have even met them without knowing.")
     scene academygatefallevening with dissolve
     play music MUSIC_KASSANDRAS_THEME
     play sound "audio/sfx/carpullover.ogg"
     show kassandraminicaringate with dissolve
-    "{i}A tall, voluptuous woman with braided hair got out of a blue mini convertible."
+    __("A tall, voluptuous woman with braided hair got out of a blue mini convertible.")
     show kassandra neutral with dissolve
-    "{i}This woman was beautiful, and when [player_name] saw her, he felt as if he had known her his whole life.{/i}"
+    __("This woman was beautiful, and when [player_name] saw her, he felt as if he had known her his whole life.")
     $ landlady_name = renpy.input("Kassandra is your... (default: landlady)")
     $ landlady_name = landlady_name.strip()
     if landlady_name == "":
@@ -374,7 +374,7 @@ label prologue_kassandraintro:
     Kassandra "Blair was so excited to have a younger sister then. You wouldn't believe it if you saw them together now though!"
     stop music
     play sound SOUND_RECORD_SCRATCH
-    "Cassidy? Blair? I know those names..."
+    __("Cassidy? Blair? I know those names...")
     Cassidy "Hey, Mom!"
     Kassandra "Oh, here they come now!"
     hide kassandra with dissolve
@@ -400,33 +400,33 @@ label prologue_kassandraintro:
         $ roommate_male = "roommate"
     #"{i}There they are, your three [roommate_female]s.{/i}"
     Kassandra "Girls! It's time you finally met your [roommate_male]. His name is [player_name]."
-    "{i}An uncomfortable silence along with dismayed stares was the first formal interaction they had.{/i}"
+    __("An uncomfortable silence along with dismayed stares was the first formal interaction they had.")
     hide blair
     hide cassidy
     with dissolve
     Alice "Hi, I'm Alice."
-    "Alice - she was the shy girl I saw in Spanish class."
-    "Now I know why she was looking at me as if she'd seen a ghost."
+    __("Alice - she was the shy girl I saw in Spanish class.")
+    __("Now I know why she was looking at me as if she'd seen a ghost.")
     Jimmy "Nice to meet you, Alice."
     Jimmy "I think I saw you in Spanish class."
     Jimmy "I didn't know you were my [roommate_female] then."
     Alice "Yeah, I kind of did, but I wasn't sure."
     hide alice with dissolve
     show blair roommate intro with dissolve
-    "Blair, the girl who saw me spying on Lola inside the car, before Shop class."
-    "Now that's a weird secret to share with your [roommate_female]."
+    __("Blair, the girl who saw me spying on Lola inside the car, before Shop class.")
+    __("Now that's a weird secret to share with your [roommate_female].")
     Blair "We know each other already, right, [player_name]?"
     Jimmy "Umm... Yeah, we have Shop class together."
     Blair "Yes, we do."
     hide blair with dissolve
     show cassidy pajama neutral with dissolve
-    "Cassidy... The only thing I know about her is that she loves to play with dildos in weird places."
+    __("Cassidy... The only thing I know about her is that she loves to play with dildos in weird places.")
     Cassidy "He's my [roommate_male]? Are you sure, Mom?"
     Cassidy "I mean... This guy? Really?"
     Jimmy "Did you expect something else?"
     Cassidy "Well, kinda. I expected someone taller and more masculine."
     Jimmy "Yeah, well, I'm sorry I don't have the same appeal as a rubber toy."
-    "{i}Cassidy blushed almost immediately.{/i}"
+    __("Cassidy blushed almost immediately.")
     Cassidy blush "I... I don't know what you're talking about... Um, anyway... Nice meeting you."
     Jimmy "The pleasure is mine."
     hide cassidy with dissolve
@@ -436,15 +436,15 @@ label prologue_kassandraintro:
     # show cassidy neutral with dissolve
     Kassandra casual happy "It's nice to see you all getting along already."
     Kassandra "It's getting late. Let's go home, then."
-    "Oh, boy. This is going to be fun."
+    __("Oh, boy. This is going to be fun.")
     play music "audio/music/happyrock01.ogg"
     scene seasideneighborhoodfallevening with fade
-    "{i}The buildings and houses around town were pretty colorful.{/i}"
-    "{i}A lot of vegetation covered the valley to the coastline.{/i}"
-    "{i}Far away, you could see the mountains to the northeast...{/i}"
-    "{i}Followed by lush hills where fancier houses and mansions stood.{/i}"
-    "{i}For a moment, [player_name] thought that his new house was among the richest part in town.{/i}"
-    "{i}The sight of a huge mansion near a cliff called his attention.{/i}"
+    __("The buildings and houses around town were pretty colorful.")
+    __("A lot of vegetation covered the valley to the coastline.")
+    __("Far away, you could see the mountains to the northeast...")
+    __("Followed by lush hills where fancier houses and mansions stood.")
+    __("For a moment, [player_name] thought that his new house was among the richest part in town.")
+    __("The sight of a huge mansion near a cliff called his attention.")
     Jimmy "That's a big house."
     Kassandra "That's the Mayor's house, actually."
     Jimmy "Huh, good to know that."
@@ -452,12 +452,12 @@ label prologue_kassandraintro:
     Blair "You wouldn't kill a fly, Cassidy."
     Alice "Stop talking about killing, guys."
     scene townpierareafallnight with fade
-    "{i}The house seemed to be in a residential area not far away from the coastline.{/i}"
-    "{i}As the car rounded a corner, [player_name] caught a glimpse of a large carnival on a pier.{/i}"
-    "{i}Even further away, he had a sight of what seemed to be a small industrial area.{/i}"
+    __("The house seemed to be in a residential area not far away from the coastline.")
+    __("As the car rounded a corner, [player_name] caught a glimpse of a large carnival on a pier.")
+    __("Even further away, he had a sight of what seemed to be a small industrial area.")
     scene housefrontfallnight with fade
-    "{i}Minutes later, they finally arrived home.{/i}"
-    "{i}It was a modest house, but a lot bigger than [player_name] expected.{/i}"
+    __("Minutes later, they finally arrived home.")
+    __("It was a modest house, but a lot bigger than [player_name] expected.")
     scene jimmytownroomempty with fade
     play music MUSIC_TOWNHOUSE
     show kassandra neutral with dissolve
@@ -474,21 +474,21 @@ label prologue_kassandraintro:
     Kassandra "Make yourself comfortable."
     Jimmy "Thanks."
     hide kassandra with dissolve
-    "Well, I guess this is my home now. I like it, it's cozy."
+    __("Well, I guess this is my home now. I like it, it's cozy.")
     play music "audio/music/heistplan.ogg"
     show planner_template with dissolve
     show wendyplan01 with dissolve
-    "So, I have a goal this weekend."
+    __("So, I have a goal this weekend.")
     show wendyplan02 with dissolve
-    "Sneak into the Mayor's mansion..."
+    __("Sneak into the Mayor's mansion...")
     show wendyplan03 with dissolve
-    "And get to Wendy...."
-    "I'm not sure how to do that, but I know where it is, so that's a start."
+    __("And get to Wendy....")
+    __("I'm not sure how to do that, but I know where it is, so that's a start.")
     scene jimmytownroomempty with fade
-    "I think I'll organize my stuff tomorrow, set up my PC, and then I will go and take a peek at the beach near the mansion."
-    "Maybe taking a bath will open my mind to new ideas."
-    "There has to be a way to enter the mansion. It's on top of a cliff, so there are many ways to get close to it."
-    "Anyways, I'm tired as fuck. Gonna sleep the night away."
+    __("I think I'll organize my stuff tomorrow, set up my PC, and then I will go and take a peek at the beach near the mansion.")
+    __("Maybe taking a bath will open my mind to new ideas.")
+    __("There has to be a way to enter the mansion. It's on top of a cliff, so there are many ways to get close to it.")
+    __("Anyways, I'm tired as fuck. Gonna sleep the night away.")
     stop music
     $ prologue.kassandraIntro = True
     call nextday from _call_nextday_12
@@ -496,11 +496,11 @@ label prologue_kassandraintro:
 
 label prologue_day3start:
     scene seasideneighborhoodfallday with fade
-    "{i}When the sun came out that morning, [player_name] woke up early to start the development of his plan.{/i}"
+    __("When the sun came out that morning, [player_name] woke up early to start the development of his plan.")
     scene jimmytownroomday01 with fade
-    "Alright, the PC is set up, but I can't find my USB drive."
-    "I need it to install a couple of things."
-    "It must still be in the boxes down in the living room."
+    __("Alright, the PC is set up, but I can't find my USB drive.")
+    __("I need it to install a couple of things.")
+    __("It must still be in the boxes down in the living room.")
     $ quests.blairUSB = ACTIVE
     $ gotoscene('townhousejimmysroom')
 
@@ -508,8 +508,8 @@ label prologue_day3start:
 label prologue_cassidycaught:
     hide screen freeroamhud
     show jimmy neutral with dissolve
-    "Seems like a good spot to sneak out."
-    "The fall's not that high."
+    __("Seems like a good spot to sneak out.")
+    __("The fall's not that high.")
     show cassidy pajama talk with vpunch
     play music "audio/music/crazymoment01.ogg"
     Cassidy "Aha! Gotcha."
@@ -538,7 +538,7 @@ label prologue_cassidycaught:
     $ gotoscene('townhousehallwayfirstnight')
 
 label prologue_cassidydildo:
-    "{i}*Knock* *knock*{/i}"
+    __("{i}*Knock* *knock*{/i}")
     hide screen freeroamhud
     show jimmy neutral with dissolve
     show cassidy pajama talk with dissolve
@@ -552,83 +552,83 @@ label prologue_cassidydildo:
     hide cassidy with vpunch
     hide jimmy with dissolve
     pause 0.5
-    "I already hear noises inside."
-    "I wonder if there's a way to take a peek..."
+    __("I already hear noises inside.")
+    __("I wonder if there's a way to take a peek...")
     $ quests.cassidyDildo = COMPLETE
     $ Jimmy.inventory.remove(ItemCassidyDildo)
     $ gotoscene('townhousejimmysroomnightinfiltration')
 
 label prologue_cassidypeephole:
-    "I can hear coming moans from the hole."
+    __("I can hear coming moans from the hole.")
     hide screen freeroamhud
     scene cassidybedroomdildopeek with fade
     stop music
-    "Oh, I was hoping to see Cassidy on the other side."
-    "Wait... There she is."
-    "Holy shit, she's going for it!"
+    __("Oh, I was hoping to see Cassidy on the other side.")
+    __("Wait... There she is.")
+    __("Holy shit, she's going for it!")
     call cassidy_townhousepeephole_scene from _call_cassidy_townhousepeephole_scene
     $ showscene('townhousejimmysroomnightinfiltration', transition=fade)
-    "She's really hot."
-    "It's kind of weird that she's my [roommate_female], but I can't stop watching that sweet pussy."
-    "Now at least I should be able to get out."
+    __("She's really hot.")
+    __("It's kind of weird that she's my [roommate_female], but I can't stop watching that sweet pussy.")
+    __("Now at least I should be able to get out.")
     $ prologue.cassidyPeephole = True
     $ gotoscene('townhousejimmysroomnightinfiltration')
 
 label prologue_mayorsmansion:
     hide screen freeroamhud
     scene seasideneighborhoodfallnight with fade
-    "{i}With one goal in mind, [player_name] crept out of the window and started walking towards the beach.{/i}"
-    "{i}It was exciting. He was going to fulfill his promise to Wendy and let her know that he meant serious business.{/i}"
-    "{i}Of course, he was thinking with his penis, not even considering the real consequences his actions might bring.{/i}"
-    "{i}Everything worked just like he planned, and soon he found himself in the backyard of the huge mansion.{/i}"
+    __("With one goal in mind, [player_name] crept out of the window and started walking towards the beach.")
+    __("It was exciting. He was going to fulfill his promise to Wendy and let her know that he meant serious business.")
+    __("Of course, he was thinking with his penis, not even considering the real consequences his actions might bring.")
+    __("Everything worked just like he planned, and soon he found himself in the backyard of the huge mansion.")
     $ showscene('mayorsmansionbackyard', transition=fade)
     show jimmy neutral with dissolve
     show screen freeroamhud(False)
-    "Damn, it looks bigger from here."
-    "There doesn't seem to be much surveillance for a place so important."
-    "Alright, there's a shed, a pool, and a lot of terrain to cover."
-    "How the fuck am I going to get in?"
-    "And where exactly is Wendy's room?"
+    __("Damn, it looks bigger from here.")
+    __("There doesn't seem to be much surveillance for a place so important.")
+    __("Alright, there's a shed, a pool, and a lot of terrain to cover.")
+    __("How the fuck am I going to get in?")
+    __("And where exactly is Wendy's room?")
     $ prologue.sneakOutTownhouse = True
     $ gotoscene('mayorsmansionbackyard')
 
 label prologue_wendykitchen:
-    "Looks like the kitchen is behind the glass."
-    "Wait, I think I can see someone inside."
+    __("Looks like the kitchen is behind the glass.")
+    __("Wait, I think I can see someone inside.")
     hide screen freeroamhud
     show wendyfridgepose with fade
-    "That's Wendy!"
-    "Fuck, look at that hot ass."
-    "Now I just need to wait for her to go back to bed."
+    __("That's Wendy!")
+    __("Fuck, look at that hot ass.")
+    __("Now I just need to wait for her to go back to bed.")
     hide wendyfridgepose with fade
     show screen freeroamhud(False)
-    "Show me where your room is, princess..."
+    __("Show me where your room is, princess...")
     $ mayorsmansionbackyard.wendysLightOn = True
     pause 1.0
     $ showscene('mayorsmansionbackyard')
     pause 0.5
-    "There you are."
-    "Coming for you, princess."
+    __("There you are.")
+    __("Coming for you, princess.")
     $ gotoscene('mayorsmansionbackyard')
 
 label prologue_wendyinfiltration:
     hide screen freeroamhud
-    "{i}After climbing the trellis with cat-like grace, [player_name]'s fingers grazed the cold ledge as he pulled himself up.{/i}"
+    __("After climbing the trellis with cat-like grace, [player_name]'s fingers grazed the cold ledge as he pulled himself up.")
     scene wendyroomnightintro with fade
-    "{i}Wendy's room was on the top floor. A symphony of opulence with velvet drapes, gilded mirrors, and a bed that could fit a dozen people.{/i}"
+    __("Wendy's room was on the top floor. A symphony of opulence with velvet drapes, gilded mirrors, and a bed that could fit a dozen people.")
     stop music
     scene wendywalkmandancing with dissolve
     play music "audio/sfx/wendyheadphones.ogg"
-    "{i}There she was in the middle of the room, holding a walkman with headphones covering her ears.{/i}"
-    "{i}Her eyes were closed, and her lips moved silently, mouthing the lyrics.{/i}"
-    "{i}[player_name] watched as she danced, her movements fluid and not selfconscious.{/i}"
-    "{i}He admired her butt moving slowly with grace, remembering the last night the danced together in his bed.{/i}"
-    "{i}Then, as if sensing his presence, she opened her eyes.{/i}"
+    __("There she was in the middle of the room, holding a walkman with headphones covering her ears.")
+    __("Her eyes were closed, and her lips moved silently, mouthing the lyrics.")
+    __("[player_name] watched as she danced, her movements fluid and not selfconscious.")
+    __("He admired her butt moving slowly with grace, remembering the last night the danced together in his bed.")
+    __("Then, as if sensing his presence, she opened her eyes.")
     stop music
     play sound "audio/sfx/scream01.ogg"
     scene wendywalkmansurprise with vpunch
     Wendy "AAAHHHH!"
-    "{i}The walkman slipped from her fingers as she put the headphones away. She hurried to the window, her eyes wide.{/i}"
+    __("The walkman slipped from her fingers as she put the headphones away. She hurried to the window, her eyes wide.")
     scene wendyroomnightintro with fade
     show jimmy smug with dissolve
     play music "audio/music/funnymoment.ogg"
@@ -645,7 +645,7 @@ label prologue_wendyinfiltration:
     Jimmy "That depends whether you tell him."
     Wendy "Well, I could..."
     Jimmy "It doesn't matter if I get punished for this. You're worth every second of it."
-    "{i}Wendy's couldn't hold a laugh as she made sure her door was closed."
+    __("Wendy couldn't hold a laugh as she made sure her door was closed.")
     Wendy "You know, seeing you sneaking in my room {i}is{/i} kind of sexy."
     Jimmy "Tell me more..."
     Wendy "You kept your promise."
@@ -695,7 +695,7 @@ label prologue_jimmycaught:
     Donaguy "I will meet you there to have a talk about this."
     Donaguy "But first, I must talk to my daughter."
     Donaguy "Get in the car, now."
-    "{i}Without saying a word, [player_name] did as the Mayor asked.{/i}"
+    __("Without saying a word, [player_name] did as the Mayor asked.")
     jump prologue_policestation
 
 label prologue_policestation:
@@ -718,7 +718,7 @@ label prologue_policestation:
     Jimmy "Who's Grant?"
     play sound "audio/sfx/highheels.ogg"
     hide jill with dissolve
-    "{i}The sexy officer left without answering [player_name]'s question.{/i}"
+    __("The sexy officer left without answering [player_name]'s question.")
     Jimmy "Well, shit."
     Jimmy "This is exactly what I needed to avoid."
     Jimmy "I guess this is the end of the road for me."
@@ -755,12 +755,12 @@ label prologue_policestation:
     hide jimmy with dissolve
     show policestationcellblockgrant with dissolve
     play sound "audio/sfx/spit.ogg"
-    "{i}The hobo approached the lock and, making a weird sound with his throat, spat over it.{/i}"
-    "{i}More disgusted than he'd ever been, [player_name] watched the green slime slide into the lock... and suddenly heard a click.{/i}"
+    __("The hobo approached the lock and, making a weird sound with his throat, spat over it.")
+    __("More disgusted than he'd ever been, [player_name] watched the green slime slide into the lock... and suddenly heard a click.")
     Grant "Here we go."
     scene policestationcellblockgrantopen with vpunch
     play sound "audio/sfx/metalgateopen.ogg"
-    "{i}The gate opened, also leaving [player_name] more {/i}confused{i} than he'd ever been.{/i}"
+    __("The gate opened, also leaving [player_name] more confused than he'd ever been.")
     Jimmy "How the fuck did you do that?"
     show grant neutral with dissolve
     Grant "I never brush my teeth, kiddo."
@@ -771,8 +771,8 @@ label prologue_policestation:
     Jimmy "Oh, gross."
     Grant "Just go get my bag, kiddo. I'll wait for you here."
     stop music
-    "This guy is totally nuts. But he might be telling the truth."
-    "Besides, I have no other options."
+    __("This guy is totally nuts. But he might be telling the truth.")
+    __("Besides, I have no other options.")
     $ quests.grantHoboBag = ACTIVE
     $ gotoscene('policestationcellswest')
 
@@ -845,7 +845,7 @@ label prologue_mayorwarning:
     Donaguy "But I understand, because I was one of you when I was younger."
     Donaguy "However, I chose a different path, and now I'm gonna help you find that path too."
     play sound "audio/sfx/malehum01.ogg"
-    "Blah, blah, blah..."
+    __("Blah, blah, blah...")
     Donaguy "In fact, I think I owe you my thanks."
     Donaguy think "You see, until now I had thought my methods were getting a little too... extreme."
     Donaguy "But you have helped me to see the truth."
@@ -854,15 +854,15 @@ label prologue_mayorwarning:
     Donaguy "I was hesitating to implement my new reformation program."
     Donaguy "But now I see this is the only way."
     play sound "audio/sfx/beastgrunt01.ogg"
-    "What is this guy talking about?"
-    "This is getting weird."
+    __("What is this guy talking about?")
+    __("This is getting weird.")
     play sound "audio/sfx/clearthroat01.ogg"
     Donaguy neutral "My daughter decided not to press charges against you."
     Donaguy "I couldn't disagree more, but she's an adult and she's capable of making her own decisions, for now."
     Donaguy "So, you should go home and think about what you did today, because there will be consequences..."
     Donaguy "And when you least expect it, when you think you've gotten out Scot-free..."
     Donaguy "It will be too late, kid."
-    "...Did he just threaten me?"
+    __("...Did he just threaten me?")
     Donaguy "Now, get out of my sight."
     play sound "audio/sfx/malehum01.ogg"
     if prologue.complete:

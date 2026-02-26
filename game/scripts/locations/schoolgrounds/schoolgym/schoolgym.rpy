@@ -40,7 +40,7 @@ label schoolgym_storageroom:
     $ gotoscene('schoolgymstorageroom')
 
 label schoolgym_girlslockers:
-    "I shouldn't just walk into the girl's locker room."
+    __("I shouldn't just walk into the girl's locker room.")
     jump schoolgym_loop
 
 label schoolgym_boyslockers:

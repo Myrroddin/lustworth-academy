@@ -8,7 +8,7 @@ label punny_69lesson_scene:
     Punny "Una polla que espero que sea grande."
     Jimmy "..."
     Punny "Come with me, [player_name]. Take your clothes off and lay down on that table in the back."
-    Jimmy "Yes, Miss."
+    Jimmy "Si, Señora."
     scene misspunnyanatomy07 with fade
     play sound "audio/sfx/undress01.ogg"
     Punny "No one can watch, here."
@@ -41,9 +41,9 @@ label .mainangle:
     Punny "Si, chupame toda!"
     Punny "That feels so good!"
     menu:
-        "Change angle":
+        __("Change angle"):
             jump .alternateangle
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/bj4.ogg"
             Punny "YES! YES! I'm gonna cum!"
             Jimmy "Me too!"
@@ -64,10 +64,10 @@ label .alternateangle:
     Punny "Esss moii gronde."
     Punny "Mhmmmm..."
     menu:
-        "Change angle":
+        __("Change angle"):
             jump .mainangle
 
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/bj4.ogg"
             Punny "YES! YES! I'm gonna cum!"
             Jimmy "Me too!"

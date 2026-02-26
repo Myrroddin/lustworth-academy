@@ -33,7 +33,7 @@ label boysdormplaza_loop:
     jump boysdormplaza_loop
 
 label boysdormplaza_observatory:
-    "The observatory. I think that's where we have astronomy class."
+    __("The observatory. I think that's where we have astronomy class.")
     jump boysdormplaza_loop
 
 label boysdormplaza_backalley:
@@ -55,10 +55,7 @@ label boysdormplaza_exit:
 ### Various Labels ####
 
 label boysdormplazacheckderek:
-    if FionaWineFound == False:
-        Derek "Very cold"
-        return     
-    elif FionaDonutFound == False:
+    if FionaWineFound == False or FionaDonutFound == False:
         Derek "Very cold"
         return
     else:

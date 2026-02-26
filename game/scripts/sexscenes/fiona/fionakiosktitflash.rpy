@@ -2,7 +2,7 @@ label fiona_kiosktitflash_scene:
     play music MUSIC_SEXY_THEME
     scene fionatitflash00 with dissolve
     menu:
-        "Off with it!":
+        __("Off with it!"):
             pass
     scene fionatitsflashanimation with dissolve
     play sound "audio/sfx/gasp01.ogg"
@@ -11,12 +11,12 @@ label fiona_kiosktitflash_scene:
 
 label .loop:
     menu:
-        "Again?":
+        __("Again?"):
             scene fionatitsflashanimation with dissolve
             play sound "audio/sfx/gasp01.ogg"
             $ renpy.pause()
             jump .loop
-        "Continue":
+        __("Continue"):
             jump .end
 
 label .end:

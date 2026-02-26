@@ -23,9 +23,9 @@ label sally_cucumberstrapon_scene:
     Barbara "Okay, sis. Yeah, maybe just push... AHHH!"
     Sally "Wow, the other tip is rubbing my papaya inside so good!"
     Barbara "Oh, sis. Tomorrow you'll learn how it feels INSIDE your papaya."
-    "{i}[player_name] couldn't believe what he was seeing.{/i}"
-    "{i}...Oh, who am I kidding. Of course he believed it.{/i}"
-    "{i}Since he's arrived in town, he's seen more naked women than anyone I know. And I'm the narrator.{/i}"
+    __("{i}[player_name] couldn't believe what he was seeing.{/i}")
+    __("{i}...Oh, who am I kidding. Of course he believed it.{/i}")
+    __("{i}Since he's arrived in town, he's seen more naked women than anyone I know. And I'm the narrator.{/i}")
     stop sound
     stop music
     return

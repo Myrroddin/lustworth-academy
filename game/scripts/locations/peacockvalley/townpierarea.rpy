@@ -62,11 +62,11 @@ label townpierarea_kassandrahouse:
     $ gotoscene('townhousefront')
 
 label townpierarea_busstop:
-    "Where do you want to go?"
+    __("Where do you want to go?")
     menu:
-        "Beach Area":
+        __("Beach Area"):
             $ gotoscene('seasideareamap')
-        "Ranch" if prologue.complete:
+        __("Ranch") if prologue.complete:
             if calendar.when[1] == SATURDAY:
                 if calendar.when[2] == MORNING:
                     Jimmy "Let's get to work."

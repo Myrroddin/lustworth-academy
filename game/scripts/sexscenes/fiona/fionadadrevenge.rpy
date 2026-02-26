@@ -1,9 +1,9 @@
 label fiona_dadrevenge_scene:
     play sound "audio/sfx/sexyintro.ogg"
     scene fionaundressing01 with fade
-    "{i}Fiona started to take off her clothes in front of [player_name], who couldn't believe what was happening.{/i}"
+    __("{i}Fiona started to take off her clothes in front of [player_name], who couldn't believe what was happening.{/i}")
     play sound "audio/sfx/undress01.ogg"
-    "{i}She took her top and her shorts, and her panties off, even her socks, letting her hair down gracefully.{/i}"
+    __("{i}She took her top and her shorts, and her panties off, even her socks, letting her hair down gracefully.{/i}")
     play music MUSIC_SEXY_THEME
     play sound "audio/sfx/girlsigh01.ogg"
     Fiona "Take your clothes off."
@@ -18,16 +18,16 @@ label fiona_dadrevenge_scene:
     scene fionaundressing02 with vpunch 
     play sound "audio/sfx/ah1.ogg"
     Fiona "And this office is gonna smell so much like sex that my dad will feel it in the morning."
-    "{i}Fiona took the tip of [player_name]'s erect cock, spreading her ass wide and wrapping her pussy lips around it.{/i}"
+    __("{i}Fiona took the tip of [player_name]'s erect cock, spreading her ass wide and wrapping her pussy lips around it.{/i}")
     Jimmy "Fuck, you're so hot."
     Fiona "I wanna be so full of your cum to rub my ass all over this place and leave stains everywhere."
     Fiona "Are you ready to fuck me?"
     Jimmy "I'm always ready."
     Fiona "Now comes the best part. I'm gonna ride a big cock right here in your office, asshole."
     Fiona "Look at me, daddy. Your little girl is about to impale herself on big fat cock."
-    "{i}The situation was a bit uncomfortable for [player_name], but it was so wrong that it made him even harder.{/i}"
+    __("{i}The situation was a bit uncomfortable for [player_name], but it was so wrong that it made him even harder.{/i}")
     Jimmy "Come here..."
-    "{i}[player_name] lift her legs getting ready to slam her on the couch.{/i}"
+    __("{i}[player_name] lift her legs getting ready to slam her on the couch.{/i}")
     jump .slow
 
 label .slow:
@@ -38,9 +38,9 @@ label .slow:
     Fiona "It makes me feel so full in this position!"
     Fiona "I feel my inside spreading out wide for your dick, baby."
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
-        "Cum":
+        __("Cum"):
             jump .cum
 
 label .fast:
@@ -50,15 +50,15 @@ label .fast:
     Fiona "That's right, daddy. I'm jumping on this cock making sure it goes all the way up my belly."
     Fiona "FUCK, YES YES YES!!"
     menu:
-        "Slow":
+        __("Slow"):
             jump .slow
-        "Cum":
+        __("Cum"):
             jump .cum
 
 label .cum:
     play sound "audio/sfx/cowgirlcum.ogg"
     Fiona "I'm cumming, [player_name]!"
-    "{i}When she felt his warm cum starting to burst, she pushed herself down on his cock as much as she could.{/i}"
+    __("{i}When she felt his warm cum starting to burst, she pushed herself down on his cock as much as she could.{/i}")
     show fionadadrevengecum with vpunch
     Fiona "Fuck yes!! All that cum inside me. I can feel it flowing in my womb."
     play sound "audio/sfx/cumshotone.ogg"

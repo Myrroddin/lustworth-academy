@@ -12,7 +12,7 @@ label gym_minigame:
     if lesson > 1:
         return True
     menu:
-        "Play minigame":
+        __("Play minigame"):
             call start_battletutorial from _call_start_battletutorial
     return _return
 
@@ -56,10 +56,10 @@ label gym_lesson1outro:
     Toord "Here you go, fella. Don't ask how I got that. I mean it."
     play sound SOUND_SEXY_INTRO
     show gymclassonereward with dissolve
-    "{i}Congratulations, you beat Thad Carlson.{/i}"
-    "{i}Don't get too cocky though. He was the weakest fighter in the lineup.{/i}"
-    "{i}If you want to become Truthworth's wrestling champion, you'll have to beat tougher opponents.{/i}"
-    "{i}But if you somehow manage to do it, then maybe you'll have a chance with that sexy redhead, Christy.{/i}"
+    __("{i}Congratulations, you beat Thad Carlson.{/i}")
+    __("{i}Don't get too cocky though. He was the weakest fighter in the lineup.{/i}")
+    __("{i}If you want to become Truthworth's wrestling champion, you'll have to beat tougher opponents.{/i}")
+    __("{i}But if you somehow manage to do it, then maybe you'll have a chance with that sexy redhead, Christy.{/i}")
     pause 0.6
     hide gymclassonereward with dissolve
     play sound SOUND_SCHOOL_BELL

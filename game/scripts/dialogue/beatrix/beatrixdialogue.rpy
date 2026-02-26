@@ -22,10 +22,8 @@ label beatrixdialogue:
     if quests.beatrixHerpes <= COMPLETE:
         if quests.beatrixHerpes == ACTIVE:
             show beatrix herpes talk
-
         elif quests.beatrixHerpes == SATISFIED:
             show beatrix herpes talk
-
         else:
             show beatrix uniform talk
             Beatrix "I'm kind of busy studying quantum physics..."
@@ -39,18 +37,18 @@ label beatrixdialogue:
 
 label .dialogmenu:
     menu:
-        "Reset Beatrix Get Laid Quest (v0.5.4)" if quests.beatrixGetlaid == SATISFIED or quests.beatrixHerpes == COMPLETE:
+        __("Reset Beatrix Get Laid Quest (v0.5.4)") if quests.beatrixGetlaid == SATISFIED or quests.beatrixHerpes == COMPLETE:
             $ Beatrix.relPoints -= 1
             $ quests.beatrixGetlaid = ACTIVE
             if Jimmy.hasItem(ItemCrownofGods):
                 $ Jimmy.inventory.remove(ItemCrownofGods)
             $ showscene('schoollibrarynerdcliquehq', transition=fade)
             jump rpgcampaignintro
-        "Herpes Cream" if quests.beatrixHerpes == SATISFIED:
+        __("Herpes Cream") if quests.beatrixHerpes == SATISFIED:
             jump beatrixherpestreatment
-        "\"Math notes\"" if quests.beatrixDiary in [ACTIVE, SATISFIED]:
+        __("\"Math notes\"") if quests.beatrixDiary in [ACTIVE, SATISFIED]:
             jump beatrixdiaryquest
-        "Lap dance" if quests.beatrixDiary == COMPLETE:
+        __("Lap dance") if quests.beatrixDiary == COMPLETE:
             Jimmy smug "I just wanted to... you know, relax a bit."
             Jimmy "Maybe we could just sit together, if you know what I mean."
             Beatrix "Oh, my god... You guys all think like prehistoric men, just thinking about coitus all the time."
@@ -59,7 +57,7 @@ label .dialogmenu:
             call beatrix_lapdance_scene from _call_beatrix_lapdance_scene
             call nexttime from _call_nexttime_5
             $ gotoscene('mainbuildingrighthallway', transition=fade)
-        "Nevermind":
+        __("Nevermind"):
             pass
     $ gotoscene('mainbuildingrighthallway')
 

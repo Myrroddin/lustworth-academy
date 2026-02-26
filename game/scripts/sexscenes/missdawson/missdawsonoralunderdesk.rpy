@@ -21,7 +21,7 @@ label missdawson_oralunderdesk_scene:
     play sound SOUND_RECORD_SCRATCH
     Stapleneck "Miss Dawson!" with vpunch
     play sound "audio/sfx/dooropen01.ogg"
-    "{i}'Oh, shit... Here we go again', thought [player_name], thinking about his unavoidable expulsion from yet another school.{/i}"
+    __("Oh, shit... Here we go again', thought [player_name], thinking about his unavoidable expulsion from yet another school.")
     play sound "audio/sfx/highheels.ogg"
     play music MUSIC_FUNNY_MOMENT
     scene missdawsonpussylick03 with vpunch
@@ -35,7 +35,7 @@ label missdawson_oralunderdesk_scene:
     play sound "audio/sfx/mh1.ogg"
     Dawson "OHHHh... Yes! Yes! Ummm! I was... Organizing some of these papers."
     play sound "audio/sfx/handjob01.ogg"
-    "{i}[player_name] could feel Miss Dawson's legs tensing as she tried to hold back her moans.{/i}"
+    __("{i}[player_name] could feel Miss Dawson's legs tensing as she tried to hold back her moans.{/i}")
     Stapleneck "Miss Dawson, you seem a bit agitated."
     Dawson "Ahhhh, yes! I've been very excited with the reunion, you know. Ohh my god..."
     Stapleneck "I see... Well, you may leave early this evening so you can get some rest."
@@ -47,10 +47,10 @@ label missdawson_oralunderdesk_scene:
     scene missdawsonpussylickcum with vpunch
     stop music
     play sound "audio/sfx/cumshotone.ogg"
-    "{i}As the headmaster left the office, Miss Dawson tried the best she could to silence her orgasm, twitching in the chair and her eyes going blank.{/i}"
+    __("{i}As the headmaster left the office, Miss Dawson tried the best she could to silence her orgasm, twitching in the chair and her eyes going blank.{/i}")
     play sound "audio/sfx/ah3.ogg"
-    "{i}She just let out a muffled moan, but her pussy let out a bunch of fluid!{/i}"
-    "{i}A couple of minutes later, she caressed [player_name]'s head before carefully getting up from her chair.{/i}"
+    __("{i}She just let out a muffled moan, but her pussy let out a bunch of fluid!{/i}")
+    __("{i}A couple of minutes later, she caressed [player_name]'s head before carefully getting up from her chair.{/i}")
     if dawsongallery == True:
         call screen dawsongallery
     return

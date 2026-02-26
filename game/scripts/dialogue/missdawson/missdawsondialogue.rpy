@@ -20,34 +20,34 @@ label missdawsondialogue:
 
 label .dialogmenu:
     menu:
-        "Give headmaster notice" if quests.missdawsonBathroomIncident == ACTIVE:
+        __("Give Headmaster notice") if quests.missdawsonBathroomIncident == ACTIVE:
             jump missdawsonunderthedesk
-        "Nevermind":
+        __("Nevermind"):
             pass
     $ gotoscene('mainbuildingsecretarysoffice')
 
 label .headmasterspy:
     hide screen freeroamhud
     play music "audio/music/sneaking01.ogg"
-    "{i}As [player_name] got closer to the door, he realized the lock was ancient.{/i}"
-    "{i}The key hole was large enough for him to peek through it.{/i}"
+    __("{i}As [player_name] got closer to the door, he realized the lock was ancient.{/i}")
+    __("{i}The key hole was large enough for him to peek through it.{/i}")
     scene headmasterlockpeek01 with dissolve
-    "{i}Through the hole, he barely could see the headmaster's office.{/i}"
-    "{i}Dr. Stapleneck was sitting in his chair with his head looking up like he was sleeping.{/i}"
-    "{i}Suddenly, he percieved a strange movement under the desk as he saw a reddish bush of hair emerging from beneath.{/i}"
+    __("{i}Through the hole, he barely could see the Headmaster's office.{/i}")
+    __("{i}Dr. Stapleneck was sitting in his chair with his head looking up like he was sleeping.{/i}")
+    __("{i}Suddenly, he percieved a strange movement under the desk as he saw a reddish bush of hair emerging from beneath.{/i}")
     scene headmasterlockpeek02 with dissolve
     play sound "audio/sfx/undress01.ogg"
-    "{i}After a couple of seconds, he realized what was actually happening.{/i}"
-    "{i}Miss Dawson, the secretary was the one coming out from below the desk.{/i}"
-    "{i}What was she doing down there? Was that part of her obligations?{/i}"
-    "{i}It wasn't a surprise for [player_name] that the secretary could be having an affair with the headmaster.{/i}"
-    "{i}The way she talked about Stapleneck, almost idolizing him, was a clear giveaway.{/i}"
-    "{i}Given the ocassion, it was obvious [player_name] had to take advantadge of the situation.{/i}"
+    __("{i}After a couple of seconds, he realized what was actually happening.{/i}")
+    __("{i}Miss Dawson, the secretary, was the one coming out from below the desk.{/i}")
+    __("{i}What was she doing down there? Was that part of her obligations?{/i}")
+    __("{i}It wasn't a surprise for [player_name] that the secretary could be having an affair with the Headmaster.{/i}")
+    __("{i}The way she talked about Stapleneck, almost idolizing him, was a clear giveaway.{/i}")
+    __("{i}Given the ocassion, it was obvious [player_name] had to take advantadge of the situation.{/i}")
     scene headmasterlockpeek03 with vpunch
     play sound "audio/sfx/doorknock01.ogg"
-    "{i}The face of the headmaster was hilarious as the secretary started to fix her clothes.{/i}"
+    __("{i}The face of the Headmaster was hilarious as the secretary started to fix her clothes.{/i}")
     play sound "audio/sfx/whispermale.ogg"
-    "{i}The headmaster quickly whispered something to Miss Dawson which [player_name] didn't quite get.{/i}"
+    __("{i}The Headmaster quickly whispered something to Miss Dawson which [player_name] didn't quite get.{/i}")
     play sound "audio/sfx/hmm02.ogg"
     Dawson "Who is it? The Headmaster is not available right now."
     Jimmy "Sorry, Miss. I just wanted to clear some stuff about my schedule."

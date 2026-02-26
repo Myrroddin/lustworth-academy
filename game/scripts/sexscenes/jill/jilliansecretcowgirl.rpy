@@ -22,8 +22,8 @@ label jillian_secretcowgirl_scene:
     Jill "I'm cumming, I'm cumming!! OHHH!"
     scene jillsecretcowgirlcum with vpunch
     play sound "audio/sfx/orgasm1.ogg"
-    "{i}Her body shook with pleasure until her pussy started drooling with cum.{/i}"
-    "{i}And you woke up...{/i}"
+    __("{i}Her body shook with pleasure until her pussy started drooling with cum.{/i}")
+    __("{i}And you woke up...{/i}")
     if jilliangallery == True:
         call screen jilliangallery
     return

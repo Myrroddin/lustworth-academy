@@ -8,25 +8,25 @@ label missdawson_deepthroat_scene:
     Dawson "Make me yours..."
     scene missdawsondeepthroat02 with fade
     play sound "audio/sfx/gasp01.ogg"
-    "Confident, [player_name] pulled down his pants. Miss Dawson opened her eyes wide as he already had a huge boner."
+    __("Confident, [player_name] pulled down his pants. Miss Dawson opened her eyes wide as he already had a huge boner.")
     Dawson "You're such man..."
     play sound "audio/sfx/giggle02.ogg"
     Dawson "I thought young guys like you would be less... Gifted."
     Dawson "Come, slide your cock deep down my throat."
     play sound "audio/sfx/mh1.ogg"
     scene missdawsondeepthroatanim with fade
-    "Miss Dawson let out a yell as [player_name] rammed his cock in her mouth."
+    __("Miss Dawson let out a yell as [player_name] rammed his cock in her mouth.")
     play sound "audio/sfx/dp1.ogg"
-    "She was choking and gagging on it but still trying to stretch her lips and tongue around it."
-    "The more she struggled, the more [player_name] pushed his cock down."
+    __("She was choking and gagging on it but still trying to stretch her lips and tongue around it.")
+    __("The more she struggled, the more [player_name] pushed his cock down.")
     play sound "audio/sfx/bj4.ogg"
-    "She wasn't able to fight it and her mouth was stuffed with [player_name]'s manhood."
+    __("She wasn't able to fight it and her mouth was stuffed with [player_name]'s manhood.")
     Jimmy "Oh fuck, that's amazing."
-    "It was the first time Miss Dawson had ever felt something that big in her mouth and it was exhilarating."
+    __("It was the first time Miss Dawson had ever felt something that big in her mouth and it was exhilarating.")
     Jimmy "I'm gonna cum!"
     scene missdawsondeepthroatanim10 with vpunch
     play sound "audio/sfx/dp1.ogg"
-    "[player_name] pulled his cock out, then rammed it again into her mouth as far as possible."
+    __("[player_name] pulled his cock out, then rammed it again into her mouth as far as possible.")
     play sound "audio/sfx/cumshotone.ogg"
     scene missdawsondeepthroatcum with vpunch
     Dawson "AGghghs!"

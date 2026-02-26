@@ -1,7 +1,7 @@
 label beatrix_beatrixfinalreward_scene:
     play music MUSIC_SEXY02_THEME
     scene beatrixfinalfuck01 with fade
-    "{i}Beatrix reaches out and grabs [player_name]'s pants, pulling them down to grab his cock.{/i}"
+    __("{i}Beatrix reaches out and grabs [player_name]'s pants, pulling them down to grab his cock.{/i}")
     play sound "audio/sfx/mh1.ogg"
     Beatrix "Now, this is a good mage staff..."
     Jimmy "..."
@@ -19,16 +19,16 @@ label beatrix_beatrixfinalreward_scene:
     Beatrix "I want you to fuck me right on this table. Can you do that?"
     Jimmy "I like it when a girl knows what she wants..."
     play sound "audio/sfx/giggle01.ogg"
-    "{i}Beatrix takes her clothes off at the same time as [player_name].{/i}"
+    __("{i}Beatrix takes her clothes off at the same time as [player_name].{/i}")
     scene beatrixfinalfuck02 with vpunch
     play sound "audio/sfx/gasp02.ogg"
-    "{i}[player_name] lifts her up—Beatrix wraps her legs around his waist—and he carries her toward the table.{/i}"
-    "{i}They passionately kiss, letting out all the sexual tension they have been gathering since the met for the first time.{/i}"
+    __("{i}[player_name] lifts her up—Beatrix wraps her legs around his waist—and he carries her toward the table.{/i}")
+    __("{i}They passionately kiss, letting out all the sexual tension they have been gathering since the met for the first time.{/i}")
     Beatrix "I've been craving for this moment all night."
     Beatrix "Well then, let's make this special."
     play sound "audio/sfx/oh1.ogg"
-    "{i}He leans in and kisses her softly on the lips, his hand trailing down to her wet pussy.{/i}"
-    "{i}Then, in a sudden move, he turns her around and gets ready to penetrate her.{/i}"
+    __("{i}He leans in and kisses her softly on the lips, his hand trailing down to her wet pussy.{/i}")
+    __("{i}Then, in a sudden move, he turns her around and gets ready to penetrate her.{/i}")
     jump .slow
 
 label .slow:
@@ -40,9 +40,9 @@ label .slow:
     Jimmy "As you wish."
     Beatrix "Oh FUCK, [player_name]... it hurts so good."
     menu:
-        "Change Angle":
+        __("Change Angle"):
             jump .fast
-        "Cum":
+        __("Cum"):
             jump .cum
 
 label .fast:
@@ -54,9 +54,9 @@ label .fast:
     Beatrix "IT'S SO UP MY PUSSY! YES!"
     Beatrix "POUND THAT ASS! POUND IT!"
     menu:
-        "Cum":
+        __("Cum"):
             jump .cum
-        "Change angle":
+        __("Change angle"):
             jump .slow
 
 label .cum:

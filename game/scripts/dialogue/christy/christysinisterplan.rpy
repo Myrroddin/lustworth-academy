@@ -4,14 +4,14 @@ label christysinisterplanintro:
     Jimmy "Maybe a shower can help..."
     stop music
     scene boyslockerbathroom with fade
-    "{i}As [player_name] started showering under the warm water, his eyes closed for a while.{/i}"
+    __("{i}As [player_name] started showering under the warm water, his eyes closed for a while.{/i}")
     play sound "audio/sfx/fewmomentslater.ogg"
     scene fewmomentslater with fade
     $ renpy.pause()
     scene boyslockerbathroom with fade
     show christy towel sinister with dissolve
-    "{i}Suddenly, the sound of steps alerts him and when he turns, he sees Christy wearing only a towel.{/i}" 
-    "{i}She looks at him with a sinister smile.{/i}"
+    __("{i}Suddenly, the sound of steps alerts him and when he turns, he sees Christy wearing only a towel.{/i}")
+    __("{i}She looks at him with a sinister smile.{/i}")
     play music MUSIC_CHRISTY_THEME
     Christy "Well, well, well. What do we have here?"
     Jimmy "This is the boys bathroom."
@@ -30,7 +30,7 @@ label christysinisterplanintro:
     Christy "Her deepest desire is to become someone like me."
     Jimmy "A self-entitled bitch? That's a really low bar."
     Christy "Funny... Tell, me, new guy, do you like what you see?"
-    "{i}[player_name] didn't say anything, but Christy saw the desire in his eyes.{/i}"
+    __("{i}[player_name] didn't say anything, but Christy saw the desire in his eyes.{/i}")
     Christy "I thought so..."
     call christy_blowjob_scene from _call_christy_blowjob_scene
     scene boyslockerbathroom with fade

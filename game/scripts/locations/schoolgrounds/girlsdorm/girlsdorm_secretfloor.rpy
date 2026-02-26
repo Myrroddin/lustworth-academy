@@ -28,13 +28,13 @@ init 1 python:
 #LABELS
 label girlsdormsecretfloor:
     if not girlsdormsecretfloor.introComment:
-        "{i}As [player_name] emerged from the dark passages, he found himself in the middle of a fancy hallway.{/i}"
-        "Oh shit, the rumors were true!"
-        "It looks like the girl's dorm, but there's something strange about this place."
-        "The only exit is the way I came in."
-        "There are several doors. I wonder what's behind each one."
-        "The first door on the left says... Angie."
-        "She's the one who sent me the note."
+        __("{i}As [player_name] emerged from the dark passages, he found himself in the middle of a fancy hallway.{/i}")
+        __("Oh shit, the rumors were true!")
+        __("It looks like the girl's dorm, but there's something strange about this place.")
+        __("The only exit is the way I came in.")
+        __("There are several doors. I wonder what's behind each one.")
+        __("The first door on the left says... Angie.")
+        __("She's the one who sent me the note.")
         $ girlsdormsecretfloor.introComment = True
     jump girlsdormsecretfloor_loop
 
@@ -53,20 +53,20 @@ label girlsdormsecretfloor_ivanasroom:
 
 label girlsdormsecretfloor_tatsumakisroom:
     if not girlsdormsecretfloor.tatsumakisRoomEntered:
-        "{i}When [player_name] entered the door, he felt his body stretching and contriving like he was being shaken by some kind of strange force.{/i}"
-        "{i}He was entering a portal to a special dimension.{/i}"
-        "{i}In this dimension he found a strange female waiting for him.{/i}"
-        "{i}He seemed to recognize her from one of those cool anime he saw in his youth.{/i}"
+        __("{i}When [player_name] entered the door, he felt his body stretching and contriving like he was being shaken by some kind of strange force.{/i}")
+        __("{i}He was entering a portal to a special dimension.{/i}")
+        __("{i}In this dimension he found a strange female waiting for him.{/i}")
+        __("{i}He seemed to recognize her from one of those cool anime he saw in his youth.{/i}")
         $ girlsdormsecretfloor.tatsumakisRoomEntered = True
     call tatsumakisecretscene from _call_tatsumakisecretscene
     $ gotoscene('girlsdormsecretfloor', transition=fade)
 
 label girlsdormsecretfloor_clairesroom:
     if not girlsdormsecretfloor.clairesRoomEntered:
-        "{i}When [player_name] entered the door, he felt his body stretching and contriving like he was being shaken by some kind of strange force.{/i}"
-        "{i}He was entering a portal to a special dimension.{/i}"
-        "{i}In this dimension he found a sexy naked gal waiting for him next to a really cool bike.{/i}"
-        "{i}He seemed to recognize her from one of those cool videogames he played in his youth.{/i}"
+        __("{i}When [player_name] entered the door, he felt his body stretching and contriving like he was being shaken by some kind of strange force.{/i}")
+        __("{i}He was entering a portal to a special dimension.{/i}")
+        __("{i}In this dimension he found a sexy naked gal waiting for him next to a really cool bike.{/i}")
+        __("{i}He seemed to recognize her from one of those cool videogames he played in his youth.{/i}")
         $ girlsdormsecretfloor.clairesRoomEntered = True
     call clairesecretscene from _call_clairesecretscene
     $ gotoscene('girlsdormsecretfloor', transition=fade)

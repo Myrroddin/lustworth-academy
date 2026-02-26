@@ -38,7 +38,7 @@ screen battle_screen(player, enemy):
         right_bar "images/sprites/minigames/wrestling/hud/special_bar_empty.webp"
         xpos 1500 ypos 155 xmaximum 390
         ymaximum 85
-    text "Special: [enemy.special_current]/[enemy.special_max]" xpos 1590 ypos 210 style "battle_text"
+    text __("Special: [enemy.special_current]/[enemy.special_max]") xpos 1590 ypos 210 style "battle_text"
 
 
     bar value player.endurance_current range player.endurance_max:
@@ -53,7 +53,7 @@ screen battle_screen(player, enemy):
         right_bar "images/sprites/minigames/wrestling/hud/special_bar_empty.webp"
         xpos 74 ypos 155 xmaximum 270
         ymaximum 60
-    text "Special: [player.special_current]/[player.special_max]" xpos 160 ypos 210 style "battle_text"
+    text __("Special: [player.special_current]/[player.special_max]") xpos 160 ypos 210 style "battle_text"
 
 screen battle_actions_screen():
     

@@ -4,11 +4,11 @@ label cassidy_townhouseshower_scene:
     hide screen freeroamhud
     play music "audio/music/sexytheme02.ogg"
     scene cassidyshoweranim with dissolve
-    "Oh, boy. It's Cassidy."
-    "Seems like she really can't get enough of those toys."
-    "I wonder if she's even tried a real cock..."
+    __("Oh, boy. It's Cassidy.")
+    __("Seems like she really can't get enough of those toys.")
+    __("I wonder if she's even tried a real cock...")
     $ renpy.pause()
-    "Alright, that's enough. I don't want to give her a reason to yell at me."
+    __("Alright, that's enough. I don't want to give her a reason to yell at me.")
     stop music
     stop sound
     if prologue.complete:

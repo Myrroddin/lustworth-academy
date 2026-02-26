@@ -1,4 +1,4 @@
-﻿# # a simple function that puts a string into the clipboard
+# # a simple function that puts a string into the clipboard
 # a simple function that puts a string into the clipboard
 init python: # Start an initialization Python block.
     import pygame.scrap # Import the pygame clipboard module.

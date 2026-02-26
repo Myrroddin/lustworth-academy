@@ -34,19 +34,19 @@ label mainbuildingauditorium_loop:
     jump mainbuildingauditorium_loop
 
 label mainbuildingauditorium_infoboard:
-    "Trustworth's has talent! festival will be celebrated during the holydays."
-    "It's a competition, I think. A talent competition."
+    __("Trustworth's has talent! festival will be celebrated during the holydays.")
+    __("It's a competition, I think. A talent competition.")
     jump mainbuildingauditorium_loop
 
 label mainbuildingauditorium_exit:
     $ gotoscene('mainbuildingentrance')
 
 label mainbuildingauditorium_mainstage:
-    "Being up there has to make you feel all powerful or frightened, depends on the pussy meter."
+    __("Being up there has to make you feel all powerful or frightened, depends on the pussy meter.")
     jump mainbuildingauditorium_loop
 
 label mainbuildingauditorium_posters:
-    "Vote for your Class President! The nerds and the preps are fighting for this one."
+    __("Vote for your Class President! The nerds and the preps are fighting for this one.")
     jump mainbuildingauditorium_loop
 
 label mainbuildingauditorium_backstage:

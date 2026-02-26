@@ -15,27 +15,27 @@ label tatianadialogue:
 label tatianaintro:
     stop music
     hide screen freeroamhud with None
-    "The junkyard looked like a graveyard of forgotten things—rusted lockers, splintered desks and cracked chalkboards."
-    "[player_name] felt his feet crunching over broken bits of glass and discarded papers."
+    __("The junkyard looked like a graveyard of forgotten things—rusted lockers, splintered desks and cracked chalkboards.")
+    __("[player_name] felt his feet crunching over broken bits of glass and discarded papers.")
     Jimmy "Hmm, where can I find spray paint in this mess?"
     play sound "audio/sfx/drumpractice.ogg"
     Jimmy "What's that?"
-    "[player_name] tilted his head. The beat is way too cool to ignore."
-    "Driven by curiosity, he navigated through the junkyard maze, each step bringing him closer to the source of the music." 
+    __("[player_name] tilted his head. The beat is way too cool to ignore.")
+    __("Driven by curiosity, he navigated through the junkyard maze, each step bringing him closer to the source of the music.")
     scene tatianadrumsintro with fade
     stop sound
     play music MUSIC_TATIANA_THEME
-    "There she was, a girl gripping a pair of worn drumsticks in her hands."
-    "Around her there was an improvised drum set—a collection of dented buckets, rusted pans, and even a large pipe turned on its side."
+    __("There she was, a girl gripping a pair of worn drumsticks in her hands.")
+    __("Around her there was an improvised drum set—a collection of dented buckets, rusted pans, and even a large pipe turned on its side.")
     Jimmy "Whoa... That was really good."  
-    "She glances at him, eyes wide with surprise."
+    __("She glances at him, eyes wide with surprise.")
     play sound "audio/sfx/hey01.ogg"
     Tatiana "Oh! Uh... Thanks."  
     Jimmy "Do you have a band or something?"
     Tatiana "Not really, I only do this to release estress."
     Tatiana "I gotta come here, because the drum-sets in music class are only available during lessons."  
     Jimmy "Still, this level of improvisation it's pretty awesome."
-    "She looked down at her setup, as if just realizing how ridiculous it was."
+    __("She looked down at her setup, as if just realizing how ridiculous it was.")
     Tatiana"It works, I guess."
     Jimmy "I like playing the guitar! Well... kinda. I'm still a beginner."
     play sound "audio/sfx/giggle01.ogg"
@@ -61,7 +61,7 @@ label tatianaintro:
     Tatiana "Thanks, don't be a stranger, new guy."
     Jimmy "I won't."
     $ showscene('schoolgroundsjunkyard', transition=fade)
-    "As [player_name] left, Tatiana started playing again even cooler music."
+    __("As [player_name] left, Tatiana started playing again even cooler music.")
     call item_pickup(ItemSprayCan) from _call_item_pickup_16
     Jimmy "Here it is... Orange, it should work."
     $ quests.garyHalloweenHeist = SATISFIED

@@ -12,7 +12,7 @@ label ruby_jacuzzisex_scene:
     Ruby "I'm kind of curious about something..."
     Jimmy "About what?"
     Ruby "It is said that poor people are more fertile and, particularly men, have more... Manhood in them."
-    "WTF?"
+    __("WTF?")
     Jimmy "Well, um. I'm not sure about that."
     Ruby "Can I see your penis?"
     Jimmy "Wow! That was quick."
@@ -23,7 +23,7 @@ label ruby_jacuzzisex_scene:
     Ruby "Have you ever tried Chardonnay?"
     Jimmy "Chardo-what? That sounds like a Pokémon."
     Ruby "Ha, ha! That's so funny. What's a Pokémon?"
-    "This girl is denser than a bucket of bricks."
+    __("This girl is denser than a bucket of bricks.")
     Jimmy "Nevermind, don't worry about it."
     Jimmy "Your boobs are beautiful, my lady."
     Ruby "Thank you, my lord."
@@ -41,8 +41,8 @@ label ruby_jacuzzisex_scene:
     Ruby "I feel like I want to try something."
     Jimmy "What is it?"
     scene rubyjacuzzisex03 with vpunch
-    "Ruby got up and jumped on [player_name] like a wild animal trying to eat its prey."
-    "They kissed with such passion thanks to the warmness of the water and the mix of alcohol and dirty thoughts."
+    __("Ruby got up and jumped on [player_name] like a wild animal trying to eat its prey.")
+    __("They kissed with such passion thanks to the warmness of the water and the mix of alcohol and dirty thoughts.")
     Ruby "I want to sit on your penis, under one condition."
     Ruby "You won't say a word about this to anyone."
     Ruby "My reputation is at stake here, so can you promise?"
@@ -66,7 +66,7 @@ label ruby_jacuzzisex_scene:
     scene rubyjacuzzisex06 with dissolve
     Ruby "YES! YESSS! It's so good."
     Ruby "I never thought fucking a peasant would be this great!"
-    "What a fucking bitch, but her pussy is so fucking hot. I don't mind, baby, ride me!"
+    __("What a fucking bitch, but her pussy is so fucking hot. I don't mind, baby, ride me!")
     Ruby "Fuck, I'm gonna CUM!"
     scene rubyjacuzzisexcum with vpunch
     Ruby "[player_name], that was wonderful!"

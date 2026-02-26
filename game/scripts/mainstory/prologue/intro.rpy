@@ -8,11 +8,11 @@ label prologue_intro:
     pause 1.5
     hide impactpresentintro with dissolve
     hide presentletter with dissolve
-    "Last week was my 18th birthday."
-    "I thought I was finally free to live life by my own rules, but my dad had other plans."
+    __("Last week was my 18th birthday.")
+    __("I thought I was finally free to live life by my own rules, but my dad had other plans.")
     scene peacockvalleysignintro with fade
-    "After I got expelled from my last school only a month in, he enrolled me at some preppy boarding school to finish the year."
-    "Actually, I was expelled from my last {i}five{/i} schools, but my dad just doesn't give up."
+    __("After I got expelled from my last school only a month in, he enrolled me at some preppy boarding school to finish the year.")
+    __("Actually, I was expelled from my last {i}five{/i} schools, but my dad just doesn't give up.")
     scene jimmyanddadincarintro with fade
     play sound "audio/sfx/carpassing01.ogg"
     Dad "Say something, [player_name], please."

@@ -38,16 +38,16 @@ label .slow:
     Punny "It's so hard, pushing its way inside my pussy."
     Punny "OH, FUCK!"
     menu:
-        "Faster":
+        __("Faster"):
             jump .fast
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Punny "COJEME, COJEMEEE!"
             Punny "ME VENGO, [player_name]!"
             Jimmy "Ya tembien!!"
             scene punnydinnersexcum with vpunch
             play sound "audio/sfx/orgasm1.ogg"
-            "{i}She got up before [player_name] could cum inside her.{/i}"
+            __("{i}She got up before [player_name] could cum inside her.{/i}")
             Punny "SIIIII PAPIIII!"
             Punny "AHHHH! QUE RICO!"
             play sound "audio/sfx/cumshotone.ogg"
@@ -67,16 +67,16 @@ label .fast:
     Punny "Más duro! Más duro!"
     Punny "AHHHHHH! FUCK YES!"
     menu:
-        "Slow":
+        __("Slow"):
             jump .slow
-        "Cum":
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Punny "COJEME, COJEMEEE!"
             Punny "ME VENGO, [player_name]!"
             Jimmy "Ya tembien!!"
             scene punnydinnersexcum with vpunch
             play sound "audio/sfx/orgasm1.ogg"
-            "{i}She got up before [player_name] could cum inside her.{/i}"
+            __("{i}She got up before [player_name] could cum inside her.{/i}")
             Punny "SIIIII PAPIIII!"
             Punny "AHHHH! QUE RICO!"
             play sound "audio/sfx/cumshotone.ogg"

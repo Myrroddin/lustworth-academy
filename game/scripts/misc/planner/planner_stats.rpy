@@ -15,7 +15,7 @@ screen planner_stats:
     use planner_right_arrow(action)
 
 screen planner_jimmys_stats:
-    text "[player_name]'s Stats":
+    text __("[player_name]'s Stats"):
         style 'planner_header'
         xcenter planner_left_center
         ypos 0.18
@@ -35,7 +35,7 @@ screen planner_jimmys_stats:
             use planner_statbar(stat)
 
 screen planner_objective:
-    text "Objective":
+    text __("Objective"):
         style 'planner_header_bold'
         xcenter planner_right_center
         ypos 0.18
@@ -56,7 +56,7 @@ screen planner_objective:
         text_align 0.5
 
 screen planner_classes:
-    text "Classes":
+    text __("Classes"):
         style 'planner_header'
         xcenter planner_right_center
         ypos 0.34

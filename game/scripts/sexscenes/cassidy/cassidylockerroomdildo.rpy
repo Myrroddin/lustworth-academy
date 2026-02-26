@@ -1,15 +1,15 @@
 label cassidy_lockerroomdildo_scene:
     play music "audio/music/sexytheme01.ogg"
     scene cassidyintroanimation01 with dissolve
-    "Holy shit!"
-    "Damn, look at that ass bounce."
-    "She's totally having a good time."
+    __("Holy shit!")
+    __("Damn, look at that ass bounce.")
+    __("She's totally having a good time.")
     scene cassidyintroanimation02
     play sound "audio/sfx/ah4.ogg"
     Cassidy "SHIT SHIT SHIT! YEEEEEEES!"
     $ renpy.pause()
-    "Fuck, I want to see more, but she might catch me."
-    "I'd better go."
+    __("Fuck, I want to see more, but she might catch me.")
+    __("I'd better go.")
     if cassidygallery == True:
         call screen cassidygallery
     return
