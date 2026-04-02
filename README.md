@@ -45,8 +45,7 @@ to use this patch.
 2. Open the latest GitHub Release for this repository.
 3. Go to the main game folder.
 
-You are in the correct folder if you can see folders like `game/`, `renpy/`,
-and `lib/` there.
+You are in the correct folder if you can see folders like `game/` and `tools/` there.
 
 ### Choose which patch file to download
 
