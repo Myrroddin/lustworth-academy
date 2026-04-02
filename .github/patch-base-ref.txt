@@ -1,0 +1,9 @@
+# Set this to the git ref that contains a clean imported copy of
+# Lustworth Academy v0.5.5 Extended Edition.
+#
+# Examples:
+# upstream/v0.5.5-extended-clean
+# vanilla-0.5.5
+# abc1234deadbeefcafebabe
+
+SET_ME_TO_CLEAN_BASE_REF
