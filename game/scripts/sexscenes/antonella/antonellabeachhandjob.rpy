@@ -25,7 +25,7 @@ label antonella_hiddenbeachhandjob_scene:
     "{i}Antonella rubbed him through his shorts feeling his bulge growing in her hands.{/i}"
     "{i}After caressing her fingers around his hard-rock shaft, she pulled his shorts down, freeing his throbbing cock under the water.{/i}"
     scene beachhandjobanim with fade
-    play sound "audio/sfx/handjob01.mp3"
+    play sound "audio/sfx/handjob01.ogg"
     Antonella "Fuck, you liked that. You're so hard for Aunt Nella..."
     "{i}Swirling her hand around the tip of his manhood made him shiver.{/i}"
     Jimmy "Oh, yeah... that's it, take it all the way down."

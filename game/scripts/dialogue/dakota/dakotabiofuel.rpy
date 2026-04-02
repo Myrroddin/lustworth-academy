@@ -7,7 +7,7 @@ label dakotabiofuelintro:
     "{i}And that's exactly what [player_name] needed.{/i}"
     show dakota cowgirl neutral with dissolve
     Jimmy "Hey, Dakota. How are you doing this weekend?"
-    play sound "audio/sfx/hey04.mp3"
+    play sound "audio/sfx/hey04.ogg"
     Dakota "Well, if it ain't my favorite city boy!"
     Dakota "I bet you just miss the sound of my voice tellin' you you're holdin' the shovel on the wrong side?"
     Jimmy "Oh, yeah. I love the sound of your voice, but I wanted to ask your permission on something."
