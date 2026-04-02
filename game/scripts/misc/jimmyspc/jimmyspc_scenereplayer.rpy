@@ -24,7 +24,7 @@ screen jimmyspc_scenereplayer(x, y):
         hotspot (712, 104, 56, 56) action Function(scrollButtonOnClick, 'scenereplayer', -1) mouse 'jimmyspc'
         hotspot (712, 712, 56, 56) action Function(scrollButtonOnClick, 'scenereplayer', 1) mouse 'jimmyspc'
 
-    $ title = girl.name if girl is not None else "Scene Replayer"
+    $ title = girl.name if girl is not None else __("Scene Replayer")
     text title:
         style 'jimmyspc_windowtitle'
         pos x + 40, y + 16
