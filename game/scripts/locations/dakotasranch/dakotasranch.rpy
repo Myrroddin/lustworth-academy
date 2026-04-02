@@ -40,7 +40,7 @@ label dakotasranch_tree:
 label dakotasranch_barn:
     if prologue.complete:
         menu:
-            __("Stack some hay(25$)"):
+            __("Stack some hay (25$)"):
                 if WorkDaylimit == False:
                     __("Nice work doing nothing (for now)")
                     play sound "audio/sfx/moneyget.ogg"

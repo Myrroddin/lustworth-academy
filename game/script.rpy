@@ -126,8 +126,8 @@ label start:
             $ calendar.when = (CHAPTER_3, MONDAY, MORNING)
             $ newcontentskipactive = True
             $ showscene('boysdormhallway', transition=fade)
-            Jimmy __("So, what am I doing here?")
-            Jimmy __("Right, I gotta go talk to Pete at the TV room.")
+            Jimmy "So, what am I doing here?"
+            Jimmy "Right, I gotta go talk to Pete at the TV room."
             $ gotoscene('boysdormhallway')
         __("Continue New Game"):
             jump prologue_intro
@@ -465,7 +465,7 @@ label subject(name):
     # Intro
     $ maxLesson = class_max_lessons[name]
     if subject.lesson > maxLesson:
-        "{i}Time passes and you finish class without any novelty.{/i}"
+        __("{i}Time passes and you finish class without any novelty.{/i}")
         call nexttime from _call_nexttime_3
         return
     elif subject.lessonFailed:

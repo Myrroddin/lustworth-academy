@@ -1,28 +1,28 @@
 label sally_lakemeeting_scene:
     play sound SOUND_SEXY_INTRO
     scene sallylakeanim with fade
-    "{i}She was moving through the water with no splashing, no shivering—just pure redneck poise.{/i}" 
-    "{i}The sunlight hit the water droplets on her skin, and for a second, [player_name] forgot why he was holding a rotten apple."
+    __("{i}She was moving through the water with no splashing, no shivering—just pure redneck poise.{/i}") 
+    __("{i}The sunlight hit the water droplets on her skin, and for a second, [player_name] forgot why he was holding a rotten apple.{/i}")
     Jimmy "Damn..."
     jump .loop
     
 label .loop:
     menu:
-        "Again?":
+        __("Again?"):
             scene sallylakeanim with dissolve
             $ renpy.pause()
             jump .loop
-        "Continue":
+        __("Continue"):
             jump .end
     
 label .end:
-    "{i}[player_name] stepped on a dry branch and the snap echoed across the water like a gunshot.{/i}"
+    __("{i}[player_name] stepped on a dry branch and the snap echoed across the water like a gunshot.{/i}")
     play sound "audio/sfx/gasp01.ogg"
     scene sallylakescene02 with vpunch
-    "{i}Sally didn't scream. She didn't even cover up.{/i}"
+    __("{i}Sally didn't scream. She didn't even cover up.{/i}")
     play sound "audio/sfx/frustratedhum.ogg"
     Sally "Enjoyin' the view, huh?"
-    "{i}She gracefully turned to him, and started walking toward the shore with a smirk that could melt lead.{/i}"
+    __("{i}She gracefully turned to him, and started walking toward the shore with a smirk that could melt lead.{/i}")
     scene ranchlakeshoreday with fade
     show sally topless neutral with dissolve
     play sound "audio/sfx/femaleclearthroat.ogg"
@@ -39,15 +39,15 @@ label .end:
     Jimmy "But don't go lumping me in with every other local yokel who whistles at you from a tractor."
     play sound "audio/sfx/hum01.ogg"
     Sally topless neutral "Oh? Is that so? A 'special' breed of city dog, are ya?"
-    "{i}She stepped closer, the smell of lake water and soap drowning out the stench of the rotten apples for a brief, dangerous second.{/i}"
+    __("{i}She stepped closer, the smell of lake water and soap drowning out the stench of the rotten apples for a brief, dangerous second.{/i}")
     Sally "You want to prove you're not just lookin' for a trophy to hang on your wall?"
     Sally "You're gonna have to do a lot better than 'getting some apples.'"
     Jimmy "..."
     play sound "audio/sfx/femaleclearthroat.ogg"
     Sally teasing "..."
-    "{i}She turned her back making sure [player_name] got a full, final look at her."
+    __("{i}She turned her back making sure [player_name] got a full, final look at her.{/i}")
     Sally "Don't take too long with those apples..."
-    "{i}[player_name] stood there for a minute feeling like he just survived falling from a horse.{/i}"
+    __("{i}[player_name] stood there for a minute feeling like he just survived falling from a horse.{/i}")
     Jimmy "Great. Now I'm horny, I smell like shit, and I still have to deliver this to Alice."
     return
 

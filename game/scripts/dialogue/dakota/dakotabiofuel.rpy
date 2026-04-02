@@ -3,8 +3,8 @@ default quests.dakotaBioFuel = LOCKED
 label dakotabiofuelintro:
     hide screen freeroamhud
     scene dakotafarmhouselivingroomintro with fade
-    "{i}The air at the ranch that day smelled like hard work, wet hay, and things that had passed through a digestive tract.{/i}"
-    "{i}And that's exactly what [player_name] needed.{/i}"
+    __("{i}The air at the ranch that day smelled like hard work, wet hay, and things that had passed through a digestive tract.{/i}")
+    __("{i}And that's exactly what [player_name] needed.{/i}")
     show dakota cowgirl neutral with dissolve
     Jimmy "Hey, Dakota. How are you doing this weekend?"
     play sound "audio/sfx/hey04.ogg"
@@ -46,19 +46,19 @@ label barbarabiofuelscene:
     Barbara excited "The Festival?! Oh, that's amazing! We can be like... the Dream Team!"
     Barbara "Oh, it's gonna be so cool, you and me working together!"
     scene barbarasexybiofuel01 with fade
-    "{i}Barbara suddenly leaned against a wooden post, trying to look like a calendar model{/i}"
-    "{i}However, she was anything but a model.{/i}"
+    __("{i}Barbara suddenly leaned against a wooden post, trying to look like a calendar model{/i}")
+    __("{i}However, she was anything but a model.{/i}")
     Barbara "Hold on, I just need to stretch my back..."
     Barbara "Oh, I think I can see my nose like this..."
     scene barbarasexybiofuel02 with vpunch
-    "{i}She tried doing a pose on a chair and tried to wink, but both eyes closed at the same time.{/i}"
+    __("{i}She tried doing a pose on a chair and tried to wink, but both eyes closed at the same time.{/i}")
     Barbara "A city boy like you probably likes those skinny girls in the cheerleader outfits at the high school."
     Barbara "I can be 'peppy' too, [player_name]. Watch."
     Jimmy "Look, you're... great, Barbara. Really."
     Jimmy "But right now, I need the horse shit."
     scene barbarasexybiofuel03 with fade
     Barbara "Be patient, cutie. Let me stretch my legs a little bit."
-    "{i}Barbara put herself on an uncomfortable position in front of one of the horses and...{/i}"
+    __("{i}Barbara put herself in an uncomfortable position in front of one of the horses and...{/i}")
     scene barbarasexybiofuel03b with vpunch
     play sound "audio/sfx/horse01.ogg"
     Jimmy "Whoa! Hey there, brother."
@@ -68,8 +68,8 @@ label barbarabiofuelscene:
     Jimmy "Sure..."
     Barbara "Alright, let me help you get the poopoo."
     scene barbarasexybiofuel04 with fade
-    "{i}They spent the next twenty minutes shoveling the manure.{/i}"
-    "{i}Barbara kept 'accidentally' bumping into [player_name]'s shoulder and lingering a little too long when handing over the buckets.{/i}"
+    __("{i}They spent the next twenty minutes shoveling the manure.{/i}")
+    __("{i}Barbara kept 'accidentally' bumping into [player_name]'s shoulder and lingering a little too long when handing over the buckets.{/i}")
     scene barbarasexybiofuel04b with vpunch
     Barbara "Oh, it's so hot in here..."
     Barbara "Let me just, take some air between my..."
@@ -93,12 +93,12 @@ label sallybiofuelscene:
     play music MUSIC_RANCHLAKE_THEME
     "{i}The air near the lake was cold and fresh. [player_name] spotted the old apple tree drooping over the bank like it had a hangover.{/i}"
     Jimmy "Alright, let's get this over with."
-    "{i}[player_name] started looking for a couple of bruised, brown apples.{/i}"
-    "{i}It felt so peaceful there that for a moment [player_name] forgot about he was looking for, just admiring the view and the sound of nature.{/i}"
+    __("{i}[player_name] started looking for a couple of bruised, brown apples.{/i}")
+    __("{i}It felt so peaceful there that for a moment [player_name] forgot about he was looking for, just admiring the view and the sound of nature.{/i}")
     play sound "audio/sfx/watersplash.ogg"
-    "{i}Suddenly a strange sound coming from the lake, put him on alert.{/i}"
-    "{i}It wasn't a fish. Unless the fish in Peacock Valley had well toned arms and shiny blonde hair.{/i}"
-    "{i}[player_name] crept through the tall grass, the lake surface was broken by a figure. It was Sally.{/i}"
+    __("{i}Suddenly a strange sound coming from the lake, put him on alert.{/i}")
+    __("{i}It wasn't a fish. Unless the fish in Peacock Valley had well toned arms and shiny blonde hair.{/i}")
+    __("{i}[player_name] crept through the tall grass, the lake surface was broken by a figure. It was Sally.{/i}")
     call sally_lakemeeting_scene from _call_sally_lakemeeting_scene
     $ quests.dakotaBioFuel = COMPLETE
     $ quests.aliceScienceProject = SATISFIED
