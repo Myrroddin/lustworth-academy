@@ -1,11 +1,14 @@
 # Lustworth Academy — Unofficial Patch
 
-Patch version: **v1.03**
+Repository patch version: **v1.03**
 
 An unofficial fan patch for the visual novel *Lustworth Academy*. This repository
 contains only the changes (patches, corrected scripts, and converted assets) made
 on top of the original game. It does **not** redistribute the original game or any
 of its copyrighted assets.
+
+When you download release files, use the version number shown on the latest
+GitHub Release page.
 
 ## Table of contents
 
@@ -52,9 +55,10 @@ to use this patch.
 
 ### Before you start
 
-1. Install *Lustworth Academy* from its official source.
-2. Open the latest GitHub Release for this repository.
-3. Go to the main game folder.
+1. Install Git on your computer.
+2. Install *Lustworth Academy* from its official source.
+3. Open the latest GitHub Release for this repository.
+4. Go to the main game folder.
 
 You are in the correct folder if you can see `game/` there.
 
@@ -75,16 +79,18 @@ Important:
 
 Run one of these commands from the game folder.
 
+Replace `/path/to/...` with the real path to the patch file you downloaded.
+
 If you chose the normal patch:
 
 ```bash
-git apply --binary /path/to/lustworth-academy-v<version>-game.patch
+git apply --binary "/path/to/lustworth-academy-v<version>-game.patch"
 ```
 
 If you chose the tools patch:
 
 ```bash
-git apply --binary /path/to/lustworth-academy-v<version>-game-tools.patch
+git apply --binary "/path/to/lustworth-academy-v<version>-game-tools.patch"
 ```
 
 After that:
@@ -274,6 +280,20 @@ This section is only for maintainers.
 Use the GitHub Actions workflow in `.github/workflows/release.yml` to build the
 release patch files.
 
+Before using the workflow, you must point it at a clean imported copy of
+*Lustworth Academy* v0.5.5 Extended Edition inside git history.
+
+- Set `.github/patch-base-ref.txt` to the git tag, branch, or commit that
+  contains that clean base.
+- If you run the workflow manually, you may instead fill in the optional
+  `base_ref` input to override the file for that run.
+- If you do not have a clean imported base yet, leave the placeholder in
+  `.github/patch-base-ref.txt` unchanged and ask the developer to provide or
+  import one first.
+
+If no clean base ref is configured, the workflow now fails on purpose instead
+of creating broken patch files.
+
 The workflow can create two release files:
 
 - `lustworth-academy-v<version>-game.patch`
@@ -291,14 +311,17 @@ You can trigger the workflow in two ways:
 1. Manually from GitHub Actions.
 2. Automatically by pushing a tag such as `v1.01`.
 
+Automatic tag releases also require `.github/patch-base-ref.txt` to be set first.
+
 Recommended maintainer release flow:
 
 1. Commit your latest changes.
-2. Run the **Release Patch Artifacts** workflow with the version number you want.
-3. Wait for the workflow to finish.
-4. Open the GitHub Release.
-5. Check that the patch files were created correctly.
-6. Share the release assets.
+2. Make sure `.github/patch-base-ref.txt` points to a clean imported base game ref.
+3. Run the **Release Patch Artifacts** workflow with the version number you want.
+4. Wait for the workflow to finish.
+5. Open the GitHub Release.
+6. Check that the patch files were created correctly.
+7. Share the release assets.
 
 These release patches intentionally exclude `renpy/`, `lib/`, `README.md`,
 `LICENSE`, and other non-patch files.

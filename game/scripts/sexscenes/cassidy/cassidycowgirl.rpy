@@ -94,7 +94,7 @@ label .slow:
     menu:
         __("Faster"):
             jump .fast
-        ("Cum"):
+        __("Cum"):
             play sound "audio/sfx/cowgirlcum.ogg"
             Cassidy "Fuck, fuck fuuuuuck!"
             Cassidy "I'm gonna cum! I'm gonna cum!"

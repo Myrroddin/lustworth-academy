@@ -5,5 +5,9 @@
 # upstream/v0.5.5-extended-clean
 # vanilla-0.5.5
 # abc1234deadbeefcafebabe
+#
+# If you do not have a clean imported base in git history yet, leave the
+# placeholder below unchanged. The release workflow will stop and ask for a
+# real ref instead of building a broken patch.
 
 SET_ME_TO_CLEAN_BASE_REF

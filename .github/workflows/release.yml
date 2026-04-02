@@ -3,13 +3,17 @@ name: Release Patch Artifacts
 on:
   push:
     tags:
-      - "v*"
+      - "v[0-9]*"
 
   workflow_dispatch:
     inputs:
       version:
         description: "Patch version (for example: 1.01)"
         required: true
+        type: string
+      base_ref:
+        description: "Git ref for a clean Lustworth Academy v0.5.5 Extended Edition base"
+        required: false
         type: string
       include_tools_patch:
         description: "Also generate a game+tools patch"
@@ -31,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -41,22 +45,75 @@ jobs:
         run: |
           set -euo pipefail
 
+          default_base_ref=""
+          if [[ -f ".github/patch-base-ref.txt" ]]; then
+            while IFS= read -r line; do
+              trimmed_line="$(printf '%s' "${line}" | sed -E 's/[[:space:]]+$//')"
+              if [[ -n "${trimmed_line}" && ! "${trimmed_line}" =~ ^# && "${trimmed_line}" != "SET_ME_TO_CLEAN_BASE_REF" ]]; then
+                default_base_ref="${trimmed_line}"
+                break
+              fi
+            done < ".github/patch-base-ref.txt"
+          fi
+
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            version="${{ inputs.version }}"
+            raw_version="${{ inputs.version }}"
+            version="${raw_version#v}"
+            if ! [[ "${version}" =~ ^[0-9]+(\.[0-9]+)*([.-][0-9A-Za-z]+)*$ ]]; then
+              echo "::error title=Invalid version::Use a version like 1.03 or v1.03."
+              exit 1
+            fi
             tag="v${version}"
+            base_ref="${{ inputs.base_ref }}"
+            if [[ -z "${base_ref}" ]]; then
+              base_ref="${default_base_ref}"
+            fi
             include_tools="${{ inputs.include_tools_patch }}"
             prerelease="${{ inputs.prerelease }}"
           else
             tag="${GITHUB_REF_NAME}"
+            if ! [[ "${tag}" =~ ^v[0-9]+(\.[0-9]+)*([.-][0-9A-Za-z]+)*$ ]]; then
+              echo "::error title=Invalid tag::Release tags must look like v1.03."
+              exit 1
+            fi
             version="${tag#v}"
+            base_ref="${default_base_ref}"
             include_tools="true"
             prerelease="false"
           fi
 
           echo "version=${version}" >> "$GITHUB_OUTPUT"
           echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          echo "base_ref=${base_ref}" >> "$GITHUB_OUTPUT"
           echo "include_tools=${include_tools}" >> "$GITHUB_OUTPUT"
           echo "prerelease=${prerelease}" >> "$GITHUB_OUTPUT"
+
+      - name: Validate patch base
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          base_ref="${{ steps.vars.outputs.base_ref }}"
+
+          if [[ -z "${base_ref}" ]]; then
+            echo "::error title=Missing patch base::Set .github/patch-base-ref.txt to a git ref containing a clean Lustworth Academy v0.5.5 Extended Edition tree, or provide base_ref when running workflow_dispatch."
+            exit 1
+          fi
+
+          if ! git rev-parse -q --verify "${base_ref}^{commit}" >/dev/null; then
+            echo "::error title=Unknown patch base::Git ref '${base_ref}' was not found in this repository."
+            exit 1
+          fi
+
+          if ! git cat-file -e "${base_ref}:game" 2>/dev/null; then
+            echo "::error title=Invalid patch base::Git ref '${base_ref}' does not contain a game/ directory."
+            exit 1
+          fi
+
+          if ! git cat-file -e "${base_ref}:game/script.rpy" 2>/dev/null; then
+            echo "::error title=Invalid patch base::Git ref '${base_ref}' does not look like a full game tree."
+            exit 1
+          fi
 
       - name: Build patch artifacts
         shell: bash
@@ -64,17 +121,17 @@ jobs:
           set -euo pipefail
 
           version="${{ steps.vars.outputs.version }}"
-          base_commit="$(git rev-list --max-parents=0 HEAD | tail -n 1)"
+          base_ref="${{ steps.vars.outputs.base_ref }}"
           mkdir -p dist
 
-          # Developer-facing patch: game scripts/assets only.
+          # Developer-facing patch: game scripts/assets only, relative to a clean base ref.
           game_patch="dist/lustworth-academy-v${version}-game.patch"
-          git diff --binary "$base_commit" -- game/ > "$game_patch"
+          git diff --binary "$base_ref" -- game/ > "$game_patch"
 
           if [[ "${{ steps.vars.outputs.include_tools }}" == "true" ]]; then
             # Optional patch including maintenance tooling in addition to game files.
             tools_patch="dist/lustworth-academy-v${version}-game-tools.patch"
-            git diff --binary "$base_commit" -- game/ tools/ > "$tools_patch"
+            git diff --binary "$base_ref" -- game/ tools/ > "$tools_patch"
           fi
 
           sha256sum dist/* > dist/lustworth-academy-v${version}-SHA256SUMS.txt
@@ -167,6 +224,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.vars.outputs.tag }}
+          target_commitish: ${{ github.sha }}
           name: Lustworth Academy Patch v${{ steps.vars.outputs.version }}
           prerelease: ${{ steps.vars.outputs.prerelease }}
           body_path: dist/CHANGELOG.md

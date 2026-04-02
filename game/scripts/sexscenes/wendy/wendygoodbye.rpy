@@ -31,7 +31,7 @@ label wendygoodbyescene:
     Wendy "It was so special. I loved what we did in my bed that night."
     Wendy "I just... I want to make love with you before I go."
     call wendy_analandcreampie_scene from _call_wendy_analandcreampie_scene
-    ("{i}The choice you're about to make, will determine the future of Wendy's storyline.{/i}")
+    __("{i}The choice you're about to make, will determine the future of Wendy's storyline.{/i}")
     menu:
         __("Wendy gets pregnant"):
             $ pregnancy.Wendy = True
