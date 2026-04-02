@@ -7,6 +7,17 @@ contains only the changes (patches, corrected scripts, and converted assets) mad
 on top of the original game. It does **not** redistribute the original game or any
 of its copyrighted assets.
 
+## Table of contents
+
+- [Compatible game versions](#compatible-game-versions)
+- [Why WebP and OGG formats?](#why-webp-and-ogg-formats)
+- [What this patch does](#what-this-patch-does)
+- [Legal notice](#legal-notice)
+- [How to apply the patch](#how-to-apply-the-patch)
+- [Generate current patch file (maintainer workflow)](#generate-current-patch-file-maintainer-workflow)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+
 ## Compatible game versions
 
 This patch is intended for *Lustworth Academy* v0.5.5 Extended Edition.
@@ -45,7 +56,7 @@ to use this patch.
 2. Open the latest GitHub Release for this repository.
 3. Go to the main game folder.
 
-You are in the correct folder if you can see folders like `game/` and `tools/` there.
+You are in the correct folder if you can see `game/` there.
 
 ### Choose which patch file to download
 
@@ -83,23 +94,26 @@ After that:
 3. If you used `game.patch`, you are done.
 4. If you used `game-tools.patch`, you may also use the optional cleanup tools below.
 
-### Optional: remove `.mp3` files from `game/audio/`
+### Optional cleanup tools
 
-Do this step only if you already applied `lustworth-academy-v<version>-game-tools.patch`.
+Use the cleanup tools only if you already applied
+`lustworth-academy-v<version>-game-tools.patch`.
 
-That tools patch adds the files in `tools/audio/`.
+That tools patch adds the files in `tools/audio/` and `tools/images/`.
 
-Important:
+Before you run any cleanup tool:
 
 1. Open a terminal in the same game folder where you ran `git apply`.
-2. Pick **one** file only from `tools/audio/`.
-3. Do **not** run all of the files. They all do the same job.
+2. Pick **one** file only for the task you want to run.
+3. Do **not** run every file in the folder. Files for the same task do the same job.
 4. Run the dry run first.
 5. If the dry run looks correct, run the real command.
 
+### Optional: remove `.mp3` files from `game/audio/`
+
 This step removes `.mp3` files from `game/audio/` and all subfolders.
 
-#### Windows
+#### Windows Audio Tool
 
 Use this file:
 `tools/audio/remove_all_mp3_from_game_audio_windows.ps1`
@@ -116,7 +130,7 @@ Real run:
 powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1
 ```
 
-#### macOS
+#### macOS Audio Tool
 
 Use this file:
 `tools/audio/remove_all_mp3_from_game_audio_macos.command`
@@ -133,7 +147,7 @@ Real run:
 bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command
 ```
 
-#### Linux
+#### Linux Audio Tool
 
 Use this file:
 `tools/audio/remove_all_mp3_from_game_audio_linux.sh`
@@ -150,7 +164,7 @@ Real run:
 bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh
 ```
 
-#### One file that works on every OS
+#### One Audio Tool That Works on Every OS
 
 If Python is already installed, you can use this file instead:
 `tools/audio/remove_all_mp3_from_game_audio.py`
@@ -167,23 +181,91 @@ Real run:
 python ./tools/audio/remove_all_mp3_from_game_audio.py
 ```
 
-### Optional: remove old non-WebP image files
+### Optional: remove matching `.png` files from `game/`
 
-This tool does **not** exist yet.
+This step scans `game/` and its subfolders only.
 
-When it is added in a future release:
+It removes a `.png` file only when all of these are true:
 
-1. You will need to apply `lustworth-academy-v<version>-game-tools.patch` first.
-2. The tool will remove old image files that are not `.webp`.
-3. Like the audio tools, you should run its dry run first.
+1. A `.webp` file with the same file name exists in the same folder.
+2. The `.png` and `.webp` files have the same image dimensions.
 
-For now, there is no image cleanup command to run.
+This tool does **not** scan `lib/`, because `lib/` is outside `game/`.
+
+#### Windows Image Tool
+
+Use this file:
+`tools/images/remove_png_with_matching_webp_from_game_images_windows.ps1`
+
+Dry run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1 -DryRun
+```
+
+Real run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1
+```
+
+#### macOS Image Tool
+
+Use this file:
+`tools/images/remove_png_with_matching_webp_from_game_images_macos.command`
+
+Dry run:
+
+```bash
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command --dry-run
+```
+
+Real run:
+
+```bash
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command
+```
+
+#### Linux Image Tool
+
+Use this file:
+`tools/images/remove_png_with_matching_webp_from_game_images_linux.sh`
+
+Dry run:
+
+```bash
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh --dry-run
+```
+
+Real run:
+
+```bash
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh
+```
+
+#### One Image Tool That Works on Every OS
+
+If Python is already installed, you can use this file instead:
+`tools/images/remove_png_with_matching_webp_from_game_images.py`
+
+Dry run:
+
+```bash
+python ./tools/images/remove_png_with_matching_webp_from_game_images.py --dry-run
+```
+
+Real run:
+
+```bash
+python ./tools/images/remove_png_with_matching_webp_from_game_images.py
+```
 
 ### What the tools patch adds right now
 
-At the moment, the tools patch adds only the audio cleanup tools in `tools/audio/`.
+At the moment, the tools patch adds:
 
-The future non-WebP image cleanup tool is not included yet.
+- audio cleanup tools in `tools/audio/`
+- image cleanup tools in `tools/images/`
 
 ## Generate current patch file (maintainer workflow)
 

@@ -1,0 +1,42 @@
+param(
+    [switch]$DryRun
+)
+
+$scriptPath = $MyInvocation.MyCommand.Path
+$scriptDir = Split-Path -Parent $scriptPath
+$pythonScript = Join-Path $scriptDir "remove_png_with_matching_webp_from_game_images.py"
+
+if (-not (Test-Path -LiteralPath $pythonScript -PathType Leaf)) {
+    Write-Error "Python cleanup script not found: $pythonScript"
+    exit 1
+}
+
+$pythonExe = $null
+$pythonArgs = @()
+
+if (Get-Command py -ErrorAction SilentlyContinue) {
+    $pythonExe = "py"
+    $pythonArgs = @("-3")
+}
+elseif (Get-Command python -ErrorAction SilentlyContinue) {
+    $pythonExe = "python"
+}
+elseif (Get-Command python3 -ErrorAction SilentlyContinue) {
+    $pythonExe = "python3"
+}
+
+if (-not $pythonExe) {
+    Write-Error "Python 3 was not found in PATH. Install Python 3 to run this tool."
+    exit 1
+}
+
+$invokeArgs = @()
+$invokeArgs += $pythonArgs
+$invokeArgs += $pythonScript
+
+if ($DryRun) {
+    $invokeArgs += "--dry-run"
+}
+
+& $pythonExe @invokeArgs
+exit $LASTEXITCODE
