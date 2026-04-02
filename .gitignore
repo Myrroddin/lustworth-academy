@@ -1,33 +1,44 @@
 # ---------------------------------------------------------------------------
-# Ren'Py compiled / generated files
+# Ren'Py compiled, generated, and runtime files
 # ---------------------------------------------------------------------------
 
-# Compiled Python bytecode produced by Ren'Py
+# Compiled Ren'Py / Python bytecode
 *.rpyc
 *.rpymc
+*.rpyb
 
-# Compiled Ren'Py archives
+# Built Ren'Py archives
 *.rpa
 
-# Ren'Py log files
+# Ren'Py logs and crash output
 log.txt
 errors.txt
 traceback.txt
+stdout.txt
+stderr.txt
+*.log
 
-# ---------------------------------------------------------------------------
-# Ren'Py runtime directories
-# ---------------------------------------------------------------------------
-
-# Save data and persistent state
-game/saves/
+# Runtime save/cache state
+/cache/
+/saves/
 game/cache/
+game/saves/
 
-# Auto-generated Ren'Py directory
+# Auto-generated Ren'Py source/runtime directories
 renpy/
 lib/
 
+# Common Ren'Py build/export output directories
+/build/
+/dist/
+/packages/
+/web-cache/
+
+# Root-only launcher/runtime files from local game installs or exports
+/LustworthAcademy*.*
+
 # ---------------------------------------------------------------------------
-# Original game assets (not redistributed — must be sourced from the game)
+# Original game assets not redistributed with this repository
 # ---------------------------------------------------------------------------
 # Uncomment and adjust the paths below to match your local game installation
 # if you ever accidentally stage original assets.
@@ -42,8 +53,72 @@ game/tl/
 game/game/
 
 # ---------------------------------------------------------------------------
-# OS / editor artifacts
+# Python local environments, caches, and build artifacts
 # ---------------------------------------------------------------------------
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and extension artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Packaging / distribution output
+.eggs/
+*.egg-info/
+*.whl
+pip-wheel-metadata/
+
+# Test, lint, typing, and coverage caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.pyre/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Notebook and local package caches
+.ipynb_checkpoints/
+__pypackages__/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.direnv/
+
+# ---------------------------------------------------------------------------
+# Editor / IDE / OS artifacts
+# ---------------------------------------------------------------------------
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userossc
+
+# Vim / shell editor backups
+*.swp
+*.swo
+*~
 
 # macOS
 .DS_Store
@@ -55,34 +130,16 @@ Thumbs.db
 ehthumbs.db
 desktop.ini
 
-# Linux
-*~
-
-# Root-only launcher/runtime files from game install
-/LustworthAcademy*.*
-
-# Visual Studio Code
-.vscode/
-
-# JetBrains IDEs
-.idea/
-
 # ---------------------------------------------------------------------------
-# Patch / diff working files
+# Patch / merge working files
 # ---------------------------------------------------------------------------
 
-# Temporary patch staging area — keep actual .patch and .diff files tracked
+# Temporary patch staging area — keep intentional .patch and .diff files tracked
 *.orig
 *.rej
 
 # ---------------------------------------------------------------------------
-# Python tooling artifacts
+# Repository-local temporary artifacts
 # ---------------------------------------------------------------------------
 
-# Python bytecode/cache
-__pycache__/
-*.pyc
-*.pyo
-
-# Temporary local review artifacts
 root_webp_review_report.txt

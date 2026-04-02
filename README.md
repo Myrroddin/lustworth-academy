@@ -1,6 +1,6 @@
 # Lustworth Academy — Unofficial Patch
 
-Patch version: **v1.02**
+Patch version: **v1.03**
 
 An unofficial fan patch for the visual novel *Lustworth Academy*. This repository
 contains only the changes (patches, corrected scripts, and converted assets) made
@@ -9,10 +9,9 @@ of its copyrighted assets.
 
 ## Compatible game versions
 
-This patch is intended for *Lustworth Academy* v0.5.4b Extended Edition.
+This patch is intended for *Lustworth Academy* v0.5.5 Extended Edition.
 Do not apply it to earlier or later editions.
 If you do, you may need to fix bugs manually.
-
 
 ## Why WebP and OGG formats?
 
@@ -20,10 +19,11 @@ For details on why Lustworth Academy uses WebP for images and OGG for audio (ins
 
 ## What this patch does
 
-- Converts audio files to the more efficient `.ogg` format
-- Converts image files to the more efficient `.webp` format
+- Updates `.rpy` script files to use `.ogg` audio files instead of `.mp3` files
+- Updates `.rpy` script files to use `.webp` image files instead of older image formats
 - Corrects English spelling and grammar throughout the scripts
 - Includes miscellaneous code clean-up and optimisations
+- Updates game script files to make future translation work easier
 
 ## Legal notice
 
@@ -39,140 +39,188 @@ to use this patch.
 
 ## How to apply the patch
 
+### Before you start
+
 1. Install *Lustworth Academy* from its official source.
-2. Open the latest GitHub Release for this repository and download
-   `lustworth-academy-v<version>-game.patch`.
-3. From the game installation root, apply the downloaded patch file:
+2. Open the latest GitHub Release for this repository.
+3. Go to the main game folder.
+
+You are in the correct folder if you can see folders like `game/`, `renpy/`,
+and `lib/` there.
+
+### Choose which patch file to download
+
+- `lustworth-academy-v<version>-game.patch`
+  Use this if you only want the patch.
+- `lustworth-academy-v<version>-game-tools.patch`
+  Use this if you also want the helper tools in `tools/`.
+
+Important:
+
+1. `game-tools.patch` already includes the normal game patch changes.
+2. Do **not** apply both patch files.
+3. Pick **one** patch file only.
+
+### Apply the patch file
+
+Run one of these commands from the game folder.
+
+If you chose the normal patch:
 
 ```bash
 git apply --binary /path/to/lustworth-academy-v<version>-game.patch
 ```
 
-   (Optional) If you also need helper scripts, download and apply
-   `lustworth-academy-v<version>-game-tools.patch` instead.
-4. Remove obsolete `.mp3` files that were replaced by `.ogg` files.
-5. Remove obsolete non-webp image files that were replaced by `.webp` files.
-
-### Step 4 (optional): remove obsolete `.mp3` files
-
-After applying the audio-conversion patch, you can safely remove `.mp3` files that
-have `.ogg` counterparts:
+If you chose the tools patch:
 
 ```bash
-# Cross-platform (Windows/Linux/macOS) dry-run
-python ./tools/remove_obsolete_mp3.py --dry-run
-
-# Cross-platform apply cleanup
-python ./tools/remove_obsolete_mp3.py
+git apply --binary /path/to/lustworth-academy-v<version>-game-tools.patch
 ```
 
-On Windows, you can also use PowerShell:
+After that:
+
+1. Start the game.
+2. Make sure the game opens normally.
+3. If you used `game.patch`, you are done.
+4. If you used `game-tools.patch`, you may also use the optional cleanup tools below.
+
+### Optional: remove `.mp3` files from `game/audio/`
+
+Do this step only if you already applied `lustworth-academy-v<version>-game-tools.patch`.
+
+That tools patch adds the files in `tools/audio/`.
+
+Important:
+
+1. Open a terminal in the same game folder where you ran `git apply`.
+2. Pick **one** file only from `tools/audio/`.
+3. Do **not** run all of the files. They all do the same job.
+4. Run the dry run first.
+5. If the dry run looks correct, run the real command.
+
+This step removes `.mp3` files from `game/audio/` and all subfolders.
+
+#### Windows
+
+Use this file:
+`tools/audio/remove_all_mp3_from_game_audio_windows.ps1`
+
+Dry run:
 
 ```powershell
-# Dry-run (shows what would be removed)
-powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1 -WhatIf
-
-# Apply cleanup
-powershell -ExecutionPolicy Bypass -File .\tools\remove_obsolete_mp3.ps1
+powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1 -DryRun
 ```
 
-The script only removes `.mp3` files when a same-name `.ogg` file exists in the
-same directory.
+Real run:
 
-### Step 5 (optional): remove replaced non-webp image files
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1
+```
 
-After converting images, you can remove non-webp files that have a same-name
-`.webp` in the same directory.
+#### macOS
 
-This cleanup is conservative:
+Use this file:
+`tools/audio/remove_all_mp3_from_game_audio_macos.command`
 
-- Only checks same-directory replacements (`name.png` -> `name.webp`)
-- Preserves common icon patterns (for launcher/build safety)
-- Skips uncertain cases automatically
+Dry run:
 
 ```bash
-# Dry-run
-python ./tools/remove_replaced_non_webp.py --dry-run
-
-# Apply cleanup
-python ./tools/remove_replaced_non_webp.py
+bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command --dry-run
 ```
 
-### Additional maintainer helper scripts (optional)
-
-These scripts are for the game developer/maintainer. They are not required for
-normal patch application by testers.
-
-- `tools/update_known_image_refs_to_webp.py`
-   - Purpose: proactive migration.
-   - It updates script references from `.png`/`.jpg` to `.webp` when the `.webp`
-      file is known to exist.
-   - Use when you want to convert more legacy references safely.
-
-- `tools/fix_missing_legacy_refs_to_webp.py`
-   - Purpose: repair missing-file references.
-   - It only updates references that currently point to missing `.png`/`.jpg`
-      files, and only if a matching `.webp` file exists.
-   - Use after cleanup/moves when some old references break.
-
-Recommended order: run `update_known_image_refs_to_webp.py` first, then
-`fix_missing_legacy_refs_to_webp.py`.
-
-Run from repository root:
+Real run:
 
 ```bash
-python ./tools/update_known_image_refs_to_webp.py
-python ./tools/fix_missing_legacy_refs_to_webp.py
+bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command
 ```
+
+#### Linux
+
+Use this file:
+`tools/audio/remove_all_mp3_from_game_audio_linux.sh`
+
+Dry run:
+
+```bash
+bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh --dry-run
+```
+
+Real run:
+
+```bash
+bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh
+```
+
+#### One file that works on every OS
+
+If Python is already installed, you can use this file instead:
+`tools/audio/remove_all_mp3_from_game_audio.py`
+
+Dry run:
+
+```bash
+python ./tools/audio/remove_all_mp3_from_game_audio.py --dry-run
+```
+
+Real run:
+
+```bash
+python ./tools/audio/remove_all_mp3_from_game_audio.py
+```
+
+### Optional: remove old non-WebP image files
+
+This tool does **not** exist yet.
+
+When it is added in a future release:
+
+1. You will need to apply `lustworth-academy-v<version>-game-tools.patch` first.
+2. The tool will remove old image files that are not `.webp`.
+3. Like the audio tools, you should run its dry run first.
+
+For now, there is no image cleanup command to run.
+
+### What the tools patch adds right now
+
+At the moment, the tools patch adds only the audio cleanup tools in `tools/audio/`.
+
+The future non-WebP image cleanup tool is not included yet.
 
 ## Generate current patch file (maintainer workflow)
 
-Use the GitHub Actions workflow in `.github/workflows/release.yml` to generate
-release patch artifacts.
+This section is only for maintainers.
 
-You can trigger releases in two ways:
+Use the GitHub Actions workflow in `.github/workflows/release.yml` to build the
+release patch files.
 
-- Manual: run **Release Patch Artifacts** from GitHub Actions.
-   - Automatic: push a tag like `v1.01`.
-
-For automatic tag releases, the tools patch is enabled by default.
-
-Default release artifact scope:
-
-- `game/` only (developer-facing apply patch)
-
-Optional release artifact scope:
-
-- `game/` + `tools/` (for maintainers who also want helper scripts)
-
-Artifact meaning:
+The workflow can create two release files:
 
 - `lustworth-academy-v<version>-game.patch`
-   - Includes all tracked adds/edits/deletes under `game/`.
-   - This is the patch for game developer testing/integration.
-   - Default choice: use this patch unless helper scripts are also required.
-- `lustworth-academy-v<version>-game-tools.patch` (optional)
-   - Includes everything in the game patch, plus tracked changes under `tools/`.
-   - Use this only when helper scripts are also needed.
+  This is the normal patch.
+- `lustworth-academy-v<version>-game-tools.patch`
+  This is the normal patch plus the files in `tools/`.
 
-For game developer (release assets):
+Important:
 
-1. Open the GitHub Release for the tagged version.
-2. Download `lustworth-academy-v<version>-game.patch` (default file).
-3. Apply the patch from the game install root so `game/...` paths map correctly.
-4. Launch and test the game.
-5. Use `lustworth-academy-v<version>-game-tools.patch` only if you also want
-   the helper scripts from `tools/`.
+1. `game-tools.patch` includes the normal patch too.
+2. End users should download only one patch file.
+
+You can trigger the workflow in two ways:
+
+1. Manually from GitHub Actions.
+2. Automatically by pushing a tag such as `v1.01`.
+
+Recommended maintainer release flow:
+
+1. Commit your latest changes.
+2. Run the **Release Patch Artifacts** workflow with the version number you want.
+3. Wait for the workflow to finish.
+4. Open the GitHub Release.
+5. Check that the patch files were created correctly.
+6. Share the release assets.
 
 These release patches intentionally exclude `renpy/`, `lib/`, `README.md`,
 `LICENSE`, and other non-patch files.
-
-Recommended release flow:
-
-1. Run cleanup dry-run and apply cleanup if needed.
-2. Commit your latest changes.
-3. Run the **Release Patch Artifacts** workflow with your version (for example `1.01`).
-4. Share the generated release assets from GitHub Releases.
 
 ## Contributing
 
