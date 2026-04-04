@@ -3,54 +3,55 @@
 set -eu
 
 dry_run=0
+game_root=""
 
-if [ "${1-}" = "--dry-run" ]; then
-    dry_run=1
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --dry-run)
+            dry_run=1
+            ;;
+        --game-root)
+            shift
+            if [ "$#" -eq 0 ]; then
+                echo "Usage: $(basename "$0") [--dry-run] [--game-root <path-to-game>]" >&2
+                exit 1
+            fi
+            game_root="$1"
+            ;;
+        *)
+            echo "Usage: $(basename "$0") [--dry-run] [--game-root <path-to-game>]" >&2
+            exit 1
+            ;;
+    esac
+
     shift
-fi
-
-if [ "$#" -ne 0 ]; then
-    echo "Usage: $(basename "$0") [--dry-run]" >&2
-    exit 1
-fi
+done
 
 script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-repo_root="$(CDPATH= cd -- "$script_dir/.." && pwd)"
-audio_root="$repo_root/game/audio"
+python_script="$script_dir/remove_all_mp3_from_game_audio.py"
 
-if [ ! -d "$audio_root" ]; then
-    echo "Audio folder not found: $audio_root" >&2
+if [ ! -f "$python_script" ]; then
+    echo "Python cleanup script not found: $python_script" >&2
     exit 1
 fi
 
-tmp_file="$(mktemp)"
-trap 'rm -f "$tmp_file"' EXIT HUP INT TERM
-
-find "$audio_root" -type f -iname '*.mp3' > "$tmp_file"
-mp3_count="$(wc -l < "$tmp_file" | tr -d '[:space:]')"
-
-if [ "$mp3_count" -eq 0 ]; then
-    echo "No MP3 files found under game/audio"
-    exit 0
+if command -v python3 >/dev/null 2>&1; then
+    python_cmd="python3"
+elif command -v python >/dev/null 2>&1; then
+    python_cmd="python"
+else
+    echo "Python 3 was not found in PATH. Install Python 3 to run this tool." >&2
+    exit 1
 fi
 
-while IFS= read -r file_path; do
-    relative_path="${file_path#$repo_root/}"
-
-    if [ "$dry_run" -eq 1 ]; then
-        echo "Would delete: $relative_path"
-        continue
-    fi
-
-    echo "Deleting: $relative_path"
-    rm -- "$file_path"
-done < "$tmp_file"
-
-echo "Scanned: game/audio"
-echo "Found MP3 files: $mp3_count"
+set --
 
 if [ "$dry_run" -eq 1 ]; then
-    echo "Dry run only. No files were deleted."
-else
-    echo "Deleted all MP3 files successfully."
+    set -- "$@" "--dry-run"
 fi
+
+if [ -n "$game_root" ]; then
+    set -- "$@" "--game-root" "$game_root"
+fi
+
+exec "$python_cmd" "$python_script" "$@"

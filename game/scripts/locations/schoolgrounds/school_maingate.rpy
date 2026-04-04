@@ -39,14 +39,14 @@ label schoolgroundsmaingate_busstop:
     $ gateIsOpen = (calendar.when[1:] == (FRIDAY, EVENING) or (calendar.when[1] in [SATURDAY, SUNDAY] and calendar.when[2] != NIGHT))
     if gateIsOpen:
         if Jimmy.outfit == JIMMY_UNIFORM:
-            __("I better change out of my uniform before I leave.")
+            "I better change out of my uniform before I leave."
         elif calendar.when == (PROLOGUE, FRIDAY, EVENING):
             jump prologue_kassandraintro
         else:
             menu:
-                __("{i}Visit Kassandra's house?{/i}")
+                "{i}Visit Kassandra's house?{/i}"
 
-                __("Yes"):
+                "Yes":
                     hide screen freeroamhud
                     $ intownmarker = True
                     if calendar.when[2] in [MORNING, AFTERNOON]:
@@ -63,8 +63,8 @@ label schoolgroundsmaingate_busstop:
                             $ quests.drunkblair = SATISFIED
                     pause 0.8
                     $ gotoscene('townhouselivingroom', transition=fade)
-                __("No"):
+                "No":
                     jump schoolgroundsmaingate_loop
     else:
-        __("Can't take the bus until the weekend.")
+        "Can't take the bus until the weekend."
     jump schoolgroundsentrance_loop

@@ -1,4 +1,4 @@
-name: Release Patch Artifacts
+name: Create GitHub Release
 
 on:
   push:
@@ -11,15 +11,6 @@ on:
         description: "Patch version (for example: 1.01)"
         required: true
         type: string
-      base_ref:
-        description: "Git ref for a clean Lustworth Academy v0.5.5 Extended Edition base"
-        required: false
-        type: string
-      include_tools_patch:
-        description: "Also generate a game+tools patch"
-        required: true
-        default: true
-        type: boolean
       prerelease:
         description: "Mark this GitHub Release as a pre-release"
         required: true
@@ -45,17 +36,6 @@ jobs:
         run: |
           set -euo pipefail
 
-          default_base_ref=""
-          if [[ -f ".github/patch-base-ref.txt" ]]; then
-            while IFS= read -r line; do
-              trimmed_line="$(printf '%s' "${line}" | sed -E 's/[[:space:]]+$//')"
-              if [[ -n "${trimmed_line}" && ! "${trimmed_line}" =~ ^# && "${trimmed_line}" != "SET_ME_TO_CLEAN_BASE_REF" ]]; then
-                default_base_ref="${trimmed_line}"
-                break
-              fi
-            done < ".github/patch-base-ref.txt"
-          fi
-
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
             raw_version="${{ inputs.version }}"
             version="${raw_version#v}"
@@ -64,12 +44,8 @@ jobs:
               exit 1
             fi
             tag="v${version}"
-            base_ref="${{ inputs.base_ref }}"
-            if [[ -z "${base_ref}" ]]; then
-              base_ref="${default_base_ref}"
-            fi
-            include_tools="${{ inputs.include_tools_patch }}"
             prerelease="${{ inputs.prerelease }}"
+            end_ref="HEAD"
           else
             tag="${GITHUB_REF_NAME}"
             if ! [[ "${tag}" =~ ^v[0-9]+(\.[0-9]+)*([.-][0-9A-Za-z]+)*$ ]]; then
@@ -77,64 +53,45 @@ jobs:
               exit 1
             fi
             version="${tag#v}"
-            base_ref="${default_base_ref}"
-            include_tools="true"
             prerelease="false"
+            end_ref="${tag}"
+          fi
+
+          if [[ "${end_ref}" == "HEAD" ]]; then
+            previous_tag="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          else
+            previous_tag="$(git describe --tags --abbrev=0 "${tag}^" 2>/dev/null || true)"
+          fi
+
+          if [[ -z "${previous_tag}" ]]; then
+            echo "::error title=Missing previous tag::A previous tagged release is required to generate an incremental game.patch automatically."
+            exit 1
           fi
 
           echo "version=${version}" >> "$GITHUB_OUTPUT"
           echo "tag=${tag}" >> "$GITHUB_OUTPUT"
-          echo "base_ref=${base_ref}" >> "$GITHUB_OUTPUT"
-          echo "include_tools=${include_tools}" >> "$GITHUB_OUTPUT"
           echo "prerelease=${prerelease}" >> "$GITHUB_OUTPUT"
+          echo "end_ref=${end_ref}" >> "$GITHUB_OUTPUT"
+          echo "previous_tag=${previous_tag}" >> "$GITHUB_OUTPUT"
 
-      - name: Validate patch base
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          base_ref="${{ steps.vars.outputs.base_ref }}"
-
-          if [[ -z "${base_ref}" ]]; then
-            echo "::error title=Missing patch base::Set .github/patch-base-ref.txt to a git ref containing a clean Lustworth Academy v0.5.5 Extended Edition tree, or provide base_ref when running workflow_dispatch."
-            exit 1
-          fi
-
-          if ! git rev-parse -q --verify "${base_ref}^{commit}" >/dev/null; then
-            echo "::error title=Unknown patch base::Git ref '${base_ref}' was not found in this repository."
-            exit 1
-          fi
-
-          if ! git cat-file -e "${base_ref}:game" 2>/dev/null; then
-            echo "::error title=Invalid patch base::Git ref '${base_ref}' does not contain a game/ directory."
-            exit 1
-          fi
-
-          if ! git cat-file -e "${base_ref}:game/script.rpy" 2>/dev/null; then
-            echo "::error title=Invalid patch base::Git ref '${base_ref}' does not look like a full game tree."
-            exit 1
-          fi
-
-      - name: Build patch artifacts
+      - name: Build release artifacts
         shell: bash
         run: |
           set -euo pipefail
 
           version="${{ steps.vars.outputs.version }}"
-          base_ref="${{ steps.vars.outputs.base_ref }}"
+          previous_tag="${{ steps.vars.outputs.previous_tag }}"
+          end_ref="${{ steps.vars.outputs.end_ref }}"
+
           mkdir -p dist
 
-          # Developer-facing patch: game scripts/assets only, relative to a clean base ref.
           game_patch="dist/lustworth-academy-v${version}-game.patch"
-          git diff --binary "$base_ref" -- game/ > "$game_patch"
+          git diff --binary "${previous_tag}" "${end_ref}" -- game/ > "$game_patch"
 
-          if [[ "${{ steps.vars.outputs.include_tools }}" == "true" ]]; then
-            # Optional patch including maintenance tooling in addition to game files.
-            tools_patch="dist/lustworth-academy-v${version}-game-tools.patch"
-            git diff --binary "$base_ref" -- game/ tools/ > "$tools_patch"
-          fi
+          tools_zip="dist/lustworth-academy-v${version}-tools.zip"
+          git archive --format=zip --output="$tools_zip" "${end_ref}" tools
 
-          sha256sum dist/* > dist/lustworth-academy-v${version}-SHA256SUMS.txt
+          sha256sum "$game_patch" "$tools_zip" > "dist/lustworth-academy-v${version}-SHA256SUMS.txt"
 
       - name: Generate release changelog
         shell: bash
@@ -143,24 +100,18 @@ jobs:
 
           repo="${GITHUB_REPOSITORY}"
           tag="${{ steps.vars.outputs.tag }}"
+          end_ref="${{ steps.vars.outputs.end_ref }}"
+          previous_tag="${{ steps.vars.outputs.previous_tag }}"
           release_date="$(date -u +%Y-%m-%d)"
 
-          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
-            end_ref="${tag}"
-            previous_tag="$(git describe --tags --abbrev=0 "${tag}^" 2>/dev/null || true)"
+          if [[ "${end_ref}" == "HEAD" ]]; then
+            compare_target="${GITHUB_SHA}"
           else
-            end_ref="HEAD"
-            previous_tag="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+            compare_target="${tag}"
           fi
 
-          if [[ -n "${previous_tag}" ]]; then
-            compare_url="https://github.com/${repo}/compare/${previous_tag}...${tag}"
-            range="${previous_tag}..${end_ref}"
-          else
-            first_commit="$(git rev-list --max-parents=0 "${end_ref}" | tail -n 1)"
-            compare_url="https://github.com/${repo}/compare/${first_commit}...${tag}"
-            range="${first_commit}..${end_ref}"
-          fi
+          compare_url="https://github.com/${repo}/compare/${previous_tag}...${compare_target}"
+          range="${previous_tag}..${end_ref}"
 
           commits=""
           current_subject=""
@@ -218,6 +169,16 @@ jobs:
           [Full Changelog](${compare_url}) [Previous Releases](https://github.com/${repo}/releases)
 
           ${commits}
+
+          ## Release assets
+
+          These release assets are generated automatically by GitHub Actions:
+
+          - `lustworth-academy-v${version}-game.patch`
+          - `lustworth-academy-v${version}-tools.zip`
+          - `lustworth-academy-v${version}-SHA256SUMS.txt`
+
+          `game.patch` is an incremental update from `${previous_tag}` to `${tag}`.
           EOF
 
       - name: Create GitHub release

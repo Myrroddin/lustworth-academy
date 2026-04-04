@@ -96,8 +96,8 @@ label chapterone_fionasurfinglesson:
     play sound "audio/sfx/surprisedhum.ogg"
     Fiona "..."
     Jimmy "..."
-    __("{i}The weird silence was only interrupted by the sound of the waves and the seagulls.{/i}")
-    __("{i}Even though it took her by surprise, Fiona didn't back away from the kiss, she embraced it.{/i}")
+    "{i}The weird silence was only interrupted by the sound of the waves and the seagulls.{/i}"
+    "{i}Even though it took her by surprise, Fiona didn't back away from the kiss, she embraced it.{/i}"
     call nexttime from _call_nexttime_15
     $ showscene('seasidecliff', transition=fade)
     show beachpicnicsetupnight with dissolve
@@ -179,7 +179,7 @@ label chapterone_fionasurfinglesson:
     $ Fiona.relPoints += 1
     $ quests.fionaNightDate = COMPLETE
     scene nightsky with fade
-    __("{i}After a good night of laughs and some more failed surfing practice, [player_name] and Fiona parted ways.{/i}")
-    __("{i}Who knows what destiny was planned for those two, but one thing was for sure, and it's that it was going to be dangerous.{/i}")
+    "{i}After a good night of laughs and some more failed surfing practice, [player_name] and Fiona parted ways.{/i}"
+    "{i}Who knows what destiny was planned for those two, but one thing was for sure, and it's that it was going to be dangerous.{/i}"
     call nexttime from _call_nexttime_16
     $ gotoscene('townhousejimmysroom')

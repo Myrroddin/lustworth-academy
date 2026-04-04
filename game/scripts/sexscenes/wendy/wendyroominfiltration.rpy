@@ -10,7 +10,7 @@ label .slow:
     scene wendyfootjobanim01slow
     $ renpy.pause()
     menu:
-        __("Faster"):
+        "Faster":
             play sound "audio/sfx/mh1.ogg"
             jump .fast
 
@@ -18,10 +18,10 @@ label .fast:
     scene wendyfootjobanim01fast
     $ renpy.pause()
     menu:
-        __("Slower"):
+        "Slower":
             play sound "audio/sfx/mh1.ogg"
             jump .slow
-        __("Finish"):
+        "Finish":
             jump .finish
 
 label .finish:
@@ -44,7 +44,7 @@ label .slow:
     scene wendycowgirlanim01slow
     $ renpy.pause()
     menu:
-        __("Faster"):
+        "Faster":
             jump .fast
 
 label .fast:
@@ -56,9 +56,9 @@ label .fast:
     Wendy "I can feel it in my belly!"
     $ renpy.pause()
     menu:
-        __("Slower"):
+        "Slower":
             jump .slow
-        __("Cum inside"):
+        "Cum inside":
             jump .finish
 
 label .finish:

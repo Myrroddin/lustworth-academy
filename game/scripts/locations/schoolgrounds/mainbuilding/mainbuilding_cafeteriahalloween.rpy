@@ -246,7 +246,7 @@ label camemberthalloweendialog:
     Camembert "So, what brings you here?"
     Camembert "Are you trying to saciate your knowledge about the precise mathematic explanation of the universe existance?"
     Jimmy "Well, sir..."
-    __("{i}'This guy is insufferable, thought [player_name].{/i}")
+    "{i}'This guy is insufferable, thought [player_name].{/i}"
     Jimmy "I'm not that smart, but I'm actually trying to solve a riddle of my own."
     Camembert "Ah, interesting. Tell me more."
     Jimmy "You know about the secret ghost, right?"
@@ -336,7 +336,7 @@ label misspunnyhalloweendialog:
     Punny "Oh, ha, ha, of course, dear. It's 'importa'. What do you need?"
     Jimmy "Do you know the fantasma secriito tradition?"
     Punny "Fantasma secreto? Si, por supuesto. I got my gift right here."
-    __("Goddamn she is hot! I would love to have some private classes with her.")
+    "Goddamn she is hot! I would love to have some private classes with her."
     Jimmy "Could you give me a clue of who is your fantasmo secreto?"
     Punny "Ha, ha, ha, I love your effort, my dear."
     Punny "But, lo siento. I can't tell you who is it. It's part of the tradition."
@@ -507,9 +507,9 @@ label missdawsonhalloweendialog:
     Dawson "I'll contact you one day, I promise."
     play sound "audio/sfx/highheels.ogg"
     hide missdawson with dissolve
-    __("Right before leaving, [player_name] noticed there was something shiny in the floor.")
+    "Right before leaving, [player_name] noticed there was something shiny in the floor."
     Jimmy "There is something in the floor."
-    __("Yes, I just said that.")
+    "Yes, I just said that."
     call item_pickup(ItemHeadmasterKey) from _call_item_pickup_3
     Jimmy "Oh, it's a key..."
     Jimmy "Might this be the key to the Headmaster's office?"

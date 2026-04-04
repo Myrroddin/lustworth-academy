@@ -10,7 +10,7 @@ label .intro:
     Jimmy "Are you okay?"
     Beatrix "Yess, neveeh better."
     Jimmy "Riiight."
-    __("That apple juice must have something in it. Maybe I should go taste it.")
+    "That apple juice must have something in it. Maybe I should go taste it."
     $ quests.beatrixHalloweenGrinding = ACTIVE
     $ gotoscene('harrisonhousebar')
 
@@ -19,5 +19,5 @@ label .active:
     Jimmy "Are you sure you're okay?"
     Beatrix "Whaddyou mean? I feel {i}*hic*{/i} greaaat."
     Jimmy "Whatever you say, Beatrix."
-    __("There is definitely something up. I should double-check that juice.")
+    "There is definitely something up. I should double-check that juice."
     $ gotoscene('harrisonhousebar')

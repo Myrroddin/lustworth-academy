@@ -40,7 +40,7 @@ label townhousehallwayfirstnight_loop:
 
 label townhousehallwayfirstnight_window:
     if Jimmy.outfit != JIMMY_STEALTH:
-        __("I need to change into something lighter for a stealth mission.")
+        "I need to change into something lighter for a stealth mission."
     elif quests.cassidyDildo == LOCKED:
         jump prologue_cassidycaught
     elif quests.cassidyDildo == ACTIVE:
@@ -48,14 +48,14 @@ label townhousehallwayfirstnight_window:
         Cassidy "I'm watching you, [player_name]."
         Cassidy "Get me my toy, now."
     elif quests.cassidyDildo == SATISFIED:
-        __("I should give Cassidy her dildo.")
+        "I should give Cassidy her dildo."
     elif townhousehallwayfirstnight.cassidyRoomChecked == True:
-        __("Alright, Cassidy is asleep.")
-        __("Let's roll to the mayor's mansion.")
+        "Alright, Cassidy is asleep."
+        "Let's roll to the mayor's mansion."
         jump prologue_mayorsmansion
     else:
-        __("I, uh, should make sure Cassidy is asleep. Right.")
-        __("I just need to find a way to see into her room.")
+        "I, uh, should make sure Cassidy is asleep. Right."
+        "I just need to find a way to see into her room."
     jump townhousehallwayfirstnight_loop
 
 label townhousehallwayfirstnight_jimmysroom:
@@ -63,45 +63,45 @@ label townhousehallwayfirstnight_jimmysroom:
 
 label townhousehallwayfirstnight_blairsroom:
     if not townhousehallwayfirstnight.blairsRoomChecked:
-        __("Blair's room")
+        "Blair's room"
         scene blairsleepingpeek01 with fade
-        __("The door's open, that's weird.")
+        "The door's open, that's weird."
     hide screen freeroamhud
     scene blairsleepingpeek02 with fade
     if not townhousehallwayfirstnight.blairsRoomChecked:
-        __("Oh, that's Blair.")
-        __("Wow, she sleeps almost naked.")
+        "Oh, that's Blair."
+        "Wow, she sleeps almost naked."
         $ townhousehallwayfirstnight.blairsRoomChecked = True
     $ renpy.pause()
-    __("I better go before I wake her up.")
+    "I better go before I wake her up."
     jump townhousehallwayfirstnight_loop
 
 label townhousehallwayfirstnight_cassidysroom:
     if quests.cassidyDildo == LOCKED:
-        __("I hear noises from behind, but the door is locked.")
+        "I hear noises from behind, but the door is locked."
     elif quests.cassidyDildo == ACTIVE:
-        __("I need to find her toy.")
-        __("She said it should be somewhere in my room.")
+        "I need to find her toy."
+        "She said it should be somewhere in my room."
     elif quests.cassidyDildo == SATISFIED:
         jump prologue_cassidydildo
     elif not townhousehallwayfirstnight.cassidyRoomChecked == True:
-        __("I can hear noises coming from Cassidy's room.")
+        "I can hear noises coming from Cassidy's room."
     else:
-        __("She's asleep. The coast is clear.")
+        "She's asleep. The coast is clear."
     jump townhousehallwayfirstnight_loop
 
 label townhousehallwayfirstnight_alicesroom:
     if not townhousehallwayfirstnight.alicesRoomChecked:
-        __("This seems to be Alice's room.")
+        "This seems to be Alice's room."
         $ townhousehallwayfirstnight.alicesRoomChecked = True
-    __("It's locked.")
+    "It's locked."
     jump townhousehallwayfirstnight_loop
 
 label townhousehallwayfirstnight_bathroom:
-    __("Looks like a bathroom. I don't need to go.")
+    "Looks like a bathroom. I don't need to go."
     jump townhousehallwayfirstnight_loop
 
 label townhousehallwayfirstnight_stairs:
-    __("That's not a good idea. I don't want to get caught by Kassandra.")
-    __("I need to find another way out.")
+    "That's not a good idea. I don't want to get caught by Kassandra."
+    "I need to find another way out."
     jump townhousehallwayfirstnight_loop

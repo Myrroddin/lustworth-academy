@@ -12,11 +12,11 @@ label tatsumakisecretscene_menu:
         Jimmy "Don't talk to me like that, you spoiled brat."
         $ entry = False
     menu:
-        __("Grinding"):
+        "Grinding":
             jump tatsumakisecretscene_grinding
-        __("Carry and fuck"):
+        "Carry and fuck":
             jump tatsumakisecretscene_carryfuck
-        __("Leave"):
+        "Leave":
             Jimmy "You'll just have to wait a little longer."
             Tatsumaki "Hmph."
             return

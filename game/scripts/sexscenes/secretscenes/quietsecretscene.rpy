@@ -10,15 +10,15 @@ label quietsecretscene_menu:
         Developer "{i}The quality of the animations in this room will be improved in a future update.{/i}"
         $ entry = False
     menu:
-        __("Anal"):
+        "Anal":
             scene quietanalanim01 with fade
             $ renpy.pause()
             jump quietsecretscene_menu
-        __("Cowgirl"):
+        "Cowgirl":
             scene quietplungeanim01 with fade
             $ renpy.pause()
             jump quietsecretscene_menu
-        __("Leave"):
+        "Leave":
             return
 
 #ANIMATIONS

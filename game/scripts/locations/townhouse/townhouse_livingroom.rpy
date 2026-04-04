@@ -52,21 +52,21 @@ label townhouselivingroom_stairs:
 
 label townhouselivingroom_basementdoor:
     if not townhouselivingroom.basementDoorChecked:
-        __("This door is locked.")
-        __("I think it leads to the basement.")
+        "This door is locked."
+        "I think it leads to the basement."
         $ townhouselivingroom.basementDoorChecked = True
     else:
-        __("Locked.")
+        "Locked."
     jump townhouselivingroom_loop
 
 label townhouselivingroom_boxes:
     if quests.blairUSB == ACTIVE:
         jump prologue_blairusbcollision
     elif quests.blairUSB == SATISFIED:
-        __("I already got the USB drive.")
-        __("I should go to my room and finish setting up my PC.")
+        "I already got the USB drive."
+        "I should go to my room and finish setting up my PC."
     else:
-        __("The boxes are empty.")
+        "The boxes are empty."
     jump townhouselivingroom_loop
 
 label townhouselivingroom_todiningroom:
@@ -99,5 +99,5 @@ label townhouselivingroom_housefront:
     if prologue.awkwardBreakfast == True:
         $ gotoscene('townhousefront')
     else:
-        __("I have things to do before going out.")
+        "I have things to do before going out."
         jump townhouselivingroom_loop

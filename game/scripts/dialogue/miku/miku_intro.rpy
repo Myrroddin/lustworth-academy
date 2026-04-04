@@ -3,13 +3,13 @@ default wizardhousepick = 0
 
 label libraryintroscene:
     hide screen freeroamhud with fade
-    __("The first time [player_name] enters the library, he notices the ominous atmosphere of the place.")
-    __("There are not many students there.") 
-    __("Most usually go to cyber cafes to look for information that would otherwise take much longer to find through books.")
-    __("However, there was a certain charm in the smell of paper and the texture of the cover of an old book, which came to life much more when read within those walls.")
+    "The first time [player_name] enters the library, he notices the ominous atmosphere of the place."
+    "There are not many students there." 
+    "Most usually go to cyber cafes to look for information that would otherwise take much longer to find through books."
+    "However, there was a certain charm in the smell of paper and the texture of the cover of an old book, which came to life much more when read within those walls."
     show clarissathelibrarianintro with fade
-    __("It didn't take long for [player_name] to observe what seemed to be the person in charge of the library.") 
-    __("An attractive woman who projected an aura of pure culture...")
+    "It didn't take long for [player_name] to observe what seemed to be the person in charge of the library." 
+    "An attractive woman who projected an aura of pure culture..."
     Jimmy "Good day, Miss. Are you in charge?"
     hide clarissathelibrarianintro with dissolve
     show clarissa office neutral with dissolve
@@ -36,20 +36,20 @@ label libraryintroscene:
     stop music
     play music MUSIC_MIKUS_THEME
     show mikulibraryintro with fade
-    __("In the shelves area, a petite girl with short hair was organizing some books.")
+    "In the shelves area, a petite girl with short hair was organizing some books."
     hide mikulibraryintro
     play sound "audio/sfx/big_punch_trimmed.ogg"
     show mikulibraryintro02 with vpunch
-    __("[player_name] approached cautiously, but the girl got nervous when she saw him and dropped a couple of books on the floor.")
+    "[player_name] approached cautiously, but the girl got nervous when she saw him and dropped a couple of books on the floor."
     show mikupickingbooks with vpunch
     hide mikulibraryintro02
     hide mikulibraryintro
     play sound "audio/sfx/undress01.ogg"
-    __("[player_name] quickly set about helping her collect them.")
+    "[player_name] quickly set about helping her collect them."
     Jimmy "I'm so sorry if I scared you."
     play sound "audio/sfx/hmm02.ogg"
     Miku "Oh no. Don't worry. I can be very clumsy sometimes."
-    __("[player_name] caught an eye on a couple of polaroids in the ground that seemed to depict the girl in front of him in less clothes.")
+    "[player_name] caught an eye on a couple of polaroids in the ground that seemed to depict the girl in front of him in less clothes."
     Jimmy "The librarian sent me. She told me you could give me a tour of the place."
     hide mikupickingbooks with dissolve
     show miku uniform complacent with dissolve
@@ -58,10 +58,10 @@ label libraryintroscene:
     Jimmy "Yes, I just arrived in town and I'm getting familiar with everything."
     if quests.artclassBook == ACTIVE:
         Jimmy "In fact, I'm looking for a book for the art teacher."
-    __("Even though they picked up all of the stuff that fell down, the girl kept looking down as if something was missing.")
+    "Even though they picked up all of the stuff that fell down, the girl kept looking down as if something was missing."
     Jimmy "Missing something?"
     Miku "Yeah... No! No, don't worry."
-    __("She was clearly ashamed and nervious, but the reason was ellusive to [player_name].")
+    "She was clearly ashamed and nervious, but the reason was ellusive to [player_name]."
     if quests.artclassBook == ACTIVE:
         Jimmy "Right, so... About the art book."
         Miku "Oh, right! Yes, Miss Bakshi always sends someone to fetch her a book before her class. It's like a ritual of hers."
@@ -86,19 +86,19 @@ label libraryintroscene:
     Miku "You do? I totally love the Wizardick World"
     Miku "What house would you be in?"
     menu:
-        __("Grifingcock"):
+        "Grifingcock":
             $ wizardhousepick = 1
             Jimmy "The red one, I don't remember the name."
             Miku "Grifingcock! So, you're a brave one, huh?"
-        __("Hafflebutt"):
+        "Hafflebutt":
             $ wizardhousepick = 2
             Jimmy "The yellow one, I don't remember the name."
             Miku "Hafflebutt! So, you're a kind-hearted one, huh?"
-        __("Rimjobclaw"):
+        "Rimjobclaw":
             $ wizardhousepick = 3
             Jimmy "The blue one, I don't remember the name."
             Miku "Rimjobclaw! So, you're a smart one, huh?"
-        __("Sfingering"):
+        "Sfingering":
             $ wizardhousepick = 4
             Jimmy "The green one, I don't remember the name."
             Miku "Sfingering! So, you're an ambitious one, huh?"
@@ -150,11 +150,11 @@ label libraryintroscene:
         $ quests.artclassBook = SATISFIED
     show mikumissingphoto with fade
     hide miku uniform complacent with dissolve
-    __("As [player_name] turns to leave, he notices a polaroid resting under one of the shelves.")
+    "As [player_name] turns to leave, he notices a polaroid resting under one of the shelves."
     play sound "audio/sfx/undress01.ogg"
     hide mikumissingphoto with dissolve
     show mikupolaroid01 with dissolve
-    __("After picking it up, he saw a photo that made his jaw open wide.")
+    "After picking it up, he saw a photo that made his jaw open wide."
     Jimmy "Holy..."
     Jimmy "*God damn, she's hot.*"
     Jimmy "*Nerdy girls can be bad too, huh...*"

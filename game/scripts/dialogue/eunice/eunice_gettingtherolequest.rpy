@@ -12,7 +12,7 @@ label .intro:
     play music "audio/music/classicmusic01.ogg"
     scene dramaticpractice01 with fade
     show eunice uniform acting with dissolve
-    __("{i}[player_name] spots Eunice near the decomissioned school bus, talking in a strange manner.{/i}")
+    "{i}[player_name] spots Eunice near the decomissioned school bus, talking in a strange manner.{/i}"
     Eunice "Welcome to the 47th Feast of Purity. May your intestines be clean and your souls flavorless..."
     Jimmy "..."
     Eunice "Silence! Sir Laughsalot, declare this feast a triumph!"
@@ -73,23 +73,23 @@ label sirlaughsalotsearch01:
     Eunice "Right, yeah, the rubber chicken."
     hide eunice with dissolve
     play music "audio/music/mysterytheme.ogg"
-    __("{i}The backstage area was a labyrinth of dusty props, coiled ropes, and half-painted sets. A single, bare lightbulb casted long, spooky shadows across everything.{/i}")
+    "{i}The backstage area was a labyrinth of dusty props, coiled ropes, and half-painted sets. A single, bare lightbulb casted long, spooky shadows across everything.{/i}"
     Eunice "[player_name]! Look at the floor."
     show yellowfeather with fade
-    __("{i}Eunice pointed dramatically to the floor. Lying on the dusty wood there was a single, pristine, bright yellow feather.{/i}")
+    "{i}Eunice pointed dramatically to the floor. Lying on the dusty wood there was a single, pristine, bright yellow feather.{/i}"
     Jimmy "A feather? Isn't the chicken made of rubber?"
     play sound "audio/sfx/hum01.ogg"
     Eunice "Precisely! That's what makes it weird. There are more..."
-    __("{i}A few feet away, another yellow feather rested near a stack of wooden crates. And another just beyond that.{/i}")
+    "{i}A few feet away, another yellow feather rested near a stack of wooden crates. And another just beyond that.{/i}"
     Jimmy "It's a trail. A completely illogical feather trail."
     play sound "audio/sfx/femaleclearthroat.ogg"
     Eunice "Come on! The plot chickens! Sorry... thickens!"
     play sound "audio/sfx/sexyintro.ogg"
     scene euniceinvestigating with fade
-    __("{i}[player_name] followed the mysterious feather trail, getting distracted a bit by the view.{/i}")
-    __("{i}But, in the end, the feathers lead him behind a large, velvet curtain and into a dimly lit corner.{/i}")
+    "{i}[player_name] followed the mysterious feather trail, getting distracted a bit by the view.{/i}"
+    "{i}But, in the end, the feathers lead him behind a large, velvet curtain and into a dimly lit corner.{/i}"
     show whiskeybottlemistery with fade
-    __("{i}The trail stopped abruptly at a small, overturned table. Lying next to it was an empty bottle of whiskey...{/i}")
+    "{i}The trail stopped abruptly at a small, overturned table. Lying next to it was an empty bottle of whiskey...{/i}"
     play sound "audio/sfx/whispermale.ogg"
     Jimmy "*Umm, a bottle of whiskey, so the one who took Sir Laughsalot must have been drunk.*"
     play sound "audio/sfx/whisperfemale.ogg"
@@ -126,8 +126,8 @@ label sirlaughsalotsearch01:
     stop music
     play music "audio/music/mysterytheme.ogg"
     scene schoolkitchendayfall with fade
-    __("{i}As they both entered the kitchen, the smell of the food was overwhelming.{/i}")
-    __("{i}However, as they got closer to the cook, there was a subtle scent of liquor in the air...{/i}")
+    "{i}As they both entered the kitchen, the smell of the food was overwhelming.{/i}"
+    "{i}However, as they got closer to the cook, there was a subtle scent of liquor in the air...{/i}"
     show edna cook neutral with dissolve
     play sound "audio/sfx/femaleclearthroat.ogg"
     show eunice uniform mad left with vpunch

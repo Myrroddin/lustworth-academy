@@ -31,7 +31,7 @@ label harrisonhouseexterior_observatoryhill:
     $ gotoscene('observatoryhillexterior')
 
 label harrisonhouseexterior_harrisonhouse:
-    __("It's closed.")
+    "It's closed."
     jump harrisonhouseexterior_loop
 
 label harrisonhouseexterior_exit:

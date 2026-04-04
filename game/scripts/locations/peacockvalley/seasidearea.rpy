@@ -28,11 +28,11 @@ init 1 python:
 #LABELS
 label seasideareamap:
     if prologue.visitthebeach == False:
-        __("Man, I love the beach.")
-        __("I have a feeling I'm gonna spend a lot of time here.")
-        __("Alright, let's see.")
-        __("The mansion is up there, near the cliff.")
-        __("Maybe I can find a way to climb to it.")
+        "Man, I love the beach."
+        "I have a feeling I'm gonna spend a lot of time here."
+        "Alright, let's see."
+        "The mansion is up there, near the cliff."
+        "Maybe I can find a way to climb to it."
         $ prologue.visitthebeach = True
     jump seasideareamap_loop
 
@@ -44,16 +44,16 @@ label seasideareamap_loop:
 label seasideareamap_tikibar:
     if quests.fionaNightDate == ACTIVE:
         jump tikibarintro
-    __("There is a tiki bar on the beach.")
-    __("Looks like a cool place to hang out.")
+    "There is a tiki bar on the beach."
+    "Looks like a cool place to hang out."
     jump seasideareamap_loop
 
 label seasideareamap_mansioncliff:
-    __("The Mayor's mansion.")
+    "The Mayor's mansion."
     if prologue.checkthecliff == False:
         jump cliffcheckfionaintro
     elif prologue.findtherope == False:
-        __("I have to find something to fix the stairs, maybe a rope.")
+        "I have to find something to fix the stairs, maybe a rope."
     jump seasideareamap_loop
 
 label seasideareamap_beachhorizon:
@@ -72,12 +72,12 @@ label seasideareamap_suburbanarea:
     $ gotoscene('townpierarea')
 
 label seasideareamap_beachkiosk:
-    __("A small kiosk.")
+    "A small kiosk."
     jump seasideareamap_loop
 
 label seasideareamap_beachhouse:
-    __("Must be nice to have a house that close to the beach.")
-    __("It's on sale. I bet the price is really high.")
+    "Must be nice to have a house that close to the beach."
+    "It's on sale. I bet the price is really high."
     jump seasideareamap_loop
 
 label seasideareamap_tanyahouse:

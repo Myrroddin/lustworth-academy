@@ -38,7 +38,7 @@ label seasidecliff_loop:
     jump seasidecliff_loop
 
 label seasidecliff_seaview:
-    __("That's a nice view.")
+    "That's a nice view."
     jump seasidecliff_loop
 
 label seasidecliff_stairs:

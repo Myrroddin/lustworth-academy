@@ -44,14 +44,14 @@ label townhousebackyard_treehouse:
         if prologue.findtherope == False:
             hide screen freeroamhud
             show cliffropeitem with dissolve
-            __("That's it! There is some rope behind the tree I can use.")
+            "That's it! There is some rope behind the tree I can use."
             play music MUSIC_HEISTPLAN_THEME
             show wendyplan06 with dissolve
-            __("Let's see...")
+            "Let's see..."
             show wendyplan07 with dissolve
-            __("Nice, now I got a way to fix the stair and climb the cliff.")
+            "Nice, now I got a way to fix the stair and climb the cliff."
             show wendyplan08 with dissolve
-            __("I have everything I need, I should rest for a while and wait 'til midnight.")
+            "I have everything I need, I should rest for a while and wait 'til midnight."
             $ prologue.findtherope = True
         else:
             Jimmy "An old tree house."

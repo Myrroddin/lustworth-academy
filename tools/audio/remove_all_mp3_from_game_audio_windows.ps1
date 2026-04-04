@@ -1,67 +1,49 @@
 param(
-    [switch]$DryRun
+    [switch]$DryRun,
+    [string]$GameRoot
 )
 
 $scriptPath = $MyInvocation.MyCommand.Path
-$toolsDir = Split-Path -Parent $scriptPath
-$repoRoot = Split-Path -Parent $toolsDir
-$audioRoot = Join-Path $repoRoot "game\audio"
+$scriptDir = Split-Path -Parent $scriptPath
+$pythonScript = Join-Path $scriptDir "remove_all_mp3_from_game_audio.py"
 
-if (-not (Test-Path -LiteralPath $audioRoot -PathType Container)) {
-    Write-Error "Audio folder not found: $audioRoot"
+if (-not (Test-Path -LiteralPath $pythonScript -PathType Leaf)) {
+    Write-Error "Python cleanup script not found: $pythonScript"
     exit 1
 }
 
-$mp3Files = @(
-    Get-ChildItem -LiteralPath $audioRoot -Recurse -File -Filter *.mp3 |
-        Sort-Object FullName
-)
+$pythonExe = $null
+$pythonArgs = @()
 
-if ($mp3Files.Count -eq 0) {
-    Write-Output "No MP3 files found under game/audio"
-    exit 0
+if (Get-Command py -ErrorAction SilentlyContinue) {
+    $pythonExe = "py"
+    $pythonArgs = @("-3")
+}
+elseif (Get-Command python -ErrorAction SilentlyContinue) {
+    $pythonExe = "python"
+}
+elseif (Get-Command python3 -ErrorAction SilentlyContinue) {
+    $pythonExe = "python3"
 }
 
-$failures = @()
-
-foreach ($file in $mp3Files) {
-    $relativePath = $file.FullName.Substring($repoRoot.Length).TrimStart([char]'\\', [char]'/')
-    $relativePath = $relativePath.Replace([char]'\\', [char]'/')
-
-    if ($DryRun) {
-        Write-Output "Would delete: $relativePath"
-        continue
-    }
-
-    Write-Output "Deleting: $relativePath"
-
-    try {
-        Remove-Item -LiteralPath $file.FullName -Force -ErrorAction Stop
-    }
-    catch {
-        $failures += [pscustomobject]@{
-            Path = $relativePath
-            Error = $_.Exception.Message
-        }
-    }
+if (-not $pythonExe) {
+    Write-Error "Python 3 was not found in PATH. Install Python 3 to run this tool."
+    exit 1
 }
 
-Write-Output "Scanned: game/audio"
-Write-Output "Found MP3 files: $($mp3Files.Count)"
+$invokeArgs = @()
+$invokeArgs += $pythonArgs
+$invokeArgs += $pythonScript
 
 if ($DryRun) {
-    Write-Output "Dry run only. No files were deleted."
-    exit 0
+    $invokeArgs += "--dry-run"
 }
 
-if ($failures.Count -gt 0) {
-    Write-Error "Failed deletions: $($failures.Count)"
-
-    foreach ($failure in $failures) {
-        Write-Error "$($failure.Path): $($failure.Error)"
-    }
-
-    exit 1
+if ($GameRoot) {
+    $resolvedGameRoot = (Resolve-Path -LiteralPath $GameRoot -ErrorAction Stop).Path
+    $invokeArgs += "--game-root"
+    $invokeArgs += $resolvedGameRoot
 }
 
-Write-Output "Deleted all MP3 files successfully."
+& $pythonExe @invokeArgs
+exit $LASTEXITCODE

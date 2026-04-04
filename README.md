@@ -17,7 +17,7 @@ GitHub Release page.
 - [What this patch does](#what-this-patch-does)
 - [Legal notice](#legal-notice)
 - [How to apply the patch](#how-to-apply-the-patch)
-- [Generate current patch file (maintainer workflow)](#generate-current-patch-file-maintainer-workflow)
+- [Create a release](#create-a-release)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 
@@ -53,63 +53,63 @@ to use this patch.
 
 ## How to apply the patch
 
+These release assets are intended for the original game developer, or anyone
+maintaining a game tree that already includes the previous patch release.
+They are not packaged as a first-time end-user installer for a clean official
+game copy.
+
 ### Before you start
 
 1. Install Git on your computer.
-2. Install *Lustworth Academy* from its official source.
-3. Open the latest GitHub Release for this repository.
+2. Open the latest GitHub Release for this repository.
+3. Make sure your game tree already matches the previous patch release.
 4. Go to the main game folder.
 
 You are in the correct folder if you can see `game/` there.
 
-### Choose which patch file to download
+### Choose which release files to download
 
 - `lustworth-academy-v<version>-game.patch`
-  Use this if you only want the patch.
-- `lustworth-academy-v<version>-game-tools.patch`
-  Use this if you also want the helper tools in `tools/`.
+  This is the incremental patch for the tracked files under `game/`.
+- `lustworth-academy-v<version>-tools.zip`
+  This is a zip of the tracked helper scripts in `tools/`.
+- `lustworth-academy-v<version>-SHA256SUMS.txt`
+  This contains SHA256 checksums for the release assets.
 
-Important:
-
-1. `game-tools.patch` already includes the normal game patch changes.
-2. Do **not** apply both patch files.
-3. Pick **one** patch file only.
+Most release consumers only need `game.patch`.
+`tools.zip` is only needed when you also want the helper scripts.
 
 ### Apply the patch file
 
-Run one of these commands from the game folder.
+`game.patch` updates a tree from the previous patch tag to the tagged release
+version. If your current tree does not already match the previous release,
+bring it up to that version first.
+
+Run this command from the game folder.
 
 Replace `/path/to/...` with the real path to the patch file you downloaded.
 
-If you chose the normal patch:
-
 ```bash
 git apply --binary "/path/to/lustworth-academy-v<version>-game.patch"
-```
-
-If you chose the tools patch:
-
-```bash
-git apply --binary "/path/to/lustworth-academy-v<version>-game-tools.patch"
 ```
 
 After that:
 
 1. Start the game.
 2. Make sure the game opens normally.
-3. If you used `game.patch`, you are done.
-4. If you used `game-tools.patch`, you may also use the optional cleanup tools below.
+3. If you only wanted the patch, you are done.
+4. If you also downloaded `tools.zip`, extract it and use the optional cleanup tools below.
 
 ### Optional cleanup tools
 
-Use the cleanup tools only if you already applied
-`lustworth-academy-v<version>-game-tools.patch`.
+`tools.zip` contains the cleanup tools in `tools/audio/` and `tools/images/`.
 
-That tools patch adds the files in `tools/audio/` and `tools/images/`.
+Extract that zip anywhere you want.
+The examples below assume the zip contents are available under `tools/`, and that you pass the target game folder with `--game-root` or `-GameRoot`.
 
 Before you run any cleanup tool:
 
-1. Open a terminal in the same game folder where you ran `git apply`.
+1. Open a terminal where the extracted `tools/` folder is available.
 2. Pick **one** file only for the task you want to run.
 3. Do **not** run every file in the folder. Files for the same task do the same job.
 4. Run the dry run first.
@@ -127,13 +127,13 @@ Use this file:
 Dry run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1 -DryRun
+powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1 -GameRoot "C:\path\to\game" -DryRun
 ```
 
 Real run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1
+powershell -ExecutionPolicy Bypass -File .\tools\audio\remove_all_mp3_from_game_audio_windows.ps1 -GameRoot "C:\path\to\game"
 ```
 
 #### macOS Audio Tool
@@ -144,13 +144,13 @@ Use this file:
 Dry run:
 
 ```bash
-bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command --dry-run
+bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command
+bash ./tools/audio/remove_all_mp3_from_game_audio_macos.command --game-root "/path/to/game"
 ```
 
 #### Linux Audio Tool
@@ -161,13 +161,13 @@ Use this file:
 Dry run:
 
 ```bash
-bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh --dry-run
+bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh
+bash ./tools/audio/remove_all_mp3_from_game_audio_linux.sh --game-root "/path/to/game"
 ```
 
 #### One Audio Tool That Works on Every OS
@@ -178,13 +178,13 @@ If Python is already installed, you can use this file instead:
 Dry run:
 
 ```bash
-python ./tools/audio/remove_all_mp3_from_game_audio.py --dry-run
+python ./tools/audio/remove_all_mp3_from_game_audio.py --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-python ./tools/audio/remove_all_mp3_from_game_audio.py
+python ./tools/audio/remove_all_mp3_from_game_audio.py --game-root "/path/to/game"
 ```
 
 ### Optional: remove matching `.png` files from `game/`
@@ -206,13 +206,13 @@ Use this file:
 Dry run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1 -DryRun
+powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1 -GameRoot "C:\path\to\game" -DryRun
 ```
 
 Real run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1
+powershell -ExecutionPolicy Bypass -File .\tools\images\remove_png_with_matching_webp_from_game_images_windows.ps1 -GameRoot "C:\path\to\game"
 ```
 
 #### macOS Image Tool
@@ -223,13 +223,13 @@ Use this file:
 Dry run:
 
 ```bash
-bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command --dry-run
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_macos.command --game-root "/path/to/game"
 ```
 
 #### Linux Image Tool
@@ -240,13 +240,13 @@ Use this file:
 Dry run:
 
 ```bash
-bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh --dry-run
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh
+bash ./tools/images/remove_png_with_matching_webp_from_game_images_linux.sh --game-root "/path/to/game"
 ```
 
 #### One Image Tool That Works on Every OS
@@ -257,71 +257,36 @@ If Python is already installed, you can use this file instead:
 Dry run:
 
 ```bash
-python ./tools/images/remove_png_with_matching_webp_from_game_images.py --dry-run
+python ./tools/images/remove_png_with_matching_webp_from_game_images.py --game-root "/path/to/game" --dry-run
 ```
 
 Real run:
 
 ```bash
-python ./tools/images/remove_png_with_matching_webp_from_game_images.py
+python ./tools/images/remove_png_with_matching_webp_from_game_images.py --game-root "/path/to/game"
 ```
 
-### What the tools patch adds right now
+### What `tools.zip` adds right now
 
-At the moment, the tools patch adds:
+At the moment, `tools.zip` adds:
 
 - audio cleanup tools in `tools/audio/`
 - image cleanup tools in `tools/images/`
 
-## Generate current patch file (maintainer workflow)
+## Create a release
 
-This section is only for maintainers.
+The GitHub Actions workflow in `.github/workflows/release.yml` builds the
+release assets automatically when you push a tag like `v1.03`.
 
-Use the GitHub Actions workflow in `.github/workflows/release.yml` to build the
-release patch files.
-
-Before using the workflow, you must point it at a clean imported copy of
-*Lustworth Academy* v0.5.5 Extended Edition inside git history.
-
-- Set `.github/patch-base-ref.txt` to the git tag, branch, or commit that
-  contains that clean base.
-- If you run the workflow manually, you may instead fill in the optional
-  `base_ref` input to override the file for that run.
-- If you do not have a clean imported base yet, leave the placeholder in
-  `.github/patch-base-ref.txt` unchanged and ask the developer to provide or
-  import one first.
-
-If no clean base ref is configured, the workflow now fails on purpose instead
-of creating broken patch files.
-
-The workflow can create two release files:
-
-- `lustworth-academy-v<version>-game.patch`
-  This is the normal patch.
-- `lustworth-academy-v<version>-game-tools.patch`
-  This is the normal patch plus the files in `tools/`.
-
-Important:
-
-1. `game-tools.patch` includes the normal patch too.
-2. End users should download only one patch file.
-
-You can trigger the workflow in two ways:
-
-1. Manually from GitHub Actions.
-2. Automatically by pushing a tag such as `v1.01`.
-
-Automatic tag releases also require `.github/patch-base-ref.txt` to be set first.
-
-Recommended maintainer release flow:
+Normal release flow:
 
 1. Commit your latest changes.
-2. Make sure `.github/patch-base-ref.txt` points to a clean imported base game ref.
-3. Run the **Release Patch Artifacts** workflow with the version number you want.
-4. Wait for the workflow to finish.
-5. Open the GitHub Release.
-6. Check that the patch files were created correctly.
-7. Share the release assets.
+2. In VS Code Source Control, create and push a tag such as `v1.03`.
+3. Wait for the **Create GitHub Release** workflow to finish.
+4. Open the GitHub Release page.
+5. Download or share `lustworth-academy-v<version>-game.patch`, `lustworth-academy-v<version>-tools.zip`, and `lustworth-academy-v<version>-SHA256SUMS.txt`.
+
+If needed, you can also run the workflow manually from GitHub Actions.
 
 These release patches intentionally exclude `renpy/`, `lib/`, `README.md`,
 `LICENSE`, and other non-patch files.

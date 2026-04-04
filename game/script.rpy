@@ -119,7 +119,7 @@ label start:
     pause 2.0
     call namesigning from _call_namesigning
     menu:
-        __("Play new content v0.5.4"):
+        "Play new content v0.5.4":
             call housematesnaming from _call_housematesnaming
             call newcontentvariablecheck from _call_newcontentvariablecheck
             $ Jimmy.outfit = JIMMY_UNIFORM
@@ -129,13 +129,13 @@ label start:
             Jimmy "So, what am I doing here?"
             Jimmy "Right, I gotta go talk to Pete at the TV room."
             $ gotoscene('boysdormhallway')
-        __("Continue New Game"):
+        "Continue New Game":
             jump prologue_intro
 
 label namesigning:
     stop music
     scene namesigning01 with fade
-    __("{i}What's your name, new guy?{/i}")
+    "{i}What's your name, new guy?{/i}"
     $ player_name = renpy.input(__("First name (default: Jimmy)"))
     $ player_name = player_name.strip()
     if player_name == '':
@@ -148,16 +148,16 @@ label namesigning:
         $ player_surname = "Napkins"
     play sound "audio/sfx/signature02.ogg"
     scene namesigning03 with dissolve
-    __("{i}Welcome to Trustworth, [player_name] [player_surname].{/i}")
+    "{i}Welcome to Trustworth, [player_name] [player_surname].{/i}"
     return
 
 label housematesnaming:
     play music "audio/music/happyrock01.ogg"
     scene jimmytownhouseday with fade
-    __("{i}Before we get started, I need to introduce you to a few characters.{i}")
+    "{i}Before we get started, I need to introduce you to a few characters.{i}"
     # Kassandra
     show kassandra neutral with dissolve
-    __("{i}This is Kassandra. You live with her on the weekends.{/i}")
+    "{i}This is Kassandra. You live with her on the weekends.{/i}"
     $ landlady_name = renpy.input(__("Kassandra is your... (default: landlady)"))
     $ landlady_name = landlady_name.strip()
     if landlady_name == "":
@@ -168,7 +168,7 @@ label housematesnaming:
     show blair roommate intro
     show alice roommate intro
     with dissolve
-    __("{i}These are Kassandra's daughters, Cassidy, Blair, and Alice.{/i}")
+    "{i}These are Kassandra's daughters, Cassidy, Blair, and Alice.{/i}"
     $ roommate_female = renpy.input(__("Cassidy/Blair/Alice is your... (default: roommate)"))
     $ roommate_female = roommate_female.strip()
     if roommate_female == "":
@@ -181,7 +181,7 @@ label housematesnaming:
     hide blair
     hide alice
     with dissolve
-    __("{i}Alright, thanks. Now, on with the show!{/i}")
+    "{i}Alright, thanks. Now, on with the show!{/i}"
     return
 
 label halloweencostumeselection:
@@ -189,7 +189,7 @@ label halloweencostumeselection:
     $ fionasKioskItems += [ItemShaggyCostume, ItemPirateCostume, ItemHeroCostume]
     show screen freeroamhud(showTray=False)
     call fionaskiosk_showscene from _call_fionaskiosk_showscene
-    __("What costume do you want to wear to the party?")
+    "What costume do you want to wear to the party?"
     call screen fionaskiosk(halloweenSkip=True)
     $ item = _return
     call fionaskiosk_onclick(item) from _call_fionaskiosk_onclick
@@ -271,15 +271,15 @@ label nap(until):
 label nap_menu:
     $ scene = scenemanager.scene
     menu:
-        __("How long should I rest?")
+        "How long should I rest?"
 
-        __("Afternoon") if time < AFTERNOON:
+        "Afternoon" if time < AFTERNOON:
             call nap(AFTERNOON) from _call_nap
-        __("Evening") if time < EVENING:
+        "Evening" if time < EVENING:
             call nap(EVENING) from _call_nap_1
-        __("Night") if time < NIGHT:
+        "Night" if time < NIGHT:
             call nap(NIGHT) from _call_nap_2
-        __("Nevermind"):
+        "Nevermind":
             jump expression (scene + '_bed')
     $ gotoscene(scene, transition=fade)
 
@@ -465,7 +465,7 @@ label subject(name):
     # Intro
     $ maxLesson = class_max_lessons[name]
     if subject.lesson > maxLesson:
-        __("{i}Time passes and you finish class without any novelty.{/i}")
+        "{i}Time passes and you finish class without any novelty.{/i}"
         call nexttime from _call_nexttime_3
         return
     elif subject.lessonFailed:

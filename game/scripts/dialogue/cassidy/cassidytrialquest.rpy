@@ -4,11 +4,11 @@ default quests.christyPlan = LOCKED
 label cassidytrialsquestintro:
     hide screen freeroamhud with None
 
-    __("{i}As you entered the gym, you realized there were some girls doing something weird in a corner.{/i}")
-    __("{i}An opportunity to see girls jumping in short skirts? Of course [player_name] wasn't going to let it pass.{/i}")
+    "{i}As you entered the gym, you realized there were some girls doing something weird in a corner.{/i}"
+    "{i}An opportunity to see girls jumping in short skirts? Of course [player_name] wasn't going to let it pass.{/i}"
     scene cassidytrialsintro01 with fade
-    __("{i}Getting closer, you could see Cassidy nervously standing in line with a couple other gals.{/i}")
-    __("{i}A confident redhead girl stood in front of the girls, surveying them with a critical eye.{/i}")
+    "{i}Getting closer, you could see Cassidy nervously standing in line with a couple other gals.{/i}"
+    "{i}A confident redhead girl stood in front of the girls, surveying them with a critical eye.{/i}"
     stop music
     play music MUSIC_CHRISTY_THEME
     scene gymwallbackground with fade
@@ -16,13 +16,13 @@ label cassidytrialsquestintro:
     play sound "audio/sfx/alright02.ogg"
     Christy "Alright, ladies, show me what you've got. Cassidy, you're up first."
     Cassidy "Oh, no..."
-    __("{i}Cassidy took a deep breath and launched into a dancing routine.{/i}")
+    "{i}Cassidy took a deep breath and launched into a dancing routine.{/i}"
     play sound "audio/sfx/big_punch.ogg"
     scene cassidytrialsintro02 with vpunch
-    __("{i}Her movements were kind of stiff and the uniform she wore was really short.{/i}")
+    "{i}Her movements were kind of stiff and the uniform she wore was really short.{/i}"
     play sound "audio/sfx/slap.ogg"
     show cassidytrialsintro03 with vpunch
-    __("{i}The word 'bitch' could be seen on the side of her skirt. [player_name] wondered if that was that the name of the team?{/i}")
+    "{i}The word 'bitch' could be seen on the side of her skirt. [player_name] wondered if that was that the name of the team?{/i}"
     scene gymwallbackground with fade
     show christy cheerleader neutral with dissolve
     show cassidy cheerleader neutral left with dissolve
@@ -46,8 +46,8 @@ label cassidytrialsquestintro:
     play sound "audio/sfx/mad01.ogg"
     Cassidy mad "Uggghh! Shut up, idiot!" with vpunch
     hide cassidy with vpunch
-    __("{i}Cassidy stormed off clearly mad at [player_name].{/i}")
-    __("{i}And he wondered if he could see those exercises they talked about at the library.{/i}")
+    "{i}Cassidy stormed off clearly mad at [player_name].{/i}"
+    "{i}And he wondered if he could see those exercises they talked about at the library.{/i}"
     $ quests.cassidyTrials = ACTIVE
     return
 
@@ -57,11 +57,11 @@ label cassidytrialsbanana:
     play music MUSIC_FUNNY_MOMENT
     scene libraryentrancecrowd with fade
     play sound "audio/sfx/crowdlaughclap01.ogg"
-    __("{i}There was something going on at the entrance of the library that attracted the attention of many students gathering around what looks to be a giant banana.{/i}")
-    __("{i}Everyone was laughing out loud as the banana moved around making strange moves.{/i}")
+    "{i}There was something going on at the entrance of the library that attracted the attention of many students gathering around what looks to be a giant banana.{/i}"
+    "{i}Everyone was laughing out loud as the banana moved around making strange moves.{/i}"
     show christy uniform sinister with dissolve
-    __("{i}Christy was standing close to the banana, with a sinister smile.{/i}")
-    __("{i}Is that Cassidy, then? [player_name] wondered.{/i}")
+    "{i}Christy was standing close to the banana, with a sinister smile.{/i}"
+    "{i}Is that Cassidy, then? [player_name] wondered.{/i}"
     hide christy with dissolve
     scene cassidybanana01 with vpunch
     play sound "audio/sfx/crowdlaugh01.ogg"
@@ -69,8 +69,8 @@ label cassidytrialsbanana:
     Algie "Yeah! Who's ready for potassium power?"
     Derek "Shut up, Algie! You're such a nerd, even for jokes."
     Algie "Oh..."
-    __("{i}At first, [player_name] is amused with the sight of seeing his spoiled [roommate_female] doing ridiculous stuff.{/i}")
-    __("{i}But, as the seconds went by, he could see the sadness in Cassidy's eyes. At some point, it wasn't funny anymore.{/i}")
+    "{i}At first, [player_name] is amused with the sight of seeing his spoiled [roommate_female] doing ridiculous stuff.{/i}"
+    "{i}But, as the seconds went by, he could see the sadness in Cassidy's eyes. At some point, it wasn't funny anymore.{/i}"
     $ showscene('schoollibraryplaza', transition=fade)
     stop music
     play music MUSIC_CHRISTY_THEME
@@ -92,16 +92,16 @@ label cassidytrialsbanana:
     Jimmy "Well, diplomacy didn't work, so..."
     Jimmy "Let's do some crowd control."
     play sound "audio/sfx/crowdlaugh01.ogg"
-    __("{i}No one saw [player_name] quietly taking the extinguisher from the wall.{/i}")
-    __("{i}He just needed to take the lock out and use something to clamp the trigger, like a belt...{/i}")
+    "{i}No one saw [player_name] quietly taking the extinguisher from the wall.{/i}"
+    "{i}He just needed to take the lock out and use something to clamp the trigger, like a belt...{/i}"
     play music "audio/music/crazymoment01.ogg"
     scene cassidybanana03 with vpunch
     play sound "audio/sfx/slap.ogg"
-    __("{i}The master plan worked, as the extinguisher started to fire foam while spinning around on the floor.{/i}")
+    "{i}The master plan worked, as the extinguisher started to fire foam while spinning around on the floor.{/i}"
     play sound "audio/sfx/scream01.ogg"
-    __("{i}[player_name] watched everything from a safe distance, careful to not be seen by the cameras.{/i}")
+    "{i}[player_name] watched everything from a safe distance, careful to not be seen by the cameras.{/i}"
     play sound "audio/sfx/horrorscream.ogg"
-    __("{i}The crowd started to run away in all directions and Cassidy found a way to sneak out of Christy's sight.{/i}")
+    "{i}The crowd started to run away in all directions and Cassidy found a way to sneak out of Christy's sight.{/i}"
     show algieuniformpantsdown with vpunch
     play sound "audio/sfx/whistle01.ogg"
     Algie "Hey, who took my belt!?"
@@ -121,8 +121,8 @@ label cassidytrialbedroomtalk:
     scene cassidycrossedlegs with fade
     play sound "audio/sfx/doorclose01.ogg"
     play music MUSIC_CASSIDY_THEME
-    __("{i}As [player_name] entered the bedroom, he saw Cassidy sitting cross-legged on her bed, looking utterly dejected.{/i}")
-    __("{i}Her room was filled with posters of inspirational quotes and pictures of her on family trips.{/i}")
+    "{i}As [player_name] entered the bedroom, he saw Cassidy sitting cross-legged on her bed, looking utterly dejected.{/i}"
+    "{i}Her room was filled with posters of inspirational quotes and pictures of her on family trips.{/i}"
     Jimmy "Banana emergency? Or just looking a-peel-ing?"
     play sound "audio/sfx/hum01.ogg"
     Cassidy "Not in the mood for your stupid jokes, [player_name]."
@@ -149,14 +149,14 @@ label cassidytrialbedroomtalk:
     Jimmy "Forget Christy and her stupid rituals."
     Jimmy "If you want to feel confident, you need to stand up for yourself."
     Jimmy "Prove that bitch what you're made of. Prove her that you can be a better leader that she is."
-    __("{i}Cassidy looked at him with a hopeful expression.{/i}")
+    "{i}Cassidy looked at him with a hopeful expression.{/i}"
     play sound "audio/sfx/giggle01.ogg"
     Cassidy "I thought you were a total asshole."
     Jimmy "Well, it depends on the situation."
     Cassidy "Do you remember when we were kids?"
     Jimmy "To be honest, I don't remember much."
     Cassidy "Look..."
-    __("{i}Cassidy pointed at a picture hanging on the wall and [player_name] took it in his hands.{/i}")
+    "{i}Cassidy pointed at a picture hanging on the wall and [player_name] took it in his hands.{/i}"
     play music "audio/music/tendertheme02.ogg"
     scene woodstripphoto with fade
     Cassidy "That's the last trip to the woods we made before you left."
@@ -170,7 +170,7 @@ label cassidytrialbedroomtalk:
     Jimmy "That story is a masterpiece, and it worked, didn't it?"
     scene cassidybedroomnight with fade
     show cassidy pajama neutral with dissolve
-    __("{i}Cassidy looked at him with a smile.{/i}")
+    "{i}Cassidy looked at him with a smile.{/i}"
     play sound "audio/sfx/girlsigh01.ogg"
     Cassidy "You did it, again."
     Cassidy "I saw you firing the extinguisher that day."

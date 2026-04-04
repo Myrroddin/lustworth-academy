@@ -10,6 +10,7 @@ init offset = -2
 ## width and height of the game.
 init python:
     gui.init(1920, 1080)
+    gui.button_image_extension = ".webp"
 
 ################################################################################
 ## GUI Configuration Variables

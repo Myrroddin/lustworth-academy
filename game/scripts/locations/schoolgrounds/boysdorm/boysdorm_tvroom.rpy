@@ -43,7 +43,7 @@ label boysdormtvroom:
     elif quests.beatrixDiary == COMPLETE:
         if quests.garyHalloweenHeist == LOCKED:
             if glob.halloweenEventComplete:
-                __("You have already completed the Halloween Event.")
+                "You have already completed the Halloween Event."
                 $ quests.garyHalloweenHeist = COMPLETE
                 jump boysdormtvroom_loop
             else:
@@ -60,46 +60,46 @@ label boysdormtvroom_tohallway:
 
 label boysdormtvroom_tv:
     if not boysdormtvroom.tvChecked:
-        __("There's an XPlayBoy console hooked up, but I have other things to do.")
+        "There's an XPlayBoy console hooked up, but I have other things to do."
         $ boysdormtvroom.tvChecked = True
-    __("Maybe later.")
+    "Maybe later."
     jump boysdormtvroom_loop
 
 label boysdormtvroom_fratbanner:
-    __("\"Alpha Legion, the best fraternity in the country.\"")
+    "\"Alpha Legion, the best fraternity in the country.\""
     if not boysdormtvroom.fratBannerChecked:
-        __("\"If you have the balls, try to join us.\"")
-        __("\"Pedicabo ego vos et irrumabo.\"")
-        __("I wonder what that means.")
+        "\"If you have the balls, try to join us.\""
+        "\"Pedicabo ego vos et irrumabo.\""
+        "I wonder what that means."
         $ boysdormtvroom.fratBannerChecked = True
     jump boysdormtvroom_loop
 
 label boysdormtvroom_noticeboard:
-    __("Math classes, a rock concert, and...")
-    __("Hey, look at this. The Spanish teacher gives private lessons.")
+    "Math classes, a rock concert, and..."
+    "Hey, look at this. The Spanish teacher gives private lessons."
     if not Punny.met:
-        __("I wonder if she's hot.")
+        "I wonder if she's hot."
     jump boysdormtvroom_loop
 
 label boysdormtvroom_sodamachine:
     if not boysdormtvroom.sodaMachineChecked:
-        __("It's a Coca-Pep machine.")
+        "It's a Coca-Pep machine."
         $ boysdormtvroom.sodaMachineChecked = True
-    __("I don't have any money right now.")
+    "I don't have any money right now."
     jump boysdormtvroom_loop
 
 label boysdormtvroom_wallofprankmasters:
     if not boysdormtvroom.wallOfPrankmastersChecked:
-        __("This must be the Wall of Prankmasters.")
-        __("It memorializes the legendary students that funded this dorm.")
-        __("Some say they even made a secret tunnel that led right into the girl's dorm.")
-        __("Maybe someone knows more about it.")
+        "This must be the Wall of Prankmasters."
+        "It memorializes the legendary students that funded this dorm."
+        "Some say they even made a secret tunnel that led right into the girl's dorm."
+        "Maybe someone knows more about it."
         $ boysdormtvroom.wallOfPrankmastersChecked = True
     if wallofprankmasters.secretPassage:
         menu: 
-            __("Enter the secret passage"):
+            "Enter the secret passage":
                 jump wallofprankmasters_secretpassage
-            __("Admire the Wall of Prankmasters"):
+            "Admire the Wall of Prankmasters":
                 jump wallofprankmasters
     jump wallofprankmasters
 
@@ -111,7 +111,7 @@ label boysdormtvroom_pete:
     jump petedialogue
 
 label boysdormtvroom_padlock:
-    __("This must be Fiona's padlock. Nice!")
+    "This must be Fiona's padlock. Nice!"
     hide fionapadlock
     call item_pickup(ItemFionaPadlock) from _call_item_pickup_12
     $ quests.fionaPadlock = SATISFIED

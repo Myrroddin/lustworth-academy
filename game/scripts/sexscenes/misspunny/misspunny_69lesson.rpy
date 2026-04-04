@@ -41,9 +41,9 @@ label .mainangle:
     Punny "Si, chupame toda!"
     Punny "That feels so good!"
     menu:
-        __("Change angle"):
+        "Change angle":
             jump .alternateangle
-        __("Cum"):
+        "Cum":
             play sound "audio/sfx/bj4.ogg"
             Punny "YES! YES! I'm gonna cum!"
             Jimmy "Me too!"
@@ -64,10 +64,10 @@ label .alternateangle:
     Punny "Esss moii gronde."
     Punny "Mhmmmm..."
     menu:
-        __("Change angle"):
+        "Change angle":
             jump .mainangle
 
-        __("Cum"):
+        "Cum":
             play sound "audio/sfx/bj4.ogg"
             Punny "YES! YES! I'm gonna cum!"
             Jimmy "Me too!"

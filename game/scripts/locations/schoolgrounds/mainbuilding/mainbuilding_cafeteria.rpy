@@ -56,7 +56,7 @@ label mainbuildingcafeteria_kitchen:
     if quests.missdawsonAssistant == ACTIVE:
         if quests.missdawsonAssistantEdna == LOCKED:
             jump ednathecookintro
-    __("That's the kitchen, it smells awful in there.")
+    "That's the kitchen, it smells awful in there."
     jump mainbuildingcafeteria_loop
 
 label ednathecookintro:

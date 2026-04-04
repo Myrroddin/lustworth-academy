@@ -14,7 +14,7 @@ label prologue_dakotaranchintro:
     Dakota "Here, let's go to the house and have some coffee before I show you around."
     Dakota "You were yawning the whole way here."
     scene dakotafarmhouselivingroomintro with fade
-    __("As they entered the house, two girls came running toward the entrance.")
+    "As they entered the house, two girls came running toward the entrance."
     show barbara neutral
     show sally neutral
     with vpunch
@@ -52,10 +52,10 @@ label prologue_dakotaranchintro:
     Jimmy talk "Alright."
     $ showscene('dakotasranch', transition=fade)
     show jimmy neutral with dissolve
-    __("I feel like this place is gonna be interesting.")
-    __("If it's true a man hasn't been here in a while...")
+    "I feel like this place is gonna be interesting."
+    "If it's true a man hasn't been here in a while..."
     show jimmy smug with dissolve
-    __("Then maybe this will be an opportunity to get more than just cash.")
+    "Then maybe this will be an opportunity to get more than just cash."
     hide jimmy with dissolve
     show screen freeroamhud(False)
     Developer "{i}From now on, you'll be able to come the ranch on the weekend and work for Dakota.{/i}"
@@ -89,26 +89,26 @@ label prologue_dakotaranchbarnintro:
 
 label prologue_barbarasallystrapon:
     $ showscene('dakotasranch', transition=fade)
-    __("...I think I hear voices coming from inside the shed.")
+    "...I think I hear voices coming from inside the shed."
     hide screen freeroamhud
     scene farmshedintro with fade
     play music MUSIC_SNEAK_THEME
-    __("The shed was packed with boxes, shelves, and tools.")
-    __(" [player_name] followed the voices coming from the back, trying not to be heard.")
+    "The shed was packed with boxes, shelves, and tools."
+    " [player_name] followed the voices coming from the back, trying not to be heard."
     Barbara "Come on, Sally!"
     Barbara "That cucumber looks so tasty."
     Sally "Don't rush me, Barbara. I'm really tight down there."
-    __("What are they talking about?")
-    __("When [player_name] saw them, his eyes opened wide.")
+    "What are they talking about?"
+    "When [player_name] saw them, his eyes opened wide."
     play sound SOUND_RECORD_SCRATCH
     call barbara_cucumberstrapon_scene from _call_barbara_cucumberstrapon_scene_1
-    __("After watching for a few more moments, [player_name] made his way out before they caught him.")
+    "After watching for a few more moments, [player_name] made his way out before they caught him."
     $ showscene('dakotasranch', transition=fade)
     show jimmy unamused with dissolve
-    __("Those girls are nuts!")
+    "Those girls are nuts!"
     show jimmy smug with dissolve
-    __("...But they're also really hot.")
-    __("Hopefully that wasn't the last I'll get to see of them.")
+    "...But they're also really hot."
+    "Hopefully that wasn't the last I'll get to see of them."
     $ prologue.barbaraSallyStrapon = True
     jump prologue_leaveranch
 
@@ -127,24 +127,24 @@ label prologue_leaveranch:
     call nexttime from _call_nexttime_35
     $ showscene('townhouselivingroom', transition=fade)
     show screen freeroamhud(False)
-    __("I'm beat. I think I'll take a shower and head to bed.")
+    "I'm beat. I think I'll take a shower and head to bed."
     $ gotoscene('townhouselivingroom')
 
 label prologue_cassidyshower:
     hide screen freeroamhud
-    __("The door is open...")
+    "The door is open..."
     play sound "audio/sfx/showermoans.ogg"
     scene secondfloorbathroom with fade
-    __("Looks like someone's already taking a shower.")
+    "Looks like someone's already taking a shower."
     call cassidy_townhouseshower_scene from _call_cassidy_townhouseshower_scene
     $ showscene('townhousehallway', transition=fade)
-    __("Oh well. Guess I'll just take a shower in the morning.")
+    "Oh well. Guess I'll just take a shower in the morning."
     $ prologue.cassidyShower = True
     $ gotoscene('townhousehallway')
 
 label prologue_day4end:
     hide screen freeroamhud
-    __("Tomorrow is Monday, which means I go back to Trustworth.")
+    "Tomorrow is Monday, which means I go back to Trustworth."
     call sleep("I hope I sleep well.") from _call_sleep_8
     $ showscene('townhousejimmysroom', transition=fade)
     play music MUSIC_KASSANDRAS_THEME

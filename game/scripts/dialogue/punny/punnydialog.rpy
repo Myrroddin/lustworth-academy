@@ -19,14 +19,14 @@ label misspunnydialog:
 
 label .dialogmenu:
     if Jimmy.money < 100:
-        __("Don't have enough money, yet.")
+        "Don't have enough money, yet."
         $ gotoscene('spanishclassroom')
     else:
         menu:
-            __("Private Lessons I (100$)") if quests.punnyPrivateLessons == ACTIVE:
+            "Private Lessons I (100$)" if quests.punnyPrivateLessons == ACTIVE:
                 jump misspunnyprivatelesson01
-            __("Private Lessons II (100$)") if quests.punnyPrivateLessons == COMPLETE and quests.punnyDatingTeacher == LOCKED and glob.halloweenEventComplete:
+            "Private Lessons II (100$)" if quests.punnyPrivateLessons == COMPLETE and quests.punnyDatingTeacher == LOCKED and glob.halloweenEventComplete:
                 jump misspunnyprivatelesson02
-            __("Nevermind"):
+            "Nevermind":
                 pass
         $ gotoscene('spanishclassroom')

@@ -43,36 +43,36 @@ label boysdormhallway_jimmysroom:
 
 label boysdormhallway_petesroom:
     if not boysdormhallway.petesRoomChecked:
-        __("\"P. Kowalski.\"")
+        "\"P. Kowalski.\""
         if not Pete.met:
-            __("Funny name.")
+            "Funny name."
         else:
-            __("This must be Pete's room.")
+            "This must be Pete's room."
         $ boysdormhallway.petesRoomChecked = True
     elif not Pete.met:
-        __("Locked.")
+        "Locked."
     else:
-        __("Pete's room. It's locked. Guess he's not here right now.")
+        "Pete's room. It's locked. Guess he's not here right now."
     jump boysdormhallway_loop
 
 label boysdormhallway_garysroom:
     if not boysdormhallway.garysRoomChecked:
-        __("\"Gary. No last name.")
-        __("Some sort of twisted swastika has been carved into the door.")
+        "\"Gary. No last name."
+        "Some sort of twisted swastika has been carved into the door."
         $ boysdormhallway.garysRoomChecked = True
     elif not Gary.met:
-        __("Locked.")
+        "Locked."
     else:
-        __("Gary's room. Don't want to talk him right now.")
+        "Gary's room. Don't want to talk him right now."
     jump boysdormhallway_loop
 
 label boysdormhallway_rastamansroom:
     if not boysdormhallway.rastamansRoomChecked:
-        __("\"Rastaman.\"")
-        __("Cool name.")
+        "\"Rastaman.\""
+        "Cool name."
         $ boysdormhallway.rastamansRoomChecked = True
     else:
-        __("I can hear reggae music playing from behind the door.")
+        "I can hear reggae music playing from behind the door."
     jump boysdormhallway_loop
 
 label boysdormhallway_tvroom:

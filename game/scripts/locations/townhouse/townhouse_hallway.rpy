@@ -34,7 +34,7 @@ label townhousehallway_loop:
     jump townhousehallway_loop
 
 label townhousehallway_window:
-    __("Looks like a sunny day.")
+    "Looks like a sunny day."
     jump townhousehallway_loop
 
 label townhousehallway_jimmysroom:
@@ -45,46 +45,46 @@ label townhousehallway_bathroom:
         if not prologue.cassidyShower:
             jump prologue_cassidyshower
         else:
-            __("Cassidy's still in there. I shouldn't bother her.")
-            __("I'll just take a shower in the morning.")
+            "Cassidy's still in there. I shouldn't bother her."
+            "I'll just take a shower in the morning."
     else:
-        __("I don't need to use the bathroom right now.")
+        "I don't need to use the bathroom right now."
     jump townhousehallway_loop
 
 label townhousehallway_blairsroom:
-    __("i}*Knock, knock.*{/i}")
+    "i}*Knock, knock.*{/i}"
     pause 0.5
-    __("No answer.")
+    "No answer."
     jump townhousehallway_loop
 
 label townhousehallway_cassidysroom:
-    __("i}*Knock, knock.*{/i}")
+    "i}*Knock, knock.*{/i}"
     if quests.cassidyTrials == SATISFIED:
         if calendar.when[2] == NIGHT:
             Cassidy "Come in..."
             call cassidytrialbedroomtalk from _call_cassidytrialbedroomtalk
             jump townhousehallway_loop
         else:
-            __("She's usually in her room at night.")
+            "She's usually in her room at night."
             jump townhousehallway_loop
     elif quests.cassidyFirstFuck == SATISFIED:
         if calendar.when[2] == NIGHT:
             Cassidy "Come in..."
             jump cassidynightdate01
         else:
-            __("i}I wonder how Cassidy is doing with her cheerleader thing, thought [player_name].{/i}")
-            __("i}Not knowing that his [roommate_female] was waiting for him to visit her during the night.{/i}")
+            "i}I wonder how Cassidy is doing with her cheerleader thing, thought [player_name].{/i}"
+            "i}Not knowing that his [roommate_female] was waiting for him to visit her during the night.{/i}"
     pause 0.5
-    __("No answer.")
+    "No answer."
     jump townhousehallway_loop
 
 label townhousehallway_alicesroom:
     if alice_breakfastwarning == True:
-        __("I shouldn't bother her any more.")
+        "I shouldn't bother her any more."
     elif breakfast_ready == True:
         jump townhousehallway_alicereading
     else:
-        __("I shouldn't bother her.")
+        "I shouldn't bother her."
     jump townhousehallway_loop
 
 label townhousehallway_stairs:
@@ -92,13 +92,13 @@ label townhousehallway_stairs:
 
 #CUTSCENES
 label townhousehallway_alicereading:
-    __("i}*Knock, knock.*{/i}")
+    "i}*Knock, knock.*{/i}"
     Alice "Come in!"
     hide screen freeroamhud
     play music MUSIC_ALICES_THEME
     scene alicereadingpose01 with fade
-    __("i}When [player_name] opened the door, he found Alice in a bizarre pose.{/i}")
-    __("i}From his perspective, he could clearly see the shape of her ass.{/i}")
+    "i}When [player_name] opened the door, he found Alice in a bizarre pose.{/i}"
+    "i}From his perspective, he could clearly see the shape of her ass.{/i}"
     Alice "Who is it?"
     Jimmy "Umm, hey, it's me."
     Alice "Oh my god, [player_name]!"

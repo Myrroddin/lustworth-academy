@@ -692,8 +692,10 @@ screen file_slots(title):
             xalign 0.93
 
             if not renpy.variant('web'):
-                $ text = "Save naming enabled" if persistent.save_naming else "Save naming disabled"
-                textbutton _(text) action ToggleField(persistent,"save_naming")
+                if persistent.save_naming:
+                    textbutton _("Save Naming Enabled") action ToggleField(persistent, "save_naming")
+                else:
+                    textbutton _("Save Naming Disabled") action ToggleField(persistent, "save_naming")
 
         fixed:
             ## This ensures the input will get the enter event before any of the
@@ -857,6 +859,13 @@ screen preferences():
                     label _("Quick Menu")
                     textbutton _("Enabled") action SetField(persistent, "quick_menu", True)
                     textbutton _("Disabled") action SetField(persistent, "quick_menu", False)
+
+                if not renpy.variant("web"):
+                    vbox:
+                        style_prefix "radio"
+                        label _("Save Naming")
+                        textbutton _("Enabled") action SetField(persistent, "save_naming", True)
+                        textbutton _("Disabled") action SetField(persistent, "save_naming", False)
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.

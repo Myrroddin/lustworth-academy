@@ -33,7 +33,7 @@ label boysdormplaza_loop:
     jump boysdormplaza_loop
 
 label boysdormplaza_observatory:
-    __("The observatory. I think that's where we have astronomy class.")
+    "The observatory. I think that's where we have astronomy class."
     jump boysdormplaza_loop
 
 label boysdormplaza_backalley:

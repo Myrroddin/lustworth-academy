@@ -44,19 +44,19 @@ label townhousejimmysroom_loop:
 label townhousejimmysroom_pc:
     if day3morning:
         if quests.blairUSB == SATISFIED:
-            __("Alright, let's get to business.")
+            "Alright, let's get to business."
             jump prologue_blairlesbianvideo
         elif quests.blairUSB != COMPLETE:
-            __("I need to find my USB stick before I can start using my computer.")
+            "I need to find my USB stick before I can start using my computer."
         else:
-            __("I'll have time to use my computer later.")
+            "I'll have time to use my computer later."
     elif day3afternoon and not prologue.dakotaJobOffer:
-        __("I'll have time to use my computer later.")
+        "I'll have time to use my computer later."
     elif day4night and not prologue.cassidyShower:
-        __("I need to take a shower first, but maybe I could use my PC for bit after.")
+        "I need to take a shower first, but maybe I could use my PC for bit after."
     else:
         if calendar.when[0] == PROLOGUE and not townhousejimmysroom.pcIntroCommentSaid:
-            __("Sigh. I think I finally have time to use my PC for a bit.")
+            "Sigh. I think I finally have time to use my PC for a bit."
             $ townhousejimmysroom.pcIntroCommentSaid = True
         call jimmyspc from _call_jimmyspc_2
     jump townhousejimmysroom_loop
@@ -64,12 +64,12 @@ label townhousejimmysroom_pc:
 label townhousejimmysroom_closet:
     show jimmy neutral with dissolve
     if day3morning and Jimmy.outfit == JIMMY_STEALTH:
-        __("It'll feel great to be in some fresh clothes again.")
+        "It'll feel great to be in some fresh clothes again."
         $ Jimmy.outfit = JIMMY_DEFAULT
         show jimmy smug with dissolve
-        __("That's better.")
+        "That's better."
     else:
-        __("I don't need to change clothes.")
+        "I don't need to change clothes."
     hide jimmy with dissolve
     jump townhousejimmysroom_loop
 
@@ -77,9 +77,9 @@ label townhousejimmysroom_bed:
     $ time = calendar.when[2]
     if prologue.complete == True:
         menu:
-            __("Take a nap") if calendar.when[2] < NIGHT and not day3evening:
+            "Take a nap" if calendar.when[2] < NIGHT and not day3evening:
                 jump nap_menu
-            __("Go to sleep") if not day3morning:
+            "Go to sleep" if not day3morning:
                 hide screen freeroamhud
                 if glob.halloweenEventComplete and not quests.drunkblair == COMPLETE:
                     jump blairdrunkscene
@@ -89,22 +89,22 @@ label townhousejimmysroom_bed:
                 else:
                     call sleep from _call_sleep_6
                 $ gotoscene('townhousejimmysroom', transition=fade)
-            __("Nevermind"):
+            "Nevermind":
                 jump townhousejimmysroom_loop
     elif day4night:
         if prologue.cassidyShower == True:
             jump prologue_day4end
         else:
-            __("Gotta take a shower first.")
+            "Gotta take a shower first."
     elif prologue.findtherope == True:
-        __("Alright, everything is ready. I'll wait 'til midnight to sneak out.")
+        "Alright, everything is ready. I'll wait 'til midnight to sneak out."
         $ prologue.afternoonNap = True
         call nexttime from _call_nexttime_27
         $ gotoscene('townhousejimmysroomnightinfiltration')
     elif prologue.findtherope == False:
-        __("I have things to do. I don't want to sleep now.")
+        "I have things to do. I don't want to sleep now."
     elif day4night and not prologue.cassidyShower:
-        __("I need to take a shower first, I'm all sweaty after working at the ranch.")
+        "I need to take a shower first, I'm all sweaty after working at the ranch."
     $ gotoscene('townhousejimmysroom')
 
 label townhousemondaymorning:
@@ -125,13 +125,13 @@ label townhousemondaymorning:
 label townhousejimmysroom_floorcrack:
     hide screen freeroamhud
     show cassidybedroomnightpeek with dissolve
-    __("Looks like Cassidy's not in her room right now.")
+    "Looks like Cassidy's not in her room right now."
     hide cassidybedroomnightpeek with dissolve
     jump townhousejimmysroom_loop
 
 label townhousejimmysroom_tohallway:
     if day3morning and Jimmy.outfit == JIMMY_STEALTH:
-        __("I should really change before I do anything else.")
+        "I should really change before I do anything else."
     else:
         $ gotoscene('townhousehallway')
     jump townhousejimmysroom_loop

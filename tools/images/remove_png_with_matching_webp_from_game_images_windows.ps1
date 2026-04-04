@@ -1,5 +1,6 @@
 param(
-    [switch]$DryRun
+    [switch]$DryRun,
+    [string]$GameRoot
 )
 
 $scriptPath = $MyInvocation.MyCommand.Path
@@ -36,6 +37,12 @@ $invokeArgs += $pythonScript
 
 if ($DryRun) {
     $invokeArgs += "--dry-run"
+}
+
+if ($GameRoot) {
+    $resolvedGameRoot = (Resolve-Path -LiteralPath $GameRoot -ErrorAction Stop).Path
+    $invokeArgs += "--game-root"
+    $invokeArgs += $resolvedGameRoot
 }
 
 & $pythonExe @invokeArgs

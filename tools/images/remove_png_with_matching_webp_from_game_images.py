@@ -8,8 +8,15 @@ from pathlib import Path
 
 
 SCRIPT_PATH = Path(__file__).resolve()
-REPO_ROOT = SCRIPT_PATH.parents[2]
-GAME_ROOT = REPO_ROOT / "game"
+DEFAULT_GAME_ROOT = SCRIPT_PATH.parents[2] / "game"
+
+KNOWN_MANUAL_REMOVALS: dict[str, str] = {
+    "game/gui/web/lustworthmaincoverclick.png": (
+        "Confirmed unused in the full install after a manual rename test. "
+        "Safe to remove manually, but this tool will not auto-delete it because "
+        "the same-name WebP has different dimensions."
+    ),
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -20,11 +27,65 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--game-root",
+        type=Path,
+        help="Path to the game directory to clean. Defaults to the repository game directory.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="List matching files without deleting them.",
     )
     return parser.parse_args()
+
+
+def resolve_game_root(game_root: Path | None) -> Path:
+    if game_root is None:
+        return DEFAULT_GAME_ROOT.resolve()
+
+    return game_root.expanduser().resolve()
+
+
+def get_display_root(game_root: Path) -> Path:
+    if game_root.name.lower() == "game":
+        return game_root.parent
+
+    return game_root
+
+
+def format_path(path: Path, display_root: Path) -> str:
+    try:
+        return path.relative_to(display_root).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def format_size(size: tuple[int, int]) -> str:
+    width, height = size
+    return f"{width}x{height}"
+
+
+def print_mismatched_files(
+    mismatched: list[tuple[Path, tuple[int, int], Path, tuple[int, int]]],
+    display_root: Path,
+) -> None:
+    if not mismatched:
+        return
+
+    print("Dimension mismatches:")
+
+    for png_path, png_size, webp_path, webp_size in mismatched:
+        relative_png_path = format_path(png_path, display_root)
+        relative_webp_path = format_path(webp_path, display_root)
+
+        print(
+            f"- {relative_png_path} ({format_size(png_size)}) != "
+            f"{relative_webp_path} ({format_size(webp_size)})"
+        )
+
+        note = KNOWN_MANUAL_REMOVALS.get(relative_png_path)
+        if note:
+            print(f"  Note: {note}")
 
 
 def read_png_size(path: Path) -> tuple[int, int]:
@@ -129,12 +190,16 @@ def find_removable_png_files(
     return removable, missing_webp, mismatched, errors
 
 
-def remove_png_files(png_files: list[Path], dry_run: bool) -> list[tuple[Path, OSError]]:
+def remove_png_files(
+    png_files: list[Path],
+    dry_run: bool,
+    display_root: Path,
+) -> list[tuple[Path, OSError]]:
     failures: list[tuple[Path, OSError]] = []
     action = "Would delete" if dry_run else "Deleting"
 
     for path in png_files:
-        relative_path = path.relative_to(REPO_ROOT).as_posix()
+        relative_path = format_path(path, display_root)
         print(f"{action}: {relative_path}")
 
         if dry_run:
@@ -150,25 +215,28 @@ def remove_png_files(png_files: list[Path], dry_run: bool) -> list[tuple[Path, O
 
 def main() -> int:
     args = parse_args()
+    game_root = resolve_game_root(args.game_root)
+    display_root = get_display_root(game_root)
 
-    if not GAME_ROOT.is_dir():
-        print(f"Game folder not found: {GAME_ROOT}", file=sys.stderr)
+    if not game_root.is_dir():
+        print(f"Game folder not found: {game_root}", file=sys.stderr)
         return 1
 
-    removable, missing_webp, mismatched, errors = find_removable_png_files(GAME_ROOT)
+    removable, missing_webp, mismatched, errors = find_removable_png_files(game_root)
 
     if errors:
         print(f"Failed image reads: {len(errors)}", file=sys.stderr)
         for path, exc in errors:
-            print(f"{path.relative_to(REPO_ROOT).as_posix()}: {exc}", file=sys.stderr)
+            print(f"{format_path(path, display_root)}: {exc}", file=sys.stderr)
         return 1
 
-    failures = remove_png_files(removable, args.dry_run)
+    failures = remove_png_files(removable, args.dry_run, display_root)
 
-    print(f"Scanned: {GAME_ROOT.relative_to(REPO_ROOT).as_posix()}")
+    print(f"Scanned: {format_path(game_root, display_root)}")
     print(f"Found matching PNG files: {len(removable)}")
     print(f"Skipped without WebP: {len(missing_webp)}")
     print(f"Skipped dimension mismatch: {len(mismatched)}")
+    print_mismatched_files(mismatched, display_root)
 
     if not removable:
         print("No matching PNG files found under game")
@@ -181,7 +249,7 @@ def main() -> int:
     if failures:
         print(f"Failed deletions: {len(failures)}", file=sys.stderr)
         for path, exc in failures:
-            print(f"{path.relative_to(REPO_ROOT).as_posix()}: {exc}", file=sys.stderr)
+            print(f"{format_path(path, display_root)}: {exc}", file=sys.stderr)
         return 1
 
     print("Deleted all matching PNG files successfully.")

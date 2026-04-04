@@ -43,39 +43,35 @@ label boysdormjimmysroom_loop:
 label boysdormjimmysroom_window:
     if quests.goodbyeWendy == ACTIVE:
         if calendar.when[2] in [NIGHT]:
-            __("Someone is coming...")
+            "Someone is coming..."
             jump wendygoodbyescene
     elif quests.fionaNightDate == ACTIVE:
         if calendar.when[1] != TUESDAY:
-            __("Fiona isn't coming until Tuesday.")
+            "Fiona isn't coming until Tuesday."
         elif calendar.when[2] != NIGHT:
-            __("Fiona won't be here until midnight.")
+            "Fiona won't be here until midnight."
         else:
             jump chapterone_fionanightdate
     elif calendar.when[2] in [MORNING, AFTERNOON]:
         if not boysdormjimmysroom.alwaysSunnyComment:
-                __("You know what they say - it's always sunny in Philadelphia.")
+            "You know what they say - it's always sunny in Philadelphia."
             $ boysdormjimmysroom.alwaysSunnyComment = True
         else:
-            else:
-                __("Sunny day.")
+            "Sunny day."
     elif calendar.when[2] == EVENING:
-        elif calendar.when[2] == EVENING:
-            __("It's getting dark out.")
+        "It's getting dark out."
     else:
-        else:
-            __("It's pitch black outside.")
+        "It's pitch black outside."
     jump boysdormjimmysroom_loop
 
 label boysdormjimmysroom_nightstand:
     if not boysdormjimmysroom.nightstandChecked:
-            __("What the?")
-            __("It's locked.")
-            __("I guess I need a key or something.")
+        "What the?"
+        "It's locked."
+        "I guess I need a key or something."
         $ boysdormjimmysroom.nightstandChecked = True
     else:
-        else:
-            __("It's locked.")
+        "It's locked."
     jump boysdormjimmysroom_loop
 
 label boysdormjimmysroom_closet:
@@ -84,14 +80,14 @@ label boysdormjimmysroom_closet:
 label boysdormjimmysroom_bed:
     $ time = calendar.when[2]
     if calendar.when[0] == PROLOGUE and time != NIGHT:
-        __("I'm not in the mood to sleep this early.")
+        "I'm not in the mood to sleep this early."
         jump boysdormjimmysroom_loop
     $ night1 = (calendar.when == (PROLOGUE, WEDNESDAY, NIGHT))
     $ night2 = (calendar.when == (PROLOGUE, THURSDAY, NIGHT))
     menu:
-        __("Take a nap") if time < NIGHT:
+        "Take a nap" if time < NIGHT:
             jump nap_menu
-        __("Go to sleep"):
+        "Go to sleep":
             if night1:
                 jump prologue_mysterygirlnight1
             elif night2:
@@ -99,7 +95,7 @@ label boysdormjimmysroom_bed:
             # TODO: actually implement weekends
             elif calendar.when[1] == FRIDAY:
                 menu:
-                    __("Skip the weekend?"):
+                    "Skip the weekend?":
                         hide screen freeroamhud
                         stop music
                         scene black with fade
@@ -108,7 +104,7 @@ label boysdormjimmysroom_bed:
                         call nextday from _call_nextday_2
                         call nextday from _call_nextday_3
                         call sleep from _call_sleep_1
-                    __("Go to town for the weekend"):
+                    "Go to town for the weekend":
                         $ Jimmy.outfit = JIMMY_DEFAULT
                         hide screen freeroamhud
                         $ intownmarker = True
@@ -126,22 +122,22 @@ label boysdormjimmysroom_bed:
                                 $ quests.drunkblair = SATISFIED
                         pause 0.8
                         $ gotoscene('townhouselivingroom', transition=fade)
-                    __("Nevermind"):
+                    "Nevermind":
                         jump boysdormjimmysroom_loop
             else:
                 call sleep from _call_sleep_5
-        __("Nevermind"):
+        "Nevermind":
             jump boysdormjimmysroom_loop
     $ gotoscene('boysdormjimmysroom', transition=fade)
 
 label boysdormjimmysroom_panties:
     if not boysdormjimmysroom.pantiesChecked:
-        __("She sure left in a hurry...")
-        __("Judging by the stain, she got really wet down there before taking them off.")
+        "She sure left in a hurry..."
+        "Judging by the stain, she got really wet down there before taking them off."
         $ boysdormjimmysroom.pantiesChecked = True
         jump boysdormjimmysroom_loop
     else:
-        __("These are Wendy's panties.")
+        "These are Wendy's panties."
         jump boysdormjimmysroom_loop
 
 label boysdormjimmysroom_angiesnote:
@@ -154,8 +150,8 @@ label boysdormjimmysroom_derbylaptop:
     if chapter1_freeroam_iscomplete:
         call jimmyspc from _call_jimmyspc
     else:
-        __("I'll have time to use my computer later.")
-        __("Right now I need to do something else.")
+        "I'll have time to use my computer later."
+        "Right now I need to do something else."
         jump boysdormjimmysroom_loop
 
 label boysdormjimmysroom_dearsantamark:
@@ -164,12 +160,11 @@ label boysdormjimmysroom_dearsantamark:
             jump finaltruth
         else:
             menu:
-                __("Jillian Secret Scene"):
+                "Jillian Secret Scene":
                     hide screen freeroamhud
                     call jillian_secretcowgirl_scene from _call_jillian_secretcowgirl_scene
                     jump boysdormjimmysroom_loop
-                __("Nevermind"):
-                    __("Nevermind"):
+                "Nevermind":
                     jump boysdormjimmysroom_loop
     else:
         call firstomen from _call_firstomen

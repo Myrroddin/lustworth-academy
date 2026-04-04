@@ -42,8 +42,8 @@ label infirmarynurseintro:
     Jimmy "Is there someone in here?"
     play sound "audio/sfx/surprisedhum.ogg"
     Vanessa "Just a moment!"
-    __("The voice came from behind a door at the back of the infirmary.")
-    __("Suddenly, a woman dressed in an especially tight suit came out of the room.")
+    "The voice came from behind a door at the back of the infirmary."
+    "Suddenly, a woman dressed in an especially tight suit came out of the room."
     play music "audio/music/funrocktheme01.ogg"
     show vanessa nurse coffee with dissolve
     play sound "audio/sfx/hey04.ogg"
@@ -82,7 +82,7 @@ label infirmarynurseintro:
     play sound "audio/sfx/alright03.ogg"
     Vanessa "Alright, thank you coming! See you later!"
     hide vanessa with vpunch
-    __("As quickly as she came out, she got back inside the room at the back.")
+    "As quickly as she came out, she got back inside the room at the back."
     Jimmy "Wow, that caffeine it's doing its work."
     Jimmy "Well, let's see if this cream helps Beatrix."
     $ quests.beatrixHerpes = SATISFIED

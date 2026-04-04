@@ -42,6 +42,6 @@ label schoolgroundspeacockplaza_toharrisonhouse:
     $ gotoscene('harrisonhouseexterior')
 
 label schoolgroundspeacockplaza_peacockstatue:
-    __("That statue is impressive.")
-    __("Is it made of gold?")
+    "That statue is impressive."
+    "Is it made of gold?"
     jump schoolgroundspeacockplaza_loop

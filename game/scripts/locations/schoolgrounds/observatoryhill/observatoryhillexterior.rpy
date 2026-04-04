@@ -32,14 +32,14 @@ label observatoryhillexterior_loop:
 label observatoryhillexterior_observatory:
     #if calendar.when[1:] == (WEDNESDAY, AFTERNOON):
         #jump astronomyclass
-    __("There is a note in the entrance.")
+    "There is a note in the entrance."
     show observatorynote with dissolve
-    __("...")
+    "..."
     hide observatorynote with dissolve
     jump observatoryhillexterior_loop
 
 label observatoryhillexterior_mountaintop:
-    __("It's a long way to the top...")
+    "It's a long way to the top..."
     jump observatoryhillexterior_loop
 
 label observatoryhillexterior_exit:

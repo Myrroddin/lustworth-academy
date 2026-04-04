@@ -36,7 +36,7 @@ label fionadialogue:
 
 label .dialogmenu:
     menu:
-        __("Reset Dad Revenge Quest (v0.5.4)") if quests.fionaDadTrouble == COMPLETE:
+        "Reset Dad Revenge Quest (v0.5.4)" if quests.fionaDadTrouble == COMPLETE:
             $ quests.fionaDadTrouble = ACTIVE
             $ quest.fionaheadmastertalk = False
             $ prefectpass = False
@@ -44,17 +44,17 @@ label .dialogmenu:
             call item_pickup(ItemHeadmasterKey) from _call_item_pickup_42
             $ Fiona.relPoints -= 2
             jump fionadadtroublequest
-        __("Headmaster Keys") if quests.fionaDadTrouble == SATISFIED:
+        "Headmaster Keys" if quests.fionaDadTrouble == SATISFIED:
             jump fionadadtroublequest
-        __("Beatrix's diary") if quests.fionaNightDate == COMPLETE and quests.beatrixDiary == ACTIVE:
+        "Beatrix's diary" if quests.fionaNightDate == COMPLETE and quests.beatrixDiary == ACTIVE:
             jump .beatrixdiary_dialogue
-        __("Padlock") if quests.fionaPadlock in [ACTIVE, SATISFIED]:
+        "Padlock" if quests.fionaPadlock in [ACTIVE, SATISFIED]:
             jump fionapadlockquest
-        __("Derek") if quests.fionaConfrontDerek in [ACTIVE, SATISFIED]:
+        "Derek" if quests.fionaConfrontDerek in [ACTIVE, SATISFIED]:
             jump fionaconfrontderekquest
-        __("Night date") if quests.fionaNightDate == ACTIVE:
+        "Night date" if quests.fionaNightDate == ACTIVE:
             jump fionanightdatequest
-        __("Nevermind"):
+        "Nevermind":
             pass
     $ gotoscene('girlsdormfrontgate')
 
@@ -149,7 +149,7 @@ label fionahalloweendialogue:
 
 label .dialogmenu:
     menu:
-        __("Ask about the drinks") if quests.fionaBartender != COMPLETE:
+        "Ask about the drinks" if quests.fionaBartender != COMPLETE:
             Jimmy "You know, I've been wondering what these kind of people drink."
             Jimmy "I mean, the people who live in a place like this."
             Fiona "Oh, well. They usually like cocktails with fruit juice or something sweet."
@@ -159,7 +159,7 @@ label .dialogmenu:
             Jimmy "Umm, okay. Thanks for the tip."
             $ quests.halloweenFruitPunch = SATISFIED
             jump .dialogmenu
-        __("Ask for a drink for Beatrix") if quests.beatrixAppleCider == ACTIVE:
+        "Ask for a drink for Beatrix" if quests.beatrixAppleCider == ACTIVE:
             Jimmy "Do you have anything without alcohol?"
             Fiona "Hmm, short answer, no."
             Fiona "Water? Maybe?"
@@ -168,7 +168,7 @@ label .dialogmenu:
             Fiona "Sorry, I don't have anything left. Used everything on the cocktails."
             Jimmy "Alright, no worries."
             jump .dialogmenu
-        __("Hang out") if quests.fionaBartender == LOCKED:
+        "Hang out" if quests.fionaBartender == LOCKED:
             jump fionabartenderquest
-        __("Nevermind"):
+        "Nevermind":
             $ gotoscene('harrisonhousebar')

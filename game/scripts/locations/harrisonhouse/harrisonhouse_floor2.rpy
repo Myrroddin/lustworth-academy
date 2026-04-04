@@ -38,7 +38,7 @@ label harrisonhousefloor2_upstairs:
     jump harrisonhousefloor2_loop
 
 label harrisonhousefloor2_bedroom1:
-    __("I hear voices inside, but it's closed.")
+    "I hear voices inside, but it's closed."
     jump harrisonhousefloor2_loop
 
 label harrisonhousefloor2_bedroom2:
@@ -48,8 +48,8 @@ label harrisonhousefloor2_bedroom2:
 
 label harrisonhousefloor2_office:
     if quests.beatrixHalloweenGrinding == COMPLETE:
-        __("The door won't open.")
-        __("Beatrix must've locked it.")
+        "The door won't open."
+        "Beatrix must've locked it."
     else:
         $ gotoscene('harrisonhouseoffice')
     jump harrisonhousefloor2_loop

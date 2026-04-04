@@ -41,41 +41,41 @@ label townhousejimmysroomnightinfiltration_loop:
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_window:
-    __("The night is dark and full of possibilities.")
+    "The night is dark and full of possibilities."
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_pc:
-    __("Don't have time for that.")
+    "Don't have time for that."
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_closet:
     if Jimmy.outfit == JIMMY_STEALTH:
-        __("I already have what I need.")
+        "I already have what I need."
     else:
         show jimmy neutral with dissolve
-        __("Let's get some proper clothes for tonight.")
-        __("I think this should work for a stealth mission.")
+        "Let's get some proper clothes for tonight."
+        "I think this should work for a stealth mission."
         $ Jimmy.outfit = JIMMY_STEALTH
         show jimmy smug with dissolve
-        __("Perfect.")
+        "Perfect."
     hide jimmy with dissolve
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_bed:
-    __("I have a plan tonight. I won't sleep 'til it's done.")
+    "I have a plan tonight. I won't sleep 'til it's done."
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_underbed:
     if quests.cassidyDildo == LOCKED:
-        __("I think there's something in the back. It looks like it's made of rubber.")
-        __("...I'm not gonna touch it.")
+        "I think there's something in the back. It looks like it's made of rubber."
+        "...I'm not gonna touch it."
     elif quests.cassidyDildo == ACTIVE:
-        __("I think that's Cassidy's dildo back there.")
+        "I think that's Cassidy's dildo back there."
         call item_pickup(ItemCassidyDildo) from _call_item_pickup_13
-        __("She is so dirty...")
+        "She is so dirty..."
         $ quests.cassidyDildo = SATISFIED
     else:
-        __("No monsters.")
+        "No monsters."
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_floorcrack:
@@ -85,9 +85,9 @@ label townhousejimmysroomnightinfiltration_floorcrack:
         hide screen freeroamhud
         show cassidybedroomnightpeek with dissolve
         if townhousehallwayfirstnight.cassidyRoomChecked == True:
-            __("I can see Cassidy's bedroom on the other side.")
+            "I can see Cassidy's bedroom on the other side."
         else:
-            __("I can see Cassidy's bedroom on the other side.")
+            "I can see Cassidy's bedroom on the other side."
     jump townhousejimmysroomnightinfiltration_loop
 
 label townhousejimmysroomnightinfiltration_tohallway:

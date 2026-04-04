@@ -75,14 +75,14 @@ label rpgcampaignintro:
     show beatrix uniform arm with dissolve
     Beatrix "Well, this is as far as you can go, Bard of the West Mountains."
     Beatrix smile "I wish you could come up. If there was a way for you to sneak in, like the last time..."
-    __("{i}[player_name] leans against the wall, crossing his arms, a smirk playing on his lips.{/i}")
+    "{i}[player_name] leans against the wall, crossing his arms, a smirk playing on his lips.{/i}"
     Jimmy "I don't know what you're talking about."
     play sound "audio/sfx/hmm01.ogg"
     Beatrix "Well, just wait for me here, I guess..."
-    __("{i}She's definetely inviting me in, thought [player_name], while Beatrix got inside the building looking back at him several times.{/i}")
+    "{i}She's definetely inviting me in, thought [player_name], while Beatrix got inside the building looking back at him several times.{/i}"
     play music MUSIC_SNEAK_THEME
     scene girlsdormpipeclimb with fade
-    __("{i}[player_name] reaches the same spot, looking up at the high window near the attic where he snuck in before.{/i}")
+    "{i}[player_name] reaches the same spot, looking up at the high window near the attic where he snuck in before.{/i}"
     Jimmy "Well, should I do this, again?"
     Jimmy "If I get caught..."
     Jimmy "Fuck it, I'm already here and I won't get another chance like this with Metal Mouth, ha, ha."
@@ -97,11 +97,11 @@ label rpgcampaignintro:
     play sound "audio/sfx/highheels.ogg"
     Jimmy "Someone is coming up the stairs..."
     play sound "audio/sfx/dooropen01.ogg"
-    __("{i}Suddenly, a door opened up next the [player_name] and he felt a hand pulling his arm inside a bedroom.{/i}")
+    "{i}Suddenly, a door opened up next the [player_name] and he felt a hand pulling his arm inside a bedroom.{/i}"
     stop music
     scene beatrixbedroom01 with vpunch
     play sound "audio/sfx/doorclose01.ogg"
-    __("{i}The bedroom was meticulously tidy, a faint scent of lavender and something a bit off, like a mix of chemicals.{/i}")
+    "{i}The bedroom was meticulously tidy, a faint scent of lavender and something a bit off, like a mix of chemicals.{/i}"
     play sound "audio/sfx/surprisedhum.ogg"
     Beatrix "I thought you weren't going to come in, he, he."
     show beatrix underwear neutral with dissolve
@@ -115,14 +115,14 @@ label rpgcampaignintro:
     Beatrix "..."
     scene beatrixfirstkiss01 with fade
     play music MUSIC_TENDER01_THEME
-    __("{i}[player_name] took a step closer, then another, getting so close to her that he could feel her breath.{/i}")
+    "{i}[player_name] took a step closer, then another, getting so close to her that he could feel her breath.{/i}"
     Beatrix "You shouldn't be here..."
-    __("{i}[player_name] reaches out a hand, not for the crown, but to gently cup her cheek, his thumb brushing over the spot where her allergy had been.{/i}")
+    "{i}[player_name] reaches out a hand, not for the crown, but to gently cup her cheek, his thumb brushing over the spot where her allergy had been.{/i}"
     Beatrix "This is..."
     play sound "audio/sfx/kiss01.ogg"
     scene beatrixfirstkiss02 with fade
-    __("{i}As he leaned in slowly, her eyes opened wide and their lips met in a soft and hesitant kiss.{/i}")
-    __("{i}Time stopped for them, a couple of seconds. At least, that's how it felt for them.{/i}")
+    "{i}As he leaned in slowly, her eyes opened wide and their lips met in a soft and hesitant kiss.{/i}"
+    "{i}Time stopped for them, a couple of seconds. At least, that's how it felt for them.{/i}"
     scene beatrixbedroom01 with fade
     show beatrix underwear smile with dissolve
     play sound "audio/sfx/gasp01.ogg"
@@ -165,8 +165,8 @@ label rpgcampaignintro:
     Jimmy "I have to get out here, fast."
     scene girldormattic with fade
     play sound "audio/sfx/run01.ogg"
-    __("{i}[player_name] made his way up to the attic once again carrying a bunch of bedsheets.{/i}")
-    __("{i}He started making the improvised rope, but didn't realized there was someone else there with him.{/i}")
+    "{i}[player_name] made his way up to the attic once again carrying a bunch of bedsheets.{/i}"
+    "{i}He started making the improvised rope, but didn't realized there was someone else there with him.{/i}"
     play sound "audio/sfx/gasp02.ogg"
     Alice "[player_name]?"
     show aliceattictalk with dissolve
@@ -194,12 +194,12 @@ label rpgcampaignintro:
     Alice "Okay, [roommate_male]."
     Jimmy "Thanks, little [roommate_female]."
     scene girlsdormsheetsclimb with fade
-    __("{i}[player_name] didn't have more time to think about it.{/i}")
+    "{i}[player_name] didn't have more time to think about it.{/i}"
     play sound "audio/sfx/undress01.ogg"
-    __("{i}Alice waited for him to start climbing down and pulled the rope up when he reached the ground.{/i}")
+    "{i}Alice waited for him to start climbing down and pulled the rope up when he reached the ground.{/i}"
     show girlsdormpipeclimbbroken with dissolve
     play sound "audio/sfx/run01.ogg"
-    __("{i}[player_name] gave her a thumbs up and fled the place to a safe ground as fast as he could.{/i}")
+    "{i}[player_name] gave her a thumbs up and fled the place to a safe ground as fast as he could.{/i}"
     $ Beatrix.relPoints += 1
     $ quests.beatrixGetlaid = SATISFIED
     $ BeatrixDaylimit = True
@@ -211,12 +211,12 @@ label rpgcampaignpromo:
     play music "audio/music/battlebackground02.ogg"
     scene extendededitionpromo with fade
     $ renpy.pause()
-    __("{i}You have reached the end of v0.5.4 Standard Edition. Beyond this point, the game hasn't been updated.{/i}")
+    "{i}You have reached the end of v0.5.4 Standard Edition. Beyond this point, the game hasn't been updated.{/i}"
     scene rpgcampaignpreview with fade
-    __("{i}The Extended Edition of v0.5.4 will be available on Patreon on December 21st.{/i}")
-    __("{i}That's right, before Jesus Christ is born so he doesn't get to watch you playing this... *wink* *wink*.{/i}")
-    __("{i}It features the new fully animated scenes for Fiona and Beatrix as well as the RPG Campaign sequence with the nerds.{/i}")
-    __("{i}Happy Holidays, everyone!{/i}")
+    "{i}The Extended Edition of v0.5.4 will be available on Patreon on December 21st.{/i}"
+    "{i}That's right, before Jesus Christ is born so he doesn't get to watch you playing this... *wink* *wink*.{/i}"
+    "{i}It features the new fully animated scenes for Fiona and Beatrix as well as the RPG Campaign sequence with the nerds.{/i}"
+    "{i}Happy Holidays, everyone!{/i}"
     $ gotoscene('schoollibrarymainhall')
 
 
@@ -243,8 +243,8 @@ label rpgcampaignact1:
     Algie "You are the Bard of the West Mountains, remember? Here is your character sheet."
     show rpgsheetname01 with dissolve
     Algie "Put your name, here..."
-    __("{i}What's your name, Bard of the West Mountains?{/i}")
-    $ bard_name = renpy.input("Bard name (default: Spotifus)")
+    "{i}What's your name, Bard of the West Mountains?{/i}"
+    $ bard_name = renpy.input(__("Bard name (default: Spotifus)"))
     $ bard_name = bard_name.strip()
     if bard_name == '':
         $ bard_name = "Spotifus"
@@ -346,18 +346,18 @@ label rpgcampaignact1:
     Earnest "What do you do?"
     show jimmy bard neutral with dissolve
     menu:
-        __("Sing something?"):
+        "Sing something?":
             Jimmy "Sing something?"
             Earnest "Uh... okay."
             Earnest "I guess you try to confuse the enemy? Umm, throw a d12"
-        __("Kick it in the balls!"):
+        "Kick it in the balls!":
             Jimmy "Kick it in the balls!"
             Earnest "Tentacle Globins don't have balls, [bard_name]."
             Jimmy "Well, I will kick it on the most sensible part while singing."
             Earnest "Ugh, alright..."
             Earnest "Throw a d16."
     play sound "audio/sfx/diceroll01.ogg"
-    __("{i}[bard_name] rolled the dice and it landed on 1.{/i}")
+    "{i}[bard_name] rolled the dice and it landed on 1.{/i}"
     Jimmy "Aha! I got a 1! Is that good?"
     play sound "audio/sfx/algieno.ogg"
     Algie "No."
@@ -408,7 +408,7 @@ label rpgcampaignact2:
     stop music
     play music "audio/music/epictheme03.ogg"
     scene rpgsewersintro with fade
-    __("{i}Making their way through the destroyed streets of the Hardon Citadel, the group finds an entrance to a totally gross sewer tunnel.{/i}")
+    "{i}Making their way through the destroyed streets of the Hardon Citadel, the group finds an entrance to a totally gross sewer tunnel.{/i}"
     Earnest "The party descends into The Rectum of the City."
     Algie "These sewers also got corrupted by the darkness energy."
     Algie "It creates a natural mana hazard. Every turn you spend here, you must roll a Constitution Save or vomit."
@@ -460,7 +460,7 @@ label rpgcampaignact2:
     Jimmy "I just want to get this over with so I can see Beatrix's costume."
     Earnest "Roll Charisma."
     play sound "audio/sfx/diceroll01.ogg"
-    __("[bard_name] picks up the dice. He shakes them vigorously. He rolls... Natural 20!")
+    "[bard_name] picks up the dice. He shakes them vigorously. He rolls... Natural 20!"
     stop music
     play music "audio/sfx/carelesswhisper.ogg"
     scene rpgdungeonjazzmadness with vpunch
@@ -533,8 +533,8 @@ label rpgcampaignact3:
     Miku "What is that coming down from the sky!!?"
     play sound "audio/sfx/swordslash01.ogg"
     scene rpgthroneroomslayer with vpunch
-    __("{i}The roof of the throne room ilumminates! A celestial figure descends!{/i}")
-    __("{i}Everyone is confused. Earnest, the Game Master, lays down on the ground as the mysterious figure shows himself.{/i}")
+    "{i}The roof of the throne room ilumminates! A celestial figure descends!{/i}"
+    "{i}Everyone is confused. Earnest, the Game Master, lays down on the ground as the mysterious figure shows himself.{/i}"
     play sound "audio/sfx/stopmusiceffect.ogg"
     play music "audio/music/funnymoment03.ogg"
     show derek arms with vpunch
@@ -574,8 +574,8 @@ label derekdefeatedrpgending:
     Earnest "Session dismissed! Good game, everyone!"
     stop music
     show librarynerdcliquehq with fade
-    __("{i}The nerds started packing up as Algie ran to the bathroom.{/i}")
-    __("{i}Slowly, they all filter out of the library basement, leaving only the mess of chips, dice, and...{/i}")
+    "{i}The nerds started packing up as Algie ran to the bathroom.{/i}"
+    "{i}Slowly, they all filter out of the library basement, leaving only the mess of chips, dice, and...{/i}"
     scene rpgthroneroomempty with fade
     show beatrix oracle neutral with dissolve
     play music "audio/music/tendertheme02.ogg"
@@ -588,16 +588,16 @@ label derekdefeatedrpgending:
     Beatrix "It was... tolerable."
     Beatrix "You defended us. That is something I will never forget."
     play sound "audio/sfx/girlsigh01.ogg"
-    __("{i}She looks up at him revealing a genuine, slightly nervous smile.{/i}")
+    "{i}She looks up at him revealing a genuine, slightly nervous smile.{/i}"
     call beatrix_beatrixfinalreward_scene from _call_beatrix_beatrixfinalreward_scene
     $ quests.beatrixGetlaid = COMPLETE
     hide screen freeroamhud with None
     play music "audio/music/epictheme01.ogg"
     scene v0_5_5preview with fade
     $ renpy.pause()
-    __("{i}You have reached the end of v0.5.4 Extended Edition. Beyond this point, the game hasn't been updated.{/i}")
-    __("{i}v0.5.5 will be launching February 20th.{/i}")
-    __("{i}The new update is set to include new sequences and sex scenes with your [landlady_name] and [roommate_female]s during the weekend at the Town House.{/i}")
-    __("{i}Cheers, everyone!{/i}")
+    "{i}You have reached the end of v0.5.4 Extended Edition. Beyond this point, the game hasn't been updated.{/i}"
+    "{i}v0.5.5 will be launching February 20th.{/i}"
+    "{i}The new update is set to include new sequences and sex scenes with your [landlady_name] and [roommate_female]s during the weekend at the Town House.{/i}"
+    "{i}Cheers, everyone!{/i}"
     call nexttime from _call_nexttime_55
     $ gotoscene('schoollibrarymainhall')

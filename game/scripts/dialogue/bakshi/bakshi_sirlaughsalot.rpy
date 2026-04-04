@@ -28,7 +28,7 @@ label .intro:
     Aurora "He is de emotional cornerstone of de play. Our sacred squeaker!"
     play sound "audio/sfx/chickensound01.ogg"
     show sirlaughsalotthrone01 with fade
-    __("{i}Suddenly, Miss Bakshi pulled out a tiny throne made of recycled materials that was conspicuously empty.{/i}")
+    "{i}Suddenly, Miss Bakshi pulled out a tiny throne made of recycled materials that was conspicuously empty.{/i}"
     Aurora "I could dalk to Eunice for the role, but as long as Sir Laughsalot is missing, Leddicia's rage feels... emotionally unsupporded."
     Jimmy "What happened to Sir Laughsalot?"
     Aurora "Rumors are dramatic, but he was last seen in de Auditorium backstage."

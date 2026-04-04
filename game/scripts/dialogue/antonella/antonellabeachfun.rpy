@@ -3,7 +3,7 @@ default quests.antonellaBeachFun = LOCKED
 label familybeachtripintro:
     hide screen freeroamhud
     $ showscene('townhousebackyard', transition=fade) 
-    __("{i}That day the air smelled like lemon-scented detergent mixed with cigarette smoke.{/i}")
+    "{i}That day the air smelled like lemon-scented detergent mixed with cigarette smoke.{/i}"
     play sound "audio/sfx/hum01.ogg"
     show kassandrahangingclothes01 with dissolve
     Kassandra "Nella, please. Don't smoke near the clothes, they will stink like nicotine."
@@ -47,7 +47,7 @@ label familybeachtrip02:
     hide screen freeroamhud
     play music "audio/music/funrocktheme02.ogg"
     scene familybeachtrip02 with fade
-    __("{i}Antonella was laying down in the front of the Mini Cooper looking like a diva, while Kassandra begged her to help with the baggage.{/i}")
+    "{i}Antonella was laying down in the front of the Mini Cooper looking like a diva, while Kassandra begged her to help with the baggage.{/i}"
     Antonella "Take a picture, Kass!"
     Antonella "I bet I could have been a super model in another life..."
     Antonella "[player_name]! Finally!"
@@ -71,19 +71,19 @@ label familybeachtrip02:
     scene laterthatday with fade
     scene familybeachtrip03 with fade
     play music MUSIC_SEASIDEAMBIENCEDAY_THEME
-    __("{i}A couple of hours later, the sun was a hammer.{/i}")
+    "{i}A couple of hours later, the sun was a hammer.{/i}"
     play sound "audio/sfx/weirdlaugh.ogg"
-    __("{i}Antonella was three margaritas deep into a very vocal lecture on why the Mayor should be a woman.{/i}")
+    "{i}Antonella was three margaritas deep into a very vocal lecture on why the Mayor should be a woman.{/i}"
     Jimmy "..."
     Antonella "Oh, [player_name], sexy boy. Be a dear and do some manual labor."
     Antonella "My back is starting to feel like a well-done steak, and only you can get to the 'danger zones'."
-    __("{i}Antonella tossed a bottle of SPF 50 to [player_name]. It was warm from the sun, or the margaritas. Hard to tell.{/i}")
+    "{i}Antonella tossed a bottle of SPF 50 to [player_name]. It was warm from the sun, or the margaritas. Hard to tell.{/i}"
     play sound "audio/sfx/frustratedhum.ogg"
     Kassandra "I think I'm going to take a bath. Talking about politics is a bit off for the beach."
     Alice "I'm going with you, mom!"
     play sound "audio/sfx/sexyintro.ogg"
     scene familybeachtrip04 with fade
-    __("{i}[player_name] knelt down. Her skin was hot, smelling like coconut.{/i}")
+    "{i}[player_name] knelt down. Her skin was hot, smelling like coconut.{/i}"
     "{i}As he spread the lotion, she let out a long, exaggerated sigh that made a nearby family look at them in a weird manner.{/i}"
     play sound "audio/sfx/mh1.ogg"
     Antonella "You've got strong hands, kid."
@@ -141,7 +141,7 @@ label familybeachantonellascene:
     Jimmy "Don't worry, Kassandra won't know a thing."
     Antonella neutral "Come on. Let's take a walk."
     Antonella "This beach has 'hidden spots' where people go to forget their marriage vows."
-    __("{i}[player_name] opened his eyes wide in curiosity as they took a stroll along the shore.{/i}")
+    "{i}[player_name] opened his eyes wide in curiosity as they took a stroll along the shore.{/i}"
     call antonella_hiddenbeachhandjob_scene from _call_antonella_hiddenbeachhandjob_scene
     call nexttime from _call_nexttime_58
     stop music
@@ -151,7 +151,7 @@ label familybeachantonellascene:
     $ showscene('seasideareamap', transition=fade)
     play music MUSIC_ANTONELLA_THEME
     show kassandra bikini neutral with dissolve
-    __("{i}They walked back to the main area. Kassandra was packing some stuff and Alice was staring at the horizon.{/i}")
+    "{i}They walked back to the main area. Kassandra was packing some stuff and Alice was staring at the horizon.{/i}"
     Kassandra "There you two where gone for a while. Where have you been?"
     play sound "audio/sfx/femaleclearthroat.ogg"
     show antonella bikini cum with dissolve
@@ -161,6 +161,6 @@ label familybeachantonellascene:
     Antonella "Oh, silly me. That must be some Piña Colada. It's the milk, darling, is very thick."
     Antonella "Let's move. I need to get the sand of my butt as soon as possible."
     hide kassandra
-    __("{i}The beach trip was over, but things were getting interesting. The 'deal' between Antonella and [player_name] was sealed, for better or worse.{/i}")
+    "{i}The beach trip was over, but things were getting interesting. The 'deal' between Antonella and [player_name] was sealed, for better or worse.{/i}"
     $ quests.antonellaBeachFun = COMPLETE
     $ gotoscene('seasideareamap')

@@ -4,22 +4,22 @@ label dormwardrobe_costume(costume, narration, oldOutfit=None):
         $ oldOutfit = JIMMY_UNIFORM
     $ Jimmy.outfit = costume
     show jimmy smug with dissolve
-    __(narration)
+    $ renpy.say(None, narration)
     if glob.halloweenEventComplete:
         menu:
-            __("Replay the Halloween event?")
-            __("Yes"):
+            "Replay the Halloween event?"
+            "Yes":
                 jump skip_to_halloween
-            __("No"):
+            "No":
                 $ Jimmy.outfit = oldOutfit
                 jump boysdormjimmysroom_closet
     elif not halloween:
-        __("But I should wait until the night of the Halloween party to change into my costume.")
+        "But I should wait until the night of the Halloween party to change into my costume."
         menu:
-            __("Skip ahead to Friday night?")
-            __("Yes"):
+            "Skip ahead to Friday night?"
+            "Yes":
                 jump skip_to_halloween
-            __("No"):
+            "No":
                 $ Jimmy.outfit = oldOutfit
                 jump boysdormjimmysroom_closet
 
@@ -55,7 +55,7 @@ label dormwardrobe_loop:
 label dormwardrobe_yellowjacket:
     $ Jimmy.outfit = JIMMY_DEFAULT
     show jimmy smug with dissolve
-    __("I like this jacket, makes me look buff.")
+    "I like this jacket, makes me look buff."
     $ gotoscene('boysdormjimmysroom', transition=fade)
 
 label dormwardrobe_uniform01:
@@ -68,19 +68,19 @@ label dormwardrobe_uniform01:
         $ jimmynewuniform = True
     $ Jimmy.outfit = JIMMY_UNIFORM
     show jimmy smug with dissolve
-    __("Alright, it fits pretty well.")
+    "Alright, it fits pretty well."
     $ gotoscene('boysdormjimmysroom', transition=fade)
 
 label dormwardrobe_shaggycostume:
-    call dormwardrobe_costume(JIMMY_SHAGGY, "Looks good...")
+    call dormwardrobe_costume(JIMMY_SHAGGY, _("Looks good..."))
 
 label dormwardrobe_piratecostume:
     $ oldOutfit = Jimmy.outfit
-    call dormwardrobe_costume(JIMMY_PIRATE, "Looks good.", oldOutfit)
+    call dormwardrobe_costume(JIMMY_PIRATE, _("Looks good."), oldOutfit)
 
 label dormwardrobe_homelandercostume:
     $ oldOutfit = Jimmy.outfit
-    call dormwardrobe_costume(JIMMY_HOMELANDER, "Looks good.", oldOutfit)
+    call dormwardrobe_costume(JIMMY_HOMELANDER, _("Looks good."), oldOutfit)
 
 label skip_to_halloween:
     $ halloween = (calendar.when == (CHAPTER_1, FRIDAY, NIGHT))

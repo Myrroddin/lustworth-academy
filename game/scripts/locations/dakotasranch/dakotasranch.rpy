@@ -34,15 +34,15 @@ label dakotasranch_loop:
     jump dakotasranch_loop
 
 label dakotasranch_tree:
-    __("How do you like them apples?")
+    "How do you like them apples?"
     jump dakotasranch_loop
 
 label dakotasranch_barn:
     if prologue.complete:
         menu:
-            __("Stack some hay (25$)"):
+            "Stack some hay (25$)":
                 if WorkDaylimit == False:
-                    __("Nice work doing nothing (for now)")
+                    "Nice work doing nothing (for now)"
                     play sound "audio/sfx/moneyget.ogg"
                     $ Jimmy.money += 25
                     call nexttime from _call_nexttime_37
@@ -51,17 +51,17 @@ label dakotasranch_barn:
                 else:
                     Jimmy "Already worked today."
                     jump dakotasranch_loop
-            __("Nevermind"):
+            "Nevermind":
                 jump dakotasranch_loop            
     elif day4morning:
         jump prologue_dakotaranchbarnintro
     else:
-        __("Already did my job for the day.")
+        "Already did my job for the day."
     jump dakotasranch_loop
 
 label dakotasranch_house:
     if day4morning:
-        __("I should go to the barn and do what I came to do.")
+        "I should go to the barn and do what I came to do."
     else:
         Developer "Coming soon."
     jump dakotasranch_loop
@@ -69,37 +69,37 @@ label dakotasranch_house:
 label dakotasranch_shed:
     if prologue.complete:
         menu:
-            __("Cucumber Fun (v0.40.8)"):
+            "Cucumber Fun (v0.40.8)":
                 $ showscene('dakotasranch', transition=fade)
-                __("...I think I hear voices coming from inside the shed.")
+                "...I think I hear voices coming from inside the shed."
                 hide screen freeroamhud
                 scene farmshedintro with fade
                 play music MUSIC_SNEAK_THEME
-                __("{i}The shed was packed with boxes, shelves, and tools.{/i}")
-                __("{i}[player_name] followed the voices coming from the back, trying not to be heard.{/i}")
+                "{i}The shed was packed with boxes, shelves, and tools.{/i}"
+                "{i}[player_name] followed the voices coming from the back, trying not to be heard.{/i}"
                 Barbara "Come on, Sally!"
                 Barbara "That cucumber looks so tasty."
                 Sally "Don't rush me, Barbara. I'm really tight down there."
-                __("What are they talking about?")
-                __("{i}When [player_name] saw them, his eyes opened wide.{/i}")
+                "What are they talking about?"
+                "{i}When [player_name] saw them, his eyes opened wide.{/i}"
                 play sound SOUND_RECORD_SCRATCH
                 call barbara_cucumberstrapon_scene from _call_barbara_cucumberstrapon_scene
-                __("{i}After watching for a few more moments, [player_name] made his way out before they caught him.{/i}")
+                "{i}After watching for a few more moments, [player_name] made his way out before they caught him.{/i}"
                 jump dakotasranch_loop
-            __("Nevermind"):
+            "Nevermind":
                 jump dakotasranch_loop
     elif day4morning:
-        __("I should go to the barn and do what I came to do.")
+        "I should go to the barn and do what I came to do."
     else:
-        __("The shed is locked.")
+        "The shed is locked."
     jump dakotasranch_loop
 
 label dakotasranch_truck:
     if day4morning:
-        __("I didn't come all the way here to leave empty-handed.")
+        "I didn't come all the way here to leave empty-handed."
     else:
         menu:
-            __("Leave"):
+            "Leave":
                 if prologue.complete:
                     show dakota neutral with dissolve
                     Dakota "Howdy pardner. Thanks for your help today."
@@ -118,11 +118,11 @@ label dakotasranch_truck:
                     $ gotoscene('townhouselivingroom')
                 else:
                     jump prologue_leaveranch
-            __("Stay"):
+            "Stay":
                 jump dakotasranch_loop
     jump dakotasranch_loop
 
 label dakotasranch_lake:
-    __("That lake is huge.")
-    __("Reminds me of San Pestillo.")
+    "That lake is huge."
+    "Reminds me of San Pestillo."
     jump dakotasranch_loop

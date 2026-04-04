@@ -36,31 +36,31 @@ label policestationcellseast_loop:
     #jump policestationcellseast_loop
 
 label policestationcellseast_medal:
-    __("\"Medal of Honor granted to Dr. Moreau.\"")
+    "\"Medal of Honor granted to Dr. Moreau.\""
     jump policestationcellseast_loop
 
 label policestationcellseast_poster:
-    __("\"Jack Donaguy. A brilliant future for our town.\"")
-    __("Yeah, right.")
+    "\"Jack Donaguy. A brilliant future for our town.\""
+    "Yeah, right."
     jump policestationcellseast_loop
 
 label policestationcellseast_map:
-    __("Hey, there is a map of Peacock Valley on the screen.")
-    __("Let's see. The academy is in the lower right...")
-    __("There's a residential area to the west...")
-    __("The carnival fair is near the coast, by the docks...")
-    __("And there's an industrial area north of the academy. There's an asylum there. Interesting.")
+    "Hey, there is a map of Peacock Valley on the screen."
+    "Let's see. The academy is in the lower right..."
+    "There's a residential area to the west..."
+    "The carnival fair is near the coast, by the docks..."
+    "And there's an industrial area north of the academy. There's an asylum there. Interesting."
     jump policestationcellseast_loop
 
 label policestationcellseast_tomorgue:
-    __("The door is locked. Looks like it leads to the morgue.")
+    "The door is locked. Looks like it leads to the morgue."
     jump policestationcellseast_loop
 
 label policestationcellseast_stairs:
     $ gotoscene('policestationfloor1')
 
 label policestationcellseast_clothes:
-    __("Medic robes, must be from the guy that runs the morgue.")
+    "Medic robes, must be from the guy that runs the morgue."
     jump policestationcellseast_loop
 
 label policestationcellseast_tocellswest:

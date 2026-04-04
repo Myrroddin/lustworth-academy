@@ -22,7 +22,7 @@ label .slow:
     Cassidy "Yes, it feels soo good..."
     Cassidy "My clit is vibrating so hard, I feel I'm gonna explode any moment."
     menu:
-        __("Faster"):
+        "Faster":
             jump .fast
 
 label .fast:
@@ -30,19 +30,19 @@ label .fast:
     Cassidy "YES! YES! YES! Fuck, I can't make too much noise or Alice is going to notice."
     Cassidy "Fuuuuuuuuuckinggg yeeesss!"
     menu:
-        __("Slower"):
+        "Slower":
             jump .slow
-        __("Finish"):
+        "Finish":
             jump .finish
 
 label .finish:
     Cassidy "I'm cumming! I'm cumming!"
     scene cassidydildofrontcum with vpunch
-    __("{i}Cassidy trembled so hard the entire bed moved from side to side.{/i}")
+    "{i}Cassidy trembled so hard the entire bed moved from side to side.{/i}"
     Cassidy "Wow, that was so good."
     Cassidy "Now I can sleep thanks to [player_name]."
     Cassidy "Maybe one of this days I could even let him watch..."
-    __("Ha, if only you knew.")
+    "Ha, if only you knew."
     $ townhousehallwayfirstnight.cassidyRoomChecked = True
     if cassidygallery == True:
         call screen cassidygallery

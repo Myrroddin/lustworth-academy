@@ -50,25 +50,25 @@ label wallofprankmasters_exit2:
 label wallofprankmasters_secretpassagelock:
     if not wallofprankmasters.secretPassage:
         if not sexscenes.angiesNote:
-            __("If you don't have an invitation, you can't join the fornication.")
+            "If you don't have an invitation, you can't join the fornication."
             jump wallofprankmasters_loop
         else:
-            __("Welcome, fellow traveller.")
+            "Welcome, fellow traveller."
             jump wallofprankmasters_secretpassage
-    __("Welcome, fellow traveller.")
+    "Welcome, fellow traveller."
     jump wallofprankmasters_secretpassage
 
 label wallofprankmasters_secretpassage:
     scene secretpassagedark01 with fade
     $ quick_menu = True
     if not wallofprankmasters.secretPassage:
-        __("{i}[player_name] didn't know what secrets were hiding below the depths of the school grounds.{/i}")
-        __("{i}It was too dark to distinguish anything but a dim light that led to an exit up ahead.{/i}")
-        __("Those are some weird mushrooms...")
-        __("And believe me, I've seen a bunch.")
-        __("I wonder what I can find in these caverns.")
-        __("But it's too dark to explore now.")
-        __("I better get out of here.")
+        "{i}[player_name] didn't know what secrets were hiding below the depths of the school grounds.{/i}"
+        "{i}It was too dark to distinguish anything but a dim light that led to an exit up ahead.{/i}"
+        "Those are some weird mushrooms..."
+        "And believe me, I've seen a bunch."
+        "I wonder what I can find in these caverns."
+        "But it's too dark to explore now."
+        "I better get out of here."
         $ wallofprankmasters.secretPassage = True
     else:
         pause 0.8

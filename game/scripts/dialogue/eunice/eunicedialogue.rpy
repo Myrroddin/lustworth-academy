@@ -37,6 +37,6 @@ label eunicedialogue:
 
 label .dialogmenu:
     menu:
-        __("Nevermind"):
+        "Nevermind":
             pass
     $ gotoscene('mainbuildingcafeteria')

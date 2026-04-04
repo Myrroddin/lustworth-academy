@@ -10,7 +10,7 @@ label cassidydialogue:
 
 label .dialogmenu:
     menu:
-        __("Nevermind."):
+        "Nevermind.":
             pass
     $ gotoscene('townhousehallway')
 

@@ -25,10 +25,10 @@ init 1 python:
 #LABELS
 label policestationfloor2:
     if quests.grantHoboBag == SATISFIED and not policestationfloor2.grantBagComment:
-        __("Man, I thought sneaking into the mayor's mansion was an adrenaline rush.")
-        __("But sneaking into a police officer's office WHILE she was in there?")
-        __("I thought my heart was gonna burst out of my chest.")
-        __("Now I just need to return this to Grant and I can get out of here.")
+        "Man, I thought sneaking into the mayor's mansion was an adrenaline rush."
+        "But sneaking into a police officer's office WHILE she was in there?"
+        "I thought my heart was gonna burst out of my chest."
+        "Now I just need to return this to Grant and I can get out of here."
         $ policestationfloor2.grantBagComment = True
     jump policestationfloor2_loop
 
@@ -38,18 +38,18 @@ label policestationfloor2_loop:
     jump policestationfloor2_loop
 
 label policestationfloor2_interrogationroom:
-    __("\"Interrogation.\"")
-    __("Locked.")
+    "\"Interrogation.\""
+    "Locked."
     jump policestationfloor2_loop
 
 label policestationfloor2_harrysoffice:
-    __("\"Harry Callahan - Chief Detective.\"")
-    __("Talk about cliché.")
+    "\"Harry Callahan - Chief Detective.\""
+    "Talk about cliché."
     jump policestationfloor2_loop
 
 label policestationfloor2_sheriffoffice:
-    __("\"Sheriff's Office.\"")
-    __("Locked.")
+    "\"Sheriff's Office.\""
+    "Locked."
     jump policestationfloor2_loop
 
 label policestationfloor2_tostafflounge:
@@ -59,17 +59,17 @@ label policestationfloor2_tostafflounge:
 
 label policestationfloor2_jillsoffice:
     if quests.grantHoboBag == ACTIVE:
-        __("\"Jillian Valentino - Detective.\"")
-        __("This is the one.")
-        __("...I hear weird noises from inside.")
-        __("What is she doing?")
+        "\"Jillian Valentino - Detective.\""
+        "This is the one."
+        "...I hear weird noises from inside."
+        "What is she doing?"
         call jill_officemasturbation_scene from _call_jill_officemasturbation_scene
-        __("Damn, she's out cold.")
-        __("I guess now's my chance.")
+        "Damn, she's out cold."
+        "I guess now's my chance."
         $ gotoscene('policestationjillsoffice', transition=fade)
     else:
-        __("I already have the bag.")
-        __("I should go back and talk to Grant.")
+        "I already have the bag."
+        "I should go back and talk to Grant."
     jump policestationfloor2_loop
 
 label policestationfloor2_tofloor1:

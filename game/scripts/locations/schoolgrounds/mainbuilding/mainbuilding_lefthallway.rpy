@@ -56,34 +56,34 @@ label mainbuildinglefthallway_boysbathroom:
     if quests.algieScroll == ACTIVE:
         jump algiescrollfound
     else:
-        __("No need to go in there.")
+        "No need to go in there."
         jump mainbuildinglefthallway_loop
 
 label mainbuildinglefthallway_girlsbathroom:
-    __("No need to go in there.")
+    "No need to go in there."
     jump mainbuildinglefthallway_loop
 
 label mainbuildinglefthallway_halloweenposter:
     if quests.halloweenCostume == LOCKED:
-        __("Trustworth's annual Halloween Party!")
-        __("Wear your best costume and win the prize!")
-        __("Huh, sounds interesting.")
+        "Trustworth's annual Halloween Party!"
+        "Wear your best costume and win the prize!"
+        "Huh, sounds interesting."
     elif quests.halloweenCostume == ACTIVE:
-        __("The Halloween party is this Friday.")
-        __("I still need a costume. Fiona said she was selling some, I wonder if she still has any.")
+        "The Halloween party is this Friday."
+        "I still need a costume. Fiona said she was selling some, I wonder if she still has any."
     elif quests.halloweenCostume != COMPLETE:
         if calendar.when[1] != FRIDAY:
-            __("The Halloween party is this Friday.")
+            "The Halloween party is this Friday."
         else:
-            __("The Halloween party is tonight.")
-            __("I'll need to be sure to wear my costume.")
+            "The Halloween party is tonight."
+            "I'll need to be sure to wear my costume."
     jump mainbuildinglefthallway_loop
 
 label mainbuildinglefthallway_campaignposter:
-    __("Don't be a nerd. Be cool and vote for Ted!")
-    __("Ted for prez!")
-    __("...")
-    __("He looks like an idiot.")
+    "Don't be a nerd. Be cool and vote for Ted!"
+    "Ted for prez!"
+    "..."
+    "He looks like an idiot."
     jump mainbuildinglefthallway_loop
 
 label mainbuildinglefthallway_labs:
@@ -97,7 +97,7 @@ label mainbuildinglefthallway_labs:
         if quests.beatrixHerpes == SATISFIED:
             jump beatrixbiologyessay03
     else:
-        __("I don't have Biology or Chemistry right now.")
+        "I don't have Biology or Chemistry right now."
     jump mainbuildinglefthallway_loop
 
 label mainbuildinglefthallway_toentrance:

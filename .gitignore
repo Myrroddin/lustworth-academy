@@ -36,6 +36,7 @@ lib/
 
 # Root-only launcher/runtime files from local game installs or exports
 /LustworthAcademy*.*
+/game live/
 
 # ---------------------------------------------------------------------------
 # Original game assets not redistributed with this repository
@@ -49,7 +50,6 @@ lib/
 # game/tl/
 game/fonts/
 game/script_version.txt
-game/tl/
 game/game/
 
 # ---------------------------------------------------------------------------
@@ -142,4 +142,7 @@ desktop.ini
 # Repository-local temporary artifacts
 # ---------------------------------------------------------------------------
 
+/dryrun*.*
+/audio*.txt
+/images*.txt
 root_webp_review_report.txt

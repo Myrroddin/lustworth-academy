@@ -12,11 +12,11 @@ label angiesecretscene_menu:
         $ entry = False
     menu:
         Angie "What do you want to do with my butt?"
-        __("Doggy style"):
+        "Doggy style":
             jump angiesecretscene_doggy
-        __("Anal"):
+        "Anal":
             jump angiesecretscene_anal
-        __("Leave"):
+        "Leave":
             Jimmy "I'll come back sometime."
             Angie "Yes, please. I'll be here for you."
             return
@@ -34,9 +34,9 @@ label angiesecretscene_doggy:
     Angie "I think I'm getting there..."
     Angie "Want me to start slow or fast?"
     menu:
-        __("Slow"):
+        "Slow":
             jump angiesecretscene_doggy_slow
-        __("Fast"):
+        "Fast":
             jump angiesecretscene_doggy_fast
 
 label angiesecretscene_doggy_slow:
@@ -48,9 +48,9 @@ label angiesecretscene_doggy_slow:
     Angie "AAHHH!"
     Angie "Fuck! You fill me so good."
     menu:
-        __("Faster"):
+        "Faster":
             jump angiesecretscene_doggy_fast
-        __("Cum"):
+        "Cum":
             jump angiesecretscene_doggy_cum
 
 label angiesecretscene_doggy_fast:
@@ -62,9 +62,9 @@ label angiesecretscene_doggy_fast:
     Angie "AAAHHHH! FUCK YES!"
     Angie "I love how you fuck me so hard!"
     menu:
-        __("Slower"):
+        "Slower":
             jump angiesecretscene_doggy_slow
-        __("Cum"):
+        "Cum":
             jump angiesecretscene_doggy_cum
 
 label angiesecretscene_doggy_cum:
@@ -87,9 +87,9 @@ label angiesecretscene_anal:
     Angie "I think my ass is opening for you..."
     Jimmy "Want me to start slow or fast?"
     menu:
-        __("Slow"):
+        "Slow":
             jump angiesecretscene_anal_slow
-        __("Fast"):
+        "Fast":
             jump angiesecretscene_anal_fast
 
 label angiesecretscene_anal_slow:
@@ -101,9 +101,9 @@ label angiesecretscene_anal_slow:
     Angie "OOHHH GOD!"
     Angie "My little butt is so stretched."
     menu:
-        __("Faster"):
+        "Faster":
             jump angiesecretscene_anal_fast
-        __("Cum"):
+        "Cum":
             jump angiesecretscene_anal_cum
 
 label angiesecretscene_anal_fast:
@@ -116,9 +116,9 @@ label angiesecretscene_anal_fast:
     Angie "AAAHHHH! I LOVE IT!"
     Angie "Your cock feels so smooth in my butt!"
     menu:
-        __("Slower"):
+        "Slower":
             jump angiesecretscene_anal_slow
-        __("Cum"):
+        "Cum":
             jump angiesecretscene_anal_cum
 
 label angiesecretscene_anal_cum:
